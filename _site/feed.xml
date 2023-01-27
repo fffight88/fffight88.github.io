@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-01-27T13:36:05+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Vic’s Knowledge Repository</title><subtitle>This is the space for a novice web developer to pile his miscellaneous articles up and show himself. 
+</subtitle><author><name>Doosan Baek</name><email>fffight88@gmail.com</email></author><entry><title type="html">TaraTPS - 1차 프로젝트</title><link href="http://localhost:4000/portfolio/2023/01/27/tara1st.html" rel="alternate" type="text/html" title="TaraTPS - 1차 프로젝트" /><published>2023-01-27T00:00:00+09:00</published><updated>2023-01-27T00:00:00+09:00</updated><id>http://localhost:4000/portfolio/2023/01/27/tara1st</id><content type="html" xml:base="http://localhost:4000/portfolio/2023/01/27/tara1st.html"><![CDATA[<h2 id="1차-프로젝트--당사-erp-회계-시스템g7-개선-및-기능-추가">1차 프로젝트 : 당사 ERP 회계 시스템(G7) 개선 및 기능 추가</h2>
+<ul>
+    <li>수행 기간: 2022년 11월 중순 ~ 2023년 1월 초</li>
+    <li>배경: 기존 ERP의 회계 부분에서 사용하던 로직을 올해안에 바꾸지 않으면  회계관련법상 가산세를 징수당할 가능성이 있어</li>
+</ul>]]></content><author><name>Doosan Baek</name><email>fffight88@gmail.com</email></author><category term="portfolio" /><summary type="html"><![CDATA[1차 프로젝트 : 당사 ERP 회계 시스템(G7) 개선 및 기능 추가 수행 기간: 2022년 11월 중순 ~ 2023년 1월 초 배경: 기존 ERP의 회계 부분에서 사용하던 로직을 올해안에 바꾸지 않으면 회계관련법상 가산세를 징수당할 가능성이 있어]]></summary></entry><entry><title type="html">안녕하세요 테스트페이지 입니다</title><link href="http://localhost:4000/test/2023/01/20/test.html" rel="alternate" type="text/html" title="안녕하세요 테스트페이지 입니다" /><published>2023-01-20T00:00:00+09:00</published><updated>2023-01-20T00:00:00+09:00</updated><id>http://localhost:4000/test/2023/01/20/test</id><content type="html" xml:base="http://localhost:4000/test/2023/01/20/test.html"><![CDATA[<h2 id="안녕하세요">안녕하세요.</h2>
+
+<h1 id="테스트페이지-입니다"><i><b><u><s>테스트페이지 입니다.</s></u></b></i></h1>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+   <span class="nt">&lt;p&gt;</span> Hello, world! 안녕, 세상!<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<p><a href="https://fffight88.github.io">Myblog</a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>안</th>
+      <th>녕</th>
+      <th>하</th>
+      <th>세</th>
+      <th>요</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>반</td>
+      <td>갑</td>
+      <td>습</td>
+      <td>니</td>
+      <td>다</td>
+    </tr>
+  </tbody>
+</table>]]></content><author><name>Doosan Baek</name><email>fffight88@gmail.com</email></author><category term="test" /><summary type="html"><![CDATA[안녕하세요.]]></summary></entry></feed>
