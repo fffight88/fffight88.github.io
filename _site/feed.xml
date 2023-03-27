@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-03-27T13:45:59+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Vic’s Knowledge Repository</title><subtitle>This is the space for a novice web developer to pile his miscellaneous articles up and show himself. 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-03-27T13:53:22+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Vic’s Knowledge Repository</title><subtitle>This is the space for a novice web developer to pile his miscellaneous articles up and show himself. 
 </subtitle><author><name>Doosan Baek</name><email>fffight88@gmail.com</email></author><entry><title type="html">안녕하세요 테스트페이지 입니다</title><link href="http://localhost:4000/test/2023/03/27/test.html" rel="alternate" type="text/html" title="안녕하세요 테스트페이지 입니다" /><published>2023-03-27T00:00:00+09:00</published><updated>2023-03-27T00:00:00+09:00</updated><id>http://localhost:4000/test/2023/03/27/test</id><content type="html" xml:base="http://localhost:4000/test/2023/03/27/test.html"><![CDATA[<h1 id="test-page">Test Page</h1>
 
 <h2 id="마크다운-문법">마크다운 문법</h2>
@@ -114,7 +114,7 @@
 | Default    | Left       | Center       | Right       |
 </code></pre></div></div>
 
-<h3 id="열-병합--병합할-컬럼들-사이에--없이-연속으로-를-입력">열 병합 : 병합할 컬럼들 사이에 — 없이 연속으로 |를 입력</h3>
+<h3 id="열-병합--병합할-컬럼들-사이에-수평구분선-없이-연속으로-파이프기호를-입력">열 병합 : 병합할 컬럼들 사이에 수평구분선 없이 연속으로 파이프기호를 입력</h3>
 
 <table>
   <thead>
@@ -160,16 +160,7 @@
         <ul>
           <li><a href="#구조-잡기">구조 잡기</a></li>
           <li><a href="#표-정렬--콜론을-헤더의-한쪽-또는-양쪽에-삽입">표 정렬 : 콜론(:)을 헤더의 한쪽 또는 양쪽에 삽입</a></li>
-          <li>
-            <table>
-              <tbody>
-                <tr>
-                  <td>[열 병합 : 병합할 컬럼들 사이에 — 없이 연속으로</td>
-                  <td>를 입력](#열-병합–병합할-컬럼들-사이에—–없이-연속으로-를-입력)</td>
-                </tr>
-              </tbody>
-            </table>
-          </li>
+          <li><a href="#열-병합--병합할-컬럼들-사이에-수평구분선-없이-연속으로-파이프기호를-입력">열 병합 : 병합할 컬럼들 사이에 수평구분선 없이 연속으로 파이프기호를 입력</a></li>
         </ul>
       </li>
       <li><a href="#목차-자동-생성--ctrl--shift--p--markdowncreate-toc">목차 자동 생성 : Ctrl + Shift + P &gt;&gt; markdown:create toc</a></li>
