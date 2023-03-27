@@ -1,4 +1,4 @@
----
+---p
 layout: post
 title:  "안녕하세요 테스트페이지 입니다"
 categories: test
@@ -6,21 +6,67 @@ categories: test
 
 ## 안녕하세요.
 
-# <i><b><u><s>테스트페이지 입니다.</s></u></b></i>
+## 마크다운 문법
+-큰제목            : ===
+-작은제목          : ---
+-***굵게+이탤릭*** : 별(*) 3개 또는 언더바(__) 3개
+-**굵게**          : 별(*) 2개 또는 언더바(__) 2개
+-*이탤릭*          : 별(*) 1개 또는 언더바(_) 1개
+-~~취소선~~        : 물결표시(~)  2개
+-<u>밑줄</u>       : u태그
+->인용문           : > 기호
+-`코드`            : `기호로 감싼다
+-수평 구분선       : *** 또는 --- 또는 ___
+-번호 목록         : 숫자와 점 (1. 등)
+-기호 목록         : - 또는 + 또는 *. Tab키로 계층 변화
 
+## 코드블럭 사용법
 ```html
 <html>
-<body>
-   <p> Hello, world! 안녕, 세상!</p>
-</body>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>테스트 페이지</title>
+   </head>
+   <body>
+      <p> Hello, world! 안녕, 세상!</p>      
+   </body>
 </html>
 ```
 
+## 링크 사용법
+### 참조 링크 : [텍스트][링크이름] , 다른 줄에 [링크이름]: url
 [Myblog][my-blog]
-
-안 | 녕 | 하 | 세 | 요 
----|---|---|---|---
-반 | 갑 | 습 | 니 | 다
-
-
 [my-blog]: https://fffight88.github.io
+### 인라인 링크 : [텍스트](url)
+[myblog](https://fffight88.github.io)
+### url 링크 : 중괄호(<>) 사이에 url
+<https://fffight88.github.io>
+### 내부 링크 : [텍스트](#id)
+[MyBlog](#my-blog)
+
+## 이미지 사용법 : ![이미지이름](이미지주소)
+이미지는 링크를 삽입하는 방법과 같지만 대괄호 앞에 !를 붙인다.
+
+## 표 삽입하기
+### 구조 잡기
+| First Header  | Second Header | Third Header         |
+| :------------ | :-----------: | -------------------: |
+| First row     | Data          | Very long data entry |
+| Second row    | **Cell**      | *Cell*               |
+| Third row     | Cell that spans across two columns  ||
+[Table caption, works as a reference][section-mmd-tables-table1]
+### 표 정렬 : 콜론(:)을 헤더의 한쪽 또는 양쪽에 삽입
+| Header One | Header Two | Header Three | Header Four |
+| ---------- | :--------- | :----------: | ----------: |
+| Default    | Left       | Center       | Right       |
+### 열 병합
+| Column 1 | Column 2 | Column 3 | Column 4 |
+| -------- | :------: | -------- | -------- |
+| No span  | Span across three columns    |||
+
+## 목차 자동 생성 : {:toc}
+
+## 각주 : [^myfootnote]
+각주테스트[^myfootnote]
+[^myfootnote] : 각주테스트
