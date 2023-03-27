@@ -35,21 +35,23 @@ categories: test
 ```
 
 ## 링크 사용법
-### 참조 링크 : [텍스트][링크이름] , 다른 줄에 [링크이름]: url
+### 참조 링크 : \[텍스트][링크이름] , 다른 줄에 [링크이름]: url
 [Myblog][my-blog]
+
 [my-blog]: https://fffight88.github.io
-### 인라인 링크 : [텍스트](url)
+### 인라인 링크 : \[텍스트](url)
 [myblog](https://fffight88.github.io)
 ### url 링크 : 중괄호(<>) 사이에 url
 <https://fffight88.github.io>
-### 내부 링크 : [텍스트](#id)
+### 내부 링크 : \[텍스트](#id)
 [MyBlog](#my-blog)
 
-## 이미지 사용법 : ![이미지이름](이미지주소)
+## 이미지 사용법 : \![이미지이름](이미지주소)
 이미지는 링크를 삽입하는 방법과 같지만 대괄호 앞에 !를 붙인다.
 
 ## 표 삽입하기
 ### 구조 잡기
+
 | First Header  | Second Header | Third Header         |
 | :------------ | :-----------: | -------------------: |
 | First row     | Data          | Very long data entry |
@@ -57,17 +59,19 @@ categories: test
 | Third row     | Cell that spans across two columns  ||
 [Table caption, works as a reference][section-mmd-tables-table1]
 ### 표 정렬 : 콜론(:)을 헤더의 한쪽 또는 양쪽에 삽입
+
 | Header One | Header Two | Header Three | Header Four |
 | ---------- | :--------- | :----------: | ----------: |
 | Default    | Left       | Center       | Right       |
 ### 열 병합
+
 | Column 1 | Column 2 | Column 3 | Column 4 |
 | -------- | :------: | -------- | -------- |
 | No span  | Span across three columns    |||
 
-## 목차 자동 생성 : {:toc}
-\{:toc}
+## 목차 자동 생성 : \{:toc}
+{:toc}
 
-## 각주 : [\^myfootnote]
-각주테스트[\^myfootnote]
-[\^myfootnote] : 각주테스트
+## 각주 : \[^myfootnote]
+각주테스트 [^myfootnote]
+[^myfootnote] : 각주테스트
