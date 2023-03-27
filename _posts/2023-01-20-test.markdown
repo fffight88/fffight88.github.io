@@ -49,7 +49,7 @@ toc_sticky: true
 ### 내부 링크 : \[텍스트](#id)
 [MyBlog](#my-blog)
 
-## 이미지 사용법 : \![이미지이름](url)
+## 이미지 사용법 : \![이미지이름]\(url)
 이미지는 링크를 삽입하는 방법과 같지만 대괄호 앞에 !를 붙인다.
 ![이미지이름](url)
 
@@ -62,13 +62,26 @@ toc_sticky: true
 | First row     | Data          | Very long data entry |
 | Second row    | **Cell**      | *Cell*               |
 | Third row     | Cell that spans across two columns  ||
-[Table caption, works as a reference][section-mmd-tables-table1]
+
+```markdown
+| First Header  | Second Header | Third Header         |
+| :------------ | :-----------: | -------------------: |
+| First row     | Data          | Very long data entry |
+| Second row    | **Cell**      | *Cell*               |
+| Third row     | Cell that spans across two columns  ||
+```
 
 ### 표 정렬 : 콜론(:)을 헤더의 한쪽 또는 양쪽에 삽입
 
 | Header One | Header Two | Header Three | Header Four |
 | ---------- | :--------- | :----------: | ----------: |
 | Default    | Left       | Center       | Right       |
+
+```markdown
+| Header One | Header Two | Header Three | Header Four |
+| ---------- | :--------- | :----------: | ----------: |
+| Default    | Left       | Center       | Right       |
+```
 
 ### 열 병합 : 병합할 컬럼들 사이에 --- 없이 연속으로 |를 입력
 
