@@ -96,12 +96,16 @@ toc_sticky: true
 | No span  | Span across three columns    |||
 ```
 
-## 목차 자동 생성 : \[toc]
+## 목차 자동 생성 : Ctrl + Shift + P >> markdown:create toc
 
-[toc]
+@import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false}
 
-## 각주 : 각주를 넣고자 하는 부분에 \[^각주이름], 각주 설명하는 부분에서 \[^각주이름] : 내용입력
+## 각주
+
+### 각주를 넣고자 하는 부분에 \[^각주이름], 각주 설명하는 부분에 \[^각주이름] : 내용입력
 
 각주테스트[^각주이름]
+
 ---
+
 [^각주이름]: 각주 여기서 설명
