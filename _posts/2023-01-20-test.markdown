@@ -2,9 +2,12 @@
 layout: post
 title:  "안녕하세요 테스트페이지 입니다"
 categories: test
+date: 2023-03-27
+toc: true
+toc_sticky: true
 ---
 
-## 안녕하세요.
+# Test Page
 
 ## 마크다운 문법
 - 큰제목            : ===
@@ -46,10 +49,12 @@ categories: test
 ### 내부 링크 : \[텍스트](#id)
 [MyBlog](#my-blog)
 
-## 이미지 사용법 : \![이미지이름](이미지주소)
+## 이미지 사용법 : \![이미지이름](url)
 이미지는 링크를 삽입하는 방법과 같지만 대괄호 앞에 !를 붙인다.
+![이미지이름](url)
 
 ## 표 삽입하기
+
 ### 구조 잡기
 
 | First Header  | Second Header | Third Header         |
@@ -58,20 +63,30 @@ categories: test
 | Second row    | **Cell**      | *Cell*               |
 | Third row     | Cell that spans across two columns  ||
 [Table caption, works as a reference][section-mmd-tables-table1]
+
 ### 표 정렬 : 콜론(:)을 헤더의 한쪽 또는 양쪽에 삽입
 
 | Header One | Header Two | Header Three | Header Four |
 | ---------- | :--------- | :----------: | ----------: |
 | Default    | Left       | Center       | Right       |
-### 열 병합
+
+### 열 병합 : 병합할 컬럼들 사이에 --- 없이 연속으로 |를 입력
 
 | Column 1 | Column 2 | Column 3 | Column 4 |
 | -------- | :------: | -------- | -------- |
 | No span  | Span across three columns    |||
 
-## 목차 자동 생성 : \{:toc}
+```markdown
+| Column 1 | Column 2 | Column 3 | Column 4 |
+| -------- | :------: | -------- | -------- |
+| No span  | Span across three columns    |||
+```
+
+## 목차 자동 생성 : {:toc}
+
 {:toc}
 
-## 각주 : \[^myfootnote]
+## 각주 : [^myfootnote]
+
 각주테스트 [^myfootnote]
 [^myfootnote] : 각주테스트
