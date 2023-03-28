@@ -119,8 +119,16 @@ date: 2023-03-27
 
 각주번호1번<sup id="a1">[1](#footnote1)</sup>이고 각주번호2번<sup id="a2">[2](#footnote2)</sup>이며 각주번호3번<sup id="a3">[3](#footnote3)</sup>입니다.
 
+
+각주번호1번\<sup id="a1">[1](#footnote1)</sup>이고 각주번호2번\<sup id="a2">[2](#footnote2)</sup>이며 각주번호3번\<sup id="a3">[3](#footnote3)</sup>입니다.
+
+
 ---
 
 <b id="footnote1">1</b> 각주1번 내용입니다. [↩](#a1)
 <b id="footnote2">2</b> 각주2번 내용입니다. [↩](#a2)
 <b id="footnote3">3</b> 각주3번 내용입니다. [↩](#a3)
+
+\<b id="footnote1">1</b> 각주1번 내용입니다. [↩](#a1)
+\<b id="footnote2">2</b> 각주2번 내용입니다. [↩](#a2)
+\<b id="footnote3">3</b> 각주3번 내용입니다. [↩](#a3)

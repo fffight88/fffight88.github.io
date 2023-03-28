@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-03-27T14:00:06+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Vic’s Knowledge Repository</title><subtitle>This is the space for a novice web developer to pile his miscellaneous articles up and show himself. 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-03-28T16:54:25+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Vic’s Knowledge Repository</title><subtitle>This is the space for a novice web developer to pile his miscellaneous articles up and show himself. 
 </subtitle><author><name>Doosan Baek</name><email>fffight88@gmail.com</email></author><entry><title type="html">안녕하세요 테스트페이지 입니다</title><link href="http://localhost:4000/test/2023/03/27/test.html" rel="alternate" type="text/html" title="안녕하세요 테스트페이지 입니다" /><published>2023-03-27T00:00:00+09:00</published><updated>2023-03-27T00:00:00+09:00</updated><id>http://localhost:4000/test/2023/03/27/test</id><content type="html" xml:base="http://localhost:4000/test/2023/03/27/test.html"><![CDATA[<h1 id="test-page">Test Page</h1>
 
 <h2 id="마크다운-문법">마크다운 문법</h2>
@@ -175,11 +175,17 @@
 
 <p>각주번호1번<sup id="a1"><a href="#footnote1">1</a></sup>이고 각주번호2번<sup id="a2"><a href="#footnote2">2</a></sup>이며 각주번호3번<sup id="a3"><a href="#footnote3">3</a></sup>입니다.</p>
 
+<p>각주번호1번&lt;sup id=”a1”&gt;<a href="#footnote1">1</a>&lt;/sup&gt;이고 각주번호2번&lt;sup id=”a2”&gt;<a href="#footnote2">2</a>&lt;/sup&gt;이며 각주번호3번&lt;sup id=”a3”&gt;<a href="#footnote3">3</a>&lt;/sup&gt;입니다.</p>
+
 <hr />
 
 <p><b id="footnote1">1</b> 각주1번 내용입니다. <a href="#a1">↩</a>
 <b id="footnote2">2</b> 각주2번 내용입니다. <a href="#a2">↩</a>
-<b id="footnote3">3</b> 각주3번 내용입니다. <a href="#a3">↩</a></p>]]></content><author><name>Doosan Baek</name><email>fffight88@gmail.com</email></author><category term="test" /><summary type="html"><![CDATA[Test Page]]></summary></entry><entry><title type="html">TaraTPS - 1차 프로젝트</title><link href="http://localhost:4000/portfolio/2023/01/27/tara1st.html" rel="alternate" type="text/html" title="TaraTPS - 1차 프로젝트" /><published>2023-01-27T00:00:00+09:00</published><updated>2023-01-27T00:00:00+09:00</updated><id>http://localhost:4000/portfolio/2023/01/27/tara1st</id><content type="html" xml:base="http://localhost:4000/portfolio/2023/01/27/tara1st.html"><![CDATA[<h4 id="당사-erp-시스템g7-유지보수작업-인수-및-회계관련로직-개선-기능-추가">당사 ERP 시스템(G7) 유지보수작업 인수 및 회계관련로직 개선, 기능 추가</h4>
+<b id="footnote3">3</b> 각주3번 내용입니다. <a href="#a3">↩</a></p>
+
+<p>&lt;b id=”footnote1”&gt;1&lt;/b&gt; 각주1번 내용입니다. <a href="#a1">↩</a>
+&lt;b id=”footnote2”&gt;2&lt;/b&gt; 각주2번 내용입니다. <a href="#a2">↩</a>
+&lt;b id=”footnote3”&gt;3&lt;/b&gt; 각주3번 내용입니다. <a href="#a3">↩</a></p>]]></content><author><name>Doosan Baek</name><email>fffight88@gmail.com</email></author><category term="test" /><summary type="html"><![CDATA[Test Page]]></summary></entry><entry><title type="html">TaraTPS - 1차 프로젝트</title><link href="http://localhost:4000/portfolio/2023/01/27/tara1st.html" rel="alternate" type="text/html" title="TaraTPS - 1차 프로젝트" /><published>2023-01-27T00:00:00+09:00</published><updated>2023-01-27T00:00:00+09:00</updated><id>http://localhost:4000/portfolio/2023/01/27/tara1st</id><content type="html" xml:base="http://localhost:4000/portfolio/2023/01/27/tara1st.html"><![CDATA[<h4 id="당사-erp-시스템g7-유지보수작업-인수-및-회계관련로직-개선-기능-추가">당사 ERP 시스템(G7) 유지보수작업 인수 및 회계관련로직 개선, 기능 추가</h4>
 <ul>
     <li>수행 기간: 2022년 11월 중순 ~ 2023년 1월 초</li>
     <li>수행 배경</li>
