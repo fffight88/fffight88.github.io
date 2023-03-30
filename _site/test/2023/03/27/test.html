@@ -71,7 +71,7 @@
   <li>기호 목록         : - 또는 + 또는 *. Tab키로 계층 변화</li>
 </ul>
 
-<h2 id="코드블럭-사용법">코드블럭 사용법</h2>
+<h2 id="코드블럭-사용법---로-감싼다">코드블럭 사용법 : ``` 로 감싼다.</h2>
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;html&gt;</span>
    <span class="nt">&lt;head&gt;</span>
       <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
@@ -88,17 +88,28 @@
 <h3 id="참조-링크--텍스트링크이름--다른-줄에-링크이름-url">참조 링크 : [텍스트][링크이름] , 다른 줄에 [링크이름]: url</h3>
 <p><a href="https://fffight88.github.io">Myblog</a></p>
 
+<p>[Myblog][my-blog]</p>
+
+<p>[my-blog]: https://fffight88.github.io</p>
 <h3 id="인라인-링크--텍스트url">인라인 링크 : [텍스트](url)</h3>
 <p><a href="https://fffight88.github.io">myblog</a></p>
+
+<p>[myblog](https://fffight88.github.io)</p>
 <h3 id="url-링크--중괄호-사이에-url">url 링크 : 중괄호(&lt;&gt;) 사이에 url</h3>
 <p><a href="https://fffight88.github.io">https://fffight88.github.io</a></p>
+
+<p>&lt;https://fffight88.github.io&gt;</p>
 <h3 id="내부-링크--텍스트id">내부 링크 : [텍스트](#id)</h3>
 <p><a href="#my-blog">MyBlog</a></p>
+
+<p>[MyBlog](#my-blog)</p>
 
 <h2 id="이미지-사용법--이미지이름url">이미지 사용법 : ![이미지이름](url)</h2>
 <p>이미지는 링크를 삽입하는 방법과 같지만 대괄호 앞에 !를 붙인다.</p>
 
 <p><img src="url" alt="이미지이름" /></p>
+
+<p>![이미지이름](url)</p>
 
 <h2 id="표-삽입하기">표 삽입하기</h2>
 
@@ -125,17 +136,17 @@
     </tr>
     <tr>
       <td style="text-align: left">Third row</td>
-      <td style="text-align: center">Cell that spans across two columns</td>
+      <td style="text-align: center">no support of colspan</td>
       <td style="text-align: right"> </td>
     </tr>
   </tbody>
 </table>
 
-<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>| First Header  | Second Header | Third Header         |
-| :------------ | :-----------: | -------------------: |
-| First row     | Data          | Very long data entry |
-| Second row    | <span class="gs">**Cell**</span>      | <span class="ge">*Cell*</span>               |
-| Third row     | Cell that spans across two columns  ||
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>| First Header |     Second Header     |         Third Header |
+| :----------- | :-------------------: | -------------------: |
+| First row    |         Data          | Very long data entry |
+| Second row   |       <span class="gs">**Cell**</span>        |               <span class="ge">*Cell*</span> |
+| Third row    | no support of colspan |
 </code></pre></div></div>
 
 <h3 id="표-정렬--콜론을-헤더의-한쪽-또는-양쪽에-삽입">표 정렬 : 콜론(:)을 헤더의 한쪽 또는 양쪽에 삽입</h3>
@@ -161,10 +172,10 @@
 
 <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>| Header One | Header Two | Header Three | Header Four |
 | ---------- | :--------- | :----------: | ----------: |
-| Default    | Left       | Center       | Right       |
+| Default    | Left       |    Center    |       Right |
 </code></pre></div></div>
 
-<h3 id="열-병합--병합할-컬럼들-사이에-수평구분선-없이-연속으로-파이프기호를-입력">열 병합 : 병합할 컬럼들 사이에 수평구분선 없이 연속으로 파이프기호를 입력</h3>
+<h3 id="열-병합--빈-셀이-있으면-자동으로-그-앞-셀과-병합기본적으로-지원안함">열 병합 : 빈 셀이 있으면 자동으로 그 앞 셀과 병합(기본적으로 지원안함)</h3>
 
 <table>
   <thead>
@@ -178,16 +189,16 @@
   <tbody>
     <tr>
       <td>No span</td>
-      <td style="text-align: center">Span across three columns</td>
+      <td style="text-align: center">no support of colspan</td>
       <td> </td>
       <td> </td>
     </tr>
   </tbody>
 </table>
 
-<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>| Column 1 | Column 2 | Column 3 | Column 4 |
-| -------- | :------: | -------- | -------- |
-| No span  | Span across three columns    |||
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>| Column 1 |       Column 2        | Column 3 | Column 4 |
+| -------- | :-------------------: | -------- | -------- |
+| No span  | no support of colspan |          |          |
 </code></pre></div></div>
 
 <h2 id="목차-자동-생성--ctrl--shift--p-markdowncreate-toc">목차 자동 생성 : Ctrl + Shift + P » markdown:create toc</h2>
@@ -196,7 +207,7 @@
   <li><a href="#test-page">Test Page</a>
     <ul>
       <li><a href="#마크다운-문법">마크다운 문법</a></li>
-      <li><a href="#코드블럭-사용법">코드블럭 사용법</a></li>
+      <li><a href="#코드블럭-사용법---로-감싼다">코드블럭 사용법 : ``` 로 감싼다.</a></li>
       <li><a href="#링크-사용법">링크 사용법</a>
         <ul>
           <li><a href="#참조-링크--텍스트링크이름--다른-줄에-링크이름-url">참조 링크 : [텍스트][링크이름] , 다른 줄에 [링크이름]: url</a></li>
@@ -210,7 +221,7 @@
         <ul>
           <li><a href="#구조-잡기">구조 잡기</a></li>
           <li><a href="#표-정렬--콜론을-헤더의-한쪽-또는-양쪽에-삽입">표 정렬 : 콜론(:)을 헤더의 한쪽 또는 양쪽에 삽입</a></li>
-          <li><a href="#열-병합--병합할-컬럼들-사이에-수평구분선-없이-연속으로-파이프기호를-입력">열 병합 : 병합할 컬럼들 사이에 수평구분선 없이 연속으로 파이프기호를 입력</a></li>
+          <li><a href="#열-병합--빈-셀이-있으면-자동으로-그-앞-셀과-병합기본적으로-지원안함">열 병합 : 빈 셀이 있으면 자동으로 그 앞 셀과 병합(기본적으로 지원안함)</a></li>
         </ul>
       </li>
       <li><a href="#목차-자동-생성--ctrl--shift--p--markdowncreate-toc">목차 자동 생성 : Ctrl + Shift + P &gt;&gt; markdown:create toc</a></li>
@@ -233,9 +244,9 @@
 <b id="footnote2">2</b> 각주2번 내용입니다. <a href="#a2">↩</a>
 <b id="footnote3">3</b> 각주3번 내용입니다. <a href="#a3">↩</a></p>
 
-<p>&lt;b id=”footnote1”&gt;1&lt;/b&gt; 각주1번 내용입니다. <a href="#a1">↩</a>
-&lt;b id=”footnote2”&gt;2&lt;/b&gt; 각주2번 내용입니다. <a href="#a2">↩</a>
-&lt;b id=”footnote3”&gt;3&lt;/b&gt; 각주3번 내용입니다. <a href="#a3">↩</a></p>
+<p>&lt;b id=”footnote1”&gt;1&lt;/b&gt; 각주1번 내용입니다. [↩](#a1)
+&lt;b id=”footnote2”&gt;2&lt;/b&gt; 각주2번 내용입니다. [↩](#a2)
+&lt;b id=”footnote3”&gt;3&lt;/b&gt; 각주3번 내용입니다. [↩](#a3)</p>
 
   </div><a class="u-url" href="/test/2023/03/27/test.html" hidden></a>
 </article>

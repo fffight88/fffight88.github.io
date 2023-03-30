@@ -21,7 +21,7 @@ date: 2023-03-27
 - 번호 목록         : 숫자와 점 (1. 등)
 - 기호 목록         : - 또는 + 또는 *. Tab키로 계층 변화
 
-## 코드블럭 사용법
+## 코드블럭 사용법 : ``` 로 감싼다.
 ```html
 <html>
    <head>
@@ -40,65 +40,77 @@ date: 2023-03-27
 [Myblog][my-blog]
 
 [my-blog]: https://fffight88.github.io
+
+\[Myblog]\[my-blog]
+
+\[my-blog]: https://fffight88.github.io
 ### 인라인 링크 : \[텍스트](url)
 [myblog](https://fffight88.github.io)
+
+\[myblog](https://fffight88.github.io)
 ### url 링크 : 중괄호(<>) 사이에 url
 <https://fffight88.github.io>
+
+\<https://fffight88.github.io>
 ### 내부 링크 : \[텍스트](#id)
 [MyBlog](#my-blog)
+
+\[MyBlog](#my-blog)
 
 ## 이미지 사용법 : \![이미지이름]\(url)
 이미지는 링크를 삽입하는 방법과 같지만 대괄호 앞에 !를 붙인다.
 
 ![이미지이름](url)
 
+\![이미지이름]\(url)
+
 ## 표 삽입하기
 
 ### 구조 잡기
 
-| First Header  | Second Header | Third Header         |
-| :------------ | :-----------: | -------------------: |
-| First row     | Data          | Very long data entry |
-| Second row    | **Cell**      | *Cell*               |
-| Third row     | Cell that spans across two columns  ||
+| First Header |     Second Header     |         Third Header |
+| :----------- | :-------------------: | -------------------: |
+| First row    |         Data          | Very long data entry |
+| Second row   |       **Cell**        |               *Cell* |
+| Third row    | no support of colspan |
 
 ```markdown
-| First Header  | Second Header | Third Header         |
-| :------------ | :-----------: | -------------------: |
-| First row     | Data          | Very long data entry |
-| Second row    | **Cell**      | *Cell*               |
-| Third row     | Cell that spans across two columns  ||
+| First Header |     Second Header     |         Third Header |
+| :----------- | :-------------------: | -------------------: |
+| First row    |         Data          | Very long data entry |
+| Second row   |       **Cell**        |               *Cell* |
+| Third row    | no support of colspan |
 ```
 
 ### 표 정렬 : 콜론(:)을 헤더의 한쪽 또는 양쪽에 삽입
 
 | Header One | Header Two | Header Three | Header Four |
 | ---------- | :--------- | :----------: | ----------: |
-| Default    | Left       | Center       | Right       |
+| Default    | Left       |    Center    |       Right |
 
 ```markdown
 | Header One | Header Two | Header Three | Header Four |
 | ---------- | :--------- | :----------: | ----------: |
-| Default    | Left       | Center       | Right       |
+| Default    | Left       |    Center    |       Right |
 ```
 
-### 열 병합 : 병합할 컬럼들 사이에 수평구분선 없이 연속으로 파이프기호를 입력
+### 열 병합 : 빈 셀이 있으면 자동으로 그 앞 셀과 병합(기본적으로 지원안함)
 
-| Column 1 | Column 2 | Column 3 | Column 4 |
-| -------- | :------: | -------- | -------- |
-| No span  | Span across three columns    |||
+| Column 1 |       Column 2        | Column 3 | Column 4 |
+| -------- | :-------------------: | -------- | -------- |
+| No span  | no support of colspan |          |          |
 
 ```markdown
-| Column 1 | Column 2 | Column 3 | Column 4 |
-| -------- | :------: | -------- | -------- |
-| No span  | Span across three columns    |||
+| Column 1 |       Column 2        | Column 3 | Column 4 |
+| -------- | :-------------------: | -------- | -------- |
+| No span  | no support of colspan |          |          |
 ```
 
 ## 목차 자동 생성 : Ctrl + Shift + P >> markdown:create toc
 
 - [Test Page](#test-page)
   - [마크다운 문법](#마크다운-문법)
-  - [코드블럭 사용법](#코드블럭-사용법)
+  - [코드블럭 사용법 : \`\`\` 로 감싼다.](#코드블럭-사용법---로-감싼다)
   - [링크 사용법](#링크-사용법)
     - [참조 링크 : \[텍스트\]\[링크이름\] , 다른 줄에 \[링크이름\]: url](#참조-링크--텍스트링크이름--다른-줄에-링크이름-url)
     - [인라인 링크 : \[텍스트\](url)](#인라인-링크--텍스트url)
@@ -108,7 +120,7 @@ date: 2023-03-27
   - [표 삽입하기](#표-삽입하기)
     - [구조 잡기](#구조-잡기)
     - [표 정렬 : 콜론(:)을 헤더의 한쪽 또는 양쪽에 삽입](#표-정렬--콜론을-헤더의-한쪽-또는-양쪽에-삽입)
-    - [열 병합 : 병합할 컬럼들 사이에 수평구분선 없이 연속으로 파이프기호를 입력](#열-병합--병합할-컬럼들-사이에-수평구분선-없이-연속으로-파이프기호를-입력)
+    - [열 병합 : 빈 셀이 있으면 자동으로 그 앞 셀과 병합(기본적으로 지원안함)](#열-병합--빈-셀이-있으면-자동으로-그-앞-셀과-병합기본적으로-지원안함)
   - [목차 자동 생성 : Ctrl + Shift + P \>\> markdown:create toc](#목차-자동-생성--ctrl--shift--p--markdowncreate-toc)
   - [각주](#각주)
 
@@ -129,6 +141,6 @@ date: 2023-03-27
 <b id="footnote2">2</b> 각주2번 내용입니다. [↩](#a2)
 <b id="footnote3">3</b> 각주3번 내용입니다. [↩](#a3)
 
-\<b id="footnote1">1</b> 각주1번 내용입니다. [↩](#a1)
-\<b id="footnote2">2</b> 각주2번 내용입니다. [↩](#a2)
-\<b id="footnote3">3</b> 각주3번 내용입니다. [↩](#a3)
+\<b id="footnote1">1</b> 각주1번 내용입니다. \[↩](#a1)
+\<b id="footnote2">2</b> 각주2번 내용입니다. \[↩](#a2)
+\<b id="footnote3">3</b> 각주3번 내용입니다. \[↩](#a3)
