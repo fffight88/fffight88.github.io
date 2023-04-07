@@ -44,7 +44,7 @@ date: 2023-03-27
 \[Myblog]\[my-blog]
 
 \[my-blog]: https://fffight88.github.io
-### 인라인 링크 : \[텍스트](url)
+### 인라인 링크 : \[텍스트]\(url)
 [myblog](https://fffight88.github.io)
 
 \[myblog](https://fffight88.github.io)
@@ -60,7 +60,7 @@ date: 2023-03-27
 ## 이미지 사용법 : \![이미지이름]\(url)
 이미지는 링크를 삽입하는 방법과 같지만 대괄호 앞에 !를 붙인다.
 
-![이미지이름](url)
+![이미지이름]\(url)
 
 \![이미지이름]\(url)
 
@@ -72,14 +72,14 @@ date: 2023-03-27
 | :----------- | :-------------------: | -------------------: |
 | First row    |         Data          | Very long data entry |
 | Second row   |       **Cell**        |               *Cell* |
-| Third row    | no support of colspan |
+| Third row    | no support of colspan ||
 
 ```markdown
 | First Header |     Second Header     |         Third Header |
 | :----------- | :-------------------: | -------------------: |
 | First row    |         Data          | Very long data entry |
 | Second row   |       **Cell**        |               *Cell* |
-| Third row    | no support of colspan |
+| Third row    | no support of colspan ||
 ```
 
 ### 표 정렬 : 콜론(:)을 헤더의 한쪽 또는 양쪽에 삽입

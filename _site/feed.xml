@@ -1,541 +1,917 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-04T08:31:36+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Moonwalk</title><subtitle>Moonwalk is a fast and elegant Jekyll theme with a clean dark mode. It comes with horizontal list (for navbar and footer), card list (for portfolio), and a generic vertical list. It is very easy to modify in case you want to build over it - please see _layouts/home.html to do that.
-</subtitle><author><name>Abhinav Saxena</name></author><entry><title type="html">안녕하세요 테스트페이지 입니다</title><link href="http://localhost:4000/test" rel="alternate" type="text/html" title="안녕하세요 테스트페이지 입니다" /><published>2023-03-27T00:00:00+09:00</published><updated>2023-03-27T00:00:00+09:00</updated><id>http://localhost:4000/test</id><content type="html" xml:base="http://localhost:4000/test">&lt;h1 id=&quot;test-page&quot;&gt;Test Page&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-07T13:15:13+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Newbie’s DoorClosing</title><subtitle>A website with blog posts and pages</subtitle><entry><title type="html">HTTP 터널링</title><link href="http://localhost:4000/database/2023/04/07/HTTP-tunneling.html" rel="alternate" type="text/html" title="HTTP 터널링" /><published>2023-04-07T00:00:00+09:00</published><updated>2023-04-07T00:00:00+09:00</updated><id>http://localhost:4000/database/2023/04/07/HTTP-tunneling</id><content type="html" xml:base="http://localhost:4000/database/2023/04/07/HTTP-tunneling.html"><![CDATA[<p>Exercitation in nostrud incididunt laborum cupidatat enim ad eu anim officia aliquip. Lorem excepteur nulla deserunt adipisicing duis aliqua ullamco proident aute ut incididunt. In elit deserunt eiusmod ipsum dolor est anim ullamco consequat pariatur. Cillum officia voluptate nostrud adipisicing.
+<!--more--></p>
 
-&lt;h2 id=&quot;마크다운-문법&quot;&gt;마크다운 문법&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;큰제목            : ===&lt;/li&gt;
-  &lt;li&gt;작은제목          : —&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;em&gt;굵게+이탤릭&lt;/em&gt;&lt;/strong&gt; : 별(*) 3개 또는 언더바(__) 3개&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;굵게&lt;/strong&gt;          : 별(*) 2개 또는 언더바(__) 2개&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;이탤릭&lt;/em&gt;          : 별(*) 1개 또는 언더바(_) 1개&lt;/li&gt;
-  &lt;li&gt;&lt;del&gt;취소선&lt;/del&gt;        : 물결표시(~)  2개&lt;/li&gt;
-  &lt;li&gt;&lt;u&gt;밑줄&lt;/u&gt;       : u태그&lt;/li&gt;
-  &lt;li&gt;
-    &lt;blockquote&gt;
-      &lt;p&gt;인용문           : &amp;gt; 기호&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;코드&lt;/code&gt;            : `기호로 감싼다&lt;/li&gt;
-  &lt;li&gt;수평 구분선       : *** 또는 — 또는 ___&lt;/li&gt;
-  &lt;li&gt;번호 목록         : 숫자와 점 (1. 등)&lt;/li&gt;
-  &lt;li&gt;기호 목록         : - 또는 + 또는 *. Tab키로 계층 변화&lt;/li&gt;
-&lt;/ul&gt;
+<p>Eu incididunt esse id officia adipisicing qui esse. Cupidatat ad ex laborum aliquip ex dolore. Mollit minim voluptate irure culpa ad adipisicing Lorem non Lorem. Aute labore dolore culpa et veniam anim reprehenderit fugiat incididunt amet culpa cupidatat ut duis. Exercitation quis magna eiusmod qui Lorem excepteur do qui eu duis. Aliqua minim ipsum sit magna eu mollit. Voluptate esse sint quis aute laborum aute.</p>
 
-&lt;h2 id=&quot;코드블럭-사용법---로-감싼다&quot;&gt;코드블럭 사용법 : ``` 로 감싼다.&lt;/h2&gt;
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
-   &lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;charset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;UTF-8&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;viewport&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;width=device-width, initial-scale=1.0&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;테스트 페이지&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
-   &lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
-   &lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt; Hello, world! 안녕, 세상!&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;      
-   &lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<p>Do ullamco quis mollit mollit quis irure. Sunt elit ex officia anim excepteur laborum culpa enim id. Quis sint occaecat nulla excepteur.</p>
 
-&lt;h2 id=&quot;링크-사용법&quot;&gt;링크 사용법&lt;/h2&gt;
-&lt;h3 id=&quot;참조-링크--텍스트링크이름--다른-줄에-링크이름-url&quot;&gt;참조 링크 : [텍스트][링크이름] , 다른 줄에 [링크이름]: url&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;https://fffight88.github.io&quot;&gt;Myblog&lt;/a&gt;&lt;/p&gt;
+<p>Cillum sit sint est veniam ad sint reprehenderit ullamco aliquip aliquip consequat. Et exercitation exercitation velit qui tempor dolor labore exercitation non fugiat. Ut minim irure exercitation mollit duis duis. Aliquip reprehenderit ea ex elit laborum esse amet officia. Sint ullamco consectetur occaecat commodo laboris sunt commodo tempor cillum ut ea.</p>
 
-&lt;p&gt;[Myblog][my-blog]&lt;/p&gt;
+<p>Minim mollit sit deserunt mollit in amet labore officia enim occaecat dolor voluptate deserunt. Non aute qui consequat anim aliquip laborum id ea culpa. Culpa pariatur aute aliqua sint proident elit cupidatat ea et ullamco eu sunt labore. Voluptate excepteur non pariatur adipisicing aute aute proident. Deserunt minim fugiat do do adipisicing adipisicing.</p>]]></content><author><name>fffight88</name></author><category term="database" /><category term="http터널링" /><category term="mssql" /><summary type="html"><![CDATA[Exercitation in nostrud incididunt laborum cupidatat enim ad eu anim officia aliquip. Lorem excepteur nulla deserunt adipisicing duis aliqua ullamco proident aute ut incididunt. In elit deserunt eiusmod ipsum dolor est anim ullamco consequat pariatur. Cillum officia voluptate nostrud adipisicing.]]></summary></entry><entry><title type="html">안녕하세요 테스트페이지 입니다</title><link href="http://localhost:4000/test/2023/03/27/test.html" rel="alternate" type="text/html" title="안녕하세요 테스트페이지 입니다" /><published>2023-03-27T00:00:00+09:00</published><updated>2023-03-27T00:00:00+09:00</updated><id>http://localhost:4000/test/2023/03/27/test</id><content type="html" xml:base="http://localhost:4000/test/2023/03/27/test.html"><![CDATA[<h1 id="test-page">Test Page</h1>
 
-&lt;p&gt;[my-blog]: https://fffight88.github.io&lt;/p&gt;
-&lt;h3 id=&quot;인라인-링크--텍스트url&quot;&gt;인라인 링크 : [텍스트](url)&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;https://fffight88.github.io&quot;&gt;myblog&lt;/a&gt;&lt;/p&gt;
+<h2 id="마크다운-문법">마크다운 문법</h2>
+<ul>
+  <li>큰제목            : ===</li>
+  <li>작은제목          : —</li>
+  <li><strong><em>굵게+이탤릭</em></strong> : 별(*) 3개 또는 언더바(__) 3개</li>
+  <li><strong>굵게</strong>          : 별(*) 2개 또는 언더바(__) 2개</li>
+  <li><em>이탤릭</em>          : 별(*) 1개 또는 언더바(_) 1개</li>
+  <li><del>취소선</del>        : 물결표시(~)  2개</li>
+  <li><u>밑줄</u>       : u태그</li>
+  <li>
+    <blockquote>
+      <p>인용문           : &gt; 기호</p>
+    </blockquote>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">코드</code>            : `기호로 감싼다</li>
+  <li>수평 구분선       : *** 또는 — 또는 ___</li>
+  <li>번호 목록         : 숫자와 점 (1. 등)</li>
+  <li>기호 목록         : - 또는 + 또는 *. Tab키로 계층 변화</li>
+</ul>
 
-&lt;p&gt;[myblog](https://fffight88.github.io)&lt;/p&gt;
-&lt;h3 id=&quot;url-링크--중괄호-사이에-url&quot;&gt;url 링크 : 중괄호(&amp;lt;&amp;gt;) 사이에 url&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;https://fffight88.github.io&quot;&gt;https://fffight88.github.io&lt;/a&gt;&lt;/p&gt;
+<h2 id="코드블럭-사용법---로-감싼다">코드블럭 사용법 : ``` 로 감싼다.</h2>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;html&gt;</span>
+   <span class="nt">&lt;head&gt;</span>
+      <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1.0"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;title&gt;</span>테스트 페이지<span class="nt">&lt;/title&gt;</span>
+   <span class="nt">&lt;/head&gt;</span>
+   <span class="nt">&lt;body&gt;</span>
+      <span class="nt">&lt;p&gt;</span> Hello, world! 안녕, 세상!<span class="nt">&lt;/p&gt;</span>      
+   <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
 
-&lt;p&gt;&amp;lt;https://fffight88.github.io&amp;gt;&lt;/p&gt;
-&lt;h3 id=&quot;내부-링크--텍스트id&quot;&gt;내부 링크 : [텍스트](#id)&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;#my-blog&quot;&gt;MyBlog&lt;/a&gt;&lt;/p&gt;
+<h2 id="링크-사용법">링크 사용법</h2>
+<h3 id="참조-링크--텍스트링크이름--다른-줄에-링크이름-url">참조 링크 : [텍스트][링크이름] , 다른 줄에 [링크이름]: url</h3>
+<p><a href="https://fffight88.github.io">Myblog</a></p>
 
-&lt;p&gt;[MyBlog](#my-blog)&lt;/p&gt;
+<p>[Myblog][my-blog]</p>
 
-&lt;h2 id=&quot;이미지-사용법--이미지이름url&quot;&gt;이미지 사용법 : ![이미지이름](url)&lt;/h2&gt;
-&lt;p&gt;이미지는 링크를 삽입하는 방법과 같지만 대괄호 앞에 !를 붙인다.&lt;/p&gt;
+<p>[my-blog]: https://fffight88.github.io</p>
+<h3 id="인라인-링크--텍스트url">인라인 링크 : [텍스트](url)</h3>
+<p><a href="https://fffight88.github.io">myblog</a></p>
 
-&lt;p&gt;&lt;img src=&quot;url&quot; alt=&quot;이미지이름&quot; /&gt;&lt;/p&gt;
+<p>[myblog](https://fffight88.github.io)</p>
+<h3 id="url-링크--중괄호-사이에-url">url 링크 : 중괄호(&lt;&gt;) 사이에 url</h3>
+<p><a href="https://fffight88.github.io">https://fffight88.github.io</a></p>
 
-&lt;p&gt;![이미지이름](url)&lt;/p&gt;
+<p>&lt;https://fffight88.github.io&gt;</p>
+<h3 id="내부-링크--텍스트id">내부 링크 : [텍스트](#id)</h3>
+<p><a href="#my-blog">MyBlog</a></p>
 
-&lt;h2 id=&quot;표-삽입하기&quot;&gt;표 삽입하기&lt;/h2&gt;
+<p>[MyBlog](#my-blog)</p>
 
-&lt;h3 id=&quot;구조-잡기&quot;&gt;구조 잡기&lt;/h3&gt;
+<h2 id="이미지-사용법--이미지이름url">이미지 사용법 : ![이미지이름](url)</h2>
+<p>이미지는 링크를 삽입하는 방법과 같지만 대괄호 앞에 !를 붙인다.</p>
 
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;First Header&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Second Header&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;Third Header&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;First row&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Data&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;Very long data entry&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Second row&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Cell&lt;/strong&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;&lt;em&gt;Cell&lt;/em&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Third row&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;no support of colspan&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+<p>![이미지이름](url)</p>
 
-&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;| First Header |     Second Header     |         Third Header |
+<p>![이미지이름](url)</p>
+
+<h2 id="표-삽입하기">표 삽입하기</h2>
+
+<h3 id="구조-잡기">구조 잡기</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">First Header</th>
+      <th style="text-align: center">Second Header</th>
+      <th style="text-align: right">Third Header</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">First row</td>
+      <td style="text-align: center">Data</td>
+      <td style="text-align: right">Very long data entry</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Second row</td>
+      <td style="text-align: center"><strong>Cell</strong></td>
+      <td style="text-align: right"><em>Cell</em></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Third row</td>
+      <td style="text-align: center">no support of colspan</td>
+      <td style="text-align: right"> </td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>| First Header |     Second Header     |         Third Header |
 | :----------- | :-------------------: | -------------------: |
 | First row    |         Data          | Very long data entry |
-| Second row   |       &lt;span class=&quot;gs&quot;&gt;**Cell**&lt;/span&gt;        |               &lt;span class=&quot;ge&quot;&gt;*Cell*&lt;/span&gt; |
-| Third row    | no support of colspan |
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+| Second row   |       <span class="gs">**Cell**</span>        |               <span class="ge">*Cell*</span> |
+| Third row    | no support of colspan ||
+</code></pre></div></div>
 
-&lt;h3 id=&quot;표-정렬--콜론을-헤더의-한쪽-또는-양쪽에-삽입&quot;&gt;표 정렬 : 콜론(:)을 헤더의 한쪽 또는 양쪽에 삽입&lt;/h3&gt;
+<h3 id="표-정렬--콜론을-헤더의-한쪽-또는-양쪽에-삽입">표 정렬 : 콜론(:)을 헤더의 한쪽 또는 양쪽에 삽입</h3>
 
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Header One&lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;Header Two&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Header Three&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;Header Four&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Default&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Left&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Center&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;Right&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+<table>
+  <thead>
+    <tr>
+      <th>Header One</th>
+      <th style="text-align: left">Header Two</th>
+      <th style="text-align: center">Header Three</th>
+      <th style="text-align: right">Header Four</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Default</td>
+      <td style="text-align: left">Left</td>
+      <td style="text-align: center">Center</td>
+      <td style="text-align: right">Right</td>
+    </tr>
+  </tbody>
+</table>
 
-&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;| Header One | Header Two | Header Three | Header Four |
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>| Header One | Header Two | Header Three | Header Four |
 | ---------- | :--------- | :----------: | ----------: |
 | Default    | Left       |    Center    |       Right |
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
 
-&lt;h3 id=&quot;열-병합--빈-셀이-있으면-자동으로-그-앞-셀과-병합기본적으로-지원안함&quot;&gt;열 병합 : 빈 셀이 있으면 자동으로 그 앞 셀과 병합(기본적으로 지원안함)&lt;/h3&gt;
+<h3 id="열-병합--빈-셀이-있으면-자동으로-그-앞-셀과-병합기본적으로-지원안함">열 병합 : 빈 셀이 있으면 자동으로 그 앞 셀과 병합(기본적으로 지원안함)</h3>
 
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Column 1&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Column 2&lt;/th&gt;
-      &lt;th&gt;Column 3&lt;/th&gt;
-      &lt;th&gt;Column 4&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;No span&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;no support of colspan&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+<table>
+  <thead>
+    <tr>
+      <th>Column 1</th>
+      <th style="text-align: center">Column 2</th>
+      <th>Column 3</th>
+      <th>Column 4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>No span</td>
+      <td style="text-align: center">no support of colspan</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
-&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;| Column 1 |       Column 2        | Column 3 | Column 4 |
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>| Column 1 |       Column 2        | Column 3 | Column 4 |
 | -------- | :-------------------: | -------- | -------- |
 | No span  | no support of colspan |          |          |
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;목차-자동-생성--ctrl--shift--p-markdowncreate-toc&quot;&gt;목차 자동 생성 : Ctrl + Shift + P » markdown:create toc&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;#test-page&quot;&gt;Test Page&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#마크다운-문법&quot;&gt;마크다운 문법&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#코드블럭-사용법---로-감싼다&quot;&gt;코드블럭 사용법 : ``` 로 감싼다.&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#링크-사용법&quot;&gt;링크 사용법&lt;/a&gt;
-        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;#참조-링크--텍스트링크이름--다른-줄에-링크이름-url&quot;&gt;참조 링크 : [텍스트][링크이름] , 다른 줄에 [링크이름]: url&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#인라인-링크--텍스트url&quot;&gt;인라인 링크 : [텍스트](url)&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#url-링크--중괄호-사이에-url&quot;&gt;url 링크 : 중괄호(&amp;lt;&amp;gt;) 사이에 url&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#내부-링크--텍스트id&quot;&gt;내부 링크 : [텍스트](#id)&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#이미지-사용법--이미지이름url&quot;&gt;이미지 사용법 : ![이미지이름](url)&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#표-삽입하기&quot;&gt;표 삽입하기&lt;/a&gt;
-        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;#구조-잡기&quot;&gt;구조 잡기&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#표-정렬--콜론을-헤더의-한쪽-또는-양쪽에-삽입&quot;&gt;표 정렬 : 콜론(:)을 헤더의 한쪽 또는 양쪽에 삽입&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#열-병합--빈-셀이-있으면-자동으로-그-앞-셀과-병합기본적으로-지원안함&quot;&gt;열 병합 : 빈 셀이 있으면 자동으로 그 앞 셀과 병합(기본적으로 지원안함)&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#목차-자동-생성--ctrl--shift--p--markdowncreate-toc&quot;&gt;목차 자동 생성 : Ctrl + Shift + P &amp;gt;&amp;gt; markdown:create toc&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#각주&quot;&gt;각주&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;각주&quot;&gt;각주&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;깃헙에서는 markdown의 각주 기능을 제공하지 않으므로 다음과 같이 한다.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;각주번호1번&lt;sup id=&quot;a1&quot;&gt;&lt;a href=&quot;#footnote1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;이고 각주번호2번&lt;sup id=&quot;a2&quot;&gt;&lt;a href=&quot;#footnote2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;이며 각주번호3번&lt;sup id=&quot;a3&quot;&gt;&lt;a href=&quot;#footnote3&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;입니다.&lt;/p&gt;
-
-&lt;p&gt;각주번호1번&amp;lt;sup id=”a1”&amp;gt;&lt;a href=&quot;#footnote1&quot;&gt;1&lt;/a&gt;&amp;lt;/sup&amp;gt;이고 각주번호2번&amp;lt;sup id=”a2”&amp;gt;&lt;a href=&quot;#footnote2&quot;&gt;2&lt;/a&gt;&amp;lt;/sup&amp;gt;이며 각주번호3번&amp;lt;sup id=”a3”&amp;gt;&lt;a href=&quot;#footnote3&quot;&gt;3&lt;/a&gt;&amp;lt;/sup&amp;gt;입니다.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;b id=&quot;footnote1&quot;&gt;1&lt;/b&gt; 각주1번 내용입니다. &lt;a href=&quot;#a1&quot;&gt;↩&lt;/a&gt;
-&lt;b id=&quot;footnote2&quot;&gt;2&lt;/b&gt; 각주2번 내용입니다. &lt;a href=&quot;#a2&quot;&gt;↩&lt;/a&gt;
-&lt;b id=&quot;footnote3&quot;&gt;3&lt;/b&gt; 각주3번 내용입니다. &lt;a href=&quot;#a3&quot;&gt;↩&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&amp;lt;b id=”footnote1”&amp;gt;1&amp;lt;/b&amp;gt; 각주1번 내용입니다. [↩](#a1)
-&amp;lt;b id=”footnote2”&amp;gt;2&amp;lt;/b&amp;gt; 각주2번 내용입니다. [↩](#a2)
-&amp;lt;b id=”footnote3”&amp;gt;3&amp;lt;/b&amp;gt; 각주3번 내용입니다. [↩](#a3)&lt;/p&gt;</content><author><name>Abhinav Saxena</name></author><category term="test" /><summary type="html">Test Page</summary></entry><entry><title type="html">TaraTPS - 1차 프로젝트</title><link href="http://localhost:4000/tara1st" rel="alternate" type="text/html" title="TaraTPS - 1차 프로젝트" /><published>2023-01-27T00:00:00+09:00</published><updated>2023-01-27T00:00:00+09:00</updated><id>http://localhost:4000/tara1st</id><content type="html" xml:base="http://localhost:4000/tara1st">&lt;h4 id=&quot;당사-erp-시스템g7-유지보수작업-인수-및-회계관련로직-개선-기능-추가&quot;&gt;당사 ERP 시스템(G7) 유지보수작업 인수 및 회계관련로직 개선, 기능 추가&lt;/h4&gt;
-&lt;ul&gt;
-    &lt;li&gt;수행 기간: 2022년 11월 중순 ~ 2023년 1월 초&lt;/li&gt;
-    &lt;li&gt;수행 배경&lt;/li&gt;
-        &lt;ul&gt;
-            &lt;li&gt;현 시스템의 회계 처리 로직으로 표현하는 데이터의 내용이 현실과 달라 당해연도 내에 해당 부분을 수정하지 않으면 가산세가 부과될 수 있음.&lt;/li&gt;
-            &lt;li&gt;자회사 합병 및 조직 개편으로 ERP시스템 담당부서가 변경되어 업무를 인수&lt;/li&gt;
-            &lt;li&gt;기존 담당부서가 다른 프로젝트를 맡아 주력으로 진행해 온 까닭에 사용자의 불편사항이 누적되어 있는 상태임.&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;li&gt;중점 사항: 현금 및 무통장입금 매출과 같은 방식으로 처리되던 외상 매출의 로직을 대폭 변경&lt;/li&gt;
-    &lt;li&gt;수행 인원: 3명&lt;/li&gt;
-    &lt;li&gt;본인 프로젝트 기여도: 60%&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;개발-환경&quot;&gt;개발 환경&lt;/h4&gt;
-&lt;ul&gt;
-    &lt;li&gt;운영체제     : Win11&lt;/li&gt;
-    &lt;li&gt;플랫폼       : Web&lt;/li&gt;
-    &lt;li&gt;web서버      : AWS EC2&lt;/li&gt;
-    &lt;li&gt;로컬서버     : Apache 2.4(XAMPP)&lt;/li&gt;
-    &lt;li&gt;DB서버       : AWS RDS&lt;/li&gt;
-    &lt;li&gt;개발언어     : PHP 5.6, JavaScript(Jquery, Ajax)&lt;/li&gt;
-    &lt;li&gt;프레임워크   : CodeIgnitor 3.0&lt;/li&gt;
-    &lt;li&gt;IDE : Sublime Text&lt;/li&gt;
-    &lt;li&gt;RDBS        : MySQL&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;프로젝트-수행을-통한-기술적-성장&quot;&gt;프로젝트 수행을 통한 기술적 성장&lt;/h4&gt;
-&lt;ul&gt;
-    &lt;li&gt;CodeIgnitor 프레임워크를 통해 MVC패턴을 이용한 웹 어플리케이션 구성에 익숙해짐&lt;/li&gt;
-    &lt;li&gt;웹브라우저를 이용한 디버깅 작업에 익숙해짐&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;프로젝트-수행의-의의&quot;&gt;프로젝트 수행의 의의&lt;/h4&gt;
-&lt;ul&gt;
-    &lt;li&gt;PHP 및 자바스크립트를 이용한 웹개발을 처음으로 해 보는 상황에서 약 1.5개월이라는 길지 않은 기간 내에 회계 로직 제작을 위한 도메인 지식을 함께 공부해서 구현해야 하는 부분이 상당히 도전적이었음.&lt;/li&gt;
-    &lt;li&gt;교육기관에서 공부를 위해 수행하던 활동 및 프로젝트를 벗어나 처음으로 경험하는 상업적 활동&lt;/li&gt;    
-&lt;/ul&gt;</content><author><name>Abhinav Saxena</name></author><category term="portfolio" /><summary type="html">당사 ERP 시스템(G7) 유지보수작업 인수 및 회계관련로직 개선, 기능 추가 수행 기간: 2022년 11월 중순 ~ 2023년 1월 초 수행 배경 현 시스템의 회계 처리 로직으로 표현하는 데이터의 내용이 현실과 달라 당해연도 내에 해당 부분을 수정하지 않으면 가산세가 부과될 수 있음. 자회사 합병 및 조직 개편으로 ERP시스템 담당부서가 변경되어 업무를 인수 기존 담당부서가 다른 프로젝트를 맡아 주력으로 진행해 온 까닭에 사용자의 불편사항이 누적되어 있는 상태임. 중점 사항: 현금 및 무통장입금 매출과 같은 방식으로 처리되던 외상 매출의 로직을 대폭 변경 수행 인원: 3명 본인 프로젝트 기여도: 60%</summary></entry><entry><title type="html">Soopr</title><link href="http://localhost:4000/soopr" rel="alternate" type="text/html" title="Soopr" /><published>2021-03-04T00:00:00+09:00</published><updated>2021-03-04T00:00:00+09:00</updated><id>http://localhost:4000/soopr</id><content type="html" xml:base="http://localhost:4000/soopr">&lt;p&gt;&lt;a href=&quot;https://www.soopr.co&quot;&gt;Soopr&lt;/a&gt; is the easiest way for you to add share &amp;amp; reaction buttons to your blog and website, integrate an URL shortener and simple to understand analytics service. Soopr lets you manage all of these using a powerful dashboard.&lt;/p&gt;
-
-&lt;p&gt;Moonwalk uses Soopr for share and like buttons and it is already integrated. By default, Moonwalk shows &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;circular&lt;/code&gt; Twitter, Facebook and Copy buttons in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;base&lt;/code&gt; size. To add &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;like&lt;/code&gt; button, please signup for free on &lt;a href=&quot;https://www.soopr.co&quot;&gt;Soopr&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Once you have signed up on Soopr, get a publish token for your website and edit &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; file and add it under &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;soopr&lt;/code&gt; key and restart the server.&lt;/p&gt;
-&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;soopr&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;publish-token&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;ADD_YOUR_PUBLISH_TOKEN_HERE&quot;&lt;/span&gt; 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Check out the &lt;a href=&quot;https://www.soopr.co&quot;&gt;Soopr Website&lt;/a&gt; for more info on how to get the most out of Soopr.&lt;/p&gt;</content><author><name>Abhinav Saxena</name></author><category term="soopr" /><category term="config" /><summary type="html">Soopr is the easiest way for you to add share &amp;amp; reaction buttons to your blog and website, integrate an URL shortener and simple to understand analytics service. Soopr lets you manage all of these using a powerful dashboard.</summary></entry><entry><title type="html">Code</title><link href="http://localhost:4000/code" rel="alternate" type="text/html" title="Code" /><published>2021-01-08T00:00:00+09:00</published><updated>2021-01-08T00:00:00+09:00</updated><id>http://localhost:4000/code</id><content type="html" xml:base="http://localhost:4000/code">&lt;h1 id=&quot;language-test&quot;&gt;Language Test&lt;/h1&gt;
-
-&lt;h2 id=&quot;python&quot;&gt;Python&lt;/h2&gt;
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;microrequests&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;mr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;microrequests&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# mr is requests&apos; session object and you can use it in similar manner
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;res&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://httpbin.org/get&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;ruby&quot;&gt;Ruby&lt;/h2&gt;
-&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;gmail&apos;&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;time&apos;&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;yaml&apos;&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;erb&apos;&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ARGV&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Syntax: &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;__FILE__&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; gmail-username gmail-password&quot;&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;exit&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;config&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;YAML&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;load_file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;dirname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;__FILE__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/config.yaml&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;body&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ERB&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;body&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;gmail&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Gmail&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;connect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;ARGV&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ARGV&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# variable &apos;name&apos; is important given it is used in body as well&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;email_id&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;to&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;sending to &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;email_id&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;email&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gmail&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;compose&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;email_id&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;from&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;subject&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;subject&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;body&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;binding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;email&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;deliver!&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;gmail&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;logout&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;javascript&quot;&gt;Javascript&lt;/h2&gt;
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;merge&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;webpack-merge&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;common&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;./webpack.common.js&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;merge&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;common&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;mode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;development&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;devtool&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;inline-source-map&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;devServer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;writeToDisk&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;contentBase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;__dirname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;dist&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;publicPath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;__dirname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;dist&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;compress&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;port&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;elixir&quot;&gt;Elixir&lt;/h2&gt;
-&lt;div class=&quot;language-elixir highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;defmodule&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;MyAppWeb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;BearerAuth&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-
-  &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Plug&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Conn&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;alias&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;MyApp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Account&lt;/span&gt;
-
-  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;options&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-
-  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;call&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;conn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;get_bearer_auth_token&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;conn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-      &lt;span class=&quot;no&quot;&gt;nil&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;conn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;unauthorized&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-      &lt;span class=&quot;ss&quot;&gt;:error&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;conn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;unauthorized&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;auth_token&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;account&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;
-          &lt;span class=&quot;no&quot;&gt;Account&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get_from_token&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;auth_token&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;account&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-          &lt;span class=&quot;n&quot;&gt;assign&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;conn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:current_account&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;account&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
-          &lt;span class=&quot;n&quot;&gt;conn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;unauthorized&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-
-  &lt;span class=&quot;k&quot;&gt;defp&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;get_bearer_auth_token&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;conn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Bearer &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;auth_token&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;get_req_header&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;conn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;authorization&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;auth_token&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:error&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-
-  &lt;span class=&quot;k&quot;&gt;defp&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;unauthorized&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;conn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;conn&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;|&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;resp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;401&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Unauthorized&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;|&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;halt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;css&quot;&gt;CSS&lt;/h2&gt;
-&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.highlight&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;pre&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;blockquote&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;border-radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0.5em&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;blockquote&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;--bg-secondary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;nl&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1px&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;--border&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;solid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Abhinav Saxena</name></author><summary type="html">Language Test</summary></entry><entry><title type="html">Post Example With Headings And Toc</title><link href="http://localhost:4000/post-example-with-headings-and-toc" rel="alternate" type="text/html" title="Post Example With Headings And Toc" /><published>2020-07-09T00:00:00+09:00</published><updated>2020-07-09T00:00:00+09:00</updated><id>http://localhost:4000/post-example-with-headings-and-toc</id><content type="html" xml:base="http://localhost:4000/post-example-with-headings-and-toc">&lt;p&gt;Mauris viverra dictum ultricies. Vestibulum quis ipsum euismod, facilisis metus sed, varius ipsum. Donec scelerisque lacus libero, eu dignissim sem venenatis at. Nunc a egestas tortor, sed feugiat leo.&lt;/p&gt;
-
-&lt;h2 id=&quot;table-of-contents&quot;&gt;Table of contents&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;#table-of-contents&quot;&gt;Table of contents&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#the-start&quot;&gt;The start&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#the-middle&quot;&gt;The middle&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#the-end&quot;&gt;The end&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Mauris viverra dictum ultricies. Vestibulum quis ipsum euismod, facilisis metus sed, varius ipsum. Donec scelerisque lacus libero, eu dignissim sem venenatis at. Nunc a egestas tortor, sed feugiat leo. Vestibulum porta tincidunt tellus, vitae ornare tortor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed nunc neque, tempor in iaculis non, faucibus et metus. Etiam id nisl ut lorem gravida euismod.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-start&quot;&gt;&lt;a href=&quot;#the-start&quot;&gt;The start&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;Fusce non velit cursus ligula mattis convallis vel at metus. Sed pharetra tellus massa, non elementum eros vulputate non. Suspendisse potenti. Quisque arcu felis, laoreet vel accumsan sit amet, fermentum at nunc. Sed massa quam, auctor in eros quis, porttitor tincidunt orci. Nulla convallis id sapien ornare viverra. Cras nec est lacinia ligula porta tincidunt. Nam a est eget ligula pellentesque posuere. Maecenas quis enim ac risus accumsan scelerisque. Aliquam vitae libero sapien. Etiam convallis, metus nec suscipit condimentum, quam massa congue velit, sit amet sollicitudin nisi tortor a lectus. Cras a arcu enim. Suspendisse hendrerit euismod est ac gravida. Donec vitae elit tristique, suscipit eros at, aliquam augue. In ac faucibus dui. Sed tempor lacus tristique elit sagittis, vitae tempor massa convallis.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-middle&quot;&gt;&lt;a href=&quot;#the-middle&quot;&gt;The middle&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;Proin quis velit et eros auctor laoreet. Aenean eget nibh odio. Suspendisse mollis enim pretium, fermentum urna vitae, egestas purus. Donec convallis tincidunt purus, scelerisque fermentum eros sagittis vel. Aliquam ac aliquet risus, tempus iaculis est. Fusce molestie mauris non interdum hendrerit. Curabitur ullamcorper, eros vitae interdum volutpat, lacus magna lacinia turpis, at accumsan dui tortor vel lectus. Aenean risus massa, semper non lectus rutrum, facilisis imperdiet mi. Praesent sed quam quis purus auctor ornare et sed augue. Vestibulum non quam quis ligula luctus placerat sed sit amet erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Fusce auctor, sem eu volutpat dignissim, turpis nibh malesuada arcu, in consequat elit mauris quis sem. Nam tristique sit amet enim vel accumsan. Sed id nibh commodo, dictum sem id, semper quam.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-end&quot;&gt;The end&lt;/h2&gt;
-
-&lt;p&gt;Donec ex lectus, tempus non lacinia quis, pretium non ipsum. Praesent est nunc, rutrum vel tellus eu, tristique laoreet purus. In rutrum orci sit amet ex ornare, sit amet finibus lacus laoreet. Etiam ac facilisis purus, eget porttitor odio. Suspendisse tempus dolor nec risus sodales posuere. Proin dui dui, mollis a consectetur molestie, lobortis vitae tellus. Vivamus at purus sed urna sollicitudin mattis. Mauris lacinia libero in lobortis pulvinar. Nullam sit amet condimentum justo. Donec orci justo, pharetra ut dolor non, interdum finibus orci. Proin vitae ante a dui sodales commodo ac id elit. Nunc vel accumsan nunc, sit amet congue nunc. Aliquam in lacinia velit. Integer lobortis luctus eros, in fermentum metus aliquet a. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.&lt;/p&gt;</content><author><name>Abhinav Saxena</name></author><summary type="html">Mauris viverra dictum ultricies. Vestibulum quis ipsum euismod, facilisis metus sed, varius ipsum. Donec scelerisque lacus libero, eu dignissim sem venenatis at. Nunc a egestas tortor, sed feugiat leo.</summary></entry><entry><title type="html">Language Tests</title><link href="http://localhost:4000/language-tests" rel="alternate" type="text/html" title="Language Tests" /><published>2020-07-08T00:00:00+09:00</published><updated>2020-07-08T00:00:00+09:00</updated><id>http://localhost:4000/language-tests</id><content type="html" xml:base="http://localhost:4000/language-tests">&lt;p&gt;Note: Text is from &lt;a href=&quot;https://github.com/huangyz0918/moving&quot;&gt;moving&lt;/a&gt;, which is another good Jekyll theme.&lt;/p&gt;
-
-&lt;h3 id=&quot;1-日本語テスト&quot;&gt;1. 日本語テスト&lt;/h3&gt;
-
-&lt;p&gt;This is a Japanese test post to show you how japanese is displayed.&lt;/p&gt;
-
-&lt;p&gt;私は昨日ついにその助力家というのの上よりするたなけれ。
-最も今をお話団はちょうどこの前後なかろでくらいに困りがいるたをは帰着考えたなかって、そうにもするでうたらない。
-がたを知っないはずも同時に九月をいよいよたありた。&lt;/p&gt;
-
-&lt;p&gt;もっと槙さんにぼんやり金少し説明にえた自分大した人私か影響にというお関係たうませないが、この次第も私か兄具合に使うて、槙さんののに当人のあなたにさぞご意味と行くて私個人が小尊敬を聴いように同時に同反抗に集っだうて、いよいよまず相当へあっうからいだ事をしでなけれ。&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;それでそれでもご時日をしはずはたったいやと突き抜けるますて、その元がは行ったてという獄を尽すていけですた。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;この中道具の日その学校はあなたごろがすまなりかとネルソンさんの考えるですん、辺の事実ないというご盲従ありたですと、爺さんのためが薬缶が結果までの箸の当時してならて、多少の十月にためからそういう上からとにかくしましないと触れべきものたで、ないうですと多少お人達したのでたた。&lt;/p&gt;
-
-&lt;p&gt;From &lt;a href=&quot;http://lipsum.sugutsukaeru.jp/index.cgi&quot;&gt;すぐ使えるダミーテキスト - 日本語 Lorem ipsum.&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;2-繁体中文测试&quot;&gt;2. 繁体中文测试&lt;/h3&gt;
-
-&lt;p&gt;This is a chinese test post to show you how chinese is displayed.&lt;/p&gt;
-
-&lt;p&gt;善我王上魚、產生資西員合兒臉趣論。畫衣生這著爸毛親可時，安程幾？合學作。觀經而作建。都非子作這！法如言子你關！手師也。&lt;/p&gt;
-
-&lt;p&gt;以也座論頭室業放。要車時地變此親不老高小是統習直麼調未，行年香一？&lt;/p&gt;
-
-&lt;p&gt;就竟在，是我童示讓利分和異種百路關母信過明驗有個歷洋中前合著區亮風值新底車有正結，進快保的行戰從：弟除文辦條國備當來際年每小腳識世可的的外的廣下歌洲保輪市果底天影；全氣具些回童但倒影發狀在示，數上學大法很，如要我……月品大供這起服滿老？應學傳者國：山式排只不之然清同關；細車是！停屋常間又，資畫領生，相們制在？公別的人寫教資夠。資再我我！只臉夫藝量不路政吃息緊回力之；兒足灣電空時局我怎初安。意今一子區首者微陸現際安除發連由子由而走學體區園我車當會，經時取頭，嚴了新科同？很夫營動通打，出和導一樂，查旅他。坐是收外子發物北看蘭戰坐車身做可來。道就學務。&lt;/p&gt;
-
-&lt;p&gt;國新故。&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;工步他始能詩的，裝進分星海演意學值例道……於財型目古香亮自和這乎？化經溫詩。只賽嚴大一主價世哥受的沒有中年即病行金拉麼河。主小路了種就小為廣不？&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;From &lt;a href=&quot;http://www.richyli.com/tool/loremipsum/&quot;&gt;亂數假文產生器 - Chinese Lorem Ipsum.&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;3-简体中文测试&quot;&gt;3. 简体中文测试&lt;/h3&gt;
-
-&lt;p&gt;效育声去本义然空，各值太法心想，场强实地。 题铁习点儿表管少间千，只何政亲织文意部，千影画派证男须。 手反取长风治增非等直难群，连取及天他己事头级，影数弦适把气快目人。 专议以省通引而千个，格则口段度样水热马，地教少务改磨。 包思外心半院应她算斯，市外会快记路又火学，劳如肃它准众丧边。&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;团算部住县单总边素格军所，合音府教看和广光采率位转，位用品根确针百。 证其标元角工方海接交他，论象切万世认一响义，治然身本风弦带题。 向我次路持加北，她不反心。 说总元军例市决，现始即算证养，规走还壳。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;因林可相儿应满军，热影省条律因资再，整肃赤心将届。 局广写两量备验还，南教事争工民的，备进研上布。 素身电活非直，速这区交示从，百层达。 资量那毛什京身，白这快。 半打容三手开常价或，手严量般象式效，名可重芽门适。 来设什一我么，光界美么或，住身式准。 造酸改表委验众办地百养，商物战众本列听度名院，制压录丽快与千机内。 住需当四议决得命南然照按民置，当住命形金决否矿单外。 气象理离开新集增际，三划方工义很年关，拉许准孝口。 构片出干计由备美打养，持育总指承入无己。&lt;/p&gt;
-
-&lt;p&gt;From &lt;a href=&quot;http://www.cancms.com/content/dummytext&quot;&gt;假文生成器， lorem ipsum Chinese&lt;/a&gt;&lt;/p&gt;</content><author><name>Abhinav Saxena</name></author><summary type="html">Note: Text is from moving, which is another good Jekyll theme.</summary></entry><entry><title type="html">Very Very Very Long Title And Very Very Very Short Content</title><link href="http://localhost:4000/very-very-very-long-title-and-very-very-very-short-content" rel="alternate" type="text/html" title="Very Very Very Long Title And Very Very Very Short Content" /><published>2020-07-08T00:00:00+09:00</published><updated>2020-07-08T00:00:00+09:00</updated><id>http://localhost:4000/very-very-very-long-title-and-very-very-very-short-content</id><content type="html" xml:base="http://localhost:4000/very-very-very-long-title-and-very-very-very-short-content">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel lacinia neque. Praesent nulla quam, ullamcorper in sollicitudin ac, molestie sed justo. Cras aliquam, sapien id consectetur accumsan, augue magna faucibus ex, ut ultricies turpis tortor vel ante. In at rutrum tellus. Nullam vestibulum metus eu purus malesuada, volutpat mattis leo facilisis.&lt;/p&gt;</content><author><name>Abhinav Saxena</name></author><summary type="html">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel lacinia neque. Praesent nulla quam, ullamcorper in sollicitudin ac, molestie sed justo. Cras aliquam, sapien id consectetur accumsan, augue magna faucibus ex, ut ultricies turpis tortor vel ante. In at rutrum tellus. Nullam vestibulum metus eu purus malesuada, volutpat mattis leo facilisis.</summary></entry><entry><title type="html">Overview Post</title><link href="http://localhost:4000/overview-post" rel="alternate" type="text/html" title="Overview Post" /><published>2020-07-07T00:00:00+09:00</published><updated>2020-07-07T00:00:00+09:00</updated><id>http://localhost:4000/overview-post</id><content type="html" xml:base="http://localhost:4000/overview-post">&lt;p&gt;Lorem ipsum&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; dolor sit amet, consectetur adipiscing elit. Pellentesque vel lacinia neque. Praesent nulla quam, ullamcorper in sollicitudin ac, molestie sed justo. Cras aliquam, sapien id consectetur accumsan, augue magna faucibus ex, ut ultricies turpis tortor vel ante. In at rutrum tellus.&lt;/p&gt;
-
-&lt;h1 id=&quot;sample-heading-1&quot;&gt;Sample heading 1&lt;/h1&gt;
-&lt;h2 id=&quot;sample-heading-2&quot;&gt;Sample heading 2&lt;/h2&gt;
-&lt;h3 id=&quot;sample-heading-3&quot;&gt;Sample heading 3&lt;/h3&gt;
-&lt;h4 id=&quot;sample-heading-4&quot;&gt;Sample heading 4&lt;/h4&gt;
-&lt;h5 id=&quot;sample-heading-5&quot;&gt;Sample heading 5&lt;/h5&gt;
-&lt;h6 id=&quot;sample-heading-6&quot;&gt;Sample heading 6&lt;/h6&gt;
-
-&lt;p&gt;Mauris viverra dictum ultricies. Vestibulum quis ipsum euismod, facilisis metus sed, varius ipsum. Donec scelerisque lacus libero, eu dignissim sem venenatis at. Etiam id nisl ut lorem gravida euismod.&lt;/p&gt;
-
-&lt;h2 id=&quot;lists&quot;&gt;Lists&lt;/h2&gt;
-
-&lt;p&gt;Unordered:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Fusce non velit cursus ligula mattis convallis vel at metus&lt;sup id=&quot;fnref:2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/li&gt;
-  &lt;li&gt;Sed pharetra tellus massa, non elementum eros vulputate non.&lt;/li&gt;
-  &lt;li&gt;Suspendisse potenti.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Ordered:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Quisque arcu felis, laoreet vel accumsan sit amet, fermentum at nunc.&lt;/li&gt;
-  &lt;li&gt;Sed massa quam, auctor in eros quis, porttitor tincidunt orci.&lt;/li&gt;
-  &lt;li&gt;Nulla convallis id sapien ornare viverra.&lt;/li&gt;
-  &lt;li&gt;Nam a est eget ligula pellentesque posuere.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;blockquote&quot;&gt;Blockquote&lt;/h2&gt;
-
-&lt;p&gt;The following is a blockquote:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Suspendisse tempus dolor nec risus sodales posuere. Proin dui dui, mollis a consectetur molestie, lobortis vitae tellus.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;thematic-breaks-hr&quot;&gt;Thematic breaks (&amp;lt;hr&amp;gt;)&lt;/h2&gt;
-
-&lt;p&gt;Mauris viverra dictum ultricies&lt;sup id=&quot;fnref:3&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;. Vestibulum quis ipsum euismod, facilisis metus sed, varius ipsum. Donec scelerisque lacus libero, eu dignissim sem venenatis at. Etiam id nisl ut lorem gravida euismod. &lt;strong&gt;You can put some text inside the horizontal rule like so.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;hr data-content=&quot;hr with text&quot; /&gt;
-
-&lt;p&gt;Mauris viverra dictum ultricies. Vestibulum quis ipsum euismod, facilisis metus sed, varius ipsum. Donec scelerisque lacus libero, eu dignissim sem venenatis at. Etiam id nisl ut lorem gravida euismod. &lt;strong&gt;Or you can just have an clean horizontal rule.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Mauris viverra dictum ultricies. Vestibulum quis ipsum euismod, facilisis metus sed, varius ipsum. Donec scelerisque lacus libero, eu dignissim sem venenatis at. Etiam id nisl ut lorem gravida euismod. Or you can just have an clean horizontal rule.&lt;/p&gt;
-
-&lt;h2 id=&quot;code&quot;&gt;Code&lt;/h2&gt;
-
-&lt;p&gt;Now some code:&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;const ultimateTruth = &apos;follow middlepath&apos;;
-console.log(ultimateTruth);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;And here is some &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;inline code&lt;/code&gt;!&lt;/p&gt;
-
-&lt;h2 id=&quot;tables&quot;&gt;Tables&lt;/h2&gt;
-
-&lt;p&gt;Now a table:&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Tables&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Are&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;Cool&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;col 3 is&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;right-aligned&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;$1600&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;col 2 is&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;centered&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;$12&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;zebra stripes&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;are neat&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;$1&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&quot;images&quot;&gt;Images&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://www.abhinavsaxena.com/images/abhinav.jpeg&quot; alt=&quot;theme logo&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;This is an image&lt;sup id=&quot;fnref:4&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-
-&lt;hr data-content=&quot;footnotes&quot; /&gt;
-
-&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
-      &lt;p&gt;this is a footnote. You should reach here if you click on the corresponding superscript number. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:2&quot; role=&quot;doc-endnote&quot;&gt;
-      &lt;p&gt;hey there, don’t forget to read all the footnotes! &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:3&quot; role=&quot;doc-endnote&quot;&gt;
-      &lt;p&gt;this is another footnote. &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:4&quot; role=&quot;doc-endnote&quot;&gt;
-      &lt;p&gt;this is a very very long footnote to test if a very very long footnote brings some problems or not; hope that there are no problems but you know sometimes problems arise from nowhere. &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>Abhinav Saxena</name></author><category term="overview" /><category term="moonwalk" /><summary type="html">Lorem ipsum1 dolor sit amet, consectetur adipiscing elit. Pellentesque vel lacinia neque. Praesent nulla quam, ullamcorper in sollicitudin ac, molestie sed justo. Cras aliquam, sapien id consectetur accumsan, augue magna faucibus ex, ut ultricies turpis tortor vel ante. In at rutrum tellus. this is a footnote. You should reach here if you click on the corresponding superscript number. &amp;#8617;</summary></entry></feed>
+</code></pre></div></div>
+
+<h2 id="목차-자동-생성--ctrl--shift--p-markdowncreate-toc">목차 자동 생성 : Ctrl + Shift + P » markdown:create toc</h2>
+
+<ul>
+  <li><a href="#test-page">Test Page</a>
+    <ul>
+      <li><a href="#마크다운-문법">마크다운 문법</a></li>
+      <li><a href="#코드블럭-사용법---로-감싼다">코드블럭 사용법 : ``` 로 감싼다.</a></li>
+      <li><a href="#링크-사용법">링크 사용법</a>
+        <ul>
+          <li><a href="#참조-링크--텍스트링크이름--다른-줄에-링크이름-url">참조 링크 : [텍스트][링크이름] , 다른 줄에 [링크이름]: url</a></li>
+          <li><a href="#인라인-링크--텍스트url">인라인 링크 : [텍스트](url)</a></li>
+          <li><a href="#url-링크--중괄호-사이에-url">url 링크 : 중괄호(&lt;&gt;) 사이에 url</a></li>
+          <li><a href="#내부-링크--텍스트id">내부 링크 : [텍스트](#id)</a></li>
+        </ul>
+      </li>
+      <li><a href="#이미지-사용법--이미지이름url">이미지 사용법 : ![이미지이름](url)</a></li>
+      <li><a href="#표-삽입하기">표 삽입하기</a>
+        <ul>
+          <li><a href="#구조-잡기">구조 잡기</a></li>
+          <li><a href="#표-정렬--콜론을-헤더의-한쪽-또는-양쪽에-삽입">표 정렬 : 콜론(:)을 헤더의 한쪽 또는 양쪽에 삽입</a></li>
+          <li><a href="#열-병합--빈-셀이-있으면-자동으로-그-앞-셀과-병합기본적으로-지원안함">열 병합 : 빈 셀이 있으면 자동으로 그 앞 셀과 병합(기본적으로 지원안함)</a></li>
+        </ul>
+      </li>
+      <li><a href="#목차-자동-생성--ctrl--shift--p--markdowncreate-toc">목차 자동 생성 : Ctrl + Shift + P &gt;&gt; markdown:create toc</a></li>
+      <li><a href="#각주">각주</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="각주">각주</h2>
+
+<p><strong><em>깃헙에서는 markdown의 각주 기능을 제공하지 않으므로 다음과 같이 한다.</em></strong></p>
+
+<p>각주번호1번<sup id="a1"><a href="#footnote1">1</a></sup>이고 각주번호2번<sup id="a2"><a href="#footnote2">2</a></sup>이며 각주번호3번<sup id="a3"><a href="#footnote3">3</a></sup>입니다.</p>
+
+<p>각주번호1번&lt;sup id=”a1”&gt;<a href="#footnote1">1</a>&lt;/sup&gt;이고 각주번호2번&lt;sup id=”a2”&gt;<a href="#footnote2">2</a>&lt;/sup&gt;이며 각주번호3번&lt;sup id=”a3”&gt;<a href="#footnote3">3</a>&lt;/sup&gt;입니다.</p>
+
+<hr />
+
+<p><b id="footnote1">1</b> 각주1번 내용입니다. <a href="#a1">↩</a>
+<b id="footnote2">2</b> 각주2번 내용입니다. <a href="#a2">↩</a>
+<b id="footnote3">3</b> 각주3번 내용입니다. <a href="#a3">↩</a></p>
+
+<p>&lt;b id=”footnote1”&gt;1&lt;/b&gt; 각주1번 내용입니다. [↩](#a1)
+&lt;b id=”footnote2”&gt;2&lt;/b&gt; 각주2번 내용입니다. [↩](#a2)
+&lt;b id=”footnote3”&gt;3&lt;/b&gt; 각주3번 내용입니다. [↩](#a3)</p>]]></content><author><name></name></author><category term="test" /><summary type="html"><![CDATA[Test Page]]></summary></entry><entry><title type="html">Dark Mode</title><link href="http://localhost:4000/demo/2021/04/27/dark-mode.html" rel="alternate" type="text/html" title="Dark Mode" /><published>2021-04-27T00:00:00+09:00</published><updated>2021-04-27T00:00:00+09:00</updated><id>http://localhost:4000/demo/2021/04/27/dark-mode</id><content type="html" xml:base="http://localhost:4000/demo/2021/04/27/dark-mode.html"><![CDATA[<p>More colors with less light. Click the <strong>half-moon</strong> most top-right button to turn the lights ON/OFF.
+Here is a bit of everything, so you can check how the theme look, have fun! 👌</p>
+
+<h1 id="headers">Headers</h1>
+<h2 id="level-2">Level 2</h2>
+<h3 id="level-3">Level 3</h3>
+<h4 id="level-4">Level 4</h4>
+<h5 id="level-5">Level 5</h5>
+<h6 id="level-6">Level 6</h6>
+
+<h1 id="headers-with-links"><a href="http://localhost">Headers with links</a></h1>
+<h2 id="level-2-1"><a href="http://localhost">Level 2</a></h2>
+<h3 id="level-3-1"><a href="http://localhost">Level 3</a></h3>
+<h4 id="level-4-1"><a href="http://localhost">Level 4</a></h4>
+<h5 id="level-5-1"><a href="http://localhost">Level 5</a></h5>
+<h6 id="level-6-1"><a href="http://localhost">Level 6</a></h6>
+
+<h2 id="code-highlight">Code highlight</h2>
+<p>Mode specific code highlighting themes. <a href="https://kramdown.gettalong.org/">Kramdown</a> which is responsible for the color highlighting may be more limited than your IDE.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/env python
+</span><span class="s">"""
+Test file for syntax
+"""</span>
+<span class="c1"># TODO: Use dark mode
+</span><span class="kn">from</span> <span class="n">sys</span> <span class="kn">import</span> <span class="n">os</span>
+
+<span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">bar</span><span class="p">):</span> 
+    <span class="k">try</span><span class="p">:</span>
+        <span class="nf">print</span><span class="p">(</span><span class="n">bar</span><span class="p">)</span>
+    <span class="k">except</span> <span class="nb">NameError</span><span class="p">:</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"Variable bar is not defined"</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">Bar</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span> 
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="nf">foo</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">octal</span> <span class="o">=</span> <span class="s">'</span><span class="se">\04</span><span class="s">'</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">text</span> <span class="o">=</span> <span class="s">"""Example </span><span class="se">\t\n</span><span class="s">"""</span>
+    
+    <span class="k">def</span> <span class="nf">__exit__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">'exit</span><span class="se">\u1111\xFF</span><span class="s">'</span><span class="p">)</span>
+        <span class="k">pass</span>
+    
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">example</span><span class="p">():</span>
+        <span class="nf">assert </span><span class="p">(</span><span class="mf">1.0</span> <span class="ow">and</span> <span class="il">2L</span><span class="p">)</span> <span class="ow">or</span> <span class="bp">True</span>
+        <span class="k">return</span> <span class="p">{</span> <span class="s">"example"</span><span class="p">:</span> <span class="p">[(</span><span class="mi">1</span><span class="p">,),</span> <span class="p">(</span><span class="sa">r</span><span class="s">'raw'</span><span class="p">,</span> <span class="sa">u</span><span class="s">'unicode'</span><span class="p">)]}</span>
+</code></pre></div></div>
+
+<h2 id="tables">Tables</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>hex</th>
+      <th>dec</th>
+      <th>oct</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>5</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>A</td>
+      <td>10</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>16</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>F5</td>
+      <td>21</td>
+      <td>25</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="katex">KaTeX</h2>
+
+<p>Some KaTeX diagrams to check in dark mode:</p>
+
+\[\begin{CD}
+A @&gt;a&gt;&gt; B \\
+@VbVV @AAcA \\
+C @= D
+\end{CD}\]
+
+\[\utilde{AB}\]
+
+<h2 id="mermaid">Mermaid</h2>
+
+<div class="mermaid">
+flowchart TB
+    c1--&gt;a2
+    subgraph one
+    a1--&gt;a2
+    end
+    subgraph two
+    b1--&gt;b2
+    end
+    subgraph three
+    c1--&gt;c2
+    end
+</div>]]></content><author><name></name></author><category term="Demo" /><category term="Katex" /><category term="Mermaid" /><category term="Markdown" /><summary type="html"><![CDATA[More colors with less light. Click the half-moon most top-right button to turn the lights ON/OFF. Here is a bit of everything, so you can check how the theme look, have fun! 👌]]></summary></entry><entry><title type="html">Tech Stuff example</title><link href="http://localhost:4000/2019/11/02/Tech-stuff-example.html" rel="alternate" type="text/html" title="Tech Stuff example" /><published>2019-11-02T00:00:00+09:00</published><updated>2019-11-02T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/02/Tech-stuff-example</id><content type="html" xml:base="http://localhost:4000/2019/11/02/Tech-stuff-example.html"><![CDATA[<p>Let’s demo some code snippet, with some mermaid diagrams.
+Because if you put some code in your blog, you would at least make it:</p>
+<ol>
+  <li>Searchable</li>
+  <li>Good-looking</li>
+</ol>
+
+<h2 id="search-on-code">Search on code</h2>
+
+<p>Search should be working even for complicated escape symbols.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sed</span> <span class="nt">-i</span> <span class="s1">'s/\"hostname\"\:.*$/\"hostname\"\: \"'</span><span class="nv">$IPADDR</span><span class="s1">'\"\,/g'</span> open-falcon/agent/config/cfg.json
+</code></pre></div></div>
+
+<p>Or try searching for partial of a command, like this article should be returned when looking for “find grep”</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>find /etc <span class="nt">-type</span> f <span class="nt">-exec</span> <span class="nb">cat</span> <span class="s1">'{}'</span> <span class="se">\;</span> | <span class="nb">tr</span> <span class="nt">-c</span> <span class="s1">'.[:digit:]'</span> <span class="s1">'\n'</span> | <span class="nb">grep</span> <span class="s1">'^[^.][^.]*\.[^.][^.]*\.[^.][^.]*\.[^.][^.]*$'</span>
+</code></pre></div></div>
+
+<h2 id="code-highlighting-examples">Code highlighting examples</h2>
+
+<p>Because you might put code in your blog post, and you want to make sure it will look good in here. Plus that the search
+function will still be working!</p>
+
+<h3 id="xml">XML</h3>
+
+<p>Example from <a href="https://www.w3.org/standards/xml/core">W3C</a></p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;part</span> <span class="na">number=</span><span class="s">"1976"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;name&gt;</span>Windscreen Wiper<span class="nt">&lt;/name&gt;</span>
+  <span class="nt">&lt;description&gt;</span>The Windscreen wiper
+    automatically removes rain
+    from your windscreen, if it
+    should happen to splash there.
+    It has a rubber <span class="nt">&lt;ref</span> <span class="na">part=</span><span class="s">"1977"</span><span class="nt">&gt;</span>blade<span class="nt">&lt;/ref&gt;</span>
+    which can be ordered separately
+    if you need to replace it.
+  <span class="nt">&lt;/description&gt;</span>
+<span class="nt">&lt;/part&gt;</span>
+</code></pre></div></div>
+
+<h3 id="java">Java</h3>
+
+<p>java example</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
+
+<span class="nd">@Example</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Demo</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="nc">String</span> <span class="no">CONSTANT</span> <span class="o">=</span> <span class="s">"String"</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="nc">Object</span> <span class="n">o</span><span class="o">;</span>
+  <span class="cm">/**
+   * Creates a new demo.
+   * @param o The object to demonstrate.
+   */</span>
+  <span class="kd">public</span> <span class="nf">Demo</span><span class="o">(</span><span class="nc">Object</span> <span class="n">o</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">o</span> <span class="o">=</span> <span class="n">o</span> <span class="o">!==</span> <span class="kc">null</span> <span class="o">?</span> <span class="n">o</span> <span class="o">:</span> <span class="k">new</span> <span class="nc">Object</span><span class="o">();</span>
+    <span class="nc">String</span> <span class="n">s</span> <span class="o">=</span> <span class="no">CONSTANT</span> <span class="o">+</span> <span class="s">"Other example of text"</span><span class="o">;</span>
+    <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">123</span> <span class="o">-</span> <span class="mi">33</span> <span class="o">%</span> <span class="mi">11</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">Demo</span> <span class="n">demo</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Demo</span><span class="o">();</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">demo</span><span class="o">.</span><span class="na">o</span><span class="o">.</span><span class="na">toString</span><span class="o">())</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="javascript">Javascript</h3>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/**
+ * Does a thing
+ */</span>
+<span class="kd">function</span> <span class="nf">helloWorld</span><span class="p">(</span><span class="nx">param1</span><span class="p">,</span> <span class="nx">param2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">example</span> <span class="o">=</span> <span class="s2">`hello </span><span class="p">${</span><span class="nx">param1</span><span class="p">}</span><span class="s2">`</span>
+    <span class="kd">var</span> <span class="nx">something</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="na">key</span><span class="p">:</span> <span class="dl">"</span><span class="s2">value</span><span class="dl">"</span><span class="p">,</span>
+        <span class="na">number</span><span class="p">:</span> <span class="mi">1</span>
+    <span class="p">};</span>
+
+    <span class="c1">// Do something</span>
+    <span class="nf">if </span><span class="p">(</span><span class="mf">2.0</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="nx">something</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Hello, world!</span><span class="dl">'</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">// TODO comment</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="json">JSON</h3>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"animals"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"tiger"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tiger"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"images"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"🐯"</span><span class="p">,</span><span class="w"> </span><span class="s2">"🐅"</span><span class="p">,</span><span class="w"> </span><span class="s2">"⻁"</span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"turtle"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"age"</span><span class="p">:</span><span class="w"> </span><span class="mi">126</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"🐢"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"unicorn"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"doesExist"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"🦄"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="python">Python</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">os</span>
+
+
+<span class="k">def</span> <span class="nf">some_function</span><span class="p">(</span><span class="n">param_one</span><span class="o">=</span><span class="s">""</span><span class="p">,</span> <span class="n">param_two</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="sa">r</span><span class="s">'''A docstring'''</span>
+    <span class="k">if</span> <span class="n">param_one</span> <span class="o">&gt;</span> <span class="n">param_two</span><span class="p">:</span>  <span class="c1"># interesting
+</span>        <span class="nf">print</span><span class="p">(</span><span class="s">"Greater"</span><span class="p">)</span>
+    <span class="nf">return </span><span class="p">(</span><span class="n">param_two</span> <span class="o">-</span> <span class="n">param_one</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">+</span> <span class="mb">0b10</span><span class="p">)</span> <span class="ow">or</span> <span class="bp">None</span>
+
+
+<span class="k">class</span> <span class="nc">SomeClass</span><span class="p">:</span>
+    <span class="s">""" dunno what I am doing """</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+</code></pre></div></div>
+
+<h3 id="yaml">YAML</h3>
+
+<p>You can also render some yaml, like this <code class="language-plaintext highlighter-rouge">_config.yml</code>:</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="c1"># Welcome to Jekyll!</span>
+<span class="c1">#</span>
+<span class="c1"># This config file is meant for settings that affect your whole blog, values</span>
+<span class="c1"># which you are expected to set up once and rarely edit after that. If you find</span>
+<span class="c1"># yourself editing this file very often, consider using Jekyll's data files</span>
+<span class="c1"># feature for the data you need to update frequently.</span>
+<span class="c1">#</span>
+<span class="c1"># This file, "_config.yml" is *NOT* reloaded automatically when you use</span>
+<span class="c1"># 'bundle exec jekyll serve'. If you change this file, please restart the server process.</span>
+
+<span class="c1"># Site settings</span>
+<span class="c1"># These are used to personalize your new site. If you look in the HTML files,</span>
+<span class="c1"># you will see them accessed via Newbie's DoorClosing, , and so on.</span>
+<span class="c1"># You can create any custom variable you would like, and they will be accessible</span>
+<span class="c1"># in the templates via .</span>
+
+<span class="c1"># SITE CONFIGURATION</span>
+<span class="na">baseurl</span><span class="pi">:</span> <span class="s2">"</span><span class="s">/Type-on-Strap"</span>
+<span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://sylhare.github.io"</span>
+
+<span class="c1"># THEME-SPECIFIC CONFIGURATION</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">Type on Strap</span>                                    <span class="c1"># site's title</span>
+<span class="na">description</span><span class="pi">:</span> <span class="s2">"</span><span class="s">A</span><span class="nv"> </span><span class="s">website</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">blog</span><span class="nv"> </span><span class="s">posts</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">pages"</span>      <span class="c1"># used by search engines</span>
+<span class="na">avatar</span><span class="pi">:</span> <span class="s">assets/img/triangle.png</span>                         <span class="c1"># Empty for no avatar in navbar</span>
+<span class="na">favicon</span><span class="pi">:</span> <span class="s">assets/favicon.ico</span>                             <span class="c1"># Icon displayed in the tab</span>
+
+<span class="na">remote_theme</span><span class="pi">:</span> <span class="s">sylhare/Type-on-Strap</span>                     <span class="c1"># If using as a remote_theme in github</span>
+</code></pre></div></div>
+
+<h3 id="mermaid">Mermaid</h3>
+
+<p>Diagrams with mermaid, make sure it is enabled in the <code class="language-plaintext highlighter-rouge">_config.yml</code>.
+Here is a simple example:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- To generate a diagram --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"mermaid"</span><span class="nt">&gt;</span>
+sequenceDiagram
+    Alice-&gt;&gt;John: Hello John, how are you?
+    John--&gt;&gt;Alice: Great!
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<p>That will be rendered into this:</p>
+
+<div class="row">
+    
+    <div style="flex: 100.0%">
+        <img class="single" src="/assets/img/mermaid-example.png" alt="mermaid-example.png" />
+    </div>
+    
+</div>
+
+<p>You can also go with more complex features and diagrams from the <a href="https://mermaid-js.github.io/mermaid/">documentation</a>:</p>
+
+<details>
+<summary>More complex diagram</summary>
+<div class="mermaid">
+sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice-&gt;&gt;John: Hello John, how are you?
+    loop Healthcheck
+        John-&gt;&gt;John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts prevail!
+    John--&gt;&gt;Alice: Great!
+    John-&gt;&gt;Bob: How about you?
+    Bob--&gt;&gt;John: Jolly good!
+</div>
+</details>]]></content><author><name></name></author><category term="Mermaid" /><category term="Highlight" /><category term="Markdown" /><summary type="html"><![CDATA[Let’s demo some code snippet, with some mermaid diagrams. Because if you put some code in your blog, you would at least make it: Searchable Good-looking]]></summary></entry><entry><title type="html">Sample post</title><link href="http://localhost:4000/2019/06/30/sample-post.html" rel="alternate" type="text/html" title="Sample post" /><published>2019-06-30T00:00:00+09:00</published><updated>2019-06-30T00:00:00+09:00</updated><id>http://localhost:4000/2019/06/30/sample-post</id><content type="html" xml:base="http://localhost:4000/2019/06/30/sample-post.html"><![CDATA[<p>Consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. 
+Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. 
+<!--more-->
+Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem.</p>
+
+<ul>
+  <li>Consectetur adipiscing elit</li>
+  <li>Donec a diam lectus</li>
+  <li>Sed sit amet ipsum mauris</li>
+</ul>
+
+<p>Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.</p>
+
+<p>Nunc diam velit, adipiscing ut tristique vitae, sagittis vel odio. Maecenas convallis ullamcorper ultricies. Curabitur ornare, ligula <em>semper consectetur sagittis</em>, nisi diam iaculis velit, id fringilla sem nunc vel mi. Nam dictum, odio nec pretium volutpat, arcu ante placerat erat, non tristique elit urna et turpis. Quisque mi metus, ornare sit amet fermentum et, tincidunt et orci. Fusce eget orci a orci congue vestibulum.</p>
+
+<div class="row">
+    
+    <div style="flex: 100.0%">
+        <img class="single" src="/assets/img/pexels/travel.jpeg" alt="travel.jpeg" />
+    </div>
+    
+</div>
+
+<p>Ut dolor diam, elementum et vestibulum eu, porttitor vel elit. Curabitur venenatis pulvinar tellus gravida ornare. Sed et erat faucibus nunc euismod ultricies ut id justo. Nullam cursus suscipit nisi, et ultrices justo sodales nec. Fusce venenatis facilisis lectus ac semper. Aliquam at massa ipsum. Quisque bibendum purus convallis nulla ultrices ultricies. Nullam aliquam, mi eu aliquam tincidunt, purus velit laoreet tortor, viverra pretium nisi quam vitae mi. Fusce vel volutpat elit. Nam sagittis nisi dui.</p>
+
+<blockquote>
+  <p>Suspendisse lectus leo, consectetur in tempor sit amet, placerat quis neque</p>
+</blockquote>
+
+<p>Etiam luctus porttitor lorem, sed suscipit est rutrum non. Curabitur lobortis nisl a enim congue semper. Aenean commodo ultrices imperdiet. Vestibulum ut justo vel sapien venenatis tincidunt.</p>
+
+\[\Theta \ne \Gamma\]
+
+<p>Phasellus eget dolor sit amet ipsum dapibus condimentum vitae quis lectus. Aliquam ut massa in turpis dapibus convallis. Praesent elit lacus, vestibulum at malesuada et, ornare et est. Ut augue nunc, sodales ut euismod non, adipiscing vitae orci<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>. Mauris ut placerat justo. Mauris in ultricies enim. Quisque nec est eleifend nulla ultrices egestas quis ut quam. Donec sollicitudin lectus a mauris pulvinar id aliquam urna cursus. Cras quis ligula sem, vel elementum mi. Phasellus non ullamcorper urna.</p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+
+      <p><span class="cit-authors">John Smith</span>, <span class="cit-title">A Title About Citations</span> <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>]]></content><author><name></name></author><category term="A Tag" /><category term="Katex" /><summary type="html"><![CDATA[Consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur.]]></summary></entry><entry><title type="html">Color Post</title><link href="http://localhost:4000/example/2019/05/18/color-post.html" rel="alternate" type="text/html" title="Color Post" /><published>2019-05-18T00:00:00+09:00</published><updated>2019-05-18T00:00:00+09:00</updated><id>http://localhost:4000/example/2019/05/18/color-post</id><content type="html" xml:base="http://localhost:4000/example/2019/05/18/color-post.html"><![CDATA[<h1 id="what-a-colorful-post">What a colorful post!</h1>
+
+<p>This is an idea that came from <a href="https://github.com/xukimseven/HardCandy-Jekyll">xukimseven/HardCandy-Jekyll</a> 
+looking at this cheerful and colorful theme, I wanted to enable something similar for Type-on-Strap.</p>
+
+<p>You can go fork and star <em>HardCandy-Jekyll</em> too! 😉</p>
+
+<!--more-->
+
+<h2 id="how-does-it-work">How does it work?</h2>
+
+<p>Basically you need to add just one thing, the color:</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">post</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">Color Post</span>
+<span class="na">color</span><span class="pi">:</span> <span class="s">brown</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+
+<p>It can either be a html color like <code class="language-plaintext highlighter-rouge">brown</code> (which look like red to me). Or with the rgb:</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">post</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">Color Post</span>
+<span class="na">color</span><span class="pi">:</span> <span class="s">rgb(165,42,42)</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+
+<p>The background used is <code class="language-plaintext highlighter-rouge">lineart.png</code> from <a href="https://github.com/xukimseven">xukimseven</a> you can edit it in the config file. 
+If you want another one, put it in <code class="language-plaintext highlighter-rouge">/assets/img</code> as well.</p>
+
+<blockquote>
+  <p>⚠️ It’s a bit hacking the css in the <code class="language-plaintext highlighter-rouge">post.html</code></p>
+</blockquote>]]></content><author><name>Sylhare</name></author><category term="Example" /><category term="Test" /><category term="Color" /><summary type="html"><![CDATA[What a colorful post! This is an idea that came from xukimseven/HardCandy-Jekyll looking at this cheerful and colorful theme, I wanted to enable something similar for Type-on-Strap. You can go fork and star HardCandy-Jekyll too! 😉]]></summary></entry><entry><title type="html">Feature images</title><link href="http://localhost:4000/example/2018/10/29/feature-images.html" rel="alternate" type="text/html" title="Feature images" /><published>2018-10-29T00:00:00+09:00</published><updated>2018-10-29T00:00:00+09:00</updated><id>http://localhost:4000/example/2018/10/29/feature-images</id><content type="html" xml:base="http://localhost:4000/example/2018/10/29/feature-images.html"><![CDATA[<p>Hopefully you will find enough information about how to set images in your blog here.
+This is an example of a post which includes a feature image specified in the front matter of the post. 
+The feature image spans the full-width of the page, and is shown with the title on permalink pages:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">feature-img</span><span class="pi">:</span> <span class="s2">"</span><span class="s">assets/img/feature-img/desk-messy.jpeg"</span>
+<span class="na">thumbnail</span><span class="pi">:</span> <span class="s2">"</span><span class="s">assets/img/thumbnails/feature-img/desk-messy.jpeg"</span> 
+</code></pre></div></div>
+
+<p>You can also use a thumbnail, a smaller version of the same image to improve loading of the page.
+The thumbnail will also be used when you share your article on other platform (linkedin, whatsapp, facebook, …).</p>
+
+<blockquote>
+  <ul>
+    <li>And now it is working</li>
+  </ul>
+</blockquote>
+
+<p>You can also add images aligned in your post using the <code class="language-plaintext highlighter-rouge">aligner</code> include.
+Make sure to separate all of the image path from in a string separated with <code class="language-plaintext highlighter-rouge">,</code>.
+It by default look into <code class="language-plaintext highlighter-rouge">assets/img/</code> so give the path from there, example:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="p">{</span><span class="sx">% include </span><span class="n">aligner</span><span class="p">.</span><span class="nf">html</span> <span class="n">images</span><span class="o">=</span><span class="s2">"pexels/book-glass.jpeg,triangle.png"</span> <span class="o">%</span><span class="p">}</span></code></pre></figure>
+
+<div class="row">
+    
+    <div class="column">
+        <img src="/assets/img/pexels/book-glass.jpeg" alt="book-glass.jpeg" />
+    </div>
+    
+    <div class="column">
+        <img src="/assets/img/feature-img/desk-messy.jpeg" alt="desk-messy.jpeg" />
+    </div>
+    
+</div>
+
+<p>Here you have two images side by side, but you can set more and set the amount per columns 
+(by specifying the number of columns or let it be automatic using <code class="language-plaintext highlighter-rouge">"auto"</code>):</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="p">{</span><span class="sx">% include </span><span class="n">aligner</span><span class="p">.</span><span class="nf">html</span> <span class="n">images</span><span class="o">=</span><span class="s2">"portfolio/cabin.png,portfolio/cake.png,portfolio/circus.png"</span> <span class="n">column</span><span class="o">=</span><span class="mi">3</span> <span class="o">%</span><span class="p">}</span></code></pre></figure>
+
+<div class="row">
+    
+    <div style="flex: 33.333333333333336%">
+        <img src="/assets/img/portfolio/cabin.png" alt="cabin.png" />
+    </div>
+    
+    <div style="flex: 33.333333333333336%">
+        <img src="/assets/img/portfolio/cake.png" alt="cake.png" />
+    </div>
+    
+    <div style="flex: 33.333333333333336%">
+        <img src="/assets/img/portfolio/circus.png" alt="circus.png" />
+    </div>
+    
+</div>
+
+<p>it also works with only one images, it is made to display it smaller than normally.
+However you can just use the Markdown way of doing it to get the image normal sized and centered.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="c1"># Markdown way (bigger)</span>
+<span class="o">!</span><span class="p">[</span><span class="no">Travel</span><span class="p">]({{</span> <span class="s2">"/assets/img/pexels/computer.jpeg"</span> <span class="o">|</span> <span class="n">relative_url</span><span class="p">}})</span>
+<span class="c1"># Aligner with only One (50% of width)</span>
+<span class="p">{</span><span class="sx">% include </span><span class="n">aligner</span><span class="p">.</span><span class="nf">html</span> <span class="n">images</span><span class="o">=</span><span class="s2">"pexels/computer.jpeg"</span> <span class="o">%</span><span class="p">}</span></code></pre></figure>
+
+<div class="row">
+    
+    <div class="column">
+        <img class="single" src="/assets/img/pexels/computer.jpeg" alt="computer.jpeg" />
+    </div>
+    
+</div>]]></content><author><name></name></author><category term="Example" /><category term="Test" /><category term="Image" /><summary type="html"><![CDATA[Hopefully you will find enough information about how to set images in your blog here. This is an example of a post which includes a feature image specified in the front matter of the post. The feature image spans the full-width of the page, and is shown with the title on permalink pages:]]></summary></entry><entry><title type="html">Bootstrap</title><link href="http://localhost:4000/demo/2017/09/17/Use-Bootstrap.html" rel="alternate" type="text/html" title="Bootstrap" /><published>2017-09-17T00:00:00+09:00</published><updated>2017-09-17T00:00:00+09:00</updated><id>http://localhost:4000/demo/2017/09/17/Use-Bootstrap</id><content type="html" xml:base="http://localhost:4000/demo/2017/09/17/Use-Bootstrap.html"><![CDATA[<p>This theme is compatible with Bootstrap if you choose to use it in your pages or posts.
+Here is a little demo with a code snippet, look at the source to see how the HTML and markdown get tangled.</p>
+
+<h2 id="use-bootstrap">Use bootstrap</h2>
+
+<p>Add some custom Bootstrap in the custom layout!</p>
+
+<p><img src="https://startbootstrap.com/assets/img/sb-logo.svg" alt="startbootstrap" width="500" /></p>
+
+<h3 id="snippet-example">Snippet example</h3>
+
+<p>If you are new to Bootstrap you can  always check the <a href="https://getbootstrap.com/docs/4.1/getting-started/introduction/">documentation</a>.<br />
+Here is an example from <a href="https://startbootstrap.com/snippets/portfolio-two-column">startbootstrap.com</a>.</p>
+
+<!-- Page Content -->
+<div class="container">
+
+  <div class="row">
+    <div class="col-lg-6 mb-4">
+      <div class="card h-100">
+        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt="" /></a>
+        <div class="card-body">
+          <h4 class="card-title">
+            <a href="#">Project One</a>
+          </h4>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 mb-4">
+      <div class="card h-100">
+        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt="" /></a>
+        <div class="card-body">
+          <h4 class="card-title">
+            <a href="#">Project Two</a>
+          </h4>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit aliquam aperiam nulla perferendis dolor nobis numquam, rem expedita, aliquid optio, alias illum eaque. Non magni, voluptates quae, necessitatibus unde temporibus.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 mb-4">
+      <div class="card h-100">
+        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt="" /></a>
+        <div class="card-body">
+          <h4 class="card-title">
+            <a href="#">Project Three</a>
+          </h4>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 mb-4">
+      <div class="card h-100">
+        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt="" /></a>
+        <div class="card-body">
+          <h4 class="card-title">
+            <a href="#">Project Four</a>
+          </h4>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit aliquam aperiam nulla perferendis dolor nobis numquam, rem expedita, aliquid optio, alias illum eaque. Non magni, voluptates quae, necessitatibus unde temporibus.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 mb-4">
+      <div class="card h-100">
+        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt="" /></a>
+        <div class="card-body">
+          <h4 class="card-title">
+            <a href="#">Project Five</a>
+          </h4>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 mb-4">
+      <div class="card h-100">
+        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt="" /></a>
+        <div class="card-body">
+          <h4 class="card-title">
+            <a href="#">Project Six</a>
+          </h4>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit aliquam aperiam nulla perferendis dolor nobis numquam, rem expedita, aliquid optio, alias illum eaque. Non magni, voluptates quae, necessitatibus unde temporibus.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /.row -->
+
+</div>
+<!-- /.container -->
+
+<h3 id="mix-it-with-markdown">Mix it with Markdown</h3>
+
+<p>All the above was custom HTML with Bootstrap.
+You can also mix it up with some markdown.</p>
+
+<p>You can use the bootstrap’s build in javascript API to control your event.
+Here is a code snippet for the <a href="https://getbootstrap.com/docs/4.0/getting-started/javascript/">documentation</a>:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#myModal</span><span class="dl">'</span><span class="p">).</span><span class="nf">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">show.bs.modal</span><span class="dl">'</span><span class="p">,</span> <span class="nf">function </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nf">if </span><span class="p">(</span><span class="o">!</span><span class="nx">data</span><span class="p">)</span> <span class="k">return</span> <span class="nx">e</span><span class="p">.</span><span class="nf">preventDefault</span><span class="p">()</span> <span class="c1">// stops modal from being shown</span>
+<span class="p">})</span>
+</code></pre></div></div>
+
+<p>That’s just for demo though, you would need to properly integrate your javascript in your page.
+Usually you would put any custom javascript script in the <em>assets</em> folder under js and reference it in your page from there.</p>
+
+<p>So try it out using the <code class="language-plaintext highlighter-rouge">bootstrap: true</code> flag! 😉</p>]]></content><author><name></name></author><category term="Demo" /><category term="Test" /><summary type="html"><![CDATA[This theme is compatible with Bootstrap if you choose to use it in your pages or posts. Here is a little demo with a code snippet, look at the source to see how the HTML and markdown get tangled.]]></summary></entry><entry><title type="html">Markdown and HTML</title><link href="http://localhost:4000/syntax/2014/11/28/markdown-and-html.html" rel="alternate" type="text/html" title="Markdown and HTML" /><published>2014-11-28T00:00:00+09:00</published><updated>2014-11-28T00:00:00+09:00</updated><id>http://localhost:4000/syntax/2014/11/28/markdown-and-html</id><content type="html" xml:base="http://localhost:4000/syntax/2014/11/28/markdown-and-html.html"><![CDATA[<p>Jekyll supports the use of <a href="http://daringfireball.net/projects/markdown/syntax">Markdown</a> with inline HTML tags which makes it easier to quickly write posts with Jekyll, without having to worry too much about text formatting. A sample of the formatting follows.</p>
+
+<h2 id="table-of-content">Table of content</h2>
+
+<!-- To be placed at the beginning of the post, it is where the table of content will be generated -->
+<ul>
+  <li>TOC</li>
+  <li>You need to put this at the beginning of the page where you want the table of content to be displayed</li>
+</ul>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* TOC
+{:toc}
+</code></pre></div></div>
+
+<p>It will then render the markdown and html titles (lines that begins with <code class="language-plaintext highlighter-rouge">#</code> or using the <code class="language-plaintext highlighter-rouge">&lt;h1&gt;&lt;/h1&gt;</code> tages)</p>
+
+<h2 id="title">Title</h2>
+
+<h3 id="subtitle">Subtitle</h3>
+
+<p>Tables have also been extended from Markdown:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>First Header</th>
+      <th>Second Header</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Content Cell</td>
+      <td>Content Cell</td>
+    </tr>
+    <tr>
+      <td>Content Cell</td>
+      <td>Content Cell</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Here’s an example of an image, which is included using Markdown:</p>
+
+<p><img src="/assets/img/pexels/book-glass.jpeg" alt="Image of a glass on a book" /></p>
+
+<p>This is another example of list:</p>
+
+<ul>
+  <li>list of things
+    <ol>
+      <li>Sub list</li>
+      <li>of Other things</li>
+      <li>with numbers</li>
+    </ol>
+  </li>
+  <li>And many more
+    <ul>
+      <li>Sub sub list
+        <ul>
+          <li>can go on …
+            <ul>
+              <li>and on …
+                <ul>
+                  <li>and on !</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>That’s it.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="other-subtitle">Other subtitle</h3>
+
+<p>Highlighting for code in Jekyll is done using Base16 or Rouge. This theme makes use of Rouge by default.</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// count to ten</span>
+<span class="nf">for </span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// count to twenty</span>
+<span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="nf">while </span><span class="p">(</span><span class="nx">j</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">j</span><span class="o">++</span><span class="p">;</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">j</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<h3 id="math">Math</h3>
+
+<p>Type on Strap uses KaTeX to display maths. Equations such as \(S_n = a \times \frac{1-r^n}{1-r}\) can be displayed inline.</p>
+
+<p>Alternatively, they can be shown on a new line:</p>
+
+\[f(x) = \int \frac{2x^2+4x+6}{x-2}\]
+
+<p>And in your markdown file:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$$ f(x) = <span class="se">\i</span>nt <span class="se">\f</span>rac{2x^2+4x+6}{x-2} $$
+</code></pre></div></div>
+
+<h3 id="expandable-content">Expandable content</h3>
+
+<p>Click on the expandable content to display it:</p>
+
+<details>
+    <summary>Click here!</summary>
+    Now you see me
+</details>
+
+<p>And in your markdown file:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;details&gt;</span>
+    <span class="nt">&lt;summary&gt;</span>Click here!<span class="nt">&lt;/summary&gt;</span>
+    Now you see me
+<span class="nt">&lt;/details&gt;</span>
+</code></pre></div></div>]]></content><author><name>Rohan Chandra</name></author><category term="Syntax" /><category term="Katex" /><category term="Markdown" /><summary type="html"><![CDATA[Jekyll supports the use of Markdown with inline HTML tags which makes it easier to quickly write posts with Jekyll, without having to worry too much about text formatting. A sample of the formatting follows.]]></summary></entry><entry><title type="html">What’s your title</title><link href="http://localhost:4000/2014/11/27/whats-your-title.html" rel="alternate" type="text/html" title="What’s your title" /><published>2014-11-27T00:00:00+09:00</published><updated>2014-11-27T00:00:00+09:00</updated><id>http://localhost:4000/2014/11/27/whats-your-title</id><content type="html" xml:base="http://localhost:4000/2014/11/27/whats-your-title.html"><![CDATA[<p>This is an example of a post which includes a feature image that has a
+text, where you don’t want to redisplay the title.
+Mind your image size in order for the text to be displayed where you want it to.
+The only limit is your imagination.</p>
+
+<p>Here is how the yaml looks inside the post:</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">title</span><span class="pi">:</span> <span class="s">What's your title</span>
+<span class="na">hide_title</span><span class="pi">:</span> <span class="kc">true</span>
+<span class="na">feature-img</span><span class="pi">:</span> <span class="s">assets/img/feature-img/story.jpeg</span>
+<span class="na">author</span><span class="pi">:</span> <span class="s">mhagnumdw</span>
+<span class="na">tags</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">Test</span><span class="pi">,</span> <span class="nv">Lorem</span><span class="pi">]</span>
+</code></pre></div></div>
+
+<p>You may wonder, why is there a title when you are not actually displaying it. <br />
+Well that’s due to some jekyll limitation:</p>
+
+<blockquote>
+  <p>You <strong>can’t</strong> set the <strong>title</strong> to the <strong>empty string</strong></p>
+</blockquote>
+
+<p>The title is used elsewhere than inside the post, for example in the blog page that list this post.
+An empty title would break those pages and possibly prevents jekyll to render your blog.</p>]]></content><author><name>Mhagnumdw</name></author><category term="Test" /><category term="Image" /><summary type="html"><![CDATA[This is an example of a post which includes a feature image that has a text, where you don’t want to redisplay the title. Mind your image size in order for the text to be displayed where you want it to. The only limit is your imagination.]]></summary></entry></feed>

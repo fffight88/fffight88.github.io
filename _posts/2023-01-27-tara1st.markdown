@@ -3,6 +3,7 @@ layout: post
 title:  "TaraTPS - 1차 프로젝트"
 categories: portfolio
 date: 2023-01-27
+published: false
 ---
 
 #### 당사 ERP 시스템(G7) 유지보수작업 인수 및 회계관련로직 개선, 기능 추가

@@ -1,489 +1,563 @@
 <!DOCTYPE html>
-<html lang="en" class="html" data-theme="dark"><head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<!--
+    Type on Strap jekyll theme v2.4.5
+    Theme free for personal and commercial use under the MIT license
+    https://github.com/sylhare/Type-on-Strap/blob/master/LICENSE
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=5">
 
-  <title>
+    <!-- Theme Mode-->
     
-      Moonwalk
+    <script>
+        const isAutoTheme = true;
+        document.documentElement.setAttribute('data-theme', sessionStorage.getItem('theme'))
+    </script>
     
-  </title>
 
-  <!-- Begin Jekyll SEO tag v2.7.3 -->
-<meta name="generator" content="Jekyll v4.2.2" />
-<meta property="og:title" content="Moonwalk" />
-<meta name="author" content="Abhinav Saxena" />
+    <!-- Main JS (navbar.js, katex_init.js and masonry_init.js)-->
+    <script defer src="/assets/js/main.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+
+    
+
+    <!-- KaTeX 0.15.2 -->
+    
+    <script defer src="/assets/js/vendor/katex.min.js"></script>
+    <script defer src="/assets/js/vendor/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+    
+
+    <!-- Mermaid 9.1.1 -->
+    
+    <script defer src="/assets/js/vendor/mermaid.min.js" onload="mermaid.initialize({
+      startOnLoad:true,
+      theme: 'default',
+    });"></script>
+    
+
+    <!-- Simple Jekyll Search 1.10.0 -->
+    <script src="/assets/js/vendor/simple-jekyll-search.min.js" type="text/javascript"></script>
+
+    <!-- Google Analytics / Cookie Consent -->
+    <script>
+      const cookieName = 'cookie-notice-dismissed-http://localhost:4000';
+      const isCookieConsent = 'false';
+      const analyticsName = '';
+      const analyticsNameGA4 = '';
+    </script>
+
+    
+    
+
+    <!-- seo tags -->
+    <meta property="og:image" content="http://localhost:4000/assets/img/header/suzume.jpg">
+    
+    <meta property="og:type" content="website" />
+    
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Newbie’s DoorClosing | A website with blog posts and pages</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Newbie’s DoorClosing" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Moonwalk is a fast and elegant Jekyll theme with a clean dark mode. It comes with horizontal list (for navbar and footer), card list (for portfolio), and a generic vertical list. It is very easy to modify in case you want to build over it - please see _layouts/home.html to do that." />
-<meta property="og:description" content="Moonwalk is a fast and elegant Jekyll theme with a clean dark mode. It comes with horizontal list (for navbar and footer), card list (for portfolio), and a generic vertical list. It is very easy to modify in case you want to build over it - please see _layouts/home.html to do that." />
+<meta name="description" content="A website with blog posts and pages" />
+<meta property="og:description" content="A website with blog posts and pages" />
 <link rel="canonical" href="http://localhost:4000/" />
 <meta property="og:url" content="http://localhost:4000/" />
-<meta property="og:site_name" content="Moonwalk" />
-<meta property="og:image" content="https://soopr.xyz/images/card?url=http://localhost:4000/" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta property="og:image" content="https://soopr.xyz/images/card?url=http://localhost:4000/" />
-<meta property="twitter:title" content="Moonwalk" />
-<meta name="twitter:site" content="@abhinav" />
-<meta name="twitter:creator" content="@Abhinav Saxena" />
+<meta property="og:site_name" content="Newbie’s DoorClosing" />
+<meta property="og:type" content="website" />
+<link rel="next" href="http://localhost:4000/blog/page2" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Newbie’s DoorClosing" />
 <script type="application/ld+json">
-{"name":"Moonwalk","@type":"WebSite","description":"Moonwalk is a fast and elegant Jekyll theme with a clean dark mode. It comes with horizontal list (for navbar and footer), card list (for portfolio), and a generic vertical list. It is very easy to modify in case you want to build over it - please see _layouts/home.html to do that.","url":"http://localhost:4000/","author":{"@type":"Person","name":"Abhinav Saxena"},"headline":"Moonwalk","@context":"https://schema.org"}</script>
-<script async defer data-soopr-token="" src="https://sdk.soopr.co/soopr.js"  ></script>
+{"@context":"https://schema.org","@type":"WebSite","description":"A website with blog posts and pages","headline":"Newbie’s DoorClosing","name":"Newbie’s DoorClosing","url":"http://localhost:4000/"}</script>
 <!-- End Jekyll SEO tag -->
 
-  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Moonwalk" />
 
-  <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
-  <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
-  <link rel="mask-icon" href="/assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
-  <link rel="shortcut icon" href="/assets/images/favicon/favicon.ico">
-  <meta name="msapplication-TileColor" content="#00aba9">
-  <meta name="msapplication-config" content="/assets/images/favicon/browserconfig.xml">
-  <meta name="theme-color" content="#ffffff">
-  <!-- Favicon -->
+    <!-- RSS -->
+    <link rel="alternate" type="application/atom+xml" title="Newbie's DoorClosing" href="http://localhost:4000/feed.xml"/>
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Newbie&apos;s DoorClosing" />
 
-  <link rel="stylesheet" href="/assets/css/main.css" />
-  
-    <script type="text/javascript">
-  window.addEventListener('load', themeChange);
-  const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
-  if (currentTheme)
-    document.documentElement.setAttribute('data-theme', currentTheme);
-
-  function themeChange() {
-    let button = document.querySelector('.theme-toggle');
-
-    button.addEventListener('click', function (e) {
-      let currentTheme = document.documentElement.getAttribute('data-theme');
-      if (currentTheme === 'dark') {
-        transition();
-        document.documentElement.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme', 'light');
-      } else {
-        transition();
-        document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
-      }
-    });
-
-    let transition = () => {
-      document.documentElement.classList.add('transition');
-      window.setTimeout(() => {
-        document.documentElement.classList.remove('transition');
-      }, 1000);
-    }
-  }
-</script>
-
-
-  
+    <!-- Twitter Cards -->
+    <meta name="twitter:title" content="Newbie's DoorClosing">
+    <meta name="twitter:description" content="뉴비 개발자의 문단속">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="http://localhost:4000/assets/img/header/suzume.jpg">
+    <meta name="twitter:image:alt" content="Newbie's DoorClosing">
 </head>
-<body>
-    <main class="page-content" aria-label="Content">
-      <div class="w">
-        <header>
 
-  <ul class="horizontal-list">
-  
-    <li>
-      <a href="about">
-        about
-      </a>
-      &nbsp;&nbsp;
-    </li>
-  
-    <li>
-      <a href="blog">
-        blog
-      </a>
-      &nbsp;&nbsp;
-    </li>
-  
-    <li>
-      <a href="https://www.abhinav.co">
-        website
-      </a>
-      &nbsp;&nbsp;
-    </li>
-  
-</ul>
+  <body>
+    <header class="site-header">
 
-  <div class="dashed"></div>
+    <!-- Logo and title -->
+	<div class="branding">
+        
+		<a href="/">
+			<img alt="logo img" class="avatar" src="/assets/img/triangle.png" loading="lazy"/>
+		</a>
+        
+        <a class="site-title" aria-label="Newbie's DoorClosing" href="/">
+        Newbie's DoorClosing
+		</a>
+	</div>
 
+    <!-- Toggle menu -->
+    <nav class="clear">
+    <a aria-label="pull" id="pull" class="toggle" href="#">
+    <i class="fas fa-bars fa-lg"></i>
+    </a>
 
-  <h1>Moonwalk</h1>
-  
-    <p>Moonwalk is a fast and elegant Jekyll theme with a clean dark mode. It comes with horizontal list (for navbar and footer), card list (for portfolio), and a generic vertical list. It is very easy to modify in case you want to build over it - please see _layouts/home.html to do that.
-</p>
-  
+    <!-- Menu -->
+    <ul class="hide">
+        
+
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="About" title="About" href="/about/">
+                     About 
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Gallery" title="Gallery" href="/gallery/">
+                     Gallery 
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Portfolio" title="Portfolio" href="/portfolio/">
+                     Portfolio 
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Search" title="Search" href="/search/">
+                     <i class="fas fa-search" aria-hidden="true"></i>
+                    
+                </a>
+            </li>
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Tags" title="Tags" href="/tags/">
+                     <i class="fas fa-tags" aria-hidden="true"></i>
+                    
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+
+        
+        <li class="separator"> | </li>
+        <li><a id="theme-toggle" title=" " aria-label="" onclick="themeToggle()"></a></li>
+        
+    </ul>
+
+	</nav>
 </header>
 
-
-
-
-
-  <h2>Portfolio</h2>
-  <ul class="horizontal-list">
-  
-
-    <li class="card">
-      <a href="overview-post">
-        <span class="header">
-          Project 1
-
-          
-
-        </span>
-
-        <hr />
-
+    <div class="content">
+      <div class="home">
+    <style scoped>
         
-        <p class="body">
-          This is an example project, configured in _data/home.yml
-        </p>
+        .call-out_img {
+            background-image: url('/assets/img/header/suzume.jpg');
+        }
         
-      </a>
-    </li>
-
-  
-
-    <li class="card">
-      <a href="overview-post">
-        <span class="header">
-          Project 2
-
-          
-
-        </span>
-
-        <hr />
-
+        @media screen and (max-width: 768px) {
+            .call-out_img {
+                background-image: url('/assets/img/header/suzume-medium.jpg');
+            }
+        }
+        @media screen and (max-width: 576px) {
+            .call-out_img {
+                background-image: url('/assets/img/header/suzume-small.jpg');
+            }
+        }
         
-        <p class="body">
-          Projects are shown in card layout
-        </p>
-        
-      </a>
-    </li>
+    </style>
+    <div id="main" class="call-out call-out_img">
+        <h1> 뉴비 개발자의 문단속 </h1>
+    </div>
 
-  
-
-    <li class="card">
-      <a href="overview-post">
-        <span class="header">
-          Project 3
-
-          
-
-        </span>
-
-        <hr />
-
-        
-        <p class="body">
-          You can control visibility from _config.yml file
-        </p>
-        
-      </a>
-    </li>
-
-  
-
-    <li class="card">
-      <a href="overview-post">
-        <span class="header">
-          Project 4
-
-          
-            <mark>WIP</mark>
-          
-
-        </span>
-
-        <hr />
-
-        
-        <p class="body">
-          This project uses highlight markup, configured in _data/home.yml
-        </p>
-        
-      </a>
-    </li>
-
-  
-
-    <li class="card">
-      <a href="overview-post">
-        <span class="header">
-          Project 5
-
-          
-            <mark>WIP</mark>
-          
-
-        </span>
-
-        <hr />
-
-        
-        <p class="body">
-          Moonwalk also has horizontal list (used in header and footer)
-        </p>
-        
-      </a>
-    </li>
-
-  
-
-    <li class="card">
-      <a href="overview-post">
-        <span class="header">
-          Project 6
-
-          
-
-        </span>
-
-        <hr />
-
-        
-        <p class="body">
-          It also has a scalable vertical list (in case you need it)
-        </p>
-        
-      </a>
-    </li>
-
-  
-</ul>
-
-
-
-
-
-
-  <h2>Blog</h2>
-  
-  <ul>
+    <div class="posts">
     
-      <li class="post-list-item">
-        <span class="home-date">
-          2023-03-27»
-        </span>
-        <a href="/test">안녕하세요 테스트페이지 입니다</a>
-      </li>
     
-      <li class="post-list-item">
-        <span class="home-date">
-          2023-01-27»
-        </span>
-        <a href="/tara1st">TaraTPS - 1차 프로젝트</a>
-      </li>
-    
-      <li class="post-list-item">
-        <span class="home-date">
-          2021-03-04»
-        </span>
-        <a href="/soopr">Soopr</a>
-      </li>
-    
-      <li class="post-list-item">
-        <span class="home-date">
-          2021-01-08»
-        </span>
-        <a href="/code">Code</a>
-      </li>
-    
-      <li class="post-list-item">
-        <span class="home-date">
-          2020-07-09»
-        </span>
-        <a href="/post-example-with-headings-and-toc">Post Example With Headings And Toc</a>
-      </li>
-    
-      <li class="post-list-item">
-        <span class="home-date">
-          2020-07-08»
-        </span>
-        <a href="/very-very-very-long-title-and-very-very-very-short-content">Very Very Very Long Title And Very Very Very Short Content</a>
-      </li>
-    
-      <li class="post-list-item">
-        <span class="home-date">
-          2020-07-08»
-        </span>
-        <a href="/language-tests">Language Tests</a>
-      </li>
-    
-      <li class="post-list-item">
-        <span class="home-date">
-          2020-07-07»
-        </span>
-        <a href="/overview-post">Overview Post</a>
-      </li>
-    
-  </ul>
+    <div class="post-teaser">
+        
+        <span>
+          <header>
+            <h1>
+              <a aria-label="HTTP 터널링" class="post-link" href="/database/2023/04/07/HTTP-tunneling.html">
+                HTTP 터널링
+              </a>
+            </h1>
+            
 
 
+<div class="post-info">
+    <p class="meta">
+      
+      
+      April 07, 2023
+    </p></div>
 
-
-
-  <h2>Old Projects</h2>
-  <ul class="horizontal-list">
-  
-
-    <li class="card">
-      <a href="https://www.soopr.co">
-        <span class="header">
-          Soopr
-
+          </header>
           
-            <mark>NEW</mark>
+              <div class="excerpt">
+                  
+                     Exercitation in nostrud incididunt laborum cupidatat enim ad eu anim officia aliquip. Lorem excepteur nulla deserunt adipisicing duis aliqua ullamco proident aute ut incididunt. In elit deserunt eiusmod ipsum dolor est anim ullamco consequat pariatur. Cillum officia voluptate nostrud adipisicing.
+
+                  
+              </div>
           
-
-        </span>
-
-        <hr />
-
+      </span>
+    </div>
+    
+    <div class="post-teaser">
         
-        <p class="body">
-          Delight your readers - add beautiful share and like buttons easily to your websites
-        </p>
-        
-      </a>
-    </li>
+        <span>
+          <header>
+            <h1>
+              <a aria-label="안녕하세요 테스트페이지 입니다" class="post-link" href="/test/2023/03/27/test.html">
+                안녕하세요 테스트페이지 입니다
+              </a>
+            </h1>
+            
 
-  
 
-    <li class="card">
-      <a href="https://github.com/abhinavs/cookie">
-        <span class="header">
-          Cookie
+<div class="post-info">
+    <p class="meta">
+      
+      
+      March 27, 2023
+    </p></div>
 
+          </header>
           
+              <div class="excerpt">
+                  
+                     Test Page
 
-        </span>
-
-        <hr />
-
-        
-        <p class="body">
-          An open source landing website with supporting pages and integrated blog
-        </p>
-        
-      </a>
-    </li>
-
-  
-
-    <li class="card">
-      <a href="https://github.com/abhinavs/moonwalk">
-        <span class="header">
-          Moonwalk
-
+                  
+              </div>
           
-
-        </span>
-
-        <hr />
-
+      </span>
+    </div>
+    
+    <div class="post-teaser">
         
-        <p class="body">
-          A fast and minimalist Jekyll blog theme with clean dark mode
-        </p>
-        
-      </a>
-    </li>
+        <span>
+          <header>
+            <h1>
+              <a aria-label="Dark Mode" class="post-link" href="/demo/2021/04/27/dark-mode.html">
+                Dark Mode
+              </a>
+            </h1>
+            
 
-  
 
-    <li class="card">
-      <a href="https://www.humangous.co">
-        <span class="header">
-          Humangous
+<div class="post-info">
+    <p class="meta">
+      
+      
+      April 27, 2021
+    </p></div>
 
+          </header>
           
+              <div class="excerpt">
+                  
+                     More colors with less light. Click the half-moon most top-right button to turn the lights ON/OFF.
+Here is a bit of everything, so you can check how the theme look, have fun! 👌
 
-        </span>
-
-        <hr />
-
+                  
+              </div>
+          
+      </span>
+    </div>
+    
+    <div class="post-teaser">
         
-        <p class="body">
-          The better people know you, the better they collaborate
-        </p>
-        
-      </a>
-    </li>
-
-  
-</ul>
-
-
-
-
-
-  <footer>
-    <div class="dashed"></div>
-    <ul class="horizontal-list">
-  
-    <li>
-      <a href="https://www.abhinav.co">
-        abhinav's homepage
-      </a>
-      &nbsp;&nbsp;
-    </li>
-  
-    <li>
-      <a href="https://twitter.com/abhinav">
-        twitter
-      </a>
-      &nbsp;&nbsp;
-    </li>
-  
-    <li>
-      <a href="https://github.com/abhinavs">
-        github
-      </a>
-      &nbsp;&nbsp;
-    </li>
-  
-    <li>
-      <a href="feed.xml">
-        feed
-      </a>
-      &nbsp;&nbsp;
-    </li>
-  
-</ul>
-
-  </footer>
-
-
-        
-          <button title="Toggle Theme" class="theme-toggle">
-  <svg viewBox="0 0 32 32" width="24" height="24" fill="currentcolor">
-    <circle cx="16" cy="16" r="14" fill="none" stroke="currentcolor" stroke-width="4"></circle>
-    <path d="
-             M 16 0
-             A 16 16 0 0 0 16 32
-             z">
-    </path>
-  </svg>
-</button>
-
-        
-        <div class="credits">&copy;&nbsp;2023&nbsp;Abhinav Saxena
-          &nbsp;
-          •
-          &nbsp;Powered by <a href="https://www.soopr.co" target="_blank" rel="noreferrer">Soopr</a>
-          &nbsp;
-          •
-          &nbsp;Theme&nbsp; <a href="https://github.com/abhinavs/moonwalk" target="_blank" rel="noreferrer">Moonwalk</a>
+        <div class="post-img">
+            <a aria-label="Tech Stuff example" href="/2019/11/02/Tech-stuff-example.html">
+                <img alt="Tech Stuff example" src="/assets/img/thumbnails/feature-img/circuit.jpeg">
+            </a>
         </div>
-      </div>
-    </main><script async defer src="https://sdk.soopr.co/soopr.js"></script></body>
+        
+        <span>
+          <header>
+            <h1>
+              <a aria-label="Tech Stuff example" class="post-link" href="/2019/11/02/Tech-stuff-example.html">
+                Tech Stuff example
+              </a>
+            </h1>
+            
+
+
+<div class="post-info">
+    <p class="meta">
+      
+      
+      November 02, 2019
+    </p></div>
+
+          </header>
+          
+              <div class="excerpt">
+                  
+                     Let’s demo some code snippet, with some mermaid diagrams.
+Because if you put some code in your blog, you would at least make it:
+
+  Searchable
+  Good-looking
+
+
+                  
+              </div>
+          
+      </span>
+    </div>
+    
+    <div class="post-teaser">
+        
+        <span>
+          <header>
+            <h1>
+              <a aria-label="Sample post" class="post-link" href="/2019/06/30/sample-post.html">
+                Sample post
+              </a>
+            </h1>
+            
+
+
+<div class="post-info">
+    <p class="meta">
+      
+      
+      June 30, 2019
+    </p></div>
+
+          </header>
+          
+              <div class="excerpt">
+                  
+                     Consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. 
+Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur.
+
+                  
+              </div>
+          
+      </span>
+    </div>
+    
+</div>
+
+
+<div class="pagination">
+    <div class="previous">
+        
+        
+        
+        <!-- < previous -->
+        <a aria-label="Prev" href=""
+           style="visibility:hidden" class="button">
+            <span><i class="fas fa-chevron-left"></i></span>
+            Prev
+        </a>
+    </div>
+
+    <div class="page_number">
+        1 / 3
+    </div>
+
+    <div class="next">
+        
+        <!-- next > -->
+        <a aria-label="Next" href="/blog/page2"
+            class="button">
+            Next
+            <span><i class="fas fa-chevron-right"></i></span>
+        </a>
+
+        
+        <!-- >> -->
+        <a aria-label="Next"
+        href="/blog/page3" class="button">
+            <span><i class="fas fa-angle-double-right"></i></span>
+        </a>
+        
+        
+    </div>
+</div>
+
+
+
+
+</div>
+
+    </div>
+    <footer class="site-footer">
+    <p class="text">
+        Powered by <a href='https://jekyllrb.com/'>Jekyll</a> with <a href='https://github.com/sylhare/Type-on-Strap'>Type on Strap</a></p>
+            <div class="footer-icons">
+                <ul>
+                <!-- Social icons from Font Awesome, if enabled -->
+                
+<li>
+    <a feed.xml href="/feed.xml"
+       title="Follow RSS feed"
+       target="_blank">
+        <span class="fa-stack fa-lg">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+        </span>
+    </a>
+</li>
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        
+        
+        
+        
+        <li>
+            <a href="https://github.com/sylhare"
+               title="Follow on Github"
+               target="_blank"
+               rel="noopener">
+            <span class="fa-stack fa-lg">
+              <i class="fas fa-circle fa-stack-2x"></i>
+              <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+            </span>
+            </a>
+        </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+                </ul>
+            </div>
+</footer>
+
+
+
+  </body>
 </html>
