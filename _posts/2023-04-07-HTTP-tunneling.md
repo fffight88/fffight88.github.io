@@ -7,13 +7,78 @@ categories: database
 color: turquoise
 excerpt_separator: <!--more-->
 ---
-Exercitation in nostrud incididunt laborum cupidatat enim ad eu anim officia aliquip. Lorem excepteur nulla deserunt adipisicing duis aliqua ullamco proident aute ut incididunt. In elit deserunt eiusmod ipsum dolor est anim ullamco consequat pariatur. Cillum officia voluptate nostrud adipisicing.
+```sql
+SET @var = 281;
+
+SELECT @var;
+```
+위 쿼리의 결과가 어떻게 나올지는 너무나 뻔하다.
+
+하지만, 출력된 결과는 다음과 같았다.
+
+
+![](/assets/img/feature-img/HTTP_tunnelling_null.png)
+
+
+도대체 어떻게 된 일일까? `SQLYOG`가 갑자기 맛이 가버렸나 싶어서 껐다 켜보고, PC 리셋도 해보고, 몇 번을 다시 해봐도 결과는 같았다. 그러다가 문득 한 가지 사실이 떠올랐다. 다른 DB들과는 달리 이 DB만 유일하게 `HTTP Tunnelling` 방식으로 접속하여 사용하고 있다는 것. 
+
+우리 친절한 챗지피티군한테 물어보니 `HTTP Tunnelling` 방식으로 DB에 접속하면 변수를 선언하고 값을 넣을 수는 있어도 그걸 유지할 수가 없다고 한다... 즉 변수를 사용할 수 없으니 저장프로시저도 물론 사용할 수 없고, 쿼리에서 변수를 넣어서 간단하게 처리할 수 있는 일도 일일이 값을 하드코딩으로 쳐 넣어야 하므로 일하는 시간이 무지하게 늘어난다는 것. 물론 그 날 남은 오후시간과 다음날 오전시간을 일일이 수작업으로 DB를 수정하는 데 보낼 수 밖에 없었다.
 <!--more-->
+***
 
-Eu incididunt esse id officia adipisicing qui esse. Cupidatat ad ex laborum aliquip ex dolore. Mollit minim voluptate irure culpa ad adipisicing Lorem non Lorem. Aute labore dolore culpa et veniam anim reprehenderit fugiat incididunt amet culpa cupidatat ut duis. Exercitation quis magna eiusmod qui Lorem excepteur do qui eu duis. Aliqua minim ipsum sit magna eu mollit. Voluptate esse sint quis aute laborum aute.
+### Tunnelling(터널링)
+터널링이란 둘 이상의 네트워크에 암호화된 연결을 설정하는 기술이라고 정의되어 있다. 본 사례에서는, 웹서버에서 DB서버로 접속하여 데이터를 주고 받기 위한 통로를 HTTP 터널링이란 기술로 구축했다는 얘기가 되겠다. 웹서버와 DB서버를 서로 소통할 수 있게 하려면 ***무언가***가 필요하고 그 무언가에 속하는 기술에는 다음과 같은 것들이 있다.
 
-Do ullamco quis mollit mollit quis irure. Sunt elit ex officia anim excepteur laborum culpa enim id. Quis sint occaecat nulla excepteur.
+#### 직접 접속(Direct Connection)
+웹서버와 DB서버가 같은 장소에 가까이 있어서 물리적으로 직접 연결이 가능하다면 별다른 보안 기술을 적용하지 않을 수도 있다.
 
-Cillum sit sint est veniam ad sint reprehenderit ullamco aliquip aliquip consequat. Et exercitation exercitation velit qui tempor dolor labore exercitation non fugiat. Ut minim irure exercitation mollit duis duis. Aliquip reprehenderit ea ex elit laborum esse amet officia. Sint ullamco consectetur occaecat commodo laboris sunt commodo tempor cillum ut ea.
+#### VPN(Virtual Private Network)
+하지만 요청하는 측과 응답하는 측이 멀리 떨어져 있어서 데이터 통신을 통해 접속하고 정보를 주고받아야 한다면 그 접속에는 반드시 보안이 적용되어야만 할 것이다. 이러한 필요를 충족시켜주는 기술이 ***VPN(가상 사설망)***이라고 할 수 있다. 인터넷과 같은 공중 네트워크를 마치 전용회선처럼 사용할 수 있게 해주는 기술 혹은 네트워크를 의미하며, 공중망을 경유하여 데이터가 전송되더라도 외부인으로 부터 안전하게 보호되도록 주소 및 라우터 체계의 비공개, 데이터 암호화, 사용자 인증 및 사용자 액세스 권한 제한 등의 기능을 제공한다. 터널링 기술도 VPN에서 제공하는 서비스 중 하나이다.
 
-Minim mollit sit deserunt mollit in amet labore officia enim occaecat dolor voluptate deserunt. Non aute qui consequat anim aliquip laborum id ea culpa. Culpa pariatur aute aliqua sint proident elit cupidatat ea et ullamco eu sunt labore. Voluptate excepteur non pariatur adipisicing aute aute proident. Deserunt minim fugiat do do adipisicing adipisicing.
+#### HTTP 터널링
+다른 회사의 네트워크를 경험해 본 일이 없어서 잘 모르지만 검색해보니 DB를 접속할 때 `SSH Tunnelling`을 많이 사용하는 것 같다. 하기사 교육받을 때 putty를 이용한 SSH 접속은 배웠어도 HTTP 터널링은 처음 경험해보고 있다. SSH 터널링과 HTTP 터널링의 장단점 및 변수값을 조회하면 null값이 출력되는 현상에 대해 챗지피티군과 대화한 내용을 적어보고자 한다.
+
+> ***Q. ssh 터널링과 http 터널링의 장단점을 비교하여 표로 나타내 줘.***
+>
+> A. 아래는 SSH 터널링과 HTTP 터널링의 장단점을 비교한 표입니다.
+> 
+> |구분|SSH 터널링|HTTP 터널링|
+> |---|---|---|
+> |보안성|높음|낮음|
+> |설정 및 구성|복잡함|간단함|
+> |암호화 방식|대칭키 및 공개키 암호화 지원|대칭키 암호화만 지원|
+> |대역폭|적음|많음|
+> |프로토콜 지원|TCP, UDP, FTP, SSH 등 지원|HTTP 프로토콜에 특화됨|
+> |사용 용도|보안이 필요한 접속에 사용|보안이 크게 중요하지 않은 접속에 사용|
+> |네트워크 지원|양방향 지원|단방향 지원|
+> 
+>위의 표는 일반적인 특성을 나타낸 것이며, 상황에 따라 다른 장단점이 존재할 수 있습니다. 결정적으로 어떤 방식을 사용할 것인지는 보안 및 업무 상황 등 여러 가지 요소를 고려하여 결정해야 합니다.
+>
+>
+> ***Q. http 터널링으로 db에 접속하면, 첫번째 쿼리에서 변수에 데이터를 저장하고 다음 쿼리에서 select문을 이용하여 변수의 값을 조회하였을 때 null이 출력되는 이유가 무엇인지 http 터널링의 특성과 연관지어 설명해 줘.***
+>
+>  A. HTTP 터널링은 HTTP 프로토콜을 이용하여 데이터를 전송하는 방식으로, HTTP 요청에 포함된 데이터 외에는 전송이 불가능합니다. 따라서 HTTP 터널링을 이용하여 DB에 접속하고 쿼리를 실행할 때는 HTTP 요청의 헤더 및 바디에 쿼리문을 포함시켜 전송합니다. 그러나 이 때 변수에 데이터를 저장하고 다음 쿼리에서 조회할 때 문제가 발생할 수 있습니다.
+> 
+>HTTP 터널링에서는 연결이 한 번 맺어지면 계속 유지되기 때문에, 여러 쿼리를 실행하더라도 하나의 HTTP 요청으로 전송합니다. 따라서 첫 번째 쿼리에서 변수에 데이터를 저장하고, 두 번째 쿼리에서 해당 변수 값을 조회해도 이전에 저장된 데이터를 사용할 수 없습니다. 즉, 다른 HTTP 요청이 아니기 때문에 변수가 초기화되어 이전 값을 사용할 수 없는 것입니다.
+>
+>따라서 HTTP 터널링으로 DB에 접속할 때는 이러한 특성을 고려하여 변수를 사용하는 방식을 변경하거나, 변수를 사용하지 않고 바로 데이터를 조회하는 방식으로 코드를 작성해야 합니다. 또는 SSH 터널링을 이용하여 DB에 직접 접속하는 방식으로 변경할 수도 있습니다.
+>
+>
+> ***Q. 위 답변 중 두번째 문단의 내용이 잘 이해가 가지 않는데 더 쉽고 자세하게 설명해 줘.***
+> 
+> HTTP 터널링은 HTTP 통신을 이용해 데이터를 전송하는 방식이기 때문에, 전송되는 데이터가 HTTP 요청 및 응답 메시지의 형식을 따르고 있어야 합니다. 따라서, HTTP 터널링을 이용해 DB에 접속하는 경우, SQL 쿼리문과 같은 DB 관련 데이터도 HTTP 요청 및 응답 메시지의 형식으로 변환되어야 합니다.
+> 
+> 하지만 SQL 쿼리문과 같은 DB 관련 데이터는 HTTP 요청 및 응답 메시지의 형식과는 매우 다른 형태의 데이터입니다. 그렇기 때문에 HTTP 터널링으로 DB에 접속한 후 첫 번째 쿼리에서 변수에 데이터를 저장하고, 다음 쿼리에서 변수의 값을 조회하면 null이 출력될 수 있습니다.
+> 
+> 이는 HTTP 터널링이 DB와의 연결을 유지하기 위해 사용하는 HTTP 요청 및 응답 메시지의 형식이 SQL 쿼리문과 같은 DB 관련 데이터의 형식과는 매우 다르기 때문입니다. 이러한 차이로 인해 DB 관련 데이터는 HTTP 요청 및 응답 메시지의 형식으로 변환되어 전송되지 않을 수 있으며, 따라서 값이 null로 나타날 수 있습니다.
+
+
+~~지피티군이 뉴비 가르친다고 열일했지만 미안하지만 잘 와닿지가 않아...~~ 어쨌든 요점은 <span style="color: red"><u>HTTP 터널링은 SSH 방식에 비해 설정 및 구성이 간단하지만 보안에 취약해 보안이 그다지 중요하지 않은 접속에 적합하며 DB데이터를 HTTP 요청/응답 메세지 형식으로 변환하는 것에는 한계(?)가 있으므로 변수 및 저장프로시저는 사용이 제한된다.</u></span> 다만 다음과 같은 방법으로 HTTP 터널링에서도 변수와 저장프로시저를 사용할 수 있을 것이라 생각한다.
+
+> 1. DBMS 상에서 쿼리를 날리지 않고, PHP, JSP 등 서버사이드 언어를 사용해 코드 내에 쿼리를 포함하여 쿼리의 결과를 변수에 저장해가면서 저장프로시저로 하려고 했던 로직을 만들기
+> 2. 더 편해보이는 방법으로... 그냥 SSH 터널링이나 터널링 없이 DB에 접속하도록 방식을 바꾸기
+
+
+
+
+

@@ -62,12 +62,12 @@
     <meta property="og:type" content="website" />
     
     <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Newbie’s DoorClosing | A website with blog posts and pages</title>
+<title>Newbie’s DoorClosing | Newbie’s DoorClosing</title>
 <meta name="generator" content="Jekyll v4.3.2" />
 <meta property="og:title" content="Newbie’s DoorClosing" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="A website with blog posts and pages" />
-<meta property="og:description" content="A website with blog posts and pages" />
+<meta name="description" content="Newbie’s DoorClosing" />
+<meta property="og:description" content="Newbie’s DoorClosing" />
 <link rel="canonical" href="http://localhost:4000/" />
 <meta property="og:url" content="http://localhost:4000/" />
 <meta property="og:site_name" content="Newbie’s DoorClosing" />
@@ -76,7 +76,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Newbie’s DoorClosing" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","description":"A website with blog posts and pages","headline":"Newbie’s DoorClosing","name":"Newbie’s DoorClosing","url":"http://localhost:4000/"}</script>
+{"@context":"https://schema.org","@type":"WebSite","description":"Newbie’s DoorClosing","headline":"Newbie’s DoorClosing","name":"Newbie’s DoorClosing","url":"http://localhost:4000/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -123,41 +123,11 @@
             
         
             
-            <li class="separator"> | </li>
-            <li>
-                <a class="clear" aria-label="About" title="About" href="/about/">
-                     About 
-                </a>
-            </li>
-            
             
         
             
             
         
-            
-            <li class="separator"> | </li>
-            <li>
-                <a class="clear" aria-label="Gallery" title="Gallery" href="/gallery/">
-                     Gallery 
-                </a>
-            </li>
-            
-            
-        
-            
-            
-        
-            
-            
-        
-            
-            <li class="separator"> | </li>
-            <li>
-                <a class="clear" aria-label="Portfolio" title="Portfolio" href="/portfolio/">
-                     Portfolio 
-                </a>
-            </li>
             
             
         
@@ -255,7 +225,19 @@
           
               <div class="excerpt">
                   
-                     Exercitation in nostrud incididunt laborum cupidatat enim ad eu anim officia aliquip. Lorem excepteur nulla deserunt adipisicing duis aliqua ullamco proident aute ut incididunt. In elit deserunt eiusmod ipsum dolor est anim ullamco consequat pariatur. Cillum officia voluptate nostrud adipisicing.
+                     SET @var = 281;
+
+SELECT @var;
+
+위 쿼리의 결과가 어떻게 나올지는 너무나 뻔하다.
+
+하지만, 출력된 결과는 다음과 같았다.
+
+
+
+도대체 어떻게 된 일일까? SQLYOG가 갑자기 맛이 가버렸나 싶어서 껐다 켜보고, PC 리셋도 해보고, 몇 번을 다시 해봐도 결과는 같았다. 그러다가 문득 한 가지 사실이 떠올랐다. 다른 DB들과는 달리 이 DB만 유일하게 HTTP Tunnelling 방식으로 접속하여 사용하고 있다는 것.
+
+우리 친절한 챗지피티군한테 물어보니 HTTP Tunnelling 방식으로 DB에 접속하면 변수를 선언하고 값을 넣을 수는 있어도 그걸 유지할 수가 없다고 한다… 즉 변수를 사용할 수 없으니 저장프로시저도 물론 사용할 수 없고, 쿼리에서 변수를 넣어서 간단하게 처리할 수 있는 일도 일일이 값을 하드코딩으로 쳐 넣어야 하므로 일하는 시간이 무지하게 늘어난다는 것. 물론 그 날 남은 오후시간과 다음날 오전시간을 일일이 수작업으로 DB를 수정하는 데 보낼 수 밖에 없었다.
 
                   
               </div>
