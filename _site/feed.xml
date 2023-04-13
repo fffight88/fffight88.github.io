@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-13T15:34:38+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Newbie’s DoorClosing</title><subtitle>Newbie&apos;s DoorClosing</subtitle><entry><title type="html">Code Examples(1)</title><link href="http://localhost:4000/code/2023/04/13/code-examples.html" rel="alternate" type="text/html" title="Code Examples(1)" /><published>2023-04-13T00:00:00+09:00</published><updated>2023-04-13T00:00:00+09:00</updated><id>http://localhost:4000/code/2023/04/13/code-examples</id><content type="html" xml:base="http://localhost:4000/code/2023/04/13/code-examples.html"><![CDATA[<p><strong><em>목차</em></strong></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-13T15:43:51+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Newbie’s DoorClosing</title><subtitle>Newbie&apos;s DoorClosing</subtitle><entry><title type="html">Code Examples(1)</title><link href="http://localhost:4000/code/2023/04/13/code-examples.html" rel="alternate" type="text/html" title="Code Examples(1)" /><published>2023-04-13T00:00:00+09:00</published><updated>2023-04-13T00:00:00+09:00</updated><id>http://localhost:4000/code/2023/04/13/code-examples</id><content type="html" xml:base="http://localhost:4000/code/2023/04/13/code-examples.html"><![CDATA[<p><strong><em>목차</em></strong></p>
 
 <ul>
   <li><a href="#반복문으로-뿌려지는-데이터를-대상으로-jquery-사용-시-주의할-점">반복문으로 뿌려지는 데이터를 대상으로 jQuery 사용 시 주의할 점</a></li>
@@ -43,75 +43,7 @@
 
 <p><br /></p>
 
-<h3 id="두번째-거">두번째 거</h3>]]></content><author><name>Victor Lo</name></author><category term="code" /><category term="code" /><summary type="html"><![CDATA[목차]]></summary></entry><entry><title type="html">How To Manage TCPS</title><link href="http://localhost:4000/myjob/2023/04/11/tcps-management.html" rel="alternate" type="text/html" title="How To Manage TCPS" /><published>2023-04-11T00:00:00+09:00</published><updated>2023-04-11T00:00:00+09:00</updated><id>http://localhost:4000/myjob/2023/04/11/tcps-management</id><content type="html" xml:base="http://localhost:4000/myjob/2023/04/11/tcps-management.html"><![CDATA[<p><strong><em>목차</em></strong></p>
-
-<!-- code_chunk_output -->
-
-<ul>
-  <li><a href="#주기적">주기적</a>
-    <ul>
-      <li><a href="#서버용량-관리">서버용량 관리</a></li>
-    </ul>
-  </li>
-  <li><a href="#요청있을-때">요청있을 때</a>
-    <ul>
-      <li><a href="#좌측-navigation-bar에-맞춤제품-메뉴-추가하고-제품-등록하기청년다방-브레댄코-">좌측 navigation bar에 맞춤제품 메뉴 추가하고 제품 등록하기(청년다방, 브레댄코, …)</a></li>
-      <li><a href="#좌측-navigation-bar에-메뉴명-수정하기">좌측 navigation bar에 메뉴명 수정하기</a></li>
-      <li><a href="#맞춤제품-메뉴-등록이-처음인-고객사">맞춤제품 메뉴 등록이 처음인 고객사</a></li>
-    </ul>
-  </li>
-</ul>
-
-<!-- /code_chunk_output -->
-<p><br /></p>
-
-<hr />
-
-<p><br /></p>
-
-<h2 id="주기적">주기적</h2>
-
-<h3 id="서버용량-관리">서버용량 관리</h3>
-
-<h2 id="요청있을-때">요청있을 때</h2>
-
-<h3 id="좌측-navigation-bar에-맞춤제품-메뉴-추가하고-제품-등록하기청년다방-브레댄코-">좌측 navigation bar에 맞춤제품 메뉴 추가하고 제품 등록하기(청년다방, 브레댄코, …)</h3>
-<blockquote>
-  <p><strong>“좌측에 xxxx 메뉴를 만들고 그 안에 맞춤제품번호 xxxx번(부터 xxxx번)을 추가해주세요”</strong></p>
-</blockquote>
-
-<ol>
-  <li>TCPS 실서버 db의 b2b_icm.tpa001_customize 테이블에서</li>
-  <li>where 조건에 <code class="language-plaintext highlighter-rouge">serial = 제품번호</code> 를 넣어 select로 검색하면</li>
-  <li><code class="language-plaintext highlighter-rouge">p_code</code> 컬럼에서 해당 제품들의 코드 확인</li>
-  <li><code class="language-plaintext highlighter-rouge">\application\config\config_tcps.php</code> 에서 <code class="language-plaintext highlighter-rouge">$config['고객사명_tpa013_p_codes']</code> 배열을 찾는다. 
-<em>(고객사명: 청년다방=&gt;youngdabang, 브레댄코=&gt;breadnco, …)</em></li>
-  <li>배열 안에 다음 배열을 추가한다.
-    <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">array</span><span class="p">(</span>
- <span class="s1">'name'</span> <span class="o">=&gt;</span> <span class="s2">"원하는 메뉴명"</span><span class="p">,</span>
- <span class="s1">'p_code'</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span><span class="s2">"3번에서 확인한 코드값1"</span><span class="p">,</span> <span class="s2">"3번에서 확인한 코드값2"</span><span class="p">,</span> <span class="mf">...</span><span class="p">)</span>
-<span class="p">)</span>
-</code></pre></div>    </div>
-    <p><br />
-<br /></p>
-  </li>
-</ol>
-
-<h3 id="좌측-navigation-bar에-메뉴명-수정하기">좌측 navigation bar에 메뉴명 수정하기</h3>
-
-<ol>
-  <li>TCPS 실서버 db의 b2b_icm.mem_c 테이블에서</li>
-  <li>where 조건에 <code class="language-plaintext highlighter-rouge">c_biz_com = '회사명'</code> 을 넣어 select로 검색하면</li>
-  <li><code class="language-plaintext highlighter-rouge">serial</code> 컬럼에서 해당 고객사의 코드 확인</li>
-  <li><code class="language-plaintext highlighter-rouge">\application\helpers\function_tcps_helper.php</code> 에서 <code class="language-plaintext highlighter-rouge">func_tcps_reset_config_code()</code> 를 찾는다.</li>
-  <li>해당 고객사의 코드에 해당하는 if문을 찾아 원하는 부분을 수정한다.</li>
-  <li>청년다방, 브레댄코 등 맞춤제품 부분의 메뉴가 커스터마이징 되어있는 고객사의 맞춤제품(TPA013) 메뉴명은 여기에서 바꿀 수 없고  <a href="#좌측-navigation-bar에-맞춤제품-메뉴-추가하고-제품-등록하기청년다방-브레댄코-">좌측 navigation bar에 맞춤제품 메뉴 추가하고 제품 등록하기(청년다방, 브레댄코, …)</a> 를 참조</li>
-</ol>
-
-<p><br />
-<br /></p>
-
-<h3 id="맞춤제품-메뉴-등록이-처음인-고객사">맞춤제품 메뉴 등록이 처음인 고객사</h3>]]></content><author><name>Victor Lo</name></author><category term="myjob" /><category term="tcps" /><summary type="html"><![CDATA[목차]]></summary></entry><entry><title type="html">HTTP 터널링</title><link href="http://localhost:4000/database/2023/04/07/HTTP-tunneling.html" rel="alternate" type="text/html" title="HTTP 터널링" /><published>2023-04-07T00:00:00+09:00</published><updated>2023-04-07T00:00:00+09:00</updated><id>http://localhost:4000/database/2023/04/07/HTTP-tunneling</id><content type="html" xml:base="http://localhost:4000/database/2023/04/07/HTTP-tunneling.html"><![CDATA[<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SET</span> <span class="o">@</span><span class="n">var</span> <span class="o">=</span> <span class="mi">281</span><span class="p">;</span>
+<h3 id="두번째-거">두번째 거</h3>]]></content><author><name>Victor Lo</name></author><category term="code" /><category term="code" /><summary type="html"><![CDATA[목차]]></summary></entry><entry><title type="html">HTTP 터널링</title><link href="http://localhost:4000/database/2023/04/07/HTTP-tunneling.html" rel="alternate" type="text/html" title="HTTP 터널링" /><published>2023-04-07T00:00:00+09:00</published><updated>2023-04-07T00:00:00+09:00</updated><id>http://localhost:4000/database/2023/04/07/HTTP-tunneling</id><content type="html" xml:base="http://localhost:4000/database/2023/04/07/HTTP-tunneling.html"><![CDATA[<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SET</span> <span class="o">@</span><span class="n">var</span> <span class="o">=</span> <span class="mi">281</span><span class="p">;</span>
 
 <span class="k">SELECT</span> <span class="o">@</span><span class="n">var</span><span class="p">;</span>
 </code></pre></div></div>
@@ -983,4 +915,123 @@ Here is a code snippet for the <a href="https://getbootstrap.com/docs/4.0/gettin
 <p>That’s just for demo though, you would need to properly integrate your javascript in your page.
 Usually you would put any custom javascript script in the <em>assets</em> folder under js and reference it in your page from there.</p>
 
-<p>So try it out using the <code class="language-plaintext highlighter-rouge">bootstrap: true</code> flag! 😉</p>]]></content><author><name></name></author><category term="Demo" /><category term="Test" /><summary type="html"><![CDATA[This theme is compatible with Bootstrap if you choose to use it in your pages or posts. Here is a little demo with a code snippet, look at the source to see how the HTML and markdown get tangled.]]></summary></entry></feed>
+<p>So try it out using the <code class="language-plaintext highlighter-rouge">bootstrap: true</code> flag! 😉</p>]]></content><author><name></name></author><category term="Demo" /><category term="Test" /><summary type="html"><![CDATA[This theme is compatible with Bootstrap if you choose to use it in your pages or posts. Here is a little demo with a code snippet, look at the source to see how the HTML and markdown get tangled.]]></summary></entry><entry><title type="html">Markdown and HTML</title><link href="http://localhost:4000/syntax/2014/11/28/markdown-and-html.html" rel="alternate" type="text/html" title="Markdown and HTML" /><published>2014-11-28T00:00:00+09:00</published><updated>2014-11-28T00:00:00+09:00</updated><id>http://localhost:4000/syntax/2014/11/28/markdown-and-html</id><content type="html" xml:base="http://localhost:4000/syntax/2014/11/28/markdown-and-html.html"><![CDATA[<p>Jekyll supports the use of <a href="http://daringfireball.net/projects/markdown/syntax">Markdown</a> with inline HTML tags which makes it easier to quickly write posts with Jekyll, without having to worry too much about text formatting. A sample of the formatting follows.</p>
+
+<h2 id="table-of-content">Table of content</h2>
+
+<!-- To be placed at the beginning of the post, it is where the table of content will be generated -->
+<ul>
+  <li>TOC</li>
+  <li>You need to put this at the beginning of the page where you want the table of content to be displayed</li>
+</ul>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* TOC
+{:toc}
+</code></pre></div></div>
+
+<p>It will then render the markdown and html titles (lines that begins with <code class="language-plaintext highlighter-rouge">#</code> or using the <code class="language-plaintext highlighter-rouge">&lt;h1&gt;&lt;/h1&gt;</code> tages)</p>
+
+<h2 id="title">Title</h2>
+
+<h3 id="subtitle">Subtitle</h3>
+
+<p>Tables have also been extended from Markdown:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>First Header</th>
+      <th>Second Header</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Content Cell</td>
+      <td>Content Cell</td>
+    </tr>
+    <tr>
+      <td>Content Cell</td>
+      <td>Content Cell</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Here’s an example of an image, which is included using Markdown:</p>
+
+<p><img src="/assets/img/pexels/book-glass.jpeg" alt="Image of a glass on a book" /></p>
+
+<p>This is another example of list:</p>
+
+<ul>
+  <li>list of things
+    <ol>
+      <li>Sub list</li>
+      <li>of Other things</li>
+      <li>with numbers</li>
+    </ol>
+  </li>
+  <li>And many more
+    <ul>
+      <li>Sub sub list
+        <ul>
+          <li>can go on …
+            <ul>
+              <li>and on …
+                <ul>
+                  <li>and on !</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>That’s it.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="other-subtitle">Other subtitle</h3>
+
+<p>Highlighting for code in Jekyll is done using Base16 or Rouge. This theme makes use of Rouge by default.</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// count to ten</span>
+<span class="nf">for </span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// count to twenty</span>
+<span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="nf">while </span><span class="p">(</span><span class="nx">j</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">j</span><span class="o">++</span><span class="p">;</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">j</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<h3 id="math">Math</h3>
+
+<p>Type on Strap uses KaTeX to display maths. Equations such as \(S_n = a \times \frac{1-r^n}{1-r}\) can be displayed inline.</p>
+
+<p>Alternatively, they can be shown on a new line:</p>
+
+\[f(x) = \int \frac{2x^2+4x+6}{x-2}\]
+
+<p>And in your markdown file:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$$ f(x) = <span class="se">\i</span>nt <span class="se">\f</span>rac{2x^2+4x+6}{x-2} $$
+</code></pre></div></div>
+
+<h3 id="expandable-content">Expandable content</h3>
+
+<p>Click on the expandable content to display it:</p>
+
+<details>
+    <summary>Click here!</summary>
+    Now you see me
+</details>
+
+<p>And in your markdown file:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;details&gt;</span>
+    <span class="nt">&lt;summary&gt;</span>Click here!<span class="nt">&lt;/summary&gt;</span>
+    Now you see me
+<span class="nt">&lt;/details&gt;</span>
+</code></pre></div></div>]]></content><author><name>Rohan Chandra</name></author><category term="Syntax" /><category term="Katex" /><category term="Markdown" /><summary type="html"><![CDATA[Jekyll supports the use of Markdown with inline HTML tags which makes it easier to quickly write posts with Jekyll, without having to worry too much about text formatting. A sample of the formatting follows.]]></summary></entry></feed>
