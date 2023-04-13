@@ -57,7 +57,7 @@
     
 
     <!-- seo tags -->
-    <meta property="og:image" content="http://localhost:4000/assets/img/header/suzume.jpg">
+    <meta property="og:image" content="http://localhost:4000/assets/img/header/suzume_resized.jpg">
     
     <meta property="og:type" content="website" />
     
@@ -89,7 +89,7 @@
     <meta name="twitter:description" content="뉴비 개발자의 문단속">
     
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:image" content="http://localhost:4000/assets/img/header/suzume.jpg">
+    <meta name="twitter:image" content="http://localhost:4000/assets/img/header/suzume_resized.jpg">
     <meta name="twitter:image:alt" content="Newbie's DoorClosing">
 </head>
 
@@ -180,17 +180,17 @@
     <style scoped>
         
         .call-out_img {
-            background-image: url('/assets/img/header/suzume.jpg');
+            background-image: url('/assets/img/header/suzume_resized.jpg');
         }
         
         @media screen and (max-width: 768px) {
             .call-out_img {
-                background-image: url('/assets/img/header/suzume-medium.jpg');
+                background-image: url('/assets/img/header/suzume_resized-medium.jpg');
             }
         }
         @media screen and (max-width: 576px) {
             .call-out_img {
-                background-image: url('/assets/img/header/suzume-small.jpg');
+                background-image: url('/assets/img/header/suzume_resized-small.jpg');
             }
         }
         
@@ -201,6 +201,68 @@
 
     <div class="posts">
     
+    
+    <div class="post-teaser">
+        
+        <span>
+          <header>
+            <h1>
+              <a aria-label="Code Examples(1)" class="post-link" href="/code/2023/04/13/code-examples.html">
+                Code Examples(1)
+              </a>
+            </h1>
+            
+
+
+<div class="post-info">
+    <p class="meta">
+      
+      
+      April 13, 2023
+    </p></div>
+
+          </header>
+          
+              <div class="excerpt">
+                  
+                     목차
+
+                  
+              </div>
+          
+      </span>
+    </div>
+    
+    <div class="post-teaser">
+        
+        <span>
+          <header>
+            <h1>
+              <a aria-label="How To Manage TCPS" class="post-link" href="/myjob/2023/04/11/tcps-management.html">
+                How To Manage TCPS
+              </a>
+            </h1>
+            
+
+
+<div class="post-info">
+    <p class="meta">
+      
+      
+      April 11, 2023
+    </p></div>
+
+          </header>
+          
+              <div class="excerpt">
+                  
+                     목차
+
+                  
+              </div>
+          
+      </span>
+    </div>
     
     <div class="post-teaser">
         
@@ -235,9 +297,7 @@ SELECT @var;
 
 
 
-도대체 어떻게 된 일일까? SQLYOG가 갑자기 맛이 가버렸나 싶어서 껐다 켜보고, PC 리셋도 해보고, 몇 번을 다시 해봐도 결과는 같았다. 그러다가 문득 한 가지 사실이 떠올랐다. 다른 DB들과는 달리 이 DB만 유일하게 HTTP Tunnelling 방식으로 접속하여 사용하고 있다는 것.
-
-우리 친절한 챗지피티군한테 물어보니 HTTP Tunnelling 방식으로 DB에 접속하면 변수를 선언하고 값을 넣을 수는 있어도 그걸 유지할 수가 없다고 한다… 즉 변수를 사용할 수 없으니 저장프로시저도 물론 사용할 수 없고, 쿼리에서 변수를 넣어서 간단하게 처리할 수 있는 일도 일일이 값을 하드코딩으로 쳐 넣어야 하므로 일하는 시간이 무지하게 늘어난다는 것. 물론 그 날 남은 오후시간과 다음날 오전시간을 일일이 수작업으로 DB를 수정하는 데 보낼 수 밖에 없었다.
+도대체 어떻게 된 일일까? SQLYOG가 갑자기 맛이 가버렸나 싶어서 껐다 켜보고, PC 리셋도 해보고, 몇 번을 다시 해봐도 결과는 같았다. 그러다가 문득 한 가지 사실이 떠올랐다.
 
                   
               </div>
@@ -301,80 +361,6 @@ SELECT @var;
                   
                      More colors with less light. Click the half-moon most top-right button to turn the lights ON/OFF.
 Here is a bit of everything, so you can check how the theme look, have fun! 👌
-
-                  
-              </div>
-          
-      </span>
-    </div>
-    
-    <div class="post-teaser">
-        
-        <div class="post-img">
-            <a aria-label="Tech Stuff example" href="/2019/11/02/Tech-stuff-example.html">
-                <img alt="Tech Stuff example" src="/assets/img/thumbnails/feature-img/circuit.jpeg">
-            </a>
-        </div>
-        
-        <span>
-          <header>
-            <h1>
-              <a aria-label="Tech Stuff example" class="post-link" href="/2019/11/02/Tech-stuff-example.html">
-                Tech Stuff example
-              </a>
-            </h1>
-            
-
-
-<div class="post-info">
-    <p class="meta">
-      
-      
-      November 02, 2019
-    </p></div>
-
-          </header>
-          
-              <div class="excerpt">
-                  
-                     Let’s demo some code snippet, with some mermaid diagrams.
-Because if you put some code in your blog, you would at least make it:
-
-  Searchable
-  Good-looking
-
-
-                  
-              </div>
-          
-      </span>
-    </div>
-    
-    <div class="post-teaser">
-        
-        <span>
-          <header>
-            <h1>
-              <a aria-label="Sample post" class="post-link" href="/2019/06/30/sample-post.html">
-                Sample post
-              </a>
-            </h1>
-            
-
-
-<div class="post-info">
-    <p class="meta">
-      
-      
-      June 30, 2019
-    </p></div>
-
-          </header>
-          
-              <div class="excerpt">
-                  
-                     Consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. 
-Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur.
 
                   
               </div>

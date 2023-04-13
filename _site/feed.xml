@@ -1,4 +1,117 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-09T23:40:03+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Newbie’s DoorClosing</title><subtitle>Newbie&apos;s DoorClosing</subtitle><entry><title type="html">HTTP 터널링</title><link href="http://localhost:4000/database/2023/04/07/HTTP-tunneling.html" rel="alternate" type="text/html" title="HTTP 터널링" /><published>2023-04-07T00:00:00+09:00</published><updated>2023-04-07T00:00:00+09:00</updated><id>http://localhost:4000/database/2023/04/07/HTTP-tunneling</id><content type="html" xml:base="http://localhost:4000/database/2023/04/07/HTTP-tunneling.html"><![CDATA[<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SET</span> <span class="o">@</span><span class="n">var</span> <span class="o">=</span> <span class="mi">281</span><span class="p">;</span>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-13T15:34:38+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Newbie’s DoorClosing</title><subtitle>Newbie&apos;s DoorClosing</subtitle><entry><title type="html">Code Examples(1)</title><link href="http://localhost:4000/code/2023/04/13/code-examples.html" rel="alternate" type="text/html" title="Code Examples(1)" /><published>2023-04-13T00:00:00+09:00</published><updated>2023-04-13T00:00:00+09:00</updated><id>http://localhost:4000/code/2023/04/13/code-examples</id><content type="html" xml:base="http://localhost:4000/code/2023/04/13/code-examples.html"><![CDATA[<p><strong><em>목차</em></strong></p>
+
+<ul>
+  <li><a href="#반복문으로-뿌려지는-데이터를-대상으로-jquery-사용-시-주의할-점">반복문으로 뿌려지는 데이터를 대상으로 jQuery 사용 시 주의할 점</a></li>
+  <li><a href="#두번째-거">두번째 거</a></li>
+</ul>
+
+<p><br /></p>
+
+<hr />
+
+<p><br /></p>
+
+<h3 id="반복문으로-뿌려지는-데이터를-대상으로-jquery-사용-시-주의할-점">반복문으로 뿌려지는 데이터를 대상으로 jQuery 사용 시 주의할 점</h3>
+
+<p><br /></p>
+
+<ul>
+  <li>반복문으로 여러 개의 데이터가 뿌려지는 경우 각각의 데이터를 포함하는 태그, 즉 <code class="language-plaintext highlighter-rouge">&lt;td&gt;</code>나 <code class="language-plaintext highlighter-rouge">&lt;input&gt;</code> 등의 태그는 DB로부터 기본키 따위의 유니크한 데이터를 넘겨받아 이를 <code class="language-plaintext highlighter-rouge">name</code>이나 <code class="language-plaintext highlighter-rouge">data-</code>속성 등으로 가지고 있게 해야 편하다. 이런 과정 없이는 추후에 화면단에 뿌려진 데이터를 input 등으로 이용하기 위해 선택하려 할 때 애를 먹게 된다.</li>
+</ul>
+
+<p><br /></p>
+
+<ul>
+  <li>jQuery 함수의 시작점이 되는 객체, 즉 <code class="language-plaintext highlighter-rouge">$(this)</code>로부터 위 1번에서 설명한 유니크한 데이터를 물고 있는 객체까지 가는 길을 잘 보아야 한다. 즉 <code class="language-plaintext highlighter-rouge">parent()</code>, <code class="language-plaintext highlighter-rouge">children()</code>, <code class="language-plaintext highlighter-rouge">siblings()</code> 등의 함수를 적절히 사용할 줄 알아야 하며 <code class="language-plaintext highlighter-rouge">[속성=값]</code> 등의 선택자도 마찬가지인데, 특별히 기억할 것은 ‘값’의 부분에 변수를 넣고 싶다면 그냥 변수명을 입력할 것이 아니라 <code class="language-plaintext highlighter-rouge">' + 변수명 + '</code>를 이용해야 한다. 예를 들어</li>
+</ul>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">yourGreatName</span><span class="dl">"</span><span class="p">;</span>
+<span class="nf">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nf">parent</span><span class="p">().</span><span class="nf">siblings</span><span class="p">(</span><span class="dl">'</span><span class="s1">td[name=name]</span><span class="dl">'</span><span class="p">).</span><span class="nf">children</span><span class="p">(</span><span class="dl">'</span><span class="s1">input</span><span class="dl">'</span><span class="p">).</span><span class="nf">val</span><span class="p">();</span>
+</code></pre></div></div>
+
+<p>이렇게 하면 아무런 일도 일어나지 않고,</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">yourGreatName</span><span class="dl">"</span><span class="p">;</span>
+<span class="nf">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nf">parent</span><span class="p">().</span><span class="nf">siblings</span><span class="p">(</span><span class="dl">'</span><span class="s1">td[name=</span><span class="dl">'</span> <span class="o">+</span> <span class="nx">name</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">]</span><span class="dl">'</span><span class="p">).</span><span class="nf">children</span><span class="p">(</span><span class="dl">'</span><span class="s1">input</span><span class="dl">'</span><span class="p">).</span><span class="nf">val</span><span class="p">();</span>
+</code></pre></div></div>
+
+<p>이런 식으로 써줘야 한다.</p>
+
+<p><br /></p>
+
+<hr />
+
+<p><br /></p>
+
+<h3 id="두번째-거">두번째 거</h3>]]></content><author><name>Victor Lo</name></author><category term="code" /><category term="code" /><summary type="html"><![CDATA[목차]]></summary></entry><entry><title type="html">How To Manage TCPS</title><link href="http://localhost:4000/myjob/2023/04/11/tcps-management.html" rel="alternate" type="text/html" title="How To Manage TCPS" /><published>2023-04-11T00:00:00+09:00</published><updated>2023-04-11T00:00:00+09:00</updated><id>http://localhost:4000/myjob/2023/04/11/tcps-management</id><content type="html" xml:base="http://localhost:4000/myjob/2023/04/11/tcps-management.html"><![CDATA[<p><strong><em>목차</em></strong></p>
+
+<!-- code_chunk_output -->
+
+<ul>
+  <li><a href="#주기적">주기적</a>
+    <ul>
+      <li><a href="#서버용량-관리">서버용량 관리</a></li>
+    </ul>
+  </li>
+  <li><a href="#요청있을-때">요청있을 때</a>
+    <ul>
+      <li><a href="#좌측-navigation-bar에-맞춤제품-메뉴-추가하고-제품-등록하기청년다방-브레댄코-">좌측 navigation bar에 맞춤제품 메뉴 추가하고 제품 등록하기(청년다방, 브레댄코, …)</a></li>
+      <li><a href="#좌측-navigation-bar에-메뉴명-수정하기">좌측 navigation bar에 메뉴명 수정하기</a></li>
+      <li><a href="#맞춤제품-메뉴-등록이-처음인-고객사">맞춤제품 메뉴 등록이 처음인 고객사</a></li>
+    </ul>
+  </li>
+</ul>
+
+<!-- /code_chunk_output -->
+<p><br /></p>
+
+<hr />
+
+<p><br /></p>
+
+<h2 id="주기적">주기적</h2>
+
+<h3 id="서버용량-관리">서버용량 관리</h3>
+
+<h2 id="요청있을-때">요청있을 때</h2>
+
+<h3 id="좌측-navigation-bar에-맞춤제품-메뉴-추가하고-제품-등록하기청년다방-브레댄코-">좌측 navigation bar에 맞춤제품 메뉴 추가하고 제품 등록하기(청년다방, 브레댄코, …)</h3>
+<blockquote>
+  <p><strong>“좌측에 xxxx 메뉴를 만들고 그 안에 맞춤제품번호 xxxx번(부터 xxxx번)을 추가해주세요”</strong></p>
+</blockquote>
+
+<ol>
+  <li>TCPS 실서버 db의 b2b_icm.tpa001_customize 테이블에서</li>
+  <li>where 조건에 <code class="language-plaintext highlighter-rouge">serial = 제품번호</code> 를 넣어 select로 검색하면</li>
+  <li><code class="language-plaintext highlighter-rouge">p_code</code> 컬럼에서 해당 제품들의 코드 확인</li>
+  <li><code class="language-plaintext highlighter-rouge">\application\config\config_tcps.php</code> 에서 <code class="language-plaintext highlighter-rouge">$config['고객사명_tpa013_p_codes']</code> 배열을 찾는다. 
+<em>(고객사명: 청년다방=&gt;youngdabang, 브레댄코=&gt;breadnco, …)</em></li>
+  <li>배열 안에 다음 배열을 추가한다.
+    <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">array</span><span class="p">(</span>
+ <span class="s1">'name'</span> <span class="o">=&gt;</span> <span class="s2">"원하는 메뉴명"</span><span class="p">,</span>
+ <span class="s1">'p_code'</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span><span class="s2">"3번에서 확인한 코드값1"</span><span class="p">,</span> <span class="s2">"3번에서 확인한 코드값2"</span><span class="p">,</span> <span class="mf">...</span><span class="p">)</span>
+<span class="p">)</span>
+</code></pre></div>    </div>
+    <p><br />
+<br /></p>
+  </li>
+</ol>
+
+<h3 id="좌측-navigation-bar에-메뉴명-수정하기">좌측 navigation bar에 메뉴명 수정하기</h3>
+
+<ol>
+  <li>TCPS 실서버 db의 b2b_icm.mem_c 테이블에서</li>
+  <li>where 조건에 <code class="language-plaintext highlighter-rouge">c_biz_com = '회사명'</code> 을 넣어 select로 검색하면</li>
+  <li><code class="language-plaintext highlighter-rouge">serial</code> 컬럼에서 해당 고객사의 코드 확인</li>
+  <li><code class="language-plaintext highlighter-rouge">\application\helpers\function_tcps_helper.php</code> 에서 <code class="language-plaintext highlighter-rouge">func_tcps_reset_config_code()</code> 를 찾는다.</li>
+  <li>해당 고객사의 코드에 해당하는 if문을 찾아 원하는 부분을 수정한다.</li>
+  <li>청년다방, 브레댄코 등 맞춤제품 부분의 메뉴가 커스터마이징 되어있는 고객사의 맞춤제품(TPA013) 메뉴명은 여기에서 바꿀 수 없고  <a href="#좌측-navigation-bar에-맞춤제품-메뉴-추가하고-제품-등록하기청년다방-브레댄코-">좌측 navigation bar에 맞춤제품 메뉴 추가하고 제품 등록하기(청년다방, 브레댄코, …)</a> 를 참조</li>
+</ol>
+
+<p><br />
+<br /></p>
+
+<h3 id="맞춤제품-메뉴-등록이-처음인-고객사">맞춤제품 메뉴 등록이 처음인 고객사</h3>]]></content><author><name>Victor Lo</name></author><category term="myjob" /><category term="tcps" /><summary type="html"><![CDATA[목차]]></summary></entry><entry><title type="html">HTTP 터널링</title><link href="http://localhost:4000/database/2023/04/07/HTTP-tunneling.html" rel="alternate" type="text/html" title="HTTP 터널링" /><published>2023-04-07T00:00:00+09:00</published><updated>2023-04-07T00:00:00+09:00</updated><id>http://localhost:4000/database/2023/04/07/HTTP-tunneling</id><content type="html" xml:base="http://localhost:4000/database/2023/04/07/HTTP-tunneling.html"><![CDATA[<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SET</span> <span class="o">@</span><span class="n">var</span> <span class="o">=</span> <span class="mi">281</span><span class="p">;</span>
 
 <span class="k">SELECT</span> <span class="o">@</span><span class="n">var</span><span class="p">;</span>
 </code></pre></div></div>
@@ -8,11 +121,11 @@
 
 <p><img src="/assets/img/feature-img/HTTP_tunnelling_null.png" alt="" /></p>
 
-<p>도대체 어떻게 된 일일까? <code class="language-plaintext highlighter-rouge">SQLYOG</code>가 갑자기 맛이 가버렸나 싶어서 껐다 켜보고, PC 리셋도 해보고, 몇 번을 다시 해봐도 결과는 같았다. 그러다가 문득 한 가지 사실이 떠올랐다. 다른 DB들과는 달리 이 DB만 유일하게 <code class="language-plaintext highlighter-rouge">HTTP Tunnelling</code> 방식으로 접속하여 사용하고 있다는 것.</p>
+<p>도대체 어떻게 된 일일까? <code class="language-plaintext highlighter-rouge">SQLYOG</code>가 갑자기 맛이 가버렸나 싶어서 껐다 켜보고, PC 리셋도 해보고, 몇 번을 다시 해봐도 결과는 같았다. 그러다가 문득 한 가지 사실이 떠올랐다.<!--more--> 다른 DB들과는 달리 이 DB만 유일하게 <code class="language-plaintext highlighter-rouge">HTTP Tunnelling</code> 방식으로 접속하여 사용하고 있다는 것.</p>
 
-<p>우리 친절한 챗지피티군한테 물어보니 <code class="language-plaintext highlighter-rouge">HTTP Tunnelling</code> 방식으로 DB에 접속하면 변수를 선언하고 값을 넣을 수는 있어도 그걸 유지할 수가 없다고 한다… 즉 변수를 사용할 수 없으니 저장프로시저도 물론 사용할 수 없고, 쿼리에서 변수를 넣어서 간단하게 처리할 수 있는 일도 일일이 값을 하드코딩으로 쳐 넣어야 하므로 일하는 시간이 무지하게 늘어난다는 것. 물론 그 날 남은 오후시간과 다음날 오전시간을 일일이 수작업으로 DB를 수정하는 데 보낼 수 밖에 없었다.
-<!--more-->
-***</p>
+<p>우리 친절한 챗지피티군한테 물어보니 <code class="language-plaintext highlighter-rouge">HTTP Tunnelling</code> 방식으로 DB에 접속하면 변수를 선언하고 값을 넣을 수는 있어도 그걸 유지할 수가 없다고 한다… 즉 변수를 사용할 수 없으니 저장프로시저도 물론 사용할 수 없고, 쿼리에서 변수를 넣어서 간단하게 처리할 수 있는 일도 일일이 값을 하드코딩으로 쳐 넣어야 하므로 일하는 시간이 무지하게 늘어난다는 것. 물론 그 날 남은 오후시간과 다음날 오전시간을 일일이 수작업으로 DB를 수정하는 데 보낼 수 밖에 없었다.</p>
+
+<hr />
 
 <h3 id="tunnelling터널링">Tunnelling(터널링)</h3>
 <p>터널링이란 둘 이상의 네트워크에 암호화된 연결을 설정하는 기술이라고 정의되어 있다. 본 사례에서는, 웹서버에서 DB서버로 접속하여 데이터를 주고 받기 위한 통로를 HTTP 터널링이란 기술로 구축했다는 얘기가 되겠다. 웹서버와 DB서버를 서로 소통할 수 있게 하려면 <strong><em>무언가</em></strong>가 필요하고 그 무언가에 속하는 기술에는 다음과 같은 것들이 있다.</p>
@@ -97,14 +210,14 @@
   <p>이는 HTTP 터널링이 DB와의 연결을 유지하기 위해 사용하는 HTTP 요청 및 응답 메시지의 형식이 SQL 쿼리문과 같은 DB 관련 데이터의 형식과는 매우 다르기 때문입니다. 이러한 차이로 인해 DB 관련 데이터는 HTTP 요청 및 응답 메시지의 형식으로 변환되어 전송되지 않을 수 있으며, 따라서 값이 null로 나타날 수 있습니다.</p>
 </blockquote>
 
-<p><del>지피티군이 뉴비 가르친다고 열일했지만 미안하지만 잘 와닿지가 않아…</del> 어쨌든 요점은 <span style="color: red"><u>HTTP 터널링은 SSH 방식에 비해 설정 및 구성이 간단하지만 보안에 취약해 보안이 그다지 중요하지 않은 접속에 적합하며 DB데이터를 HTTP 요청/응답 메세지 형식으로 변환하는 것에는 한계(?)가 있으므로 변수 및 저장프로시저는 사용이 제한된다.</u></span> 다만 다음과 같은 방법으로 HTTP 터널링에서도 변수와 저장프로시저를 사용할 수 있을 것이라 생각한다.</p>
+<p>요점은 <span style="color: orange"><u>HTTP 터널링은 SSH 방식에 비해 설정 및 구성이 간단하지만 보안에 취약해 보안이 그다지 중요하지 않은 접속에 적합하며 DB데이터를 HTTP 요청/응답 메세지 형식으로 변환하는 것에는 한계(?)가 있으므로 변수 및 저장프로시저는 사용이 제한된다.</u></span> 다만 다음과 같은 방법으로 HTTP 터널링에서도 변수와 저장프로시저를 사용할 수 있을 것이라 생각한다.</p>
 
 <blockquote>
   <ol>
     <li>DBMS 상에서 쿼리를 날리지 않고, PHP, JSP 등 서버사이드 언어를 사용해 코드 내에 쿼리를 포함하여 쿼리의 결과를 변수에 저장해가면서 저장프로시저로 하려고 했던 로직을 만들기</li>
     <li>더 편해보이는 방법으로… 그냥 SSH 터널링이나 터널링 없이 DB에 접속하도록 방식을 바꾸기</li>
   </ol>
-</blockquote>]]></content><author><name>fffight88</name></author><category term="database" /><category term="http터널링" /><category term="mssql" /><summary type="html"><![CDATA[SET @var = 281; SELECT @var; 위 쿼리의 결과가 어떻게 나올지는 너무나 뻔하다. 하지만, 출력된 결과는 다음과 같았다. 도대체 어떻게 된 일일까? SQLYOG가 갑자기 맛이 가버렸나 싶어서 껐다 켜보고, PC 리셋도 해보고, 몇 번을 다시 해봐도 결과는 같았다. 그러다가 문득 한 가지 사실이 떠올랐다. 다른 DB들과는 달리 이 DB만 유일하게 HTTP Tunnelling 방식으로 접속하여 사용하고 있다는 것. 우리 친절한 챗지피티군한테 물어보니 HTTP Tunnelling 방식으로 DB에 접속하면 변수를 선언하고 값을 넣을 수는 있어도 그걸 유지할 수가 없다고 한다… 즉 변수를 사용할 수 없으니 저장프로시저도 물론 사용할 수 없고, 쿼리에서 변수를 넣어서 간단하게 처리할 수 있는 일도 일일이 값을 하드코딩으로 쳐 넣어야 하므로 일하는 시간이 무지하게 늘어난다는 것. 물론 그 날 남은 오후시간과 다음날 오전시간을 일일이 수작업으로 DB를 수정하는 데 보낼 수 밖에 없었다.]]></summary></entry><entry><title type="html">안녕하세요 테스트페이지 입니다</title><link href="http://localhost:4000/test/2023/03/27/test.html" rel="alternate" type="text/html" title="안녕하세요 테스트페이지 입니다" /><published>2023-03-27T00:00:00+09:00</published><updated>2023-03-27T00:00:00+09:00</updated><id>http://localhost:4000/test/2023/03/27/test</id><content type="html" xml:base="http://localhost:4000/test/2023/03/27/test.html"><![CDATA[<h1 id="test-page">Test Page</h1>
+</blockquote>]]></content><author><name>Victor Lo</name></author><category term="database" /><category term="http터널링" /><category term="mssql" /><summary type="html"><![CDATA[SET @var = 281; SELECT @var; 위 쿼리의 결과가 어떻게 나올지는 너무나 뻔하다. 하지만, 출력된 결과는 다음과 같았다. 도대체 어떻게 된 일일까? SQLYOG가 갑자기 맛이 가버렸나 싶어서 껐다 켜보고, PC 리셋도 해보고, 몇 번을 다시 해봐도 결과는 같았다. 그러다가 문득 한 가지 사실이 떠올랐다.]]></summary></entry><entry><title type="html">안녕하세요 테스트페이지 입니다</title><link href="http://localhost:4000/test/2023/03/27/test.html" rel="alternate" type="text/html" title="안녕하세요 테스트페이지 입니다" /><published>2023-03-27T00:00:00+09:00</published><updated>2023-03-27T00:00:00+09:00</updated><id>http://localhost:4000/test/2023/03/27/test</id><content type="html" xml:base="http://localhost:4000/test/2023/03/27/test.html"><![CDATA[<h1 id="test-page">Test Page</h1>
 
 <h2 id="마크다운-문법">마크다운 문법</h2>
 <ul>
@@ -870,145 +983,4 @@ Here is a code snippet for the <a href="https://getbootstrap.com/docs/4.0/gettin
 <p>That’s just for demo though, you would need to properly integrate your javascript in your page.
 Usually you would put any custom javascript script in the <em>assets</em> folder under js and reference it in your page from there.</p>
 
-<p>So try it out using the <code class="language-plaintext highlighter-rouge">bootstrap: true</code> flag! 😉</p>]]></content><author><name></name></author><category term="Demo" /><category term="Test" /><summary type="html"><![CDATA[This theme is compatible with Bootstrap if you choose to use it in your pages or posts. Here is a little demo with a code snippet, look at the source to see how the HTML and markdown get tangled.]]></summary></entry><entry><title type="html">Markdown and HTML</title><link href="http://localhost:4000/syntax/2014/11/28/markdown-and-html.html" rel="alternate" type="text/html" title="Markdown and HTML" /><published>2014-11-28T00:00:00+09:00</published><updated>2014-11-28T00:00:00+09:00</updated><id>http://localhost:4000/syntax/2014/11/28/markdown-and-html</id><content type="html" xml:base="http://localhost:4000/syntax/2014/11/28/markdown-and-html.html"><![CDATA[<p>Jekyll supports the use of <a href="http://daringfireball.net/projects/markdown/syntax">Markdown</a> with inline HTML tags which makes it easier to quickly write posts with Jekyll, without having to worry too much about text formatting. A sample of the formatting follows.</p>
-
-<h2 id="table-of-content">Table of content</h2>
-
-<!-- To be placed at the beginning of the post, it is where the table of content will be generated -->
-<ul>
-  <li>TOC</li>
-  <li>You need to put this at the beginning of the page where you want the table of content to be displayed</li>
-</ul>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* TOC
-{:toc}
-</code></pre></div></div>
-
-<p>It will then render the markdown and html titles (lines that begins with <code class="language-plaintext highlighter-rouge">#</code> or using the <code class="language-plaintext highlighter-rouge">&lt;h1&gt;&lt;/h1&gt;</code> tages)</p>
-
-<h2 id="title">Title</h2>
-
-<h3 id="subtitle">Subtitle</h3>
-
-<p>Tables have also been extended from Markdown:</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>First Header</th>
-      <th>Second Header</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Content Cell</td>
-      <td>Content Cell</td>
-    </tr>
-    <tr>
-      <td>Content Cell</td>
-      <td>Content Cell</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>Here’s an example of an image, which is included using Markdown:</p>
-
-<p><img src="/assets/img/pexels/book-glass.jpeg" alt="Image of a glass on a book" /></p>
-
-<p>This is another example of list:</p>
-
-<ul>
-  <li>list of things
-    <ol>
-      <li>Sub list</li>
-      <li>of Other things</li>
-      <li>with numbers</li>
-    </ol>
-  </li>
-  <li>And many more
-    <ul>
-      <li>Sub sub list
-        <ul>
-          <li>can go on …
-            <ul>
-              <li>and on …
-                <ul>
-                  <li>and on !</li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>That’s it.</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="other-subtitle">Other subtitle</h3>
-
-<p>Highlighting for code in Jekyll is done using Base16 or Rouge. This theme makes use of Rouge by default.</p>
-
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// count to ten</span>
-<span class="nf">for </span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="c1">// count to twenty</span>
-<span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-<span class="nf">while </span><span class="p">(</span><span class="nx">j</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">j</span><span class="o">++</span><span class="p">;</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">j</span><span class="p">);</span>
-<span class="p">}</span></code></pre></figure>
-
-<h3 id="math">Math</h3>
-
-<p>Type on Strap uses KaTeX to display maths. Equations such as \(S_n = a \times \frac{1-r^n}{1-r}\) can be displayed inline.</p>
-
-<p>Alternatively, they can be shown on a new line:</p>
-
-\[f(x) = \int \frac{2x^2+4x+6}{x-2}\]
-
-<p>And in your markdown file:</p>
-
-<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$$ f(x) = <span class="se">\i</span>nt <span class="se">\f</span>rac{2x^2+4x+6}{x-2} $$
-</code></pre></div></div>
-
-<h3 id="expandable-content">Expandable content</h3>
-
-<p>Click on the expandable content to display it:</p>
-
-<details>
-    <summary>Click here!</summary>
-    Now you see me
-</details>
-
-<p>And in your markdown file:</p>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;details&gt;</span>
-    <span class="nt">&lt;summary&gt;</span>Click here!<span class="nt">&lt;/summary&gt;</span>
-    Now you see me
-<span class="nt">&lt;/details&gt;</span>
-</code></pre></div></div>]]></content><author><name>Rohan Chandra</name></author><category term="Syntax" /><category term="Katex" /><category term="Markdown" /><summary type="html"><![CDATA[Jekyll supports the use of Markdown with inline HTML tags which makes it easier to quickly write posts with Jekyll, without having to worry too much about text formatting. A sample of the formatting follows.]]></summary></entry><entry><title type="html">What’s your title</title><link href="http://localhost:4000/2014/11/27/whats-your-title.html" rel="alternate" type="text/html" title="What’s your title" /><published>2014-11-27T00:00:00+09:00</published><updated>2014-11-27T00:00:00+09:00</updated><id>http://localhost:4000/2014/11/27/whats-your-title</id><content type="html" xml:base="http://localhost:4000/2014/11/27/whats-your-title.html"><![CDATA[<p>This is an example of a post which includes a feature image that has a
-text, where you don’t want to redisplay the title.
-Mind your image size in order for the text to be displayed where you want it to.
-The only limit is your imagination.</p>
-
-<p>Here is how the yaml looks inside the post:</p>
-
-<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">title</span><span class="pi">:</span> <span class="s">What's your title</span>
-<span class="na">hide_title</span><span class="pi">:</span> <span class="kc">true</span>
-<span class="na">feature-img</span><span class="pi">:</span> <span class="s">assets/img/feature-img/story.jpeg</span>
-<span class="na">author</span><span class="pi">:</span> <span class="s">mhagnumdw</span>
-<span class="na">tags</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">Test</span><span class="pi">,</span> <span class="nv">Lorem</span><span class="pi">]</span>
-</code></pre></div></div>
-
-<p>You may wonder, why is there a title when you are not actually displaying it. <br />
-Well that’s due to some jekyll limitation:</p>
-
-<blockquote>
-  <p>You <strong>can’t</strong> set the <strong>title</strong> to the <strong>empty string</strong></p>
-</blockquote>
-
-<p>The title is used elsewhere than inside the post, for example in the blog page that list this post.
-An empty title would break those pages and possibly prevents jekyll to render your blog.</p>]]></content><author><name>Mhagnumdw</name></author><category term="Test" /><category term="Image" /><summary type="html"><![CDATA[This is an example of a post which includes a feature image that has a text, where you don’t want to redisplay the title. Mind your image size in order for the text to be displayed where you want it to. The only limit is your imagination.]]></summary></entry></feed>
+<p>So try it out using the <code class="language-plaintext highlighter-rouge">bootstrap: true</code> flag! 😉</p>]]></content><author><name></name></author><category term="Demo" /><category term="Test" /><summary type="html"><![CDATA[This theme is compatible with Bootstrap if you choose to use it in your pages or posts. Here is a little demo with a code snippet, look at the source to see how the HTML and markdown get tangled.]]></summary></entry></feed>
