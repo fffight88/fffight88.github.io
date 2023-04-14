@@ -18,6 +18,7 @@ published: false
 	- [좌측 navigation bar에 맞춤제품 메뉴 추가하고 제품 등록하기(청년다방, 브레댄코, ...)](#좌측-navigation-bar에-맞춤제품-메뉴-추가하고-제품-등록하기청년다방-브레댄코-)
 	- [좌측 navigation bar에 메뉴명 수정하기](#좌측-navigation-bar에-메뉴명-수정하기)
 	- [맞춤제품 메뉴 등록이 처음인 고객사](#맞춤제품-메뉴-등록이-처음인-고객사)
+	- [주문수정 알람기능 관리](#주문수정-알람기능-관리)
 
 <!-- /code_chunk_output -->
 <br>
@@ -70,3 +71,14 @@ array(
 
 ### 맞춤제품 메뉴 등록이 처음인 고객사
 
+<br>
+<br>
+
+### 주문수정 알람기능 관리
+
+1. `\views\intra\common\admin2\footer.php` 에서 `$oea_check` 부분의 배열에 생산에 사용하는 계정명과 지점코드를 추가
+2. `\assets\intra\js\order_edit_alarm.js` 에서 기능의 상세 내용 확인 및 수정 가능
+3. 관련 DB테이블 : `order_edit_alarm`
+
+<br>
+<br>
