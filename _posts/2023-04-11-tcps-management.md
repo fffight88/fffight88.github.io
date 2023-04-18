@@ -19,6 +19,7 @@ published: false
 	- [좌측 navigation bar에 메뉴명 수정하기](#좌측-navigation-bar에-메뉴명-수정하기)
 	- [맞춤제품 메뉴 등록이 처음인 고객사](#맞춤제품-메뉴-등록이-처음인-고객사)
 	- [주문수정 알람기능 관리](#주문수정-알람기능-관리)
+	- [가변템플릿 소제목 변경](#가변템플릿-소제목-변경)
 
 <!-- /code_chunk_output -->
 <br>
@@ -76,9 +77,21 @@ array(
 
 ### 주문수정 알람기능 관리
 
-1. `\views\intra\common\admin2\footer.php` 에서 `$oea_check` 부분의 배열에 생산에 사용하는 계정명과 지점코드를 추가
+1. `\views\intra\common\admin2\footer.php` 에서 `$oea_check` 부분의 배열에 생산에 사용하는 계정명과 지점코드를 추가 또는 삭제
 2. `\assets\intra\js\order_edit_alarm.js` 에서 기능의 상세 내용 확인 및 수정 가능
 3. 관련 DB테이블 : `order_edit_alarm`
+
+<br>
+<br>
+
+### 가변템플릿 소제목 변경
+
+*여기서는 야놀자 명함 템플릿 변경을 예로 든다*
+
+1. 적용하려는 제품군을 특정한다. (`serial` 또는 `p_code` 등...)
+2. `application\controllers\Tpa001.php` 의 `edit_apply()`
+3. 고객사페이지에서 입력하는 정보들은 `$input_data` 배열에 담겨진 상태로 xml파일 생성을 위해 파라메터로 전달된다. 따라서 분기문을 통해 원하는 상황에 원하는 텍스트로 보이게하거나 제거하는 등 처리가 가능하다.
+4. `CTRL + F` -> ***야놀자 명함 템플릿 소제목 코드 변경*** 으로 검색해서 내용 참조
 
 <br>
 <br>
