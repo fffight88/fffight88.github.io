@@ -10,7 +10,7 @@ color: lightblue
 ***목차***
 
 - [반복문으로 뿌려지는 데이터를 대상으로 jQuery 사용 시 주의할 점](#반복문으로-뿌려지는-데이터를-대상으로-jquery-사용-시-주의할-점)
-- [두번째 거](#두번째-거)
+- [연관배열에서 값을 가져올 때 주의할 점](#연관배열에서-값을-가져올-때-주의할-점)
 
 <br>
 
@@ -49,5 +49,43 @@ $(this).parent().siblings('td[name=' + name + ']').children('input').val();
 
 <br>
 
-### 두번째 거
+### 연관배열에서 값을 가져올 때 주의할 점
+***feat.Array to String 에러***
+```php
+$where_in = array(
+    '0' => array(
+        '0' => "POA001",
+        '1' => "POA002",
+        '2' => "POA003"
+    ),
+    '1' => array(
+        '0' => "POA004",
+        '1' => "POA005",
+        '2' => "POA006"
+    )
+);
+```
+
+iteration을 할 때 `for` 또는 `foreach`를 사용하는데, `for`는 약간 귀찮지만 좀 더 직관적이어서 이해하기 쉽지만 `foreach`는 살짝 헷갈릴 때가 있다.
+
+예를 들어, 위 연관 배열에서 값에 해당하는 내용들만 뽑아 새로운 일차원 배열을 만든다고 하면, `for`문을 이용하면 어렵지 않다.
+
+
+```php
+$where_in_values = array();
+for ($i=0; $i<count($where_in); $i++)
+{
+    for ($j=0; $j<count($where_in[$i]); $j++)
+    {
+        $where_in_values = $where_in[$i][$j];
+    }
+}
+print_r($where_in_values);
+```
+
+> Array ( [0] => POA001 [1] => POA002 [2] => POA003 [3] => POA004 [4] => POA005 [5] => POA006 )
+
+
+
+
 
