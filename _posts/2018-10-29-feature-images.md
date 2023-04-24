@@ -27,7 +27,7 @@ It by default look into `assets/img/` so give the path from there, example:
 
 {% highlight ruby %}
 {% raw %}
-{% include aligner.html images="pexels/book-glass.jpeg,triangle.png" %}
+{% include aligner.html images="pexels/book-glass.jpeg,triangle.png,door.png" %}
 {% endraw %}
 {% endhighlight %}
 
