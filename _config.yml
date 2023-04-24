@@ -6,7 +6,7 @@ url: "https://fffight88.github.io"
 # THEME-SPECIFIC CONFIGURATION
 title: Newbie's DoorClosing                                    # site's title
 description: "Newbie's DoorClosing"      # used by search engines
-avatar: assets/img/door.png                         # Empty for no avatar in navbar
+avatar: assets/img/door-circle.png                         # Empty for no avatar in navbar
 favicon: assets/favicon.ico                             # Icon displayed in the tab
 
 # Header and footer text
