@@ -5,12 +5,13 @@ author: Victor Lo
 tags: [g7]
 categories: myjob
 color: orange
-published: true
+published: false
 excerpt_separator: <!--more-->
 ---
 타라그래픽스의 영업/결제모듈 G7 관리방법 <!--more-->
 
 ***목차***
+- [접속정보](#접속정보)
 - [주기적](#주기적)
     - [첫번째](#첫번째)
 - [요청있을 때](#요청있을-때)
@@ -20,6 +21,19 @@ excerpt_separator: <!--more-->
     - [거래처 정보, 고객 정보 이관](#거래처-정보-고객-정보-이관)
     - [G7 선매출 잔액 이관](#g7-선매출-잔액-이관)
 
+
+<br>
+
+***
+
+<br>
+
+## 접속정보
+
+- 접속주소      : [http://www.ssakhedo.com](http://www.ssakhedo.com)
+- 서버아이피    : 54.178.242.82
+- 서버계정      : ec2-user
+- 키           : <a href='/assets/auth_key/AWS003_Tokyo02_PMS_Production.pem' download>AWS003_Tokyo02_PMS_Product</a>
 
 <br>
 

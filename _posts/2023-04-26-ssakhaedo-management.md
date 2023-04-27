@@ -5,7 +5,7 @@ author: Victor Lo
 tags: [싹해도]
 categories: myjob
 color: orange
-published: true
+published: false
 excerpt_separator: <!--more-->
 ---
 싹해도 <!--more-->

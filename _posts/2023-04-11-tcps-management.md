@@ -5,7 +5,7 @@ author: Victor Lo
 tags: [tcps]
 categories: myjob
 color: orange
-published: true
+published: false
 excerpt_separator: <!--more-->
 ---
 
@@ -28,6 +28,19 @@ excerpt_separator: <!--more-->
 		- ['센터배송'에 속하는 지점 변경](#센터배송에-속하는-지점-변경)
 
 <!-- /code_chunk_output -->
+<br>
+
+***
+
+<br>
+
+## 접속정보
+
+- 접속주소      : [http://edu.taragrp.co.kr/__intra](http://edu.taragrp.co.kr/__intra)
+- 서버아이피    : 211.238.4.147
+- 서버계정      : root
+- 암호         : xkfkrydks2015%% (타라교안2015%%)
+
 <br>
 
 ***
