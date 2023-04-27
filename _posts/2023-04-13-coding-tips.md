@@ -5,7 +5,10 @@ author: Victor Lo
 tags: [code]
 categories: code
 color: lightblue
+excerpt_separator: <!--more-->
 ---
+초보/신입 개발자가 코딩할 때 간과하기 쉬운 내용 정리 <!--more-->
+
 
 ***목차***
 
@@ -13,7 +16,6 @@ color: lightblue
   - [반복문으로 뿌려지는 데이터를 대상으로 jQuery 사용 시 주의할 점](#반복문으로-뿌려지는-데이터를-대상으로-jquery-사용-시-주의할-점)
 - [PHP](#php)
   - [연관배열에서 값을 가져올 때 주의할 점](#연관배열에서-값을-가져올-때-주의할-점)
-  - [view단의 객체지향적 설계](#view단의-객체지향적-설계)
 
 <br>
 
@@ -96,15 +98,6 @@ print_r($where_in_values);
 ***
 
 <br>
-
-### view단의 객체지향적 설계
-
-하나의 화면을 구성하는 각 요소를 각각 별도의 파일로 작성하여 두고 `$this->load->view('url')` 로 필요한 것을 로드할 수 있다.
-
-```php
-    (코드 예시 만들어서 삽입)
-```
-
 
 
 

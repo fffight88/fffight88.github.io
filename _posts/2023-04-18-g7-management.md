@@ -6,7 +6,9 @@ tags: [g7]
 categories: myjob
 color: orange
 published: true
+excerpt_separator: <!--more-->
 ---
+타라그래픽스의 영업/결제모듈 G7 관리방법 <!--more-->
 
 ***목차***
 - [주기적](#주기적)

@@ -6,7 +6,10 @@ tags: [tcps]
 categories: myjob
 color: orange
 published: true
+excerpt_separator: <!--more-->
 ---
+
+타라그래픽스의 생산 모듈 TCPS의 관리방법<!--more-->
 
 ***목차***
 
@@ -42,6 +45,8 @@ published: true
 <br>
 
 ## 요청있을 때
+
+#### TCPS 자체에서 외부아이피 허용방법
 
 #### 좌측 navigation bar에 맞춤제품 메뉴 추가하고 제품 등록하기(청년다방, 브레댄코, ...)
 > **"좌측에 xxxx 메뉴를 만들고 그 안에 맞춤제품번호 xxxx번(부터 xxxx번)을 추가해주세요"**
@@ -116,3 +121,12 @@ array(
 1. order_model.php
 2. get_delivery_branch 에서 '센터배송' 부분을 찾아 배열에 추가하거나 삭제한다.
 
+### AWS나 Billing 업체 등 서버가 재시작되었을 때
+
+#### DB 복구 방법
+
+1. show tables; 로 모든 테이블 목록 엑셀에 붙여넣기
+2. check table 테이블명;
+3. 결과가 한 줄로 OK라고 뜨면 문제없음
+4. 문제가 발생했다고 뜰 경우 repair table 테이블명;
+5. 이런 식으로 모든 테이블을 검사한다. 주로 많이 쓰이는 테이블에서 오류가 발생하고 있음.

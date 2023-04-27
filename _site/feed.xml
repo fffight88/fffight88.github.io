@@ -1,4 +1,123 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-25T08:37:00+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Newbie’s DoorClosing</title><subtitle>Newbie&apos;s DoorClosing</subtitle><entry><title type="html">How To Manage G7</title><link href="http://localhost:4000/myjob/2023/04/18/g7-management.html" rel="alternate" type="text/html" title="How To Manage G7" /><published>2023-04-18T00:00:00+09:00</published><updated>2023-04-18T00:00:00+09:00</updated><id>http://localhost:4000/myjob/2023/04/18/g7-management</id><content type="html" xml:base="http://localhost:4000/myjob/2023/04/18/g7-management.html"><![CDATA[<p><strong><em>목차</em></strong></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-27T09:00:45+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Newbie’s DoorClosing</title><subtitle>Newbie&apos;s DoorClosing</subtitle><entry><title type="html">How To Manage Edu</title><link href="http://localhost:4000/myjob/2023/04/26/edu-management.html" rel="alternate" type="text/html" title="How To Manage Edu" /><published>2023-04-26T00:00:00+09:00</published><updated>2023-04-26T00:00:00+09:00</updated><id>http://localhost:4000/myjob/2023/04/26/edu-management</id><content type="html" xml:base="http://localhost:4000/myjob/2023/04/26/edu-management.html"><![CDATA[<p>타라그래픽스의 강의교재 주문생산 모듈 <!--more--></p>
+
+<p><strong><em>목차</em></strong></p>
+<ul>
+  <li><a href="#접속정보">접속정보</a></li>
+  <li><a href="#참고문서">참고문서</a></li>
+</ul>
+
+<p><br /></p>
+
+<hr />
+
+<p><br /></p>
+
+<h2 id="접속정보">접속정보</h2>
+
+<ul>
+  <li>접속주소      : <a href="http://edu.taragrp.co.kr/__intra">http://edu.taragrp.co.kr/__intra</a></li>
+  <li>서버아이피    : 211.238.4.147</li>
+  <li>서버계정      : root</li>
+  <li>암호         : xkfkrydks2015%% (타라교안2015%%)</li>
+</ul>
+
+<p><br /></p>
+
+<hr />
+
+<p><br /></p>
+
+<h2 id="참고문서">참고문서</h2>
+
+<ul>
+  <li><a href="/assets/document/20230426_%EC%97%85%EB%AC%B4%EC%9D%B8%EC%88%98%EC%9D%B8%EA%B3%84_%EB%B0%95%EC%9E%AC%EC%9C%A4_%EB%B0%B1%EB%91%90%EC%82%B0.xlsx">업무인수인계서</a></li>
+</ul>
+
+<p><br /></p>
+
+<hr />
+
+<p><br /></p>]]></content><author><name>Victor Lo</name></author><category term="myjob" /><category term="교안" /><summary type="html"><![CDATA[타라그래픽스의 강의교재 주문생산 모듈]]></summary></entry><entry><title type="html">How To Manage Ssakhaedo</title><link href="http://localhost:4000/myjob/2023/04/26/ssakhaedo-management.html" rel="alternate" type="text/html" title="How To Manage Ssakhaedo" /><published>2023-04-26T00:00:00+09:00</published><updated>2023-04-26T00:00:00+09:00</updated><id>http://localhost:4000/myjob/2023/04/26/ssakhaedo-management</id><content type="html" xml:base="http://localhost:4000/myjob/2023/04/26/ssakhaedo-management.html"><![CDATA[<p>싹해도 <!--more--></p>
+
+<p><strong><em>목차</em></strong></p>
+<ul>
+  <li><a href="#접속정보">접속정보</a></li>
+  <li><a href="#참고문서">참고문서</a></li>
+</ul>
+
+<p><br /></p>
+
+<hr />
+
+<p><br /></p>
+
+<h2 id="접속정보">접속정보</h2>
+
+<ul>
+  <li>접속주소      : <a href="http://www.ssakhedo.com">http://www.ssakhedo.com</a></li>
+  <li>서버아이피    : 54.178.242.82</li>
+  <li>서버계정      : ec2-user</li>
+  <li>키           : <a href="/assets/auth_key/AWS003_Tokyo02_PMS_Production.pem" download="">AWS003_Tokyo02_PMS_Product</a></li>
+</ul>
+
+<p><br /></p>
+
+<hr />
+
+<p><br /></p>
+
+<h2 id="참고문서">참고문서</h2>
+
+<ul>
+  <li><a href="/assets/document/20230426_%EC%97%85%EB%AC%B4%EC%9D%B8%EC%88%98%EC%9D%B8%EA%B3%84_%EB%B0%95%EC%9E%AC%EC%9C%A4_%EB%B0%B1%EB%91%90%EC%82%B0.xlsx">업무인수인계서</a></li>
+</ul>
+
+<p><br /></p>
+
+<hr />
+
+<p><br /></p>]]></content><author><name>Victor Lo</name></author><category term="myjob" /><category term="싹해도" /><summary type="html"><![CDATA[싹해도]]></summary></entry><entry><title type="html">How To Manage PNF</title><link href="http://localhost:4000/myjob/2023/04/26/pnf-management.html" rel="alternate" type="text/html" title="How To Manage PNF" /><published>2023-04-26T00:00:00+09:00</published><updated>2023-04-26T00:00:00+09:00</updated><id>http://localhost:4000/myjob/2023/04/26/pnf-management</id><content type="html" xml:base="http://localhost:4000/myjob/2023/04/26/pnf-management.html"><![CDATA[<p>PNF <!--more--></p>
+
+<p><strong><em>목차</em></strong></p>
+<ul>
+  <li><a href="#접속정보">접속정보</a></li>
+  <li><a href="#참고문서">참고문서</a></li>
+</ul>
+
+<p><br /></p>
+
+<hr />
+
+<p><br /></p>
+
+<h2 id="접속정보">접속정보</h2>
+
+<ul>
+  <li>접속주소      : <a href="http://www.tcps.co.kr">http://www.tcps.co.kr</a></li>
+  <li>서버아이피    : 54.178.242.82</li>
+  <li>서버계정      : ec2-user</li>
+  <li>키           : <a href="/assets/auth_key/AWS003_Tokyo02_PMS_Production.pem" download="">AWS003_Tokyo02_PMS_Product</a></li>
+</ul>
+
+<p><br /></p>
+
+<hr />
+
+<p><br /></p>
+
+<h2 id="참고문서">참고문서</h2>
+
+<ul>
+  <li><a href="/assets/document/20230426_%EC%97%85%EB%AC%B4%EC%9D%B8%EC%88%98%EC%9D%B8%EA%B3%84_%EB%B0%95%EC%9E%AC%EC%9C%A4_%EB%B0%B1%EB%91%90%EC%82%B0.xlsx">업무인수인계서</a></li>
+</ul>
+
+<p><br /></p>
+
+<hr />
+
+<p><br /></p>]]></content><author><name>Victor Lo</name></author><category term="myjob" /><category term="pnf" /><summary type="html"><![CDATA[PNF]]></summary></entry><entry><title type="html">How To Manage G7</title><link href="http://localhost:4000/myjob/2023/04/18/g7-management.html" rel="alternate" type="text/html" title="How To Manage G7" /><published>2023-04-18T00:00:00+09:00</published><updated>2023-04-18T00:00:00+09:00</updated><id>http://localhost:4000/myjob/2023/04/18/g7-management</id><content type="html" xml:base="http://localhost:4000/myjob/2023/04/18/g7-management.html"><![CDATA[<p>타라그래픽스의 영업/결제모듈 G7 관리방법 <!--more--></p>
+
+<p><strong><em>목차</em></strong></p>
 <ul>
   <li><a href="#주기적">주기적</a>
     <ul>
@@ -52,11 +171,21 @@
   <li>요청받은 선매출주문 번호로 select하여 결과를 출력한다.</li>
   <li>쿼리 또는 DBMS의 기능으로 한 줄을 추가하여 각종 정보와 함께 남은 금액에 상당하는 마이너스 금액을 입력한다.</li>
   <li>G7상에 잘 반영되었는지 확인한다.</li>
-</ol>]]></content><author><name>Victor Lo</name></author><category term="myjob" /><category term="g7" /><summary type="html"><![CDATA[목차 주기적 첫번째 요청있을 때 첫번째 특정 시점 조직변경, 인사발령 후 거래처 정보, 고객 정보 이관 G7 선매출 잔액 이관]]></summary></entry><entry><title type="html">Code Examples(1)</title><link href="http://localhost:4000/code/2023/04/13/code-examples.html" rel="alternate" type="text/html" title="Code Examples(1)" /><published>2023-04-13T00:00:00+09:00</published><updated>2023-04-13T00:00:00+09:00</updated><id>http://localhost:4000/code/2023/04/13/code-examples</id><content type="html" xml:base="http://localhost:4000/code/2023/04/13/code-examples.html"><![CDATA[<p><strong><em>목차</em></strong></p>
+</ol>]]></content><author><name>Victor Lo</name></author><category term="myjob" /><category term="g7" /><summary type="html"><![CDATA[타라그래픽스의 영업/결제모듈 G7 관리방법]]></summary></entry><entry><title type="html">Coding Tips &amp;amp; Knowhow</title><link href="http://localhost:4000/code/2023/04/13/coding-tips.html" rel="alternate" type="text/html" title="Coding Tips &amp;amp; Knowhow" /><published>2023-04-13T00:00:00+09:00</published><updated>2023-04-13T00:00:00+09:00</updated><id>http://localhost:4000/code/2023/04/13/coding-tips</id><content type="html" xml:base="http://localhost:4000/code/2023/04/13/coding-tips.html"><![CDATA[<p>초보/신입 개발자가 코딩할 때 간과하기 쉬운 내용 정리 <!--more--></p>
+
+<p><strong><em>목차</em></strong></p>
 
 <ul>
-  <li><a href="#반복문으로-뿌려지는-데이터를-대상으로-jquery-사용-시-주의할-점">반복문으로 뿌려지는 데이터를 대상으로 jQuery 사용 시 주의할 점</a></li>
-  <li><a href="#연관배열에서-값을-가져올-때-주의할-점">연관배열에서 값을 가져올 때 주의할 점</a></li>
+  <li><a href="#javascript">JavaScript</a>
+    <ul>
+      <li><a href="#반복문으로-뿌려지는-데이터를-대상으로-jquery-사용-시-주의할-점">반복문으로 뿌려지는 데이터를 대상으로 jQuery 사용 시 주의할 점</a></li>
+    </ul>
+  </li>
+  <li><a href="#php">PHP</a>
+    <ul>
+      <li><a href="#연관배열에서-값을-가져올-때-주의할-점">연관배열에서 값을 가져올 때 주의할 점</a></li>
+    </ul>
+  </li>
 </ul>
 
 <p><br /></p>
@@ -65,9 +194,9 @@
 
 <p><br /></p>
 
-<h3 id="반복문으로-뿌려지는-데이터를-대상으로-jquery-사용-시-주의할-점">반복문으로 뿌려지는 데이터를 대상으로 jQuery 사용 시 주의할 점</h3>
+<h2 id="javascript">JavaScript</h2>
 
-<p><br /></p>
+<h3 id="반복문으로-뿌려지는-데이터를-대상으로-jquery-사용-시-주의할-점">반복문으로 뿌려지는 데이터를 대상으로 jQuery 사용 시 주의할 점</h3>
 
 <ul>
   <li>반복문으로 여러 개의 데이터가 뿌려지는 경우 각각의 데이터를 포함하는 태그, 즉 <code class="language-plaintext highlighter-rouge">&lt;td&gt;</code>나 <code class="language-plaintext highlighter-rouge">&lt;input&gt;</code> 등의 태그는 DB로부터 기본키 따위의 유니크한 데이터를 넘겨받아 이를 <code class="language-plaintext highlighter-rouge">name</code>이나 <code class="language-plaintext highlighter-rouge">data-</code>속성 등으로 가지고 있게 해야 편하다. 이런 과정 없이는 추후에 화면단에 뿌려진 데이터를 input 등으로 이용하기 위해 선택하려 할 때 애를 먹게 된다.</li>
@@ -76,7 +205,7 @@
 <p><br /></p>
 
 <ul>
-  <li>jQuery 함수의 시작점이 되는 객체, 즉 <code class="language-plaintext highlighter-rouge">$(this)</code>로부터 위 1번에서 설명한 유니크한 데이터를 물고 있는 객체까지 가는 길을 잘 보아야 한다. 즉 <code class="language-plaintext highlighter-rouge">parent()</code>, <code class="language-plaintext highlighter-rouge">children()</code>, <code class="language-plaintext highlighter-rouge">siblings()</code> 등의 함수를 적절히 사용할 줄 알아야 하며 <code class="language-plaintext highlighter-rouge">[속성=값]</code> 등의 선택자도 마찬가지인데, 특별히 기억할 것은 ‘값’의 부분에 변수를 넣고 싶다면 그냥 변수명을 입력할 것이 아니라 <code class="language-plaintext highlighter-rouge">' + 변수명 + '</code>를 이용해야 한다. 예를 들어</li>
+  <li>jQuery 함수의 시작점이 되는 객체, 즉 <code class="language-plaintext highlighter-rouge">$(this)</code>로부터 위 1번에서 설명한 유니크한 데이터를 물고 있는 객체까지 가는 길을 잘 보아야 한다. 즉 <code class="language-plaintext highlighter-rouge">parent()</code>, <code class="language-plaintext highlighter-rouge">children()</code>, <code class="language-plaintext highlighter-rouge">siblings()</code> 등의 함수를 적절히 사용할 줄 알아야 하며 <code class="language-plaintext highlighter-rouge">[속성=값]</code> 등의 선택자도 마찬가지인데, 별거아니지만 꼭 기억할 것은 ‘값’의 부분에 변수를 넣고 싶다면 그냥 변수명을 입력할 것이 아니라 <code class="language-plaintext highlighter-rouge">' + 변수명 + '</code>를 이용해야 한다. 예를 들어</li>
 </ul>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">yourGreatName</span><span class="dl">"</span><span class="p">;</span>
@@ -96,6 +225,8 @@
 <hr />
 
 <p><br /></p>
+
+<h2 id="php">PHP</h2>
 
 <h3 id="연관배열에서-값을-가져올-때-주의할-점">연관배열에서 값을 가져올 때 주의할 점</h3>
 <p><strong><em>feat.Array to String 에러</em></strong></p>
@@ -130,7 +261,17 @@
 
 <blockquote>
   <p>Array ( [0] =&gt; POA001 [1] =&gt; POA002 [2] =&gt; POA003 [3] =&gt; POA004 [4] =&gt; POA005 [5] =&gt; POA006 )</p>
-</blockquote>]]></content><author><name>Victor Lo</name></author><category term="code" /><category term="code" /><summary type="html"><![CDATA[목차]]></summary></entry><entry><title type="html">How To Manage TCPS</title><link href="http://localhost:4000/myjob/2023/04/11/tcps-management.html" rel="alternate" type="text/html" title="How To Manage TCPS" /><published>2023-04-11T00:00:00+09:00</published><updated>2023-04-11T00:00:00+09:00</updated><id>http://localhost:4000/myjob/2023/04/11/tcps-management</id><content type="html" xml:base="http://localhost:4000/myjob/2023/04/11/tcps-management.html"><![CDATA[<p><strong><em>목차</em></strong></p>
+</blockquote>
+
+<p>계속…</p>
+
+<p><br /></p>
+
+<hr />
+
+<p><br /></p>]]></content><author><name>Victor Lo</name></author><category term="code" /><category term="code" /><summary type="html"><![CDATA[초보/신입 개발자가 코딩할 때 간과하기 쉬운 내용 정리]]></summary></entry><entry><title type="html">How To Manage TCPS</title><link href="http://localhost:4000/myjob/2023/04/11/tcps-management.html" rel="alternate" type="text/html" title="How To Manage TCPS" /><published>2023-04-11T00:00:00+09:00</published><updated>2023-04-11T00:00:00+09:00</updated><id>http://localhost:4000/myjob/2023/04/11/tcps-management</id><content type="html" xml:base="http://localhost:4000/myjob/2023/04/11/tcps-management.html"><![CDATA[<p>타라그래픽스의 생산 모듈 TCPS의 관리방법<!--more--></p>
+
+<p><strong><em>목차</em></strong></p>
 
 <!-- code_chunk_output -->
 
@@ -165,7 +306,15 @@
 
 <h4 id="서버용량-관리">서버용량 관리</h4>
 
+<p><br /></p>
+
+<hr />
+
+<p><br /></p>
+
 <h2 id="요청있을-때">요청있을 때</h2>
+
+<h4 id="tcps-자체에서-외부아이피-허용방법">TCPS 자체에서 외부아이피 허용방법</h4>
 
 <h4 id="좌측-navigation-bar에-맞춤제품-메뉴-추가하고-제품-등록하기청년다방-브레댄코-">좌측 navigation bar에 맞춤제품 메뉴 추가하고 제품 등록하기(청년다방, 브레댄코, …)</h4>
 <blockquote>
@@ -230,8 +379,18 @@
   <li><code class="language-plaintext highlighter-rouge">CTRL + F</code> -&gt; <strong><em>야놀자 명함 템플릿 소제목 코드 변경</em></strong> 으로 검색해서 내용 참조</li>
 </ol>
 
-<p><br />
-<br /></p>
+<h4 id="명함-가변-내용입력창에서-영문-주소-입력란이-세-칸이-나오게-하기">명함 가변 내용입력창에서 영문 주소 입력란이 세 칸이 나오게 하기</h4>
+
+<ol>
+  <li>/home/podtest/v2/order/input_frame.html</li>
+  <li>$arr_line_count 배열을 찾아 배열안에 해당 템플릿의 시리얼 넘버를 삽입</li>
+</ol>
+
+<p><br /></p>
+
+<hr />
+
+<p><br /></p>
 
 <h2 id="특정시점">특정시점</h2>
 
@@ -242,7 +401,19 @@
 <ol>
   <li>order_model.php</li>
   <li>get_delivery_branch 에서 ‘센터배송’ 부분을 찾아 배열에 추가하거나 삭제한다.</li>
-</ol>]]></content><author><name>Victor Lo</name></author><category term="myjob" /><category term="tcps" /><summary type="html"><![CDATA[목차]]></summary></entry><entry><title type="html">HTTP 터널링</title><link href="http://localhost:4000/database/2023/04/07/HTTP-tunneling.html" rel="alternate" type="text/html" title="HTTP 터널링" /><published>2023-04-07T00:00:00+09:00</published><updated>2023-04-07T00:00:00+09:00</updated><id>http://localhost:4000/database/2023/04/07/HTTP-tunneling</id><content type="html" xml:base="http://localhost:4000/database/2023/04/07/HTTP-tunneling.html"><![CDATA[<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SET</span> <span class="o">@</span><span class="n">var</span> <span class="o">=</span> <span class="mi">281</span><span class="p">;</span>
+</ol>
+
+<h3 id="aws나-billing-업체-등-서버가-재시작되었을-때">AWS나 Billing 업체 등 서버가 재시작되었을 때</h3>
+
+<h4 id="db-복구-방법">DB 복구 방법</h4>
+
+<ol>
+  <li>show tables; 로 모든 테이블 목록 엑셀에 붙여넣기</li>
+  <li>check table 테이블명;</li>
+  <li>결과가 한 줄로 OK라고 뜨면 문제없음</li>
+  <li>문제가 발생했다고 뜰 경우 repair table 테이블명;</li>
+  <li>이런 식으로 모든 테이블을 검사한다. 주로 많이 쓰이는 테이블에서 오류가 발생하고 있음.</li>
+</ol>]]></content><author><name>Victor Lo</name></author><category term="myjob" /><category term="tcps" /><summary type="html"><![CDATA[타라그래픽스의 생산 모듈 TCPS의 관리방법]]></summary></entry><entry><title type="html">HTTP 터널링</title><link href="http://localhost:4000/database/2023/04/07/HTTP-tunneling.html" rel="alternate" type="text/html" title="HTTP 터널링" /><published>2023-04-07T00:00:00+09:00</published><updated>2023-04-07T00:00:00+09:00</updated><id>http://localhost:4000/database/2023/04/07/HTTP-tunneling</id><content type="html" xml:base="http://localhost:4000/database/2023/04/07/HTTP-tunneling.html"><![CDATA[<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SET</span> <span class="o">@</span><span class="n">var</span> <span class="o">=</span> <span class="mi">281</span><span class="p">;</span>
 
 <span class="k">SELECT</span> <span class="o">@</span><span class="n">var</span><span class="p">;</span>
 </code></pre></div></div>
@@ -862,150 +1033,4 @@ sequenceDiagram
     John-&gt;&gt;Bob: How about you?
     Bob--&gt;&gt;John: Jolly good!
 </div>
-</details>]]></content><author><name></name></author><category term="Mermaid" /><category term="Highlight" /><category term="Markdown" /><summary type="html"><![CDATA[Let’s demo some code snippet, with some mermaid diagrams. Because if you put some code in your blog, you would at least make it: Searchable Good-looking]]></summary></entry><entry><title type="html">Sample post</title><link href="http://localhost:4000/2019/06/30/sample-post.html" rel="alternate" type="text/html" title="Sample post" /><published>2019-06-30T00:00:00+09:00</published><updated>2019-06-30T00:00:00+09:00</updated><id>http://localhost:4000/2019/06/30/sample-post</id><content type="html" xml:base="http://localhost:4000/2019/06/30/sample-post.html"><![CDATA[<p>Consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. 
-Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. 
-<!--more-->
-Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem.</p>
-
-<ul>
-  <li>Consectetur adipiscing elit</li>
-  <li>Donec a diam lectus</li>
-  <li>Sed sit amet ipsum mauris</li>
-</ul>
-
-<p>Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.</p>
-
-<p>Nunc diam velit, adipiscing ut tristique vitae, sagittis vel odio. Maecenas convallis ullamcorper ultricies. Curabitur ornare, ligula <em>semper consectetur sagittis</em>, nisi diam iaculis velit, id fringilla sem nunc vel mi. Nam dictum, odio nec pretium volutpat, arcu ante placerat erat, non tristique elit urna et turpis. Quisque mi metus, ornare sit amet fermentum et, tincidunt et orci. Fusce eget orci a orci congue vestibulum.</p>
-
-<div class="row">
-    
-    <div style="flex: 100.0%">
-        <img class="single" src="/assets/img/pexels/travel.jpeg" alt="travel.jpeg" />
-    </div>
-    
-</div>
-
-<p>Ut dolor diam, elementum et vestibulum eu, porttitor vel elit. Curabitur venenatis pulvinar tellus gravida ornare. Sed et erat faucibus nunc euismod ultricies ut id justo. Nullam cursus suscipit nisi, et ultrices justo sodales nec. Fusce venenatis facilisis lectus ac semper. Aliquam at massa ipsum. Quisque bibendum purus convallis nulla ultrices ultricies. Nullam aliquam, mi eu aliquam tincidunt, purus velit laoreet tortor, viverra pretium nisi quam vitae mi. Fusce vel volutpat elit. Nam sagittis nisi dui.</p>
-
-<blockquote>
-  <p>Suspendisse lectus leo, consectetur in tempor sit amet, placerat quis neque</p>
-</blockquote>
-
-<p>Etiam luctus porttitor lorem, sed suscipit est rutrum non. Curabitur lobortis nisl a enim congue semper. Aenean commodo ultrices imperdiet. Vestibulum ut justo vel sapien venenatis tincidunt.</p>
-
-\[\Theta \ne \Gamma\]
-
-<p>Phasellus eget dolor sit amet ipsum dapibus condimentum vitae quis lectus. Aliquam ut massa in turpis dapibus convallis. Praesent elit lacus, vestibulum at malesuada et, ornare et est. Ut augue nunc, sodales ut euismod non, adipiscing vitae orci<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>. Mauris ut placerat justo. Mauris in ultricies enim. Quisque nec est eleifend nulla ultrices egestas quis ut quam. Donec sollicitudin lectus a mauris pulvinar id aliquam urna cursus. Cras quis ligula sem, vel elementum mi. Phasellus non ullamcorper urna.</p>
-
-<div class="footnotes" role="doc-endnotes">
-  <ol>
-    <li id="fn:1" role="doc-endnote">
-
-      <p><span class="cit-authors">John Smith</span>, <span class="cit-title">A Title About Citations</span> <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-    </li>
-  </ol>
-</div>]]></content><author><name></name></author><category term="A Tag" /><category term="Katex" /><summary type="html"><![CDATA[Consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur.]]></summary></entry><entry><title type="html">Color Post</title><link href="http://localhost:4000/example/2019/05/18/color-post.html" rel="alternate" type="text/html" title="Color Post" /><published>2019-05-18T00:00:00+09:00</published><updated>2019-05-18T00:00:00+09:00</updated><id>http://localhost:4000/example/2019/05/18/color-post</id><content type="html" xml:base="http://localhost:4000/example/2019/05/18/color-post.html"><![CDATA[<h1 id="what-a-colorful-post">What a colorful post!</h1>
-
-<p>This is an idea that came from <a href="https://github.com/xukimseven/HardCandy-Jekyll">xukimseven/HardCandy-Jekyll</a> 
-looking at this cheerful and colorful theme, I wanted to enable something similar for Type-on-Strap.</p>
-
-<p>You can go fork and star <em>HardCandy-Jekyll</em> too! 😉</p>
-
-<!--more-->
-
-<h2 id="how-does-it-work">How does it work?</h2>
-
-<p>Basically you need to add just one thing, the color:</p>
-
-<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
-<span class="na">layout</span><span class="pi">:</span> <span class="s">post</span>
-<span class="na">title</span><span class="pi">:</span> <span class="s">Color Post</span>
-<span class="na">color</span><span class="pi">:</span> <span class="s">brown</span>
-<span class="nn">---</span>
-</code></pre></div></div>
-
-<p>It can either be a html color like <code class="language-plaintext highlighter-rouge">brown</code> (which look like red to me). Or with the rgb:</p>
-
-<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
-<span class="na">layout</span><span class="pi">:</span> <span class="s">post</span>
-<span class="na">title</span><span class="pi">:</span> <span class="s">Color Post</span>
-<span class="na">color</span><span class="pi">:</span> <span class="s">rgb(165,42,42)</span>
-<span class="nn">---</span>
-</code></pre></div></div>
-
-<p>The background used is <code class="language-plaintext highlighter-rouge">lineart.png</code> from <a href="https://github.com/xukimseven">xukimseven</a> you can edit it in the config file. 
-If you want another one, put it in <code class="language-plaintext highlighter-rouge">/assets/img</code> as well.</p>
-
-<blockquote>
-  <p>⚠️ It’s a bit hacking the css in the <code class="language-plaintext highlighter-rouge">post.html</code></p>
-</blockquote>]]></content><author><name>Sylhare</name></author><category term="Example" /><category term="Test" /><category term="Color" /><summary type="html"><![CDATA[What a colorful post! This is an idea that came from xukimseven/HardCandy-Jekyll looking at this cheerful and colorful theme, I wanted to enable something similar for Type-on-Strap. You can go fork and star HardCandy-Jekyll too! 😉]]></summary></entry><entry><title type="html">Feature images</title><link href="http://localhost:4000/example/2018/10/29/feature-images.html" rel="alternate" type="text/html" title="Feature images" /><published>2018-10-29T00:00:00+09:00</published><updated>2018-10-29T00:00:00+09:00</updated><id>http://localhost:4000/example/2018/10/29/feature-images</id><content type="html" xml:base="http://localhost:4000/example/2018/10/29/feature-images.html"><![CDATA[<p>Hopefully you will find enough information about how to set images in your blog here.
-This is an example of a post which includes a feature image specified in the front matter of the post. 
-The feature image spans the full-width of the page, and is shown with the title on permalink pages:</p>
-
-<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">feature-img</span><span class="pi">:</span> <span class="s2">"</span><span class="s">assets/img/feature-img/desk-messy.jpeg"</span>
-<span class="na">thumbnail</span><span class="pi">:</span> <span class="s2">"</span><span class="s">assets/img/thumbnails/feature-img/desk-messy.jpeg"</span> 
-</code></pre></div></div>
-
-<p>You can also use a thumbnail, a smaller version of the same image to improve loading of the page.
-The thumbnail will also be used when you share your article on other platform (linkedin, whatsapp, facebook, …).</p>
-
-<blockquote>
-  <ul>
-    <li>And now it is working</li>
-  </ul>
-</blockquote>
-
-<p>You can also add images aligned in your post using the <code class="language-plaintext highlighter-rouge">aligner</code> include.
-Make sure to separate all of the image path from in a string separated with <code class="language-plaintext highlighter-rouge">,</code>.
-It by default look into <code class="language-plaintext highlighter-rouge">assets/img/</code> so give the path from there, example:</p>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="p">{</span><span class="sx">% include </span><span class="n">aligner</span><span class="p">.</span><span class="nf">html</span> <span class="n">images</span><span class="o">=</span><span class="s2">"pexels/book-glass.jpeg,triangle.png,door.png"</span> <span class="o">%</span><span class="p">}</span></code></pre></figure>
-
-<div class="row">
-    
-    <div class="column">
-        <img src="/assets/img/pexels/book-glass.jpeg" alt="book-glass.jpeg" />
-    </div>
-    
-    <div class="column">
-        <img src="/assets/img/feature-img/desk-messy.jpeg" alt="desk-messy.jpeg" />
-    </div>
-    
-</div>
-
-<p>Here you have two images side by side, but you can set more and set the amount per columns 
-(by specifying the number of columns or let it be automatic using <code class="language-plaintext highlighter-rouge">"auto"</code>):</p>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="p">{</span><span class="sx">% include </span><span class="n">aligner</span><span class="p">.</span><span class="nf">html</span> <span class="n">images</span><span class="o">=</span><span class="s2">"portfolio/cabin.png,portfolio/cake.png,portfolio/circus.png"</span> <span class="n">column</span><span class="o">=</span><span class="mi">3</span> <span class="o">%</span><span class="p">}</span></code></pre></figure>
-
-<div class="row">
-    
-    <div style="flex: 33.333333333333336%">
-        <img src="/assets/img/portfolio/cabin.png" alt="cabin.png" />
-    </div>
-    
-    <div style="flex: 33.333333333333336%">
-        <img src="/assets/img/portfolio/cake.png" alt="cake.png" />
-    </div>
-    
-    <div style="flex: 33.333333333333336%">
-        <img src="/assets/img/portfolio/circus.png" alt="circus.png" />
-    </div>
-    
-</div>
-
-<p>it also works with only one images, it is made to display it smaller than normally.
-However you can just use the Markdown way of doing it to get the image normal sized and centered.</p>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="c1"># Markdown way (bigger)</span>
-<span class="o">!</span><span class="p">[</span><span class="no">Travel</span><span class="p">]({{</span> <span class="s2">"/assets/img/pexels/computer.jpeg"</span> <span class="o">|</span> <span class="n">relative_url</span><span class="p">}})</span>
-<span class="c1"># Aligner with only One (50% of width)</span>
-<span class="p">{</span><span class="sx">% include </span><span class="n">aligner</span><span class="p">.</span><span class="nf">html</span> <span class="n">images</span><span class="o">=</span><span class="s2">"pexels/computer.jpeg"</span> <span class="o">%</span><span class="p">}</span></code></pre></figure>
-
-<div class="row">
-    
-    <div class="column">
-        <img class="single" src="/assets/img/pexels/computer.jpeg" alt="computer.jpeg" />
-    </div>
-    
-</div>]]></content><author><name></name></author><category term="Example" /><category term="Test" /><category term="Image" /><summary type="html"><![CDATA[Hopefully you will find enough information about how to set images in your blog here. This is an example of a post which includes a feature image specified in the front matter of the post. The feature image spans the full-width of the page, and is shown with the title on permalink pages:]]></summary></entry></feed>
+</details>]]></content><author><name></name></author><category term="Mermaid" /><category term="Highlight" /><category term="Markdown" /><summary type="html"><![CDATA[Let’s demo some code snippet, with some mermaid diagrams. Because if you put some code in your blog, you would at least make it: Searchable Good-looking]]></summary></entry></feed>
