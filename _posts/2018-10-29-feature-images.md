@@ -5,6 +5,7 @@ feature-img: "assets/img/feature-img/desk-messy.jpeg"
 thumbnail: "assets/img/thumbnails/feature-img/desk-messy.jpeg"
 tags: [Test, Image]
 categories: Example
+published: false
 ---
 
 Hopefully you will find enough information about how to set images in your blog here.

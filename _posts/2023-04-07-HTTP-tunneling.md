@@ -6,6 +6,7 @@ tags: [http터널링, mssql]
 categories: database
 color: turquoise
 excerpt_separator: <!--more-->
+comments: true
 ---
 ```sql
 SET @var = 281;

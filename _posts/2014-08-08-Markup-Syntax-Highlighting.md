@@ -4,6 +4,7 @@ title: "Markup: Syntax Highlighting"
 author: mmistakes
 tags: [Highlight, Markdown]
 categories: Syntax
+published: false
 ---
 
 Syntax highlighting[^1] is a feature that displays source code. 
