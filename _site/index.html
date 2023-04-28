@@ -85,7 +85,7 @@
 
     <!-- Twitter Cards -->
     <meta name="twitter:title" content="Newbie's DoorClosing">
-    <meta name="twitter:description" content="뉴비 개발자의 문단속">
+    <meta name="twitter:description" content="{% for post in site.posts %}  {% if post.tags contains '방명록' %}      {% else %}      {% endif %}{% endfor %}">
     
     <meta name="twitter:card" content="summary">
     <meta name="twitter:image" content="http://localhost:4000/assets/img/header/suzume.jpg">
@@ -204,6 +204,37 @@
 
     <div class="posts">
     
+    
+    <div class="post-teaser">
+        
+        <span>
+          <header>
+            <h1>
+              <a aria-label="Visitor's Book" class="post-link" href="/etc/2023/04/28/guest-book.html">
+                Visitor's Book
+              </a>
+            </h1>
+            
+
+
+<div class="post-info">
+    <p class="meta">
+      
+      
+      April 28, 2023
+    </p></div>
+
+          </header>
+          
+              <div class="excerpt">
+                  
+                     방명록입니다. 낙서 남겨 주세요!
+
+                  
+              </div>
+          
+      </span>
+    </div>
     
     <div class="post-teaser">
         
