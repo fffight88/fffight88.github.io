@@ -152,3 +152,7 @@ array(
 
 1. 구버전 서버에서 `/home/podtest/v2/login.html`
 2. 코드 중간에 보면 주석 처리로 IP를 적어놓은 부분이 보이는데, 여기에 바뀐 히스토리를 적어주고, 문서 내에 IP가 코드에 삽입된 부분을 새로운 IP로 수정해 준다.
+
+### 정전, 사무실이전 등 IP가 바뀌었을 때
+
+1. \application\config\config_access_ip.php 에서 해당 아이피를 수정 또는 추가
