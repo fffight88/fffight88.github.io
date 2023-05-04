@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-05-02T13:57:24+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Newbie’s DoorClosing</title><subtitle>Newbie&apos;s DoorClosing</subtitle><entry><title type="html">Visitor’s Book</title><link href="http://localhost:4000/etc/2023/04/28/guest-book.html" rel="alternate" type="text/html" title="Visitor’s Book" /><published>2023-04-28T00:00:00+09:00</published><updated>2023-04-28T00:00:00+09:00</updated><id>http://localhost:4000/etc/2023/04/28/guest-book</id><content type="html" xml:base="http://localhost:4000/etc/2023/04/28/guest-book.html"><![CDATA[<h1 id="방명록입니다-낙서-남겨-주세요">방명록입니다. 낙서 남겨 주세요!</h1>]]></content><author><name>Victor Lo</name></author><category term="etc" /><category term="방명록" /><category term="guestbook" /><summary type="html"><![CDATA[방명록입니다. 낙서 남겨 주세요!]]></summary></entry><entry><title type="html">Coding Tips &amp;amp; Knowhow</title><link href="http://localhost:4000/code/2023/04/13/coding-tips.html" rel="alternate" type="text/html" title="Coding Tips &amp;amp; Knowhow" /><published>2023-04-13T00:00:00+09:00</published><updated>2023-04-13T00:00:00+09:00</updated><id>http://localhost:4000/code/2023/04/13/coding-tips</id><content type="html" xml:base="http://localhost:4000/code/2023/04/13/coding-tips.html"><![CDATA[<p>초보/신입 개발자가 코딩할 때 간과하기 쉬운 내용 정리 <!--more--></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-05-04T18:42:36+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Newbie’s DoorClosing</title><subtitle>Newbie&apos;s DoorClosing</subtitle><entry><title type="html">Visitor’s Book</title><link href="http://localhost:4000/etc/2023/04/28/guest-book.html" rel="alternate" type="text/html" title="Visitor’s Book" /><published>2023-04-28T00:00:00+09:00</published><updated>2023-04-28T00:00:00+09:00</updated><id>http://localhost:4000/etc/2023/04/28/guest-book</id><content type="html" xml:base="http://localhost:4000/etc/2023/04/28/guest-book.html"><![CDATA[<h1 id="방명록입니다-낙서-남겨-주세요">방명록입니다. 낙서 남겨 주세요!</h1>]]></content><author><name>Victor Lo</name></author><category term="etc" /><category term="방명록" /><category term="guestbook" /><summary type="html"><![CDATA[방명록입니다. 낙서 남겨 주세요!]]></summary></entry><entry><title type="html">Coding Tips &amp;amp; Knowhow</title><link href="http://localhost:4000/code/2023/04/13/coding-tips.html" rel="alternate" type="text/html" title="Coding Tips &amp;amp; Knowhow" /><published>2023-04-13T00:00:00+09:00</published><updated>2023-04-13T00:00:00+09:00</updated><id>http://localhost:4000/code/2023/04/13/coding-tips</id><content type="html" xml:base="http://localhost:4000/code/2023/04/13/coding-tips.html"><![CDATA[<p>초보/신입 개발자가 코딩할 때 간과하기 쉬운 내용 정리 <!--more--></p>
 
 <p><strong><em>목차</em></strong></p>
 
@@ -96,7 +96,218 @@
 
 <hr />
 
-<p><br /></p>]]></content><author><name>Victor Lo</name></author><category term="code" /><category term="code" /><summary type="html"><![CDATA[초보/신입 개발자가 코딩할 때 간과하기 쉬운 내용 정리]]></summary></entry><entry><title type="html">HTTP 터널링</title><link href="http://localhost:4000/database/2023/04/07/HTTP-tunneling.html" rel="alternate" type="text/html" title="HTTP 터널링" /><published>2023-04-07T00:00:00+09:00</published><updated>2023-04-07T00:00:00+09:00</updated><id>http://localhost:4000/database/2023/04/07/HTTP-tunneling</id><content type="html" xml:base="http://localhost:4000/database/2023/04/07/HTTP-tunneling.html"><![CDATA[<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SET</span> <span class="o">@</span><span class="n">var</span> <span class="o">=</span> <span class="mi">281</span><span class="p">;</span>
+<p><br /></p>]]></content><author><name>Victor Lo</name></author><category term="code" /><category term="code" /><summary type="html"><![CDATA[초보/신입 개발자가 코딩할 때 간과하기 쉬운 내용 정리]]></summary></entry><entry><title type="html">How To Manage TCPS</title><link href="http://localhost:4000/myjob/2023/04/11/tcps-management.html" rel="alternate" type="text/html" title="How To Manage TCPS" /><published>2023-04-11T00:00:00+09:00</published><updated>2023-04-11T00:00:00+09:00</updated><id>http://localhost:4000/myjob/2023/04/11/tcps-management</id><content type="html" xml:base="http://localhost:4000/myjob/2023/04/11/tcps-management.html"><![CDATA[<p>타라그래픽스의 생산 모듈 TCPS의 관리방법<!--more--></p>
+
+<p><strong><em>목차</em></strong></p>
+
+<ul>
+  <li><a href="#접속정보">접속정보</a></li>
+  <li><a href="#주기적">주기적</a>
+      - <a href="#서버용량-관리">서버용량 관리</a></li>
+  <li><a href="#요청있을-때">요청있을 때</a>
+      - <a href="#tcps-자체에서-외부아이피-허용방법">TCPS 자체에서 외부아이피 허용방법</a>
+      - <a href="#좌측-navigation-bar에-맞춤제품-메뉴-추가하고-제품-등록하기청년다방-브레댄코-">좌측 navigation bar에 맞춤제품 메뉴 추가하고 제품 등록하기(청년다방, 브레댄코, …)</a>
+      - <a href="#좌측-navigation-bar에-메뉴명-수정하기">좌측 navigation bar에 메뉴명 수정하기</a>
+      - <a href="#맞춤제품-메뉴-등록이-처음인-고객사">맞춤제품 메뉴 등록이 처음인 고객사</a>
+      - <a href="#주문수정-알람기능-관리">주문수정 알람기능 관리</a>
+      - <a href="#가변템플릿-소제목-변경">가변템플릿 소제목 변경</a>
+      - <a href="#명함-내용입력창에서-영문주소-입력란-세-칸으로-변경">명함 내용입력창에서 영문주소 입력란 세 칸으로 변경</a>
+      - <a href="#특정-제품만-안될-때">특정 제품만 안될 때</a>
+          - <a href="#배경이미지">배경이미지</a></li>
+  <li><a href="#특정시점">특정시점</a>
+    <ul>
+      <li><a href="#조직변경-인사발령-후">조직변경, 인사발령 후</a>
+        <ul>
+          <li><a href="#센터배송에-속하는-지점-변경">‘센터배송’에 속하는 지점 변경</a></li>
+        </ul>
+      </li>
+      <li><a href="#aws나-billing-업체-등-서버가-재시작되었을-때">AWS나 Billing 업체 등 서버가 재시작되었을 때</a>
+        <ul>
+          <li><a href="#db-복구-방법">DB 복구 방법</a></li>
+        </ul>
+      </li>
+      <li><a href="#사무실-이전-후">사무실 이전 후</a>
+        <ul>
+          <li><a href="#오피스디포-리다이렉트">오피스디포 리다이렉트</a></li>
+        </ul>
+      </li>
+      <li><a href="#정전-사무실이전-등-ip가-바뀌었을-때">정전, 사무실이전 등 IP가 바뀌었을 때</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<hr />
+
+<p><br /></p>
+
+<h2 id="접속정보">접속정보</h2>
+
+<ul>
+  <li>접속주소      : <a href="http://edu.taragrp.co.kr/__intra">http://edu.taragrp.co.kr/__intra</a></li>
+  <li>서버아이피    : 211.238.4.147</li>
+  <li>서버계정      : root</li>
+  <li>암호         : xkfkrydks2015%% (타라교안2015%%)</li>
+</ul>
+
+<p><br /></p>
+
+<hr />
+
+<p><br /></p>
+
+<h2 id="주기적">주기적</h2>
+
+<h4 id="서버용량-관리">서버용량 관리</h4>
+
+<p><br /></p>
+
+<hr />
+
+<p><br /></p>
+
+<h2 id="요청있을-때">요청있을 때</h2>
+
+<h4 id="tcps-자체에서-외부아이피-허용방법">TCPS 자체에서 외부아이피 허용방법</h4>
+
+<h4 id="좌측-navigation-bar에-맞춤제품-메뉴-추가하고-제품-등록하기청년다방-브레댄코-">좌측 navigation bar에 맞춤제품 메뉴 추가하고 제품 등록하기(청년다방, 브레댄코, …)</h4>
+<blockquote>
+  <p><strong>“좌측에 xxxx 메뉴를 만들고 그 안에 맞춤제품번호 xxxx번(부터 xxxx번)을 추가해주세요”</strong></p>
+</blockquote>
+
+<ol>
+  <li>TCPS 실서버 db의 b2b_icm.tpa001_customize 테이블에서</li>
+  <li>where 조건에 <code class="language-plaintext highlighter-rouge">serial = 제품번호</code> 를 넣어 select로 검색하면</li>
+  <li><code class="language-plaintext highlighter-rouge">p_code</code> 컬럼에서 해당 제품들의 코드 확인</li>
+  <li><code class="language-plaintext highlighter-rouge">\application\config\config_tcps.php</code> 에서 <code class="language-plaintext highlighter-rouge">$config['고객사명_tpa013_p_codes']</code> 배열을 찾는다. 
+<em>(고객사명: 청년다방=&gt;youngdabang, 브레댄코=&gt;breadnco, …)</em></li>
+  <li>배열 안에 다음 배열을 추가한다.
+    <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">array</span><span class="p">(</span>
+ <span class="s1">'name'</span> <span class="o">=&gt;</span> <span class="s2">"원하는 메뉴명"</span><span class="p">,</span>
+ <span class="s1">'p_code'</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span><span class="s2">"3번에서 확인한 코드값1"</span><span class="p">,</span> <span class="s2">"3번에서 확인한 코드값2"</span><span class="p">,</span> <span class="mf">...</span><span class="p">)</span>
+<span class="p">)</span>
+</code></pre></div>    </div>
+    <p><br />
+<br /></p>
+  </li>
+</ol>
+
+<h4 id="좌측-navigation-bar에-메뉴명-수정하기">좌측 navigation bar에 메뉴명 수정하기</h4>
+
+<ol>
+  <li>TCPS 실서버 db의 b2b_icm.mem_c 테이블에서</li>
+  <li>where 조건에 <code class="language-plaintext highlighter-rouge">c_biz_com = '회사명'</code> 을 넣어 select로 검색하면</li>
+  <li><code class="language-plaintext highlighter-rouge">serial</code> 컬럼에서 해당 고객사의 코드 확인</li>
+  <li><code class="language-plaintext highlighter-rouge">\application\helpers\function_tcps_helper.php</code> 에서 <code class="language-plaintext highlighter-rouge">func_tcps_reset_config_code()</code> 를 찾는다.</li>
+  <li>해당 고객사의 코드에 해당하는 if문을 찾아 원하는 부분을 수정한다.</li>
+  <li>청년다방, 브레댄코 등 맞춤제품 부분의 메뉴가 커스터마이징 되어있는 고객사의 맞춤제품(TPA013) 메뉴명은 여기에서 바꿀 수 없고  <a href="#좌측-navigation-bar에-맞춤제품-메뉴-추가하고-제품-등록하기청년다방-브레댄코-">좌측 navigation bar에 맞춤제품 메뉴 추가하고 제품 등록하기(청년다방, 브레댄코, …)</a> 를 참조</li>
+</ol>
+
+<p><br />
+<br /></p>
+
+<h4 id="맞춤제품-메뉴-등록이-처음인-고객사">맞춤제품 메뉴 등록이 처음인 고객사</h4>
+
+<p><br />
+<br /></p>
+
+<h4 id="주문수정-알람기능-관리">주문수정 알람기능 관리</h4>
+
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">\views\intra\common\admin2\footer.php</code> 에서 <code class="language-plaintext highlighter-rouge">$oea_check</code> 부분의 배열에 생산에 사용하는 계정명과 지점코드를 추가 또는 삭제</li>
+  <li><code class="language-plaintext highlighter-rouge">\assets\intra\js\order_edit_alarm.js</code> 에서 기능의 상세 내용 확인 및 수정 가능</li>
+  <li>관련 DB테이블 : <code class="language-plaintext highlighter-rouge">order_edit_alarm</code></li>
+</ol>
+
+<p><br />
+<br /></p>
+
+<h4 id="가변템플릿-소제목-변경">가변템플릿 소제목 변경</h4>
+
+<p><em>여기서는 야놀자 명함 템플릿 변경을 예로 든다</em></p>
+
+<ol>
+  <li>적용하려는 제품군을 특정한다. (<code class="language-plaintext highlighter-rouge">serial</code> 또는 <code class="language-plaintext highlighter-rouge">p_code</code> 등…)</li>
+  <li><code class="language-plaintext highlighter-rouge">application\controllers\Tpa001.php</code> 의 <code class="language-plaintext highlighter-rouge">edit_apply()</code></li>
+  <li>고객사페이지에서 입력하는 정보들은 <code class="language-plaintext highlighter-rouge">$input_data</code> 배열에 담겨진 상태로 xml파일 생성을 위해 파라메터로 전달된다. 따라서 분기문을 통해 원하는 상황에 원하는 텍스트로 보이게하거나 제거하는 등 처리가 가능하다.</li>
+  <li><code class="language-plaintext highlighter-rouge">CTRL + F</code> -&gt; <strong><em>야놀자 명함 템플릿 소제목 코드 변경</em></strong> 으로 검색해서 내용 참조</li>
+</ol>
+
+<p><br />
+<br /></p>
+
+<h4 id="명함-내용입력창에서-영문주소-입력란-세-칸으로-변경">명함 내용입력창에서 영문주소 입력란 세 칸으로 변경</h4>
+
+<ol>
+  <li>/home/podtest/v2/order/input_frame.html</li>
+  <li>$arr_line_count 배열을 찾아 배열안에 해당 템플릿의 시리얼 넘버를 삽입</li>
+</ol>
+
+<p><br />
+<br /></p>
+
+<h4 id="특정-제품만-안될-때">특정 제품만 안될 때</h4>
+<p>다른 제품들은 주문까지 문제없이 잘 되는데 특정 제품만이 안되는 경우
+<br />
+<br /></p>
+
+<h5 id="배경이미지">배경이미지</h5>
+<p>개발자모드에서 에러 원인을 확인했을 때 pdf 버전이 높다는 식의 메세지가 나오면 배경이미지로 올린 pdf파일의 버전이 1.4버전보다 높은 경우이다.</p>
+
+<ol>
+  <li>해당 템플릿의 수정일자를 보고 최근에 수정사항이 있었는지 확인</li>
+  <li>요청자에게 최근 템플릿의 배경이미지를 바꿨는지, 버전은 어떻게되는지 물어보고 1.4버전으로 하라고 알려준다.</li>
+</ol>
+
+<p><br />
+<br /></p>
+
+<p><br /></p>
+
+<hr />
+
+<p><br /></p>
+
+<h2 id="특정시점">특정시점</h2>
+
+<h3 id="조직변경-인사발령-후">조직변경, 인사발령 후</h3>
+
+<h4 id="센터배송에-속하는-지점-변경">‘센터배송’에 속하는 지점 변경</h4>
+
+<ol>
+  <li>order_model.php</li>
+  <li>get_delivery_branch 에서 ‘센터배송’ 부분을 찾아 배열에 추가하거나 삭제한다.</li>
+</ol>
+
+<h3 id="aws나-billing-업체-등-서버가-재시작되었을-때">AWS나 Billing 업체 등 서버가 재시작되었을 때</h3>
+
+<h4 id="db-복구-방법">DB 복구 방법</h4>
+
+<ol>
+  <li>show tables; 로 모든 테이블 목록 엑셀에 붙여넣기</li>
+  <li>check table 테이블명;</li>
+  <li>결과가 한 줄로 OK라고 뜨면 문제없음</li>
+  <li>문제가 발생했다고 뜰 경우 repair table 테이블명;</li>
+  <li>이런 식으로 모든 테이블을 검사한다. 주로 많이 쓰이는 테이블에서 오류가 발생하고 있음.</li>
+</ol>
+
+<h3 id="사무실-이전-후">사무실 이전 후</h3>
+
+<h4 id="오피스디포-리다이렉트">오피스디포 리다이렉트</h4>
+
+<p>구버전 고객사 중 <code class="language-plaintext highlighter-rouge">오피스디포</code>(c_serial = 99, btb.tarapod.co.kr/officedepot)는 고객이 url로 접속하면 먼저 오피스디포 페이지로 연결된 후 로그인이나 제품 링크 등을 클릭하면 tcps 페이지가 열리는 구조인데, 타라 영업사원들은 오피스디포 페이지를 통해야 할 이유가 없으므로 위 url로 접속하면 바로 tcps페이지가 뜨도록 설계되어 있음. 타라 직원인지 판별하는 기준은 접속IP로 분기 처리 되어 있으므로 사무실 이전 등으로 지점의 IP가 변경될 시 변경된 아이피로 코드를 수정해줘야 함.</p>
+
+<ol>
+  <li>구버전 서버에서 <code class="language-plaintext highlighter-rouge">/home/podtest/v2/login.html</code></li>
+  <li>코드 중간에 보면 주석 처리로 IP를 적어놓은 부분이 보이는데, 여기에 바뀐 히스토리를 적어주고, 문서 내에 IP가 코드에 삽입된 부분을 새로운 IP로 수정해 준다.</li>
+</ol>
+
+<h3 id="정전-사무실이전-등-ip가-바뀌었을-때">정전, 사무실이전 등 IP가 바뀌었을 때</h3>
+
+<ol>
+  <li>\application\config\config_access_ip.php 에서 해당 아이피를 수정 또는 추가</li>
+</ol>]]></content><author><name>Victor Lo</name></author><category term="myjob" /><category term="tcps" /><summary type="html"><![CDATA[타라그래픽스의 생산 모듈 TCPS의 관리방법]]></summary></entry><entry><title type="html">HTTP 터널링</title><link href="http://localhost:4000/database/2023/04/07/HTTP-tunneling.html" rel="alternate" type="text/html" title="HTTP 터널링" /><published>2023-04-07T00:00:00+09:00</published><updated>2023-04-07T00:00:00+09:00</updated><id>http://localhost:4000/database/2023/04/07/HTTP-tunneling</id><content type="html" xml:base="http://localhost:4000/database/2023/04/07/HTTP-tunneling.html"><![CDATA[<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SET</span> <span class="o">@</span><span class="n">var</span> <span class="o">=</span> <span class="mi">281</span><span class="p">;</span>
 
 <span class="k">SELECT</span> <span class="o">@</span><span class="n">var</span><span class="p">;</span>
 </code></pre></div></div>
