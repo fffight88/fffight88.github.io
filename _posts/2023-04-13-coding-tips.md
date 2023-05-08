@@ -2,7 +2,7 @@
 layout: post
 title: "Coding Tips & Knowhow"
 author: Victor Lo
-tags: [code]
+tags: [javascript, php, mysql]
 categories: code
 color: lightblue
 excerpt_separator: <!--more-->
@@ -16,6 +16,8 @@ excerpt_separator: <!--more-->
   - [반복문으로 뿌려지는 데이터를 대상으로 jQuery 사용 시 주의할 점](#반복문으로-뿌려지는-데이터를-대상으로-jquery-사용-시-주의할-점)
 - [PHP](#php)
   - [연관배열에서 값을 가져올 때 주의할 점](#연관배열에서-값을-가져올-때-주의할-점)
+- [MySQL](#mysql)
+  - [UPDATE 문에서 주의사항](#update-문에서-주의사항)
 
 <br>
 
@@ -99,6 +101,23 @@ print_r($where_in_values);
 
 <br>
 
+## MySQL
 
+### UPDATE 문에서 주의사항
+***You can't specify target table 'example_table' for update in FROM clause***
 
+mysql에서는 업데이트의 대상이 되는 테이블의 이름을 where절에서 직접 사용하려 하면 위의 에러메세지가 뜨면서 쿼리가 먹히지 않는다. 즉,
+
+```sql
+UPDATE `example_table` SET `example_col1` = '387' WHERE `example_col2` IN (
+	SELECT `example_col2` FROM `example_table` WHERE `example_col1` = '386');
+```
+
+위와 같이 쿼리를 입력하면 에러가 발생하므로, 이 때는 where절 안의 from절 테이블에 별칭을 줘서 조회를 하게 하는 방식으로 해결한다.
+
+```sql
+UPDATE `example_table` SET `example_col1` = '387' WHERE `example_col2` IN (
+	SELECT `a`.`example_col2` FROM (
+		SELECT * FROM `example_table` WHERE `example_col1` = '386') AS a);
+```
 

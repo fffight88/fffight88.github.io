@@ -1,4 +1,37 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-05-04T18:42:36+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Newbie’s DoorClosing</title><subtitle>Newbie&apos;s DoorClosing</subtitle><entry><title type="html">Visitor’s Book</title><link href="http://localhost:4000/etc/2023/04/28/guest-book.html" rel="alternate" type="text/html" title="Visitor’s Book" /><published>2023-04-28T00:00:00+09:00</published><updated>2023-04-28T00:00:00+09:00</updated><id>http://localhost:4000/etc/2023/04/28/guest-book</id><content type="html" xml:base="http://localhost:4000/etc/2023/04/28/guest-book.html"><![CDATA[<h1 id="방명록입니다-낙서-남겨-주세요">방명록입니다. 낙서 남겨 주세요!</h1>]]></content><author><name>Victor Lo</name></author><category term="etc" /><category term="방명록" /><category term="guestbook" /><summary type="html"><![CDATA[방명록입니다. 낙서 남겨 주세요!]]></summary></entry><entry><title type="html">Coding Tips &amp;amp; Knowhow</title><link href="http://localhost:4000/code/2023/04/13/coding-tips.html" rel="alternate" type="text/html" title="Coding Tips &amp;amp; Knowhow" /><published>2023-04-13T00:00:00+09:00</published><updated>2023-04-13T00:00:00+09:00</updated><id>http://localhost:4000/code/2023/04/13/coding-tips</id><content type="html" xml:base="http://localhost:4000/code/2023/04/13/coding-tips.html"><![CDATA[<p>초보/신입 개발자가 코딩할 때 간과하기 쉬운 내용 정리 <!--more--></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-05-08T09:30:38+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Newbie’s DoorClosing</title><subtitle>Newbie&apos;s DoorClosing</subtitle><entry><title type="html">XAMPP - How to get desired domain on my server</title><link href="http://localhost:4000/myjob/2023/05/04/local-domain-setting.html" rel="alternate" type="text/html" title="XAMPP - How to get desired domain on my server" /><published>2023-05-04T00:00:00+09:00</published><updated>2023-05-04T00:00:00+09:00</updated><id>http://localhost:4000/myjob/2023/05/04/local-domain-setting</id><content type="html" xml:base="http://localhost:4000/myjob/2023/05/04/local-domain-setting.html"><![CDATA[<p>XAMPP 사용시 자신의 웹서버 또는 로컬 서버에서 특정 IP에 원하는 도메인 부여하기 <!--more--></p>
+
+<p><br /></p>
+
+<hr />
+
+<p><br /></p>
+
+<ul>
+  <li>httpd-vhosts.conf 파일을 연다.</li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">C:\xampp\apache\conf\extra\httpd-vhosts.conf</code></p>
+<ul>
+  <li>아래 태그를 추가하고 저장한다. 태그 사이에 다른 속성을 더 추가할 수 있지만 아래의 두 가지 속성은 필수임.</li>
+</ul>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;VirtualHost</span> <span class="err">*:</span> <span class="err">80</span><span class="nt">&gt;</span> 
+  DocumentRoot "c:/xampp/htdocs/example/"
+  ServerName example.example
+<span class="nt">&lt;/VirtualHost&gt;</span>
+</code></pre></div></div>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">C:\Windows\System32\drivers\etc\hosts</code> 파일을 관리자모드의 편집기에서 연다.</li>
+  <li><code class="language-plaintext highlighter-rouge">[IP주소] [원하는 도메인명]</code>을 한 줄 추가하고 저장한다.</li>
+</ul>
+
+<blockquote>
+  <p>예시 : <code class="language-plaintext highlighter-rouge">127.0.0.1 example.example</code></p>
+</blockquote>
+
+<ul>
+  <li>서버를 재시작한다.</li>
+</ul>]]></content><author><name>Victor Lo</name></author><category term="myjob" /><category term="xampp" /><category term="vhost" /><category term="hosts" /><summary type="html"><![CDATA[XAMPP 사용시 자신의 웹서버 또는 로컬 서버에서 특정 IP에 원하는 도메인 부여하기]]></summary></entry><entry><title type="html">Visitor’s Book</title><link href="http://localhost:4000/etc/2023/04/28/guest-book.html" rel="alternate" type="text/html" title="Visitor’s Book" /><published>2023-04-28T00:00:00+09:00</published><updated>2023-04-28T00:00:00+09:00</updated><id>http://localhost:4000/etc/2023/04/28/guest-book</id><content type="html" xml:base="http://localhost:4000/etc/2023/04/28/guest-book.html"><![CDATA[<h1 id="방명록입니다-낙서-남겨-주세요">방명록입니다. 낙서 남겨 주세요!</h1>]]></content><author><name>Victor Lo</name></author><category term="etc" /><category term="방명록" /><category term="guestbook" /><summary type="html"><![CDATA[방명록입니다. 낙서 남겨 주세요!]]></summary></entry><entry><title type="html">Coding Tips &amp;amp; Knowhow</title><link href="http://localhost:4000/code/2023/04/13/coding-tips.html" rel="alternate" type="text/html" title="Coding Tips &amp;amp; Knowhow" /><published>2023-04-13T00:00:00+09:00</published><updated>2023-04-13T00:00:00+09:00</updated><id>http://localhost:4000/code/2023/04/13/coding-tips</id><content type="html" xml:base="http://localhost:4000/code/2023/04/13/coding-tips.html"><![CDATA[<p>초보/신입 개발자가 코딩할 때 간과하기 쉬운 내용 정리 <!--more--></p>
 
 <p><strong><em>목차</em></strong></p>
 
@@ -11,6 +44,11 @@
   <li><a href="#php">PHP</a>
     <ul>
       <li><a href="#연관배열에서-값을-가져올-때-주의할-점">연관배열에서 값을 가져올 때 주의할 점</a></li>
+    </ul>
+  </li>
+  <li><a href="#mysql">MySQL</a>
+    <ul>
+      <li><a href="#update-문에서-주의사항">UPDATE 문에서 주의사항</a></li>
     </ul>
   </li>
 </ul>
@@ -96,7 +134,25 @@
 
 <hr />
 
-<p><br /></p>]]></content><author><name>Victor Lo</name></author><category term="code" /><category term="code" /><summary type="html"><![CDATA[초보/신입 개발자가 코딩할 때 간과하기 쉬운 내용 정리]]></summary></entry><entry><title type="html">How To Manage TCPS</title><link href="http://localhost:4000/myjob/2023/04/11/tcps-management.html" rel="alternate" type="text/html" title="How To Manage TCPS" /><published>2023-04-11T00:00:00+09:00</published><updated>2023-04-11T00:00:00+09:00</updated><id>http://localhost:4000/myjob/2023/04/11/tcps-management</id><content type="html" xml:base="http://localhost:4000/myjob/2023/04/11/tcps-management.html"><![CDATA[<p>타라그래픽스의 생산 모듈 TCPS의 관리방법<!--more--></p>
+<p><br /></p>
+
+<h2 id="mysql">MySQL</h2>
+
+<h3 id="update-문에서-주의사항">UPDATE 문에서 주의사항</h3>
+<p><strong><em>You can’t specify target table ‘example_table’ for update in FROM clause</em></strong></p>
+
+<p>mysql에서는 업데이트의 대상이 되는 테이블의 이름을 where절에서 직접 사용하려 하면 위의 에러메세지가 뜨면서 쿼리가 먹히지 않는다. 즉,</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">UPDATE</span> <span class="nv">`example_table`</span> <span class="k">SET</span> <span class="nv">`example_col1`</span> <span class="o">=</span> <span class="s1">'387'</span> <span class="k">WHERE</span> <span class="nv">`example_col2`</span> <span class="k">IN</span> <span class="p">(</span>
+	<span class="k">SELECT</span> <span class="nv">`example_col2`</span> <span class="k">FROM</span> <span class="nv">`example_table`</span> <span class="k">WHERE</span> <span class="nv">`example_col1`</span> <span class="o">=</span> <span class="s1">'386'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>위와 같이 쿼리를 입력하면 에러가 발생하므로, 이 때는 where절 안의 from절 테이블에 별칭을 줘서 조회를 하게 하는 방식으로 해결한다.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">UPDATE</span> <span class="nv">`example_table`</span> <span class="k">SET</span> <span class="nv">`example_col1`</span> <span class="o">=</span> <span class="s1">'387'</span> <span class="k">WHERE</span> <span class="nv">`example_col2`</span> <span class="k">IN</span> <span class="p">(</span>
+	<span class="k">SELECT</span> <span class="nv">`a`</span><span class="p">.</span><span class="nv">`example_col2`</span> <span class="k">FROM</span> <span class="p">(</span>
+		<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="nv">`example_table`</span> <span class="k">WHERE</span> <span class="nv">`example_col1`</span> <span class="o">=</span> <span class="s1">'386'</span><span class="p">)</span> <span class="k">AS</span> <span class="n">a</span><span class="p">);</span>
+</code></pre></div></div>]]></content><author><name>Victor Lo</name></author><category term="code" /><category term="javascript" /><category term="php" /><category term="mysql" /><summary type="html"><![CDATA[초보/신입 개발자가 코딩할 때 간과하기 쉬운 내용 정리]]></summary></entry><entry><title type="html">How To Manage TCPS</title><link href="http://localhost:4000/myjob/2023/04/11/tcps-management.html" rel="alternate" type="text/html" title="How To Manage TCPS" /><published>2023-04-11T00:00:00+09:00</published><updated>2023-04-11T00:00:00+09:00</updated><id>http://localhost:4000/myjob/2023/04/11/tcps-management</id><content type="html" xml:base="http://localhost:4000/myjob/2023/04/11/tcps-management.html"><![CDATA[<p>타라그래픽스의 생산 모듈 TCPS의 관리방법<!--more--></p>
 
 <p><strong><em>목차</em></strong></p>
 
