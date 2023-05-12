@@ -1,4 +1,86 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-05-08T09:30:38+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Newbie’s DoorClosing</title><subtitle>Newbie&apos;s DoorClosing</subtitle><entry><title type="html">XAMPP - How to get desired domain on my server</title><link href="http://localhost:4000/myjob/2023/05/04/local-domain-setting.html" rel="alternate" type="text/html" title="XAMPP - How to get desired domain on my server" /><published>2023-05-04T00:00:00+09:00</published><updated>2023-05-04T00:00:00+09:00</updated><id>http://localhost:4000/myjob/2023/05/04/local-domain-setting</id><content type="html" xml:base="http://localhost:4000/myjob/2023/05/04/local-domain-setting.html"><![CDATA[<p>XAMPP 사용시 자신의 웹서버 또는 로컬 서버에서 특정 IP에 원하는 도메인 부여하기 <!--more--></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-05-12T16:30:11+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Newbie’s DoorClosing</title><subtitle>Newbie&apos;s DoorClosing</subtitle><entry><title type="html">How to get my SSH-key for Git</title><link href="http://localhost:4000/myjob/2023/05/12/ssh-key-generation.html" rel="alternate" type="text/html" title="How to get my SSH-key for Git" /><published>2023-05-12T00:00:00+09:00</published><updated>2023-05-12T00:00:00+09:00</updated><id>http://localhost:4000/myjob/2023/05/12/ssh-key-generation</id><content type="html" xml:base="http://localhost:4000/myjob/2023/05/12/ssh-key-generation.html"><![CDATA[<p>Github 또는 Gitlab에서 사용할 public SSH-key 만들고 등록하기 <!--more--></p>
+
+<p><br /></p>
+
+<hr />
+
+<p><br /></p>
+
+<p>Github이나 Gitlab에서 clone 기능을 문제없이 사용하려면 SSH-key가 꼭 필요하다. SSH-key를 새로 만들고 등록하는 방법을 알아보자. 여기서는 Gitlab과 windows를 이용한다.</p>
+
+<p>시작하기 전에 Gitlab 계정을 생성하고, Gitbash를 설치한다.</p>
+
+<h2 id="git-bash-설치하기"><a href="https://git-scm.com/downloads">»Git Bash 설치하기«</a></h2>
+
+<p>설치과정 중 Git Bash를 선택할 수 있는 화면에서 선택하여 설치한다.</p>
+
+<p>설치가 끝나면 Git Bash를 실행한 후 다음 셋 중 하나를 입력하는데, 1번부터 순서대로 시도해본다.</p>
+
+<blockquote>
+  <ol>
+    <li>ssh-keygen</li>
+    <li>ssh-keygen -t rsa -b 4096 -C “examaple@example.com”</li>
+    <li>ssh-keygen -t ed25519 -C “examaple@example.com”</li>
+  </ol>
+</blockquote>
+
+<p><img src="/assets/img/feature-img/2023-05-12-ssh-key-generation-0.png" alt="" /></p>
+
+<p>입력을 요구하는 부분에서는 전부 그냥 엔터로 넘긴다. 이제, <code class="language-plaintext highlighter-rouge">c:\Users\user\.ssh</code> 로 가보면 파일이 두 개가 있는데 <code class="language-plaintext highlighter-rouge">id_rsa</code>는 private, <code class="language-plaintext highlighter-rouge">id_rsa.pub</code>는 public 키이고 깃랩에 등록해야 하는 키는 public 키이다.</p>
+
+<p>Git Bash에서 <code class="language-plaintext highlighter-rouge">cat /c/Users/user/.ssh/id_rsa.pub</code> 를 입력하거나, <code class="language-plaintext highlighter-rouge">id_rsa.pub</code> 파일을 VS Code 등으로 열어보면</p>
+
+<p><img src="/assets/img/feature-img/2023-05-12-ssh-key-generation-1.png" alt="" /></p>
+
+<p>이런 식의 키가 만들어져 있다. 이것을 그대로 카피한 후 깃랩으로 가서 로그인을 하면</p>
+
+<p><img src="/assets/img/feature-img/2023-05-12-ssh-key-generation-2.png" alt="" /></p>
+
+<p>좌측 메뉴에서 <code class="language-plaintext highlighter-rouge">SSH Keys</code>를 선택하여 우측 상단의 <code class="language-plaintext highlighter-rouge">Add SSH Key</code> 버튼을 누른다.</p>
+
+<p><img src="/assets/img/feature-img/2023-05-12-ssh-key-generation-3.png" alt="" /></p>
+
+<p>Title에는 원하는 명칭을, Key 부분에 아까 확인했던 키를 붙여넣는데 앞뒤로 개행문자나 공백 등이 붙이지 않고 텍스트 그대로 붙여넣어야 한다. 그 후 <code class="language-plaintext highlighter-rouge">Add Key</code> 버튼을 누르면</p>
+
+<p><img src="/assets/img/feature-img/2023-05-12-ssh-key-generation-4.png" alt="" /></p>
+
+<p>잘 되는 경우도 있고 이렇게 빨갛게 에러메세지가 뜨는 경우가 있다. 이 때가 위의 세 가지 <code class="language-plaintext highlighter-rouge">ssh-keygen</code> 중 두 번째를 시도해 볼 때이다. <code class="language-plaintext highlighter-rouge">c:\Users\user\.ssh</code> 폴더의 파일 두 개를 삭제하고 두 번째 걸로 다시 시도하자. 두 번째 것도 안되면 세 번째 것으로 시도하자. <code class="language-plaintext highlighter-rouge">example@example.com</code> 에는 자신 계정의 이메일주소를 넣어줘야 한다.</p>
+
+<p><img src="/assets/img/feature-img/2023-05-12-ssh-key-generation-5.png" alt="" /></p>
+
+<p>성공했다면 위와 같은 화면이 보이고, 더 이상 다운로드하려면 SSH-key를 등록하라는 메세지가 뜨지 않을 것이다.</p>]]></content><author><name>Victor Lo</name></author><category term="myjob" /><category term="git" /><category term="sshkey" /><category term="ssh-key" /><category term="keygen" /><summary type="html"><![CDATA[Github 또는 Gitlab에서 사용할 public SSH-key 만들고 등록하기]]></summary></entry><entry><title type="html">Code Examples</title><link href="http://localhost:4000/myjob/2023/05/12/code-examples.html" rel="alternate" type="text/html" title="Code Examples" /><published>2023-05-12T00:00:00+09:00</published><updated>2023-05-12T00:00:00+09:00</updated><id>http://localhost:4000/myjob/2023/05/12/code-examples</id><content type="html" xml:base="http://localhost:4000/myjob/2023/05/12/code-examples.html"><![CDATA[<p>유용한 예제코드들 <!--more--></p>
+
+<ul>
+  <li><a href="#javascript-jquery">Javascript, jQuery</a>
+    <ul>
+      <li><a href="#텍스트박스-일부문자만-허용하기">텍스트박스 일부문자만 허용하기</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<hr />
+
+<p><br /></p>
+
+<h2 id="javascript-jquery">Javascript, jQuery</h2>
+
+<h4 id="텍스트박스-일부문자만-허용하기">텍스트박스 일부문자만 허용하기</h4>
+
+<p>연락처 입력을 위해 <strong><em>0~9, -</em></strong> 만을 허용할 경우</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">$</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">[name=example], #example, .example</span><span class="dl">'</span><span class="p">).</span><span class="nf">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">input</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">value</span> <span class="o">=</span> <span class="nf">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nf">val</span><span class="p">();</span>
+        <span class="nf">if </span><span class="p">(</span><span class="sr">/^</span><span class="se">[</span><span class="sr">0-9</span><span class="se">\-]</span><span class="sr">+$/</span><span class="p">.</span><span class="nf">test</span><span class="p">(</span><span class="nx">value</span><span class="p">)){</span>
+
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="nf">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nf">val</span><span class="p">(</span><span class="nx">value</span><span class="p">.</span><span class="nf">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">));</span>
+        <span class="p">}</span>	
+    <span class="p">});</span>
+<span class="p">})</span>
+</code></pre></div></div>]]></content><author><name>Victor Lo</name></author><category term="myjob" /><category term="code" /><category term="coding" /><category term="example" /><summary type="html"><![CDATA[유용한 예제코드들]]></summary></entry><entry><title type="html">XAMPP - How to get desired domain on my server</title><link href="http://localhost:4000/myjob/2023/05/04/local-domain-setting.html" rel="alternate" type="text/html" title="XAMPP - How to get desired domain on my server" /><published>2023-05-04T00:00:00+09:00</published><updated>2023-05-04T00:00:00+09:00</updated><id>http://localhost:4000/myjob/2023/05/04/local-domain-setting</id><content type="html" xml:base="http://localhost:4000/myjob/2023/05/04/local-domain-setting.html"><![CDATA[<p>XAMPP 사용시 자신의 웹서버 또는 로컬 서버에서 특정 IP에 원하는 도메인 부여하기 <!--more--></p>
 
 <p><br /></p>
 
@@ -190,6 +272,11 @@
       <li><a href="#정전-사무실이전-등-ip가-바뀌었을-때">정전, 사무실이전 등 IP가 바뀌었을 때</a></li>
     </ul>
   </li>
+  <li><a href="#로직-이해하기">로직 이해하기</a>
+    <ul>
+      <li><a href="#navi-bar-메뉴-생성">navi-bar 메뉴 생성</a></li>
+    </ul>
+  </li>
 </ul>
 
 <p><br /></p>
@@ -363,6 +450,41 @@
 
 <ol>
   <li>\application\config\config_access_ip.php 에서 해당 아이피를 수정 또는 추가</li>
+</ol>
+
+<p><br />
+<br /></p>
+
+<p><br /></p>
+
+<hr />
+
+<p><br /></p>
+
+<h2 id="로직-이해하기">로직 이해하기</h2>
+
+<h3 id="navi-bar-메뉴-생성">navi-bar 메뉴 생성</h3>
+
+<ol>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">/controller/Login.php/_login</code> <br />
+로그인한 계정의 <code class="language-plaintext highlighter-rouge">c_serial</code>로 <code class="language-plaintext highlighter-rouge">mem_c</code> 테이블에서 고객사의 정보를 가져와 <code class="language-plaintext highlighter-rouge">$company_data</code>에 저장</p>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">/controller/Login.php/set_session_tpcs</code> <br />
+<code class="language-plaintext highlighter-rouge">$company_data</code>의 <code class="language-plaintext highlighter-rouge">menu</code>, <code class="language-plaintext highlighter-rouge">menu2</code>, <code class="language-plaintext highlighter-rouge">menu3</code> 컬럼의 값을 각각 <code class="language-plaintext highlighter-rouge">$session_tcps['icm_menu']</code>, <code class="language-plaintext highlighter-rouge">$session_tcps['icm_menu2']</code>, <code class="language-plaintext highlighter-rouge">$session_tcps['icm_menu3']</code>에 저장
+    <blockquote>
+      <p><em>menu 컬럼 코드</em>
+menu: 모든메뉴 ALL, 명함 N, 디자인명함 D, 오피스프린팅 O, 초간편주문 E, 맞춤제품 C, 상업인쇄 S, 실사출력 L, CTP P <br />
+menu1: 오피스프린팅에 종속된 전문가용주문 A <br />
+menu2: 모든메뉴 ALL A:제작문의 B:통계 C:공지사항 D:개인정보취급방침 E:TCPS 이용안내 F:Q&amp;A G:프린터 드라이버 다운로드</p>
+    </blockquote>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">\views\view_A\common\header.php</code> <br />
+<code class="language-plaintext highlighter-rouge">$menu_data = func_tcps_get_gnb_data($this-&gt;view)</code> 메서드를 실행하여 <code class="language-plaintext highlighter-rouge">$menu_data</code>에 저장</p>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">\helpers\function_tcps_helper.php\func_tcps_get_gnb_data()</code> <br />
+세션에 저장한 <code class="language-plaintext highlighter-rouge">icm_menu</code>, <code class="language-plaintext highlighter-rouge">icm_menu2</code>, <code class="language-plaintext highlighter-rouge">icm_menu3</code> 의 코드값을 가져와 메뉴데이터로 가공한 후 <code class="language-plaintext highlighter-rouge">$menu_data</code>로 리턴. 여기서 명함 메뉴를 nav-bar에 추가하려면 코드 “N”인 부분에서 처리하고, 맞춤제품 메뉴를 추가하려면 코드 “C”인 부분에서 처리한다.</li>
 </ol>]]></content><author><name>Victor Lo</name></author><category term="myjob" /><category term="tcps" /><summary type="html"><![CDATA[타라그래픽스의 생산 모듈 TCPS의 관리방법]]></summary></entry><entry><title type="html">HTTP 터널링</title><link href="http://localhost:4000/database/2023/04/07/HTTP-tunneling.html" rel="alternate" type="text/html" title="HTTP 터널링" /><published>2023-04-07T00:00:00+09:00</published><updated>2023-04-07T00:00:00+09:00</updated><id>http://localhost:4000/database/2023/04/07/HTTP-tunneling</id><content type="html" xml:base="http://localhost:4000/database/2023/04/07/HTTP-tunneling.html"><![CDATA[<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SET</span> <span class="o">@</span><span class="n">var</span> <span class="o">=</span> <span class="mi">281</span><span class="p">;</span>
 
 <span class="k">SELECT</span> <span class="o">@</span><span class="n">var</span><span class="p">;</span>

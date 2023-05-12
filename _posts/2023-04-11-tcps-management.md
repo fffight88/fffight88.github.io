@@ -34,6 +34,8 @@ excerpt_separator: <!--more-->
 	- [사무실 이전 후](#사무실-이전-후)
 		- [오피스디포 리다이렉트](#오피스디포-리다이렉트)
 	- [정전, 사무실이전 등 IP가 바뀌었을 때](#정전-사무실이전-등-ip가-바뀌었을-때)
+- [로직 이해하기](#로직-이해하기)
+	- [navi-bar 메뉴 생성](#navi-bar-메뉴-생성)
 
 <br>
 
@@ -183,3 +185,33 @@ array(
 ### 정전, 사무실이전 등 IP가 바뀌었을 때
 
 1. \application\config\config_access_ip.php 에서 해당 아이피를 수정 또는 추가
+
+<br>
+<br>
+
+<br>
+
+***
+
+<br>
+
+## 로직 이해하기
+
+### navi-bar 메뉴 생성
+
+1. `/controller/Login.php/_login` <br>
+로그인한 계정의 `c_serial`로 `mem_c` 테이블에서 고객사의 정보를 가져와 `$company_data`에 저장
+
+2. `/controller/Login.php/set_session_tpcs` <br>
+`$company_data`의 `menu`, `menu2`, `menu3` 컬럼의 값을 각각 `$session_tcps['icm_menu']`, `$session_tcps['icm_menu2']`, `$session_tcps['icm_menu3']`에 저장
+> *menu 컬럼 코드*
+> menu: 모든메뉴 ALL, 명함 N, 디자인명함 D, 오피스프린팅 O, 초간편주문 E, 맞춤제품 C, 상업인쇄 S, 실사출력 L, CTP P <br>
+> menu1: 오피스프린팅에 종속된 전문가용주문 A <br>
+> menu2: 모든메뉴 ALL A:제작문의 B:통계 C:공지사항 D:개인정보취급방침 E:TCPS 이용안내 F:Q&A G:프린터 드라이버 다운로드
+
+3. `\views\view_A\common\header.php` <br>
+`$menu_data = func_tcps_get_gnb_data($this->view)` 메서드를 실행하여 `$menu_data`에 저장
+
+4. `\helpers\function_tcps_helper.php\func_tcps_get_gnb_data()` <br>
+세션에 저장한 `icm_menu`, `icm_menu2`, `icm_menu3` 의 코드값을 가져와 메뉴데이터로 가공한 후 `$menu_data`로 리턴. 여기서 명함 메뉴를 nav-bar에 추가하려면 코드 "N"인 부분에서 처리하고, 맞춤제품 메뉴를 추가하려면 코드 "C"인 부분에서 처리한다.
+
