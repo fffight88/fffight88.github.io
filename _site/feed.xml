@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-05-17T08:01:57+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Newbie’s DoorClosing</title><subtitle>Newbie&apos;s DoorClosing</subtitle><entry><title type="html">How to get my SSH-key for Git</title><link href="http://localhost:4000/myjob/2023/05/12/ssh-key-generation.html" rel="alternate" type="text/html" title="How to get my SSH-key for Git" /><published>2023-05-12T00:00:00+09:00</published><updated>2023-05-12T00:00:00+09:00</updated><id>http://localhost:4000/myjob/2023/05/12/ssh-key-generation</id><content type="html" xml:base="http://localhost:4000/myjob/2023/05/12/ssh-key-generation.html"><![CDATA[<p>Github 또는 Gitlab에서 사용할 public SSH-key 만들고 등록하기 <!--more--></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-05-24T16:46:15+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Newbie’s DoorClosing</title><subtitle>Newbie&apos;s DoorClosing</subtitle><entry><title type="html">How to get my SSH-key for Git</title><link href="http://localhost:4000/myjob/2023/05/12/ssh-key-generation.html" rel="alternate" type="text/html" title="How to get my SSH-key for Git" /><published>2023-05-12T00:00:00+09:00</published><updated>2023-05-12T00:00:00+09:00</updated><id>http://localhost:4000/myjob/2023/05/12/ssh-key-generation</id><content type="html" xml:base="http://localhost:4000/myjob/2023/05/12/ssh-key-generation.html"><![CDATA[<p>Github 또는 Gitlab에서 사용할 public SSH-key 만들고 등록하기 <!--more--></p>
 
 <p><br /></p>
 
@@ -244,9 +244,11 @@
       - <a href="#서버용량-관리">서버용량 관리</a></li>
   <li><a href="#요청있을-때">요청있을 때</a>
       - <a href="#tcps-자체에서-외부아이피-허용방법">TCPS 자체에서 외부아이피 허용방법</a>
-      - <a href="#좌측-navigation-bar에-맞춤제품-메뉴-추가하고-제품-등록하기청년다방-브레댄코-">좌측 navigation bar에 맞춤제품 메뉴 추가하고 제품 등록하기(청년다방, 브레댄코, …)</a>
+      - <a href="#좌측-nav-bar에-맞춤제품-메뉴-추가하고-제품-등록하기청년다방-브레댄코-">좌측 nav-bar에 맞춤제품 메뉴 추가하고 제품 등록하기(청년다방, 브레댄코, …)</a>
       - <a href="#좌측-navigation-bar에-메뉴명-수정하기">좌측 navigation bar에 메뉴명 수정하기</a>
       - <a href="#맞춤제품-메뉴-등록이-처음인-고객사">맞춤제품 메뉴 등록이 처음인 고객사</a>
+      - <a href="#현대일렉트릭-크레디아-제품-재고-db-수정">현대일렉트릭 (크레디아) 제품 재고 DB 수정</a>
+      - <a href="#고객사페이지-디자인-수정">고객사페이지 디자인 수정</a>
       - <a href="#주문수정-알람기능-관리">주문수정 알람기능 관리</a>
       - <a href="#가변템플릿-소제목-변경">가변템플릿 소제목 변경</a>
       - <a href="#명함-내용입력창에서-영문주소-입력란-세-칸으로-변경">명함 내용입력창에서 영문주소 입력란 세 칸으로 변경</a>
@@ -314,7 +316,7 @@
 
 <h4 id="tcps-자체에서-외부아이피-허용방법">TCPS 자체에서 외부아이피 허용방법</h4>
 
-<h4 id="좌측-navigation-bar에-맞춤제품-메뉴-추가하고-제품-등록하기청년다방-브레댄코-">좌측 navigation bar에 맞춤제품 메뉴 추가하고 제품 등록하기(청년다방, 브레댄코, …)</h4>
+<h4 id="좌측-nav-bar에-맞춤제품-메뉴-추가하고-제품-등록하기청년다방-브레댄코-">좌측 nav-bar에 맞춤제품 메뉴 추가하고 제품 등록하기(청년다방, 브레댄코, …)</h4>
 <blockquote>
   <p><strong>“좌측에 xxxx 메뉴를 만들고 그 안에 맞춤제품번호 xxxx번(부터 xxxx번)을 추가해주세요”</strong></p>
 </blockquote>
@@ -351,6 +353,16 @@
 <br /></p>
 
 <h4 id="맞춤제품-메뉴-등록이-처음인-고객사">맞춤제품 메뉴 등록이 처음인 고객사</h4>
+
+<p><br />
+<br /></p>
+
+<h4 id="현대일렉트릭-크레디아-제품-재고-db-수정">현대일렉트릭 (크레디아) 제품 재고 DB 수정</h4>
+
+<p><br />
+<br /></p>
+
+<h4 id="고객사페이지-디자인-수정">고객사페이지 디자인 수정</h4>
 
 <p><br />
 <br /></p>

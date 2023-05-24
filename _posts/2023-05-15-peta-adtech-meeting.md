@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "페타애드텍 작업 관련 미팅준비 자료"
+title: "페타애드텍 명함주문 솔루션 TCPS 연동 작업"
 author: Victor Lo
 tags: [페타]
 categories: myjob
@@ -9,7 +9,7 @@ published: false
 excerpt_separator: <!--more-->
 ---
 
-페타애드텍 작업 관련 미팅준비 자료 <!--more-->
+페타애드텍 명함주문 솔루션 TCPS 연동 작업 <!--more-->
 
 <br>
 
@@ -20,7 +20,6 @@ excerpt_separator: <!--more-->
 ## TCPS 주문목록화면
 
 ### get_page_list_t_order()
-
 
 
 1. 주문번호 생성시 페타애드텍 구분자 - inc파일 통해서 시리얼넘버 생성
