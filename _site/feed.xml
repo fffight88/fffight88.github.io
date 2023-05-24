@@ -1,36 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-05-25T08:14:46+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Newbie’s DoorClosing</title><subtitle>Newbie&apos;s DoorClosing</subtitle><entry><title type="html">Code Examples</title><link href="http://localhost:4000/myjob/2023/05/12/code-examples.html" rel="alternate" type="text/html" title="Code Examples" /><published>2023-05-12T00:00:00+09:00</published><updated>2023-05-12T00:00:00+09:00</updated><id>http://localhost:4000/myjob/2023/05/12/code-examples</id><content type="html" xml:base="http://localhost:4000/myjob/2023/05/12/code-examples.html"><![CDATA[<p>유용한 예제코드들 <!--more--></p>
-
-<ul>
-  <li><a href="#javascript-jquery">Javascript, jQuery</a>
-    <ul>
-      <li><a href="#텍스트박스-일부문자만-허용하기">텍스트박스 일부문자만 허용하기</a></li>
-    </ul>
-  </li>
-</ul>
-
-<p><br /></p>
-
-<hr />
-
-<p><br /></p>
-
-<h2 id="javascript-jquery">Javascript, jQuery</h2>
-
-<h4 id="텍스트박스-일부문자만-허용하기">텍스트박스 일부문자만 허용하기</h4>
-
-<p>연락처 입력을 위해 <strong><em>0~9, -</em></strong> 만을 허용할 경우</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">$</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">[name=example], #example, .example</span><span class="dl">'</span><span class="p">).</span><span class="nf">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">input</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-        <span class="kd">var</span> <span class="nx">value</span> <span class="o">=</span> <span class="nf">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nf">val</span><span class="p">();</span>
-        <span class="nf">if </span><span class="p">(</span><span class="sr">/^</span><span class="se">[</span><span class="sr">0-9</span><span class="se">\-]</span><span class="sr">+$/</span><span class="p">.</span><span class="nf">test</span><span class="p">(</span><span class="nx">value</span><span class="p">)){</span>
-
-        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-            <span class="nf">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nf">val</span><span class="p">(</span><span class="nx">value</span><span class="p">.</span><span class="nf">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">));</span>
-        <span class="p">}</span>	
-    <span class="p">});</span>
-<span class="p">})</span>
-</code></pre></div></div>]]></content><author><name>Victor Lo</name></author><category term="myjob" /><category term="code" /><category term="coding" /><category term="example" /><summary type="html"><![CDATA[유용한 예제코드들]]></summary></entry><entry><title type="html">How to get my SSH-key for Git</title><link href="http://localhost:4000/myjob/2023/05/12/ssh-key-generation.html" rel="alternate" type="text/html" title="How to get my SSH-key for Git" /><published>2023-05-12T00:00:00+09:00</published><updated>2023-05-12T00:00:00+09:00</updated><id>http://localhost:4000/myjob/2023/05/12/ssh-key-generation</id><content type="html" xml:base="http://localhost:4000/myjob/2023/05/12/ssh-key-generation.html"><![CDATA[<p>Github 또는 Gitlab에서 사용할 public SSH-key 만들고 등록하기 <!--more--></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-05-25T08:20:56+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Newbie’s DoorClosing</title><subtitle>Newbie&apos;s DoorClosing</subtitle><entry><title type="html">How to get my SSH-key for Git</title><link href="http://localhost:4000/myjob/2023/05/12/ssh-key-generation.html" rel="alternate" type="text/html" title="How to get my SSH-key for Git" /><published>2023-05-12T00:00:00+09:00</published><updated>2023-05-12T00:00:00+09:00</updated><id>http://localhost:4000/myjob/2023/05/12/ssh-key-generation</id><content type="html" xml:base="http://localhost:4000/myjob/2023/05/12/ssh-key-generation.html"><![CDATA[<p>Github 또는 Gitlab에서 사용할 public SSH-key 만들고 등록하기 <!--more--></p>
 
 <p><br /></p>
 
@@ -80,7 +48,39 @@
 
 <p><img src="/assets/img/feature-img/2023-05-12-ssh-key-generation-5.png" alt="" /></p>
 
-<p>성공했다면 위와 같은 화면이 보이고, 더 이상 다운로드하려면 SSH-key를 등록하라는 메세지가 뜨지 않을 것이다.</p>]]></content><author><name>Victor Lo</name></author><category term="myjob" /><category term="git" /><category term="sshkey" /><category term="ssh-key" /><category term="keygen" /><summary type="html"><![CDATA[Github 또는 Gitlab에서 사용할 public SSH-key 만들고 등록하기]]></summary></entry><entry><title type="html">XAMPP - How to get desired domain on my server</title><link href="http://localhost:4000/myjob/2023/05/04/local-domain-setting.html" rel="alternate" type="text/html" title="XAMPP - How to get desired domain on my server" /><published>2023-05-04T00:00:00+09:00</published><updated>2023-05-04T00:00:00+09:00</updated><id>http://localhost:4000/myjob/2023/05/04/local-domain-setting</id><content type="html" xml:base="http://localhost:4000/myjob/2023/05/04/local-domain-setting.html"><![CDATA[<p>XAMPP 사용시 자신의 웹서버 또는 로컬 서버에서 특정 IP에 원하는 도메인 부여하기 <!--more--></p>
+<p>성공했다면 위와 같은 화면이 보이고, 더 이상 다운로드하려면 SSH-key를 등록하라는 메세지가 뜨지 않을 것이다.</p>]]></content><author><name>Victor Lo</name></author><category term="myjob" /><category term="git" /><category term="sshkey" /><category term="ssh-key" /><category term="keygen" /><summary type="html"><![CDATA[Github 또는 Gitlab에서 사용할 public SSH-key 만들고 등록하기]]></summary></entry><entry><title type="html">Code Examples</title><link href="http://localhost:4000/myjob/2023/05/12/code-examples.html" rel="alternate" type="text/html" title="Code Examples" /><published>2023-05-12T00:00:00+09:00</published><updated>2023-05-12T00:00:00+09:00</updated><id>http://localhost:4000/myjob/2023/05/12/code-examples</id><content type="html" xml:base="http://localhost:4000/myjob/2023/05/12/code-examples.html"><![CDATA[<p>유용한 예제코드들 <!--more--></p>
+
+<ul>
+  <li><a href="#javascript-jquery">Javascript, jQuery</a>
+    <ul>
+      <li><a href="#텍스트박스-일부문자만-허용하기">텍스트박스 일부문자만 허용하기</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<hr />
+
+<p><br /></p>
+
+<h2 id="javascript-jquery">Javascript, jQuery</h2>
+
+<h4 id="텍스트박스-일부문자만-허용하기">텍스트박스 일부문자만 허용하기</h4>
+
+<p>연락처 입력을 위해 <strong><em>0~9, -</em></strong> 만을 허용할 경우</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">$</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">[name=example], #example, .example</span><span class="dl">'</span><span class="p">).</span><span class="nf">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">input</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">value</span> <span class="o">=</span> <span class="nf">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nf">val</span><span class="p">();</span>
+        <span class="nf">if </span><span class="p">(</span><span class="sr">/^</span><span class="se">[</span><span class="sr">0-9</span><span class="se">\-]</span><span class="sr">+$/</span><span class="p">.</span><span class="nf">test</span><span class="p">(</span><span class="nx">value</span><span class="p">)){</span>
+
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="nf">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nf">val</span><span class="p">(</span><span class="nx">value</span><span class="p">.</span><span class="nf">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">));</span>
+        <span class="p">}</span>	
+    <span class="p">});</span>
+<span class="p">})</span>
+</code></pre></div></div>]]></content><author><name>Victor Lo</name></author><category term="myjob" /><category term="code" /><category term="coding" /><category term="example" /><summary type="html"><![CDATA[유용한 예제코드들]]></summary></entry><entry><title type="html">XAMPP - How to get desired domain on my server</title><link href="http://localhost:4000/myjob/2023/05/04/local-domain-setting.html" rel="alternate" type="text/html" title="XAMPP - How to get desired domain on my server" /><published>2023-05-04T00:00:00+09:00</published><updated>2023-05-04T00:00:00+09:00</updated><id>http://localhost:4000/myjob/2023/05/04/local-domain-setting</id><content type="html" xml:base="http://localhost:4000/myjob/2023/05/04/local-domain-setting.html"><![CDATA[<p>XAMPP 사용시 자신의 웹서버 또는 로컬 서버에서 특정 IP에 원하는 도메인 부여하기 <!--more--></p>
 
 <p><br /></p>
 
@@ -113,46 +113,7 @@
 
 <ul>
   <li>서버를 재시작한다.</li>
-</ul>]]></content><author><name>Victor Lo</name></author><category term="myjob" /><category term="xampp" /><category term="vhost" /><category term="hosts" /><summary type="html"><![CDATA[XAMPP 사용시 자신의 웹서버 또는 로컬 서버에서 특정 IP에 원하는 도메인 부여하기]]></summary></entry><entry><title type="html">Visitor’s Book</title><link href="http://localhost:4000/etc/2023/04/28/guest-book.html" rel="alternate" type="text/html" title="Visitor’s Book" /><published>2023-04-28T00:00:00+09:00</published><updated>2023-04-28T00:00:00+09:00</updated><id>http://localhost:4000/etc/2023/04/28/guest-book</id><content type="html" xml:base="http://localhost:4000/etc/2023/04/28/guest-book.html"><![CDATA[<h1 id="방명록입니다-낙서-남겨-주세요">방명록입니다. 낙서 남겨 주세요!</h1>]]></content><author><name>Victor Lo</name></author><category term="etc" /><category term="방명록" /><category term="guestbook" /><summary type="html"><![CDATA[방명록입니다. 낙서 남겨 주세요!]]></summary></entry><entry><title type="html">How To Manage Edu</title><link href="http://localhost:4000/myjob/2023/04/26/edu-management.html" rel="alternate" type="text/html" title="How To Manage Edu" /><published>2023-04-26T00:00:00+09:00</published><updated>2023-04-26T00:00:00+09:00</updated><id>http://localhost:4000/myjob/2023/04/26/edu-management</id><content type="html" xml:base="http://localhost:4000/myjob/2023/04/26/edu-management.html"><![CDATA[<p>타라그래픽스의 강의교재 주문생산 모듈 <!--more--></p>
-
-<p><strong><em>목차</em></strong></p>
-<ul>
-  <li><a href="#접속정보">접속정보</a></li>
-  <li><a href="#참고문서">참고문서</a></li>
-</ul>
-
-<p><br /></p>
-
-<hr />
-
-<p><br /></p>
-
-<h2 id="접속정보">접속정보</h2>
-
-<ul>
-  <li>접속주소      : <a href="http://edu.taragrp.co.kr/__intra">http://edu.taragrp.co.kr/__intra</a></li>
-  <li>서버아이피    : 211.238.4.147</li>
-  <li>서버계정      : root</li>
-  <li>암호         : xkfkrydks2015%% (타라교안2015%%)</li>
-</ul>
-
-<p><br /></p>
-
-<hr />
-
-<p><br /></p>
-
-<h2 id="참고문서">참고문서</h2>
-
-<ul>
-  <li><a href="/assets/document/20230426_%EC%97%85%EB%AC%B4%EC%9D%B8%EC%88%98%EC%9D%B8%EA%B3%84_%EB%B0%95%EC%9E%AC%EC%9C%A4_%EB%B0%B1%EB%91%90%EC%82%B0.xlsx">업무인수인계서</a></li>
-</ul>
-
-<p><br /></p>
-
-<hr />
-
-<p><br /><em>**</em></p>]]></content><author><name>Victor Lo</name></author><category term="myjob" /><category term="교안" /><summary type="html"><![CDATA[타라그래픽스의 강의교재 주문생산 모듈]]></summary></entry><entry><title type="html">Coding Tips &amp;amp; Knowhow</title><link href="http://localhost:4000/code/2023/04/13/coding-tips.html" rel="alternate" type="text/html" title="Coding Tips &amp;amp; Knowhow" /><published>2023-04-13T00:00:00+09:00</published><updated>2023-04-13T00:00:00+09:00</updated><id>http://localhost:4000/code/2023/04/13/coding-tips</id><content type="html" xml:base="http://localhost:4000/code/2023/04/13/coding-tips.html"><![CDATA[<p>초보/신입 개발자가 코딩할 때 간과하기 쉬운 내용 정리 <!--more--></p>
+</ul>]]></content><author><name>Victor Lo</name></author><category term="myjob" /><category term="xampp" /><category term="vhost" /><category term="hosts" /><summary type="html"><![CDATA[XAMPP 사용시 자신의 웹서버 또는 로컬 서버에서 특정 IP에 원하는 도메인 부여하기]]></summary></entry><entry><title type="html">Visitor’s Book</title><link href="http://localhost:4000/etc/2023/04/28/guest-book.html" rel="alternate" type="text/html" title="Visitor’s Book" /><published>2023-04-28T00:00:00+09:00</published><updated>2023-04-28T00:00:00+09:00</updated><id>http://localhost:4000/etc/2023/04/28/guest-book</id><content type="html" xml:base="http://localhost:4000/etc/2023/04/28/guest-book.html"><![CDATA[<h1 id="방명록입니다-낙서-남겨-주세요">방명록입니다. 낙서 남겨 주세요!</h1>]]></content><author><name>Victor Lo</name></author><category term="etc" /><category term="방명록" /><category term="guestbook" /><summary type="html"><![CDATA[방명록입니다. 낙서 남겨 주세요!]]></summary></entry><entry><title type="html">Coding Tips &amp;amp; Knowhow</title><link href="http://localhost:4000/code/2023/04/13/coding-tips.html" rel="alternate" type="text/html" title="Coding Tips &amp;amp; Knowhow" /><published>2023-04-13T00:00:00+09:00</published><updated>2023-04-13T00:00:00+09:00</updated><id>http://localhost:4000/code/2023/04/13/coding-tips</id><content type="html" xml:base="http://localhost:4000/code/2023/04/13/coding-tips.html"><![CDATA[<p>초보/신입 개발자가 코딩할 때 간과하기 쉬운 내용 정리 <!--more--></p>
 
 <p><strong><em>목차</em></strong></p>
 
