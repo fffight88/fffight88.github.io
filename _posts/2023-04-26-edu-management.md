@@ -5,7 +5,7 @@ author: Victor Lo
 tags: [교안]
 categories: myjob
 color: orange
-published: false
+published: true
 excerpt_separator: <!--more-->
 ---
 타라그래픽스의 강의교재 주문생산 모듈 <!--more-->
@@ -41,4 +41,4 @@ excerpt_separator: <!--more-->
 
 ***
 
-<br>
+<br>****
