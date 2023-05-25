@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-05-25T08:20:56+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Newbie’s DoorClosing</title><subtitle>Newbie&apos;s DoorClosing</subtitle><entry><title type="html">How to get my SSH-key for Git</title><link href="http://localhost:4000/myjob/2023/05/12/ssh-key-generation.html" rel="alternate" type="text/html" title="How to get my SSH-key for Git" /><published>2023-05-12T00:00:00+09:00</published><updated>2023-05-12T00:00:00+09:00</updated><id>http://localhost:4000/myjob/2023/05/12/ssh-key-generation</id><content type="html" xml:base="http://localhost:4000/myjob/2023/05/12/ssh-key-generation.html"><![CDATA[<p>Github 또는 Gitlab에서 사용할 public SSH-key 만들고 등록하기 <!--more--></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-05-25T12:19:12+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Newbie’s DoorClosing</title><subtitle>Newbie&apos;s DoorClosing</subtitle><entry><title type="html">How to get my SSH-key for Git</title><link href="http://localhost:4000/myjob/2023/05/12/ssh-key-generation.html" rel="alternate" type="text/html" title="How to get my SSH-key for Git" /><published>2023-05-12T00:00:00+09:00</published><updated>2023-05-12T00:00:00+09:00</updated><id>http://localhost:4000/myjob/2023/05/12/ssh-key-generation</id><content type="html" xml:base="http://localhost:4000/myjob/2023/05/12/ssh-key-generation.html"><![CDATA[<p>Github 또는 Gitlab에서 사용할 public SSH-key 만들고 등록하기 <!--more--></p>
 
 <p><br /></p>
 
@@ -252,6 +252,7 @@
       - <a href="#주문수정-알람기능-관리">주문수정 알람기능 관리</a>
       - <a href="#가변템플릿-소제목-변경">가변템플릿 소제목 변경</a>
       - <a href="#명함-내용입력창에서-영문주소-입력란-세-칸으로-변경">명함 내용입력창에서 영문주소 입력란 세 칸으로 변경</a>
+      - <a href="#타라그린--타라블루">타라그린 / 타라블루</a>
       - <a href="#특정-제품만-안될-때">특정 제품만 안될 때</a>
           - <a href="#배경이미지">배경이미지</a></li>
   <li><a href="#특정시점">특정시점</a>
@@ -402,10 +403,18 @@
 <p><br />
 <br /></p>
 
-<h4 id="특정-제품만-안될-때">특정 제품만 안될 때</h4>
-<p>다른 제품들은 주문까지 문제없이 잘 되는데 특정 제품만이 안되는 경우
-<br />
+<h4 id="타라그린--타라블루">타라그린 / 타라블루</h4>
+
+<ol>
+  <li>프로젝트 폴더 전체 검색에서 ‘타라그린’으로 검색한다.</li>
+  <li>국문명함이면 요청받은 시리얼을 타라그린 array에, 영문명함이면 타라블루 array에 추가한다.</li>
+</ol>
+
+<p><br />
 <br /></p>
+
+<h4 id="특정-제품만-안될-때">특정 제품만 안될 때</h4>
+<p>다른 제품들은 주문까지 문제없이 잘 되는데 특정 제품만이 안되는 경우</p>
 
 <h5 id="배경이미지">배경이미지</h5>
 <p>개발자모드에서 에러 원인을 확인했을 때 pdf 버전이 높다는 식의 메세지가 나오면 배경이미지로 올린 pdf파일의 버전이 1.4버전보다 높은 경우이다.</p>
