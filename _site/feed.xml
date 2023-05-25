@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-05-25T12:19:12+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Newbie’s DoorClosing</title><subtitle>Newbie&apos;s DoorClosing</subtitle><entry><title type="html">How to get my SSH-key for Git</title><link href="http://localhost:4000/myjob/2023/05/12/ssh-key-generation.html" rel="alternate" type="text/html" title="How to get my SSH-key for Git" /><published>2023-05-12T00:00:00+09:00</published><updated>2023-05-12T00:00:00+09:00</updated><id>http://localhost:4000/myjob/2023/05/12/ssh-key-generation</id><content type="html" xml:base="http://localhost:4000/myjob/2023/05/12/ssh-key-generation.html"><![CDATA[<p>Github 또는 Gitlab에서 사용할 public SSH-key 만들고 등록하기 <!--more--></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-05-25T14:57:04+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Newbie’s DoorClosing</title><subtitle>Newbie&apos;s DoorClosing</subtitle><entry><title type="html">How to get my SSH-key for Git</title><link href="http://localhost:4000/myjob/2023/05/12/ssh-key-generation.html" rel="alternate" type="text/html" title="How to get my SSH-key for Git" /><published>2023-05-12T00:00:00+09:00</published><updated>2023-05-12T00:00:00+09:00</updated><id>http://localhost:4000/myjob/2023/05/12/ssh-key-generation</id><content type="html" xml:base="http://localhost:4000/myjob/2023/05/12/ssh-key-generation.html"><![CDATA[<p>Github 또는 Gitlab에서 사용할 public SSH-key 만들고 등록하기 <!--more--></p>
 
 <p><br /></p>
 
@@ -241,20 +241,29 @@
 <ul>
   <li><a href="#접속정보">접속정보</a></li>
   <li><a href="#주기적">주기적</a>
-      - <a href="#서버용량-관리">서버용량 관리</a></li>
+    <ul>
+      <li><a href="#서버용량-관리">서버용량 관리</a></li>
+    </ul>
+  </li>
   <li><a href="#요청있을-때">요청있을 때</a>
-      - <a href="#tcps-자체에서-외부아이피-허용방법">TCPS 자체에서 외부아이피 허용방법</a>
-      - <a href="#좌측-nav-bar에-맞춤제품-메뉴-추가하고-제품-등록하기청년다방-브레댄코-">좌측 nav-bar에 맞춤제품 메뉴 추가하고 제품 등록하기(청년다방, 브레댄코, …)</a>
-      - <a href="#좌측-navigation-bar에-메뉴명-수정하기">좌측 navigation bar에 메뉴명 수정하기</a>
-      - <a href="#맞춤제품-메뉴-등록이-처음인-고객사">맞춤제품 메뉴 등록이 처음인 고객사</a>
-      - <a href="#현대일렉트릭-크레디아-제품-재고-db-수정">현대일렉트릭 (크레디아) 제품 재고 DB 수정</a>
-      - <a href="#고객사페이지-디자인-수정">고객사페이지 디자인 수정</a>
-      - <a href="#주문수정-알람기능-관리">주문수정 알람기능 관리</a>
-      - <a href="#가변템플릿-소제목-변경">가변템플릿 소제목 변경</a>
-      - <a href="#명함-내용입력창에서-영문주소-입력란-세-칸으로-변경">명함 내용입력창에서 영문주소 입력란 세 칸으로 변경</a>
-      - <a href="#타라그린--타라블루">타라그린 / 타라블루</a>
-      - <a href="#특정-제품만-안될-때">특정 제품만 안될 때</a>
-          - <a href="#배경이미지">배경이미지</a></li>
+    <ul>
+      <li><a href="#tcps-자체에서-외부아이피-허용방법">TCPS 자체에서 외부아이피 허용방법</a></li>
+      <li><a href="#좌측-nav-bar에-맞춤제품-메뉴-추가하고-제품-등록하기청년다방-브레댄코-">좌측 nav-bar에 맞춤제품 메뉴 추가하고 제품 등록하기(청년다방, 브레댄코, …)</a></li>
+      <li><a href="#좌측-navigation-bar에-메뉴명-수정하기">좌측 navigation bar에 메뉴명 수정하기</a></li>
+      <li><a href="#맞춤제품-메뉴-등록이-처음인-고객사">맞춤제품 메뉴 등록이 처음인 고객사</a></li>
+      <li><a href="#현대일렉트릭-크레디아-제품-재고-db-수정">현대일렉트릭 (크레디아) 제품 재고 DB 수정</a></li>
+      <li><a href="#고객사페이지-디자인-수정">고객사페이지 디자인 수정</a></li>
+      <li><a href="#주문수정-알람기능-관리">주문수정 알람기능 관리</a></li>
+      <li><a href="#가변템플릿-소제목-변경">가변템플릿 소제목 변경</a></li>
+      <li><a href="#명함-내용입력창에서-영문주소-입력란-세-칸으로-변경">명함 내용입력창에서 영문주소 입력란 세 칸으로 변경</a></li>
+      <li><a href="#타라그린--타라블루">타라그린 / 타라블루</a></li>
+      <li><a href="#특정-제품만-안될-때">특정 제품만 안될 때</a>
+        <ul>
+          <li><a href="#배경이미지">배경이미지</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
   <li><a href="#특정시점">특정시점</a>
     <ul>
       <li><a href="#조직변경-인사발령-후">조직변경, 인사발령 후</a>
@@ -305,7 +314,7 @@
 
 <h2 id="주기적">주기적</h2>
 
-<h4 id="서버용량-관리">서버용량 관리</h4>
+<h3 id="서버용량-관리">서버용량 관리</h3>
 
 <p><br /></p>
 
@@ -315,9 +324,9 @@
 
 <h2 id="요청있을-때">요청있을 때</h2>
 
-<h4 id="tcps-자체에서-외부아이피-허용방법">TCPS 자체에서 외부아이피 허용방법</h4>
+<h3 id="tcps-자체에서-외부아이피-허용방법">TCPS 자체에서 외부아이피 허용방법</h3>
 
-<h4 id="좌측-nav-bar에-맞춤제품-메뉴-추가하고-제품-등록하기청년다방-브레댄코-">좌측 nav-bar에 맞춤제품 메뉴 추가하고 제품 등록하기(청년다방, 브레댄코, …)</h4>
+<h3 id="좌측-nav-bar에-맞춤제품-메뉴-추가하고-제품-등록하기청년다방-브레댄코-">좌측 nav-bar에 맞춤제품 메뉴 추가하고 제품 등록하기(청년다방, 브레댄코, …)</h3>
 <blockquote>
   <p><strong>“좌측에 xxxx 메뉴를 만들고 그 안에 맞춤제품번호 xxxx번(부터 xxxx번)을 추가해주세요”</strong></p>
 </blockquote>
@@ -339,7 +348,7 @@
   </li>
 </ol>
 
-<h4 id="좌측-navigation-bar에-메뉴명-수정하기">좌측 navigation bar에 메뉴명 수정하기</h4>
+<h3 id="좌측-navigation-bar에-메뉴명-수정하기">좌측 navigation bar에 메뉴명 수정하기</h3>
 
 <ol>
   <li>TCPS 실서버 db의 b2b_icm.mem_c 테이블에서</li>
@@ -353,22 +362,22 @@
 <p><br />
 <br /></p>
 
-<h4 id="맞춤제품-메뉴-등록이-처음인-고객사">맞춤제품 메뉴 등록이 처음인 고객사</h4>
+<h3 id="맞춤제품-메뉴-등록이-처음인-고객사">맞춤제품 메뉴 등록이 처음인 고객사</h3>
 
 <p><br />
 <br /></p>
 
-<h4 id="현대일렉트릭-크레디아-제품-재고-db-수정">현대일렉트릭 (크레디아) 제품 재고 DB 수정</h4>
+<h3 id="현대일렉트릭-크레디아-제품-재고-db-수정">현대일렉트릭 (크레디아) 제품 재고 DB 수정</h3>
 
 <p><br />
 <br /></p>
 
-<h4 id="고객사페이지-디자인-수정">고객사페이지 디자인 수정</h4>
+<h3 id="고객사페이지-디자인-수정">고객사페이지 디자인 수정</h3>
 
 <p><br />
 <br /></p>
 
-<h4 id="주문수정-알람기능-관리">주문수정 알람기능 관리</h4>
+<h3 id="주문수정-알람기능-관리">주문수정 알람기능 관리</h3>
 
 <ol>
   <li><code class="language-plaintext highlighter-rouge">\views\intra\common\admin2\footer.php</code> 에서 <code class="language-plaintext highlighter-rouge">$oea_check</code> 부분의 배열에 생산에 사용하는 계정명과 지점코드를 추가 또는 삭제</li>
@@ -379,7 +388,7 @@
 <p><br />
 <br /></p>
 
-<h4 id="가변템플릿-소제목-변경">가변템플릿 소제목 변경</h4>
+<h3 id="가변템플릿-소제목-변경">가변템플릿 소제목 변경</h3>
 
 <p><em>여기서는 야놀자 명함 템플릿 변경을 예로 든다</em></p>
 
@@ -393,7 +402,7 @@
 <p><br />
 <br /></p>
 
-<h4 id="명함-내용입력창에서-영문주소-입력란-세-칸으로-변경">명함 내용입력창에서 영문주소 입력란 세 칸으로 변경</h4>
+<h3 id="명함-내용입력창에서-영문주소-입력란-세-칸으로-변경">명함 내용입력창에서 영문주소 입력란 세 칸으로 변경</h3>
 
 <ol>
   <li>/home/podtest/v2/order/input_frame.html</li>
@@ -403,7 +412,7 @@
 <p><br />
 <br /></p>
 
-<h4 id="타라그린--타라블루">타라그린 / 타라블루</h4>
+<h3 id="타라그린--타라블루">타라그린 / 타라블루</h3>
 
 <ol>
   <li>프로젝트 폴더 전체 검색에서 ‘타라그린’으로 검색한다.</li>
@@ -413,10 +422,10 @@
 <p><br />
 <br /></p>
 
-<h4 id="특정-제품만-안될-때">특정 제품만 안될 때</h4>
+<h3 id="특정-제품만-안될-때">특정 제품만 안될 때</h3>
 <p>다른 제품들은 주문까지 문제없이 잘 되는데 특정 제품만이 안되는 경우</p>
 
-<h5 id="배경이미지">배경이미지</h5>
+<h4 id="배경이미지">배경이미지</h4>
 <p>개발자모드에서 에러 원인을 확인했을 때 pdf 버전이 높다는 식의 메세지가 나오면 배경이미지로 올린 pdf파일의 버전이 1.4버전보다 높은 경우이다.</p>
 
 <ol>
@@ -471,6 +480,7 @@
 
 <ol>
   <li>\application\config\config_access_ip.php 에서 해당 아이피를 수정 또는 추가</li>
+  <li>위의 파일에 추가하기 전에 G7의 inboud 관리 화면에서 먼저 추가해야 한다.</li>
 </ol>
 
 <p><br />
