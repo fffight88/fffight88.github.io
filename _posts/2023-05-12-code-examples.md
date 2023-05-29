@@ -12,7 +12,7 @@ excerpt_separator: <!--more-->
 유용한 예제코드들 <!--more-->
 
 - [Javascript, jQuery](#javascript-jquery)
-    - [텍스트박스 일부문자만 허용하기](#텍스트박스-일부문자만-허용하기)
+  - [텍스트박스 일부문자만 허용하기](#텍스트박스-일부문자만-허용하기)
 
 
 <br>
@@ -23,7 +23,7 @@ excerpt_separator: <!--more-->
 
 ## Javascript, jQuery
 
-#### 텍스트박스 일부문자만 허용하기
+### 텍스트박스 일부문자만 허용하기
 
 연락처 입력을 위해 ***0~9, -*** 만을 허용할 경우
 

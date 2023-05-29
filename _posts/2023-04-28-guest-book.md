@@ -5,7 +5,7 @@ author: Victor Lo
 tags: [방명록, guestbook]
 categories: etc
 color: pink
-published: true
+published: false
 excerpt_separator: <!--more-->
 ---
 

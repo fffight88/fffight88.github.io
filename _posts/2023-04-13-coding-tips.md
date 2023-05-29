@@ -7,8 +7,7 @@ categories: code
 color: lightblue
 excerpt_separator: <!--more-->
 ---
-초보/신입 개발자가 코딩할 때 간과하기 쉬운 내용 정리 <!--more-->
-
+초보/신입 개발자가 코딩할 때 사소하지만 간과하기 쉬운 내용 정리 <!--more-->
 
 ***목차***
 

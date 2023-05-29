@@ -17,7 +17,7 @@ Github 또는 Gitlab에서 사용할 public SSH-key 만들고 등록하기 <!--m
 
 <br>
 
-Github이나 Gitlab에서 clone 기능을 문제없이 사용하려면 SSH-key가 꼭 필요하다. SSH-key를 새로 만들고 등록하는 방법을 알아보자. 여기서는 Gitlab과 windows를 이용한다.
+Github이나 Gitlab에서 clone 기능을 문제없이 사용하려면 SSH-key가 꼭 필요하다. SSH-key를 새로 만들고 등록하는 방법을 알아보자. 여기서는 Gitlab을 이용하며 운영체제는 windows이다.
 
 시작하기 전에 Gitlab 계정을 생성하고, Gitbash를 설치한다.
 
