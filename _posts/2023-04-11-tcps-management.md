@@ -14,13 +14,18 @@ excerpt_separator: <!--more-->
 ***목차***
 
 - [접속정보](#접속정보)
+	- [TCPS 웹서버(AWS EC2)](#tcps-웹서버aws-ec2)
+	- [TCPS v3](#tcps-v3)
+	- [DB서버(AWS EC2, 웹서버와 같은 인스턴스)](#db서버aws-ec2-웹서버와-같은-인스턴스)
+	- [웹 접속주소](#웹-접속주소)
+	- [개발서버](#개발서버)
 - [주기적](#주기적)
-	- [서버용량 관리](#서버용량-관리)
+	- [나의 위대한 할일](#나의-위대한-할일)
 - [요청있을 때](#요청있을-때)
-	- [TCPS 자체에서 외부아이피 허용방법](#tcps-자체에서-외부아이피-허용방법)
-	- [좌측 nav-bar에 맞춤제품 메뉴 추가하고 제품 등록하기(청년다방, 브레댄코, ...)](#좌측-nav-bar에-맞춤제품-메뉴-추가하고-제품-등록하기청년다방-브레댄코-)
-	- [좌측 navigation bar에 메뉴명 수정하기](#좌측-navigation-bar에-메뉴명-수정하기)
-	- [맞춤제품 메뉴 등록이 처음인 고객사](#맞춤제품-메뉴-등록이-처음인-고객사)
+	- [TCPS 외부아이피 접속 허용방법](#tcps-외부아이피-접속-허용방법)
+	- [gnb에 맞춤제품 메뉴 추가하고 제품 등록하기(청년다방, 브레댄코, ...)](#gnb에-맞춤제품-메뉴-추가하고-제품-등록하기청년다방-브레댄코-)
+	- [gnb의 메뉴명 수정하기](#gnb의-메뉴명-수정하기)
+	- [맞춤제품(TPA013) gnb 메뉴 등록이 처음인 고객사](#맞춤제품tpa013-gnb-메뉴-등록이-처음인-고객사)
 	- [현대일렉트릭 (크레디아) 제품 재고 DB 수정](#현대일렉트릭-크레디아-제품-재고-db-수정)
 	- [고객사페이지 디자인 수정](#고객사페이지-디자인-수정)
 	- [주문수정 알람기능 관리](#주문수정-알람기능-관리)
@@ -39,8 +44,7 @@ excerpt_separator: <!--more-->
 		- [오피스디포 리다이렉트](#오피스디포-리다이렉트)
 	- [정전, 사무실이전 등 IP가 바뀌었을 때](#정전-사무실이전-등-ip가-바뀌었을-때)
 - [로직 이해하기](#로직-이해하기)
-	- [navi-bar 메뉴 생성](#navi-bar-메뉴-생성)
-
+	- [gnb 메뉴 생성](#gnb-메뉴-생성)
 
 <br>
 
@@ -50,10 +54,55 @@ excerpt_separator: <!--more-->
 
 ## 접속정보
 
-- 접속주소      : [http://edu.taragrp.co.kr/__intra](http://edu.taragrp.co.kr/__intra)
-- 서버아이피    : 211.238.4.147
+### TCPS 웹서버(AWS EC2)
+- 서버아이피    : 52.79.207.19
 - 서버계정      : root
-- 암호         : xkfkrydks2015%% (타라교안2015%%)
+- 암호         : xkfkdkagh1! (타라암호1!)
+- home directory : /home/podtest/
+<br>
+<br>
+
+### TCPS v3
+- git repository : http://gitlab.openprintmarket.com:8090/hkkim/tcps_home_test.git
+<br>
+<br>
+
+### DB서버(AWS EC2, 웹서버와 같은 인스턴스)
+- DB 호스트주소 : localhost
+- DB 계정 : root
+- 암호 : Xkfkrmfnq#@$ (타라그룹#@$)
+- 포트번호 : 3306
+- SSH 호스트 : 52.79.207.19
+- SSH 계정 : root
+- 암호 : xkfkdkagh1! (타라암호1!)
+- 포트번호 : 22
+<br>
+<br>
+
+### 웹 접속주소
+- 고객사(구버전 = v2)
+  - [https://btb.tarapod.co.kr:8443/고객사코드](https://btb.tarapod.co.kr:8443/namsan)
+  - 고객사코드_admin / test$
+- 고객사(신버전 = v3)
+  - [https://btb3.tarapod.co.kr:9443/고객사코드](https://btb3.tarapod.co.kr:9443/namsan)
+  - 고객사코드_admin / test$
+-  관리자페이지
+  - [https://btb3.tarapod.co.kr:9443/intra](https://btb3.tarapod.co.kr:9443/intra)
+  - 자신의 관리자계정으로 로그인
+<br>
+<br>
+
+### 개발서버
+- 웹서버(EC2)
+  - 웹 접속주소 : [http://tcpsv3.openprintmarket.com/namsan](http://tcpsv3.openprintmarket.com/namsan)
+  - 아이피 : 52.68.111.103
+  - 계정 : ec2-user
+  - 비번없음
+  - 키파일 : [AWS002_Tokyo01_PMS_Test.pem](/assets/auth_key/AWS002_Tokyo01_PMS_Test.pem)
+- DB서버(RDS)
+  - hostname : tk-mydb02.ctpvx3yvizc6.ap-northeast-1.rds.amazonaws.com
+  - username : taragrp_tcps
+  - password : rmfovlrtmtcps#@$ (그래픽스tcps#@$)
 
 <br>
 
@@ -63,7 +112,7 @@ excerpt_separator: <!--more-->
 
 ## 주기적
 
-### 서버용량 관리
+### 나의 위대한 할일
 
 <br>
 
@@ -73,9 +122,9 @@ excerpt_separator: <!--more-->
 
 ## 요청있을 때
 
-### TCPS 자체에서 외부아이피 허용방법
+### TCPS 외부아이피 접속 허용방법
 
-### 좌측 nav-bar에 맞춤제품 메뉴 추가하고 제품 등록하기(청년다방, 브레댄코, ...)
+### gnb에 맞춤제품 메뉴 추가하고 제품 등록하기(청년다방, 브레댄코, ...)
 > **"좌측에 xxxx 메뉴를 만들고 그 안에 맞춤제품번호 xxxx번(부터 xxxx번)을 추가해주세요"**
 
 1. TCPS 실서버 db의 b2b_icm.tpa001_customize 테이블에서
@@ -93,7 +142,7 @@ array(
 <br>
 <br>
 
-### 좌측 navigation bar에 메뉴명 수정하기
+### gnb의 메뉴명 수정하기
 
 1. TCPS 실서버 db의 b2b_icm.mem_c 테이블에서
 2. where 조건에 `c_biz_com = '회사명'` 을 넣어 select로 검색하면
@@ -105,8 +154,22 @@ array(
 <br>
 <br>
 
-### 맞춤제품 메뉴 등록이 처음인 고객사
+### 맞춤제품(TPA013) gnb 메뉴 등록이 처음인 고객사
+작업의 순서는 다음과 같다.
 
+> `application/config/config_tcps.php`에 메뉴 이름과 그 메뉴에 들어갈 제품의 POA코드 등록 >>
+> 
+> `application/helpers/function_tcps_helper/func_tcps_get_gnb_data`에 코드 추가 >>
+> 
+> `application/controllers/Tpa013/__construct` 마지막줄에 코드 추가 >>
+> 
+> `application/controllers/Tpa013/`에 `product_list_고객사시리얼넘버` 이름으로 메서드 생성 >>
+> 
+> `application/controllers/Tpa013/product_list`에 코드 추가 >>
+> 
+> `application/models/tpa013_model/get_product_code_data`에 코드 추가
+
+(계속...)
 <br>
 <br>
 
@@ -228,7 +291,7 @@ array(
 
 ## 로직 이해하기
 
-### navi-bar 메뉴 생성
+### gnb 메뉴 생성
 
 1. `/controller/Login.php/_login` <br>
 로그인한 계정의 `c_serial`로 `mem_c` 테이블에서 고객사의 정보를 가져와 `$company_data`에 저장
