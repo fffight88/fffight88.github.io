@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-06-02T09:27:45+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Newbie’s DoorClosing</title><subtitle>Newbie&apos;s DoorClosing</subtitle><entry><title type="html">My Mistel Keyboard Settings</title><link href="http://localhost:4000/myjob/2023/06/02/keyboard-setting.html" rel="alternate" type="text/html" title="My Mistel Keyboard Settings" /><published>2023-06-02T00:00:00+09:00</published><updated>2023-06-02T00:00:00+09:00</updated><id>http://localhost:4000/myjob/2023/06/02/keyboard-setting</id><content type="html" xml:base="http://localhost:4000/myjob/2023/06/02/keyboard-setting.html"><![CDATA[<p>미스텔 MD770(블루투스 없는 버전) 자주 쓰는 기능 및 내 키보드 세팅 <!--more--></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-06-02T16:34:25+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Newbie’s DoorClosing</title><subtitle>Newbie&apos;s DoorClosing</subtitle><entry><title type="html">My Mistel Keyboard Settings</title><link href="http://localhost:4000/myjob/2023/06/02/keyboard-setting.html" rel="alternate" type="text/html" title="My Mistel Keyboard Settings" /><published>2023-06-02T00:00:00+09:00</published><updated>2023-06-02T00:00:00+09:00</updated><id>http://localhost:4000/myjob/2023/06/02/keyboard-setting</id><content type="html" xml:base="http://localhost:4000/myjob/2023/06/02/keyboard-setting.html"><![CDATA[<p>미스텔 MD770(블루투스 없는 버전) 자주 쓰는 기능 및 내 키보드 세팅 <!--more--></p>
 
 <p><br /></p>
 
@@ -23,8 +23,8 @@
 <h3 id="매크로-할당">매크로 할당</h3>
 
 <ul>
-  <li><strong>* 디폴트 레이어에는 매크로를 할당할 수 없다</strong>*</li>
-  <li><strong>* 매크로 할당 전 딥스위치는 전부 OFF 상태로 두어야 한다</strong>*
+  <li><strong><em>디폴트 레이어에는 매크로를 할당할 수 없다</em></strong></li>
+  <li><strong><em>매크로 할당 전 딥스위치는 전부 OFF 상태로 두어야 한다</em></strong>
 <br /></li>
 </ul>
 
