@@ -1,4 +1,56 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-06-03T16:27:13+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Newbie’s DoorClosing</title><subtitle>Newbie's DoorClosing</subtitle><entry><title type="html">How to get my SSH-key for Git</title><link href="http://localhost:4000/myjob/2023/05/12/ssh-key-generation.html" rel="alternate" type="text/html" title="How to get my SSH-key for Git" /><published>2023-05-12T00:00:00+09:00</published><updated>2023-05-12T00:00:00+09:00</updated><id>http://localhost:4000/myjob/2023/05/12/ssh-key-generation</id><content type="html" xml:base="http://localhost:4000/myjob/2023/05/12/ssh-key-generation.html"><![CDATA[<p>Github 또는 Gitlab에서 사용할 public SSH-key 만들고 등록하기 <!--more--></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-06-02T16:34:25+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Newbie’s DoorClosing</title><subtitle>Newbie&apos;s DoorClosing</subtitle><entry><title type="html">My Mistel Keyboard Settings</title><link href="http://localhost:4000/myjob/2023/06/02/keyboard-setting.html" rel="alternate" type="text/html" title="My Mistel Keyboard Settings" /><published>2023-06-02T00:00:00+09:00</published><updated>2023-06-02T00:00:00+09:00</updated><id>http://localhost:4000/myjob/2023/06/02/keyboard-setting</id><content type="html" xml:base="http://localhost:4000/myjob/2023/06/02/keyboard-setting.html"><![CDATA[<p>미스텔 MD770(블루투스 없는 버전) 자주 쓰는 기능 및 내 키보드 세팅 <!--more--></p>
+
+<p><br /></p>
+
+<hr />
+
+<p><br /></p>
+
+<h2 id="기능키">기능키</h2>
+
+<h3 id="레이어-관련">레이어 관련</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Fn</code> + <code class="language-plaintext highlighter-rouge">m</code> = 디폴트 레이어</li>
+  <li><code class="language-plaintext highlighter-rouge">Fn</code> + <code class="language-plaintext highlighter-rouge">,</code> = Layer1 (적색 LED)</li>
+  <li><code class="language-plaintext highlighter-rouge">Fn</code> + <code class="language-plaintext highlighter-rouge">.</code> = Layer2 (녹색 LED)</li>
+  <li><code class="language-plaintext highlighter-rouge">Fn</code> + <code class="language-plaintext highlighter-rouge">/</code> = Layer3 (청색 LED)</li>
+  <li><code class="language-plaintext highlighter-rouge">Fn</code> + <code class="language-plaintext highlighter-rouge">r</code>(3초 유지)= 선택한 레이어 초기화 (흰색 LED 두번 깜빡임)</li>
+  <li><code class="language-plaintext highlighter-rouge">Left Alt</code> + <code class="language-plaintext highlighter-rouge">Right Alt</code>(3초 유지) = 모든 레이어 초기화 (흰색 LED 다섯번 깜빡임)
+<br /></li>
+</ul>
+
+<h3 id="매크로-할당">매크로 할당</h3>
+
+<ul>
+  <li><strong><em>디폴트 레이어에는 매크로를 할당할 수 없다</em></strong></li>
+  <li><strong><em>매크로 할당 전 딥스위치는 전부 OFF 상태로 두어야 한다</em></strong>
+<br /></li>
+</ul>
+
+<ol>
+  <li>원하는 레이어를 선택</li>
+  <li><code class="language-plaintext highlighter-rouge">Fn</code> + <code class="language-plaintext highlighter-rouge">Right Ctrl</code> = 매크로 모드 시작 (흰색 LED)</li>
+  <li>원하는 단축키 한 번 입력 후 단축키가 수행할 기능 입력
+    <blockquote>
+      <p>예를 들어, <code class="language-plaintext highlighter-rouge">Fn</code> + <code class="language-plaintext highlighter-rouge">d</code> 입력 후 “안녕하세요” 를 순서대로 입력</p>
+    </blockquote>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">Pn</code> = 매크로 저장</li>
+  <li><code class="language-plaintext highlighter-rouge">Fn</code> + <code class="language-plaintext highlighter-rouge">Right Ctrl</code> = 매크로 모드 종료 (흰색 LED 소등)
+<br /></li>
+</ol>
+
+<h3 id="기본-pn-fn-키조합">기본 <code class="language-plaintext highlighter-rouge">Pn</code>, <code class="language-plaintext highlighter-rouge">Fn</code> 키조합</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Fn</code> + <code class="language-plaintext highlighter-rouge">p</code> = 스크린샷</li>
+  <li><code class="language-plaintext highlighter-rouge">Fn</code> + <code class="language-plaintext highlighter-rouge">h</code> = Home</li>
+  <li><code class="language-plaintext highlighter-rouge">Fn</code> + <code class="language-plaintext highlighter-rouge">n</code> = End</li>
+  <li><code class="language-plaintext highlighter-rouge">Fn</code> + <code class="language-plaintext highlighter-rouge">i</code><code class="language-plaintext highlighter-rouge">k</code><code class="language-plaintext highlighter-rouge">j</code><code class="language-plaintext highlighter-rouge">l</code> = 방향키</li>
+  <li><code class="language-plaintext highlighter-rouge">Fn</code> + <code class="language-plaintext highlighter-rouge">y</code> = 계산기</li>
+  <li><code class="language-plaintext highlighter-rouge">Fn</code> + <code class="language-plaintext highlighter-rouge">z</code> = 메뉴(마우스 오른쪽버튼)</li>
+</ul>]]></content><author><name>Victor Lo</name></author><category term="myjob" /><category term="mistel" /><category term="미스텔" /><category term="md770" /><summary type="html"><![CDATA[미스텔 MD770(블루투스 없는 버전) 자주 쓰는 기능 및 내 키보드 세팅]]></summary></entry><entry><title type="html">How to get my SSH-key for Git</title><link href="http://localhost:4000/myjob/2023/05/12/ssh-key-generation.html" rel="alternate" type="text/html" title="How to get my SSH-key for Git" /><published>2023-05-12T00:00:00+09:00</published><updated>2023-05-12T00:00:00+09:00</updated><id>http://localhost:4000/myjob/2023/05/12/ssh-key-generation</id><content type="html" xml:base="http://localhost:4000/myjob/2023/05/12/ssh-key-generation.html"><![CDATA[<p>Github 또는 Gitlab에서 사용할 public SSH-key 만들고 등록하기 <!--more--></p>
 
 <p><br /></p>
 

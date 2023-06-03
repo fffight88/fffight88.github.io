@@ -14,19 +14,25 @@ excerpt_separator: <!--more-->
 ***목차***
 
 - [접속정보](#접속정보)
+	- [TCPS 웹서버(AWS EC2)](#tcps-웹서버aws-ec2)
+	- [TCPS v3](#tcps-v3)
+	- [DB서버(AWS EC2, 웹서버와 같은 인스턴스)](#db서버aws-ec2-웹서버와-같은-인스턴스)
+	- [웹 접속주소](#웹-접속주소)
+	- [개발서버](#개발서버)
 - [주기적](#주기적)
-	- [서버용량 관리](#서버용량-관리)
+	- [나의 위대한 할일](#나의-위대한-할일)
 - [요청있을 때](#요청있을-때)
-	- [TCPS 자체에서 외부아이피 허용방법](#tcps-자체에서-외부아이피-허용방법)
-	- [좌측 nav-bar에 맞춤제품 메뉴 추가하고 제품 등록하기(청년다방, 브레댄코, ...)](#좌측-nav-bar에-맞춤제품-메뉴-추가하고-제품-등록하기청년다방-브레댄코-)
-	- [좌측 navigation bar에 메뉴명 수정하기](#좌측-navigation-bar에-메뉴명-수정하기)
-	- [맞춤제품 메뉴 등록이 처음인 고객사](#맞춤제품-메뉴-등록이-처음인-고객사)
+	- [TCPS 외부아이피 접속 허용방법](#tcps-외부아이피-접속-허용방법)
+	- [gnb에 맞춤제품 메뉴 추가하고 제품 등록하기(청년다방, 브레댄코, ...)](#gnb에-맞춤제품-메뉴-추가하고-제품-등록하기청년다방-브레댄코-)
+	- [gnb의 메뉴명 수정하기](#gnb의-메뉴명-수정하기)
+	- [맞춤제품(TPA013) gnb 메뉴 등록이 처음인 고객사](#맞춤제품tpa013-gnb-메뉴-등록이-처음인-고객사)
 	- [현대일렉트릭 (크레디아) 제품 재고 DB 수정](#현대일렉트릭-크레디아-제품-재고-db-수정)
 	- [고객사페이지 디자인 수정](#고객사페이지-디자인-수정)
 	- [주문수정 알람기능 관리](#주문수정-알람기능-관리)
 	- [가변템플릿 소제목 변경](#가변템플릿-소제목-변경)
 	- [명함 내용입력창에서 영문주소 입력란 세 칸으로 변경](#명함-내용입력창에서-영문주소-입력란-세-칸으로-변경)
 	- [타라그린 / 타라블루](#타라그린--타라블루)
+	- [pdf 다운로드시 이미지 사이즈 변경하기](#pdf-다운로드시-이미지-사이즈-변경하기)
 	- [특정 제품만 안될 때](#특정-제품만-안될-때)
 		- [배경이미지](#배경이미지)
 - [특정시점](#특정시점)
@@ -38,8 +44,7 @@ excerpt_separator: <!--more-->
 		- [오피스디포 리다이렉트](#오피스디포-리다이렉트)
 	- [정전, 사무실이전 등 IP가 바뀌었을 때](#정전-사무실이전-등-ip가-바뀌었을-때)
 - [로직 이해하기](#로직-이해하기)
-	- [navi-bar 메뉴 생성](#navi-bar-메뉴-생성)
-
+	- [gnb 메뉴 생성](#gnb-메뉴-생성)
 
 <br>
 
@@ -49,10 +54,55 @@ excerpt_separator: <!--more-->
 
 ## 접속정보
 
-- 접속주소      : [http://edu.taragrp.co.kr/__intra](http://edu.taragrp.co.kr/__intra)
-- 서버아이피    : 211.238.4.147
+### TCPS 웹서버(AWS EC2)
+- 서버아이피    : 52.79.207.19
 - 서버계정      : root
-- 암호         : xkfkrydks2015%% (타라교안2015%%)
+- 암호         : xkfkdkagh1! (타라암호1!)
+- home directory : /home/podtest/
+<br>
+<br>
+
+### TCPS v3
+- git repository : http://gitlab.openprintmarket.com:8090/hkkim/tcps_home_test.git
+<br>
+<br>
+
+### DB서버(AWS EC2, 웹서버와 같은 인스턴스)
+- DB 호스트주소 : localhost
+- DB 계정 : root
+- 암호 : Xkfkrmfnq#@$ (타라그룹#@$)
+- 포트번호 : 3306
+- SSH 호스트 : 52.79.207.19
+- SSH 계정 : root
+- 암호 : xkfkdkagh1! (타라암호1!)
+- 포트번호 : 22
+<br>
+<br>
+
+### 웹 접속주소
+- 고객사(구버전 = v2)
+  - [https://btb.tarapod.co.kr:8443/고객사코드](https://btb.tarapod.co.kr:8443/namsan)
+  - 고객사코드_admin / test$
+- 고객사(신버전 = v3)
+  - [https://btb3.tarapod.co.kr:9443/고객사코드](https://btb3.tarapod.co.kr:9443/namsan)
+  - 고객사코드_admin / test$
+-  관리자페이지
+  - [https://btb3.tarapod.co.kr:9443/intra](https://btb3.tarapod.co.kr:9443/intra)
+  - 자신의 관리자계정으로 로그인
+<br>
+<br>
+
+### 개발서버
+- 웹서버(EC2)
+  - 웹 접속주소 : [http://tcpsv3.openprintmarket.com/namsan](http://tcpsv3.openprintmarket.com/namsan)
+  - 아이피 : 52.68.111.103
+  - 계정 : ec2-user
+  - 비번없음
+  - 키파일 : [AWS002_Tokyo01_PMS_Test.pem](/assets/auth_key/AWS002_Tokyo01_PMS_Test.pem)
+- DB서버(RDS)
+  - hostname : tk-mydb02.ctpvx3yvizc6.ap-northeast-1.rds.amazonaws.com
+  - username : taragrp_tcps
+  - password : rmfovlrtmtcps#@$ (그래픽스tcps#@$)
 
 <br>
 
@@ -62,7 +112,7 @@ excerpt_separator: <!--more-->
 
 ## 주기적
 
-### 서버용량 관리
+### 나의 위대한 할일
 
 <br>
 
@@ -72,9 +122,9 @@ excerpt_separator: <!--more-->
 
 ## 요청있을 때
 
-### TCPS 자체에서 외부아이피 허용방법
+### TCPS 외부아이피 접속 허용방법
 
-### 좌측 nav-bar에 맞춤제품 메뉴 추가하고 제품 등록하기(청년다방, 브레댄코, ...)
+### gnb에 맞춤제품 메뉴 추가하고 제품 등록하기(청년다방, 브레댄코, ...)
 > **"좌측에 xxxx 메뉴를 만들고 그 안에 맞춤제품번호 xxxx번(부터 xxxx번)을 추가해주세요"**
 
 1. TCPS 실서버 db의 b2b_icm.tpa001_customize 테이블에서
@@ -92,7 +142,7 @@ array(
 <br>
 <br>
 
-### 좌측 navigation bar에 메뉴명 수정하기
+### gnb의 메뉴명 수정하기
 
 1. TCPS 실서버 db의 b2b_icm.mem_c 테이블에서
 2. where 조건에 `c_biz_com = '회사명'` 을 넣어 select로 검색하면
@@ -104,8 +154,22 @@ array(
 <br>
 <br>
 
-### 맞춤제품 메뉴 등록이 처음인 고객사
+### 맞춤제품(TPA013) gnb 메뉴 등록이 처음인 고객사
+작업의 순서는 다음과 같다.
 
+> `application/config/config_tcps.php`에 메뉴 이름과 그 메뉴에 들어갈 제품의 POA코드 등록 >>
+> 
+> `application/helpers/function_tcps_helper/func_tcps_get_gnb_data`에 코드 추가 >>
+> 
+> `application/controllers/Tpa013/__construct` 마지막줄에 코드 추가 >>
+> 
+> `application/controllers/Tpa013/`에 `product_list_고객사시리얼넘버` 이름으로 메서드 생성 >>
+> 
+> `application/controllers/Tpa013/product_list`에 코드 추가 >>
+> 
+> `application/models/tpa013_model/get_product_code_data`에 코드 추가
+
+(계속...)
 <br>
 <br>
 
@@ -143,6 +207,8 @@ array(
 
 ### 명함 내용입력창에서 영문주소 입력란 세 칸으로 변경
 
+***디폴트는 두칸***
+
 1. /home/podtest/v2/order/input_frame.html
 2. $arr_line_count 배열을 찾아 배열안에 해당 템플릿의 시리얼 넘버를 삽입
 
@@ -156,6 +222,12 @@ array(
 
 <br>
 <br>
+
+### pdf 다운로드시 이미지 사이즈 변경하기
+템플릿을 만들 때 실제 등록한 pdf의 이미지 사이즈와, 실제 제품으로 만들 때의 사이즈를 다르게 해 달라고 요청할 때가 있다. 즉, pdf파일을 다운로드할 때 등록할 때의 이미지 사이즈보다 (보통은) 축소된 크기로 다운되게 해 달라는 말인데 이 경우 담당매니저가 해당 템플릿에 사용할 새로운 SIA 코드를 생성한 후 요청해오므로,
+
+1. 코드관리 메뉴에서 해당 SIA코드를 확인
+2. `\controller\Tpa001.php` 에서 `// 이미지 실사이즈 조정` 을 검색하여 분기문 조건의 `array()` 부분에 해당 SIA코드를 추가하고 `$change_size` 를 정하는 분기문을 추가하여 요청한 가로세로 밀리미터 사이즈에 각각 2.833333333을 곱한 크기로 수정한다. 
 
 ### 특정 제품만 안될 때
 다른 제품들은 주문까지 문제없이 잘 되는데 특정 제품만이 안되는 경우
@@ -219,7 +291,7 @@ array(
 
 ## 로직 이해하기
 
-### navi-bar 메뉴 생성
+### gnb 메뉴 생성
 
 1. `/controller/Login.php/_login` <br>
 로그인한 계정의 `c_serial`로 `mem_c` 테이블에서 고객사의 정보를 가져와 `$company_data`에 저장
