@@ -1,4 +1,106 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-06-02T16:56:34+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Newbie’s DoorClosing</title><subtitle>Newbie&apos;s DoorClosing</subtitle><entry><title type="html">My Mistel Keyboard Settings</title><link href="http://localhost:4000/myjob/2023/06/02/keyboard-setting.html" rel="alternate" type="text/html" title="My Mistel Keyboard Settings" /><published>2023-06-02T00:00:00+09:00</published><updated>2023-06-02T00:00:00+09:00</updated><id>http://localhost:4000/myjob/2023/06/02/keyboard-setting</id><content type="html" xml:base="http://localhost:4000/myjob/2023/06/02/keyboard-setting.html"><![CDATA[<p>미스텔 MD770(블루투스 없는 버전) 자주 쓰는 기능 및 내 키보드 세팅 <!--more--></p>
+=======
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-06-04T19:34:27+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Newbie’s DoorClosing</title><subtitle>Newbie's DoorClosing</subtitle><entry><title type="html">네트워크 구축 기본</title><link href="http://localhost:4000/2023/06/04/network-building.html" rel="alternate" type="text/html" title="네트워크 구축 기본" /><published>2023-06-04T00:00:00+09:00</published><updated>2023-06-04T00:00:00+09:00</updated><id>http://localhost:4000/2023/06/04/network-building</id><content type="html" xml:base="http://localhost:4000/2023/06/04/network-building.html"><![CDATA[<p>AWS를 이용하여 네트워크를 구축할 때 꼭 알아야 할 기본이자 핵심 <!--more--></p>
+
+<p><strong><em>참조문서</em></strong></p>
+<ul>
+  <li><a href="http://jpub.tistory.com/1287">AWS로 시작하는 인프라 구축의 정석 (Jpub, 나카가키 겐지 / 김모세)</a></li>
+</ul>
+
+<p><br /></p>
+
+<p><strong><em>목차</em></strong></p>
+<ul>
+  <li><a href="#핵심용어-및-개념-정리">핵심용어 및 개념 정리</a></li>
+  <li><a href="#네트워크-구축-순서">네트워크 구축 순서</a></li>
+</ul>
+
+<p><br /></p>
+
+<hr />
+
+<p><br /></p>
+
+<p><img src="/assets/img/2023-06-04-network-building-0.png.jpg" alt="AWS로 구축한 네트워크 예시" /></p>
+
+<h2 id="핵심용어-및-개념-정리">핵심용어 및 개념 정리</h2>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">VPC(Virtual Private Cloud)</code> : 가상 사설 클라우드. AWS와 같은 클라우드서버에서 네트워크를 구축할 때 보이는 용어로, 물리적인 네트워크 장비로 구축하는 네트워크가 아닌, 네트워크를 구축하는 각 기기의 기능을 에뮬레이션하는 해당 서비스업체의 소프트웨어를 이용해 만든 네트워크</li>
+  <li><code class="language-plaintext highlighter-rouge">IP주소</code>와 <code class="language-plaintext highlighter-rouge">CIDR(classless inter-domain routing)</code>의 관계 : 비유하자면 IP주소 =&gt; 전화번호, CIDR =&gt; 전화번호를 시외국번/시내국번/가입자번호로 구분해서 관리하는 방식</li>
+  <li><code class="language-plaintext highlighter-rouge">IPv4 CIDR</code>
+    <ul>
+      <li>IPv4에서 IP주소는 32비트의 숫자로 이루어져 있으며 각 8비트마다 .(마침표)로 구분</li>
+      <li>IP주소는 네트워크ID와 호스트ID를 동시에 표현하는데, 네트워크ID의 범위와 호스트ID의 범위는 <code class="language-plaintext highlighter-rouge">서브넷 마스크</code>에 의해 정해진다.</li>
+      <li><code class="language-plaintext highlighter-rouge">서브넷 마스크</code>는 IP주소의 표현방식과 같으며, 마침표로 구분된 네 개의 숫자를 이진수로 표현했을 때 1로 표현된 부분은 네트워크ID를 나타내는 부분이고 0으로 표현된 부분은 호스트ID를 나타낸다. 서브넷 마스크의 숫자가 클수록(1이 많을수록) 네트워크ID를 더 많이 가지는 반면 각 네트워크ID가 가질 수 있는 호스트ID는 적으며 반대로 서브넷 마스크의 숫자가 작을수록(0이 많을수록) 네트워크ID의 가짓수는 적고 각 네트워크ID가 가질 수 있는 호스트ID는 많아진다. 즉, 서브넷 마스크의 숫자는 네트워크ID를 할당하는 범위를 보여준다고 할 수 있다. 아래의 예를 통해 이해해보자.</li>
+    </ul>
+
+    <blockquote>
+      <p>예1) 대표IP가 ‘10.0.0.0’ 이고 서브넷 마스크가 ‘255.255.255.0’ 인 경우. 서브넷 마스크를 이진수로 표현하면 ‘11111111.11111111.11111111.00000000’ 이 되는데 여기서 ‘1’로 표현된 자릿수(즉 24비트)는 네트워크ID의 범위이고 ‘0’으로 표현된 자릿수(즉 8비트)는 호스트ID의 범위이다. 즉 해당 대표IP로 표현할 수 있는 IP주소는 ‘10.0.0.0’ ~ ‘10.0.0.255’로 256가지이며 이 중 첫번째 호스트ID 0과 마지막 호스트ID 255는 용도가 정해져 있으므로 사용자에게 할당할 수 없기 때문에 최종적으로 ‘10.0.0.1’ ~ ‘10.0.0.254’까지 254가지의 IP주소를 사용자에게 할당할 수 있다. 이런 경우 ‘10.0.0.0/24’와 같이 표현하여 대표IP와 서브넷 마스크를 동시에 보여줄 수 있다.</p>
+    </blockquote>
+
+    <blockquote>
+      <p>예2) 대표IP가 ‘10.0.0.0’ 이고 서브넷 마스크가 ‘255.240.0.0’ 인 경우, 서브넷 마스크를 이진수로 표현하면 ‘11111111.11110000.00000000.00000000’ 이 되는데 여기서 ‘1’로 표현된 자릿수(즉 24비트)는 네트워크ID의 범위이고 ‘0’으로 표현된 자릿수(즉 8비트)는 호스트ID의 범위이다. 즉 해당 대표IP로 표현할 수 있는 IP주소는 ‘10.0.0.0’ ~ ‘10.16.255.255’로 (256 * 256 * 16)가지이며 이 중 첫번째 호스트ID 0과 마지막 호스트ID 255는 용도가 정해져 있으므로 사용자에게 할당할 수 없기 때문에 최종적으로 ‘10.0.0.1’ ~ ‘10.16.255.254’까지 (256 * 256 * 16 - 2)가지의 IP주소를 사용자에게 할당할 수 있다. 이런 경우 ‘10.0.0.0/12’와 같이 표현하여 대표IP와 서브넷 마스크를 동시에 보여줄 수 있다.</p>
+    </blockquote>
+
+    <blockquote>
+      <p>예3) 대표IP가 ‘10.0.0.0’ 이고 서브넷 마스크가 ‘255.255.255.255’ 라면, 이 네트워크는 오로지 대표IP로 표현되는 단 한개의 IP주소만이 허용된다.</p>
+    </blockquote>
+
+    <table>
+      <thead>
+        <tr>
+          <th>서브넷 마스크</th>
+          <th>호스트ID 개수</th>
+          <th>대표IP표현</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>255.255.255.0</td>
+          <td>256 - 2</td>
+          <td>10.0.0.0/24</td>
+        </tr>
+        <tr>
+          <td>255.240.0.0</td>
+          <td>256 * 256 * 16 - 2</td>
+          <td>10.0.0.0/12</td>
+        </tr>
+        <tr>
+          <td>255.255.255.255</td>
+          <td>0</td>
+          <td>10.0.0.0/32</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">IPv4 CIDR 블록</code> : VPC에서 사용하는 프라이빗 네트워크용 IP주소의 범위를 지정한 것으로, IP주소 범위는 다음 세 가지로 제공된다.
+    <ul>
+      <li>24비트 블록 : 10.0.0.0 ~ 10.255.255.255 / (256 * 256 * 256) 가지의 IP주소 가용 (10.0.0.0/8 로 표현)</li>
+      <li>20비트 블록 : 172.16.0.0 ~ 172.31.255.255 / (256 * 256 * 16) 가지의 IP주소 가용 (172.16.0.0/12 으로 표현)</li>
+      <li>16비트 블록 : 192.168.0.0 ~ 192.168.255.255 / (256 * 256) 가지의 IP주소 가용 (192.168.0.0/16 으로 표현)</li>
+      <li><strong><em>AWS VPC</em></strong> 에서 지정할 수 있는 서브넷 마스크는 최대 16비트이므로 어떤 범위를 이용해도 다른 점은 없다.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">테넌시(tenancy)</code>
+    <blockquote>
+      <p>컴퓨팅 환경에서 테넌시(Tenancy)는 클라우드 컴퓨팅에서 가상화된 리소스를 공유하는 방식을 나타냅니다. 클라우드 서비스 제공 업체는 여러 사용자 또는 조직에게 가상 서버, 스토리지, 네트워크 리소스 등을 제공하고, 각각의 사용자 또는 조직은 자체적인 가상 환경을 운영하게 됩니다.<br /> 테넌시는 이러한 가상화된 환경을 분리하여 각 사용자 또는 조직이 독립적인 리소스를 사용하고, 다른 테넌트와는 격리되어 작동할 수 있는 구조를 제공합니다. 즉, 테넌시를 사용하면 각 테넌트는 자체적인 컴퓨팅 리소스를 할당받아 독립적으로 운영할 수 있습니다.<br /> 테넌시는 다양한 수준과 형태로 구현될 수 있습니다. 예를 들어, 클라우드 컴퓨팅에서는 가상 머신(VM) 레벨에서 테넌시를 구현할 수 있으며, 각 테넌트는 독립된 가상 머신 인스턴스를 운영합니다. 또는 컨테이너 기반의 환경에서는 컨테이너 단위로 테넌시를 구현할 수도 있습니다.<br />테넌시는 보안, 리소스 관리, 네트워크 격리 등을 위해 중요한 개념이며, 다중 테넌시 환경에서 각 테넌트는 서로 영향을 주지 않고 독립적으로 작동할 수 있습니다.</p>
+    </blockquote>
+  </li>
+</ul>
+
+<p><br />
+<br /></p>
+
+<h2 id="네트워크-구축-순서">네트워크 구축 순서</h2>
+
+<ol>
+  <li>계정 생성 및 보안작업</li>
+  <li>개발에 사용할 IAM 생성</li>
+  <li>VPC 생성</li>
+  <li>서브넷, 가용영역(Availability Zone)</li>
+</ol>]]></content><author><name>Victor Lo</name></author><category term="network" /><category term="네트워크" /><category term="aws" /><category term="클라우드서버" /><summary type="html"><![CDATA[AWS를 이용하여 네트워크를 구축할 때 꼭 알아야 할 기본이자 핵심]]></summary></entry><entry><title type="html">Mistel MD770</title><link href="http://localhost:4000/review/2023/06/02/mistel-md770.html" rel="alternate" type="text/html" title="Mistel MD770" /><published>2023-06-02T00:00:00+09:00</published><updated>2023-06-02T00:00:00+09:00</updated><id>http://localhost:4000/review/2023/06/02/mistel-md770</id><content type="html" xml:base="http://localhost:4000/review/2023/06/02/mistel-md770.html"><![CDATA[<p>편안한 타이핑자세로 거북목, 라운드숄더를 방지해주는 것으로 유명한, 반으로 갈라진 키보드 <strong><em>미스텔 MD770</em></strong> 을 두 달 사용하고 작성하는 후기<!--more--></p>
+>>>>>>> 6f579110404440144a04da90a4d0b90e02ff5027
 
 <p><br /></p>
 
@@ -50,7 +152,39 @@
   <li><code class="language-plaintext highlighter-rouge">Fn</code> + <code class="language-plaintext highlighter-rouge">i</code><code class="language-plaintext highlighter-rouge">k</code><code class="language-plaintext highlighter-rouge">j</code><code class="language-plaintext highlighter-rouge">l</code> = 방향키</li>
   <li><code class="language-plaintext highlighter-rouge">Fn</code> + <code class="language-plaintext highlighter-rouge">y</code> = 계산기</li>
   <li><code class="language-plaintext highlighter-rouge">Fn</code> + <code class="language-plaintext highlighter-rouge">z</code> = 메뉴(마우스 오른쪽버튼)</li>
-</ul>]]></content><author><name>Victor Lo</name></author><category term="myjob" /><category term="mistel" /><category term="미스텔" /><category term="md770" /><summary type="html"><![CDATA[미스텔 MD770(블루투스 없는 버전) 자주 쓰는 기능 및 내 키보드 세팅]]></summary></entry><entry><title type="html">How to get my SSH-key for Git</title><link href="http://localhost:4000/myjob/2023/05/12/ssh-key-generation.html" rel="alternate" type="text/html" title="How to get my SSH-key for Git" /><published>2023-05-12T00:00:00+09:00</published><updated>2023-05-12T00:00:00+09:00</updated><id>http://localhost:4000/myjob/2023/05/12/ssh-key-generation</id><content type="html" xml:base="http://localhost:4000/myjob/2023/05/12/ssh-key-generation.html"><![CDATA[<p>Github 또는 Gitlab에서 사용할 public SSH-key 만들고 등록하기 <!--more--></p>
+</ul>]]></content><author><name>Victor Lo</name></author><category term="review" /><category term="mistel" /><category term="미스텔" /><category term="md770" /><category term="키보드" /><category term="거북목" /><category term="라운드숄더" /><category term="쪼개진키보드" /><summary type="html"><![CDATA[편안한 타이핑자세로 거북목, 라운드숄더를 방지해주는 것으로 유명한, 반으로 갈라진 키보드 미스텔 MD770 을 두 달 사용하고 작성하는 후기]]></summary></entry><entry><title type="html">Code Examples</title><link href="http://localhost:4000/myjob/2023/05/12/code-examples.html" rel="alternate" type="text/html" title="Code Examples" /><published>2023-05-12T00:00:00+09:00</published><updated>2023-05-12T00:00:00+09:00</updated><id>http://localhost:4000/myjob/2023/05/12/code-examples</id><content type="html" xml:base="http://localhost:4000/myjob/2023/05/12/code-examples.html"><![CDATA[<p>유용한 예제코드들 <!--more--></p>
+
+<ul>
+  <li><a href="#javascript-jquery">Javascript, jQuery</a>
+    <ul>
+      <li><a href="#텍스트박스-일부문자만-허용하기">텍스트박스 일부문자만 허용하기</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<hr />
+
+<p><br /></p>
+
+<h2 id="javascript-jquery">Javascript, jQuery</h2>
+
+<h3 id="텍스트박스-일부문자만-허용하기">텍스트박스 일부문자만 허용하기</h3>
+
+<p>연락처 입력을 위해 <strong><em>0~9, -</em></strong> 만을 허용할 경우</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">$</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">[name=example], #example, .example</span><span class="dl">'</span><span class="p">).</span><span class="nf">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">input</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">value</span> <span class="o">=</span> <span class="nf">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nf">val</span><span class="p">();</span>
+        <span class="nf">if </span><span class="p">(</span><span class="sr">/^</span><span class="se">[</span><span class="sr">0-9</span><span class="se">\-]</span><span class="sr">+$/</span><span class="p">.</span><span class="nf">test</span><span class="p">(</span><span class="nx">value</span><span class="p">)){</span>
+
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="nf">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nf">val</span><span class="p">(</span><span class="nx">value</span><span class="p">.</span><span class="nf">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">));</span>
+        <span class="p">}</span>	
+    <span class="p">});</span>
+<span class="p">})</span>
+</code></pre></div></div>]]></content><author><name>Victor Lo</name></author><category term="myjob" /><category term="code" /><category term="coding" /><category term="example" /><summary type="html"><![CDATA[유용한 예제코드들]]></summary></entry><entry><title type="html">How to get my SSH-key for Git</title><link href="http://localhost:4000/myjob/2023/05/12/ssh-key-generation.html" rel="alternate" type="text/html" title="How to get my SSH-key for Git" /><published>2023-05-12T00:00:00+09:00</published><updated>2023-05-12T00:00:00+09:00</updated><id>http://localhost:4000/myjob/2023/05/12/ssh-key-generation</id><content type="html" xml:base="http://localhost:4000/myjob/2023/05/12/ssh-key-generation.html"><![CDATA[<p>Github 또는 Gitlab에서 사용할 public SSH-key 만들고 등록하기 <!--more--></p>
 
 <p><br /></p>
 
@@ -100,39 +234,7 @@
 
 <p><img src="/assets/img/feature-img/2023-05-12-ssh-key-generation-5.png" alt="" /></p>
 
-<p>성공했다면 위와 같은 화면이 보이고, 더 이상 다운로드하려면 SSH-key를 등록하라는 메세지가 뜨지 않을 것이다.</p>]]></content><author><name>Victor Lo</name></author><category term="myjob" /><category term="git" /><category term="sshkey" /><category term="ssh-key" /><category term="keygen" /><summary type="html"><![CDATA[Github 또는 Gitlab에서 사용할 public SSH-key 만들고 등록하기]]></summary></entry><entry><title type="html">Code Examples</title><link href="http://localhost:4000/myjob/2023/05/12/code-examples.html" rel="alternate" type="text/html" title="Code Examples" /><published>2023-05-12T00:00:00+09:00</published><updated>2023-05-12T00:00:00+09:00</updated><id>http://localhost:4000/myjob/2023/05/12/code-examples</id><content type="html" xml:base="http://localhost:4000/myjob/2023/05/12/code-examples.html"><![CDATA[<p>유용한 예제코드들 <!--more--></p>
-
-<ul>
-  <li><a href="#javascript-jquery">Javascript, jQuery</a>
-    <ul>
-      <li><a href="#텍스트박스-일부문자만-허용하기">텍스트박스 일부문자만 허용하기</a></li>
-    </ul>
-  </li>
-</ul>
-
-<p><br /></p>
-
-<hr />
-
-<p><br /></p>
-
-<h2 id="javascript-jquery">Javascript, jQuery</h2>
-
-<h3 id="텍스트박스-일부문자만-허용하기">텍스트박스 일부문자만 허용하기</h3>
-
-<p>연락처 입력을 위해 <strong><em>0~9, -</em></strong> 만을 허용할 경우</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">$</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">[name=example], #example, .example</span><span class="dl">'</span><span class="p">).</span><span class="nf">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">input</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-        <span class="kd">var</span> <span class="nx">value</span> <span class="o">=</span> <span class="nf">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nf">val</span><span class="p">();</span>
-        <span class="nf">if </span><span class="p">(</span><span class="sr">/^</span><span class="se">[</span><span class="sr">0-9</span><span class="se">\-]</span><span class="sr">+$/</span><span class="p">.</span><span class="nf">test</span><span class="p">(</span><span class="nx">value</span><span class="p">)){</span>
-
-        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-            <span class="nf">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nf">val</span><span class="p">(</span><span class="nx">value</span><span class="p">.</span><span class="nf">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">));</span>
-        <span class="p">}</span>	
-    <span class="p">});</span>
-<span class="p">})</span>
-</code></pre></div></div>]]></content><author><name>Victor Lo</name></author><category term="myjob" /><category term="code" /><category term="coding" /><category term="example" /><summary type="html"><![CDATA[유용한 예제코드들]]></summary></entry><entry><title type="html">XAMPP - How to get desired domain on my server</title><link href="http://localhost:4000/myjob/2023/05/04/local-domain-setting.html" rel="alternate" type="text/html" title="XAMPP - How to get desired domain on my server" /><published>2023-05-04T00:00:00+09:00</published><updated>2023-05-04T00:00:00+09:00</updated><id>http://localhost:4000/myjob/2023/05/04/local-domain-setting</id><content type="html" xml:base="http://localhost:4000/myjob/2023/05/04/local-domain-setting.html"><![CDATA[<p>XAMPP 사용시 자신의 웹서버 또는 로컬 서버에서 특정 IP에 원하는 도메인 부여하기 <!--more--></p>
+<p>성공했다면 위와 같은 화면이 보이고, 더 이상 다운로드하려면 SSH-key를 등록하라는 메세지가 뜨지 않을 것이다.</p>]]></content><author><name>Victor Lo</name></author><category term="myjob" /><category term="git" /><category term="sshkey" /><category term="ssh-key" /><category term="keygen" /><summary type="html"><![CDATA[Github 또는 Gitlab에서 사용할 public SSH-key 만들고 등록하기]]></summary></entry><entry><title type="html">XAMPP - How to get desired domain on my server</title><link href="http://localhost:4000/myjob/2023/05/04/local-domain-setting.html" rel="alternate" type="text/html" title="XAMPP - How to get desired domain on my server" /><published>2023-05-04T00:00:00+09:00</published><updated>2023-05-04T00:00:00+09:00</updated><id>http://localhost:4000/myjob/2023/05/04/local-domain-setting</id><content type="html" xml:base="http://localhost:4000/myjob/2023/05/04/local-domain-setting.html"><![CDATA[<p>XAMPP 사용시 자신의 웹서버 또는 로컬 서버에서 특정 IP에 원하는 도메인 부여하기 <!--more--></p>
 
 <p><br /></p>
 

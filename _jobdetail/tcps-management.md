@@ -1,12 +1,10 @@
 ---
 layout: post
 title: "How To Manage TCPS"
-author: Victor Lo
-tags: [tcps]
-categories: myjob
+img: "assets/img/jobdetail/tcps-management-0.png"
 color: orange
-published: false
-excerpt_separator: <!--more-->
+tags: [tcps]
+published: true
 ---
 
 타라그래픽스의 생산 모듈 TCPS의 관리방법<!--more-->
