@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-06-02T16:34:25+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Newbie’s DoorClosing</title><subtitle>Newbie&apos;s DoorClosing</subtitle><entry><title type="html">My Mistel Keyboard Settings</title><link href="http://localhost:4000/myjob/2023/06/02/keyboard-setting.html" rel="alternate" type="text/html" title="My Mistel Keyboard Settings" /><published>2023-06-02T00:00:00+09:00</published><updated>2023-06-02T00:00:00+09:00</updated><id>http://localhost:4000/myjob/2023/06/02/keyboard-setting</id><content type="html" xml:base="http://localhost:4000/myjob/2023/06/02/keyboard-setting.html"><![CDATA[<p>미스텔 MD770(블루투스 없는 버전) 자주 쓰는 기능 및 내 키보드 세팅 <!--more--></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-06-02T16:56:34+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Newbie’s DoorClosing</title><subtitle>Newbie&apos;s DoorClosing</subtitle><entry><title type="html">My Mistel Keyboard Settings</title><link href="http://localhost:4000/myjob/2023/06/02/keyboard-setting.html" rel="alternate" type="text/html" title="My Mistel Keyboard Settings" /><published>2023-06-02T00:00:00+09:00</published><updated>2023-06-02T00:00:00+09:00</updated><id>http://localhost:4000/myjob/2023/06/02/keyboard-setting</id><content type="html" xml:base="http://localhost:4000/myjob/2023/06/02/keyboard-setting.html"><![CDATA[<p>미스텔 MD770(블루투스 없는 버전) 자주 쓰는 기능 및 내 키보드 세팅 <!--more--></p>
 
 <p><br /></p>
 
@@ -33,7 +33,7 @@
   <li><code class="language-plaintext highlighter-rouge">Fn</code> + <code class="language-plaintext highlighter-rouge">Right Ctrl</code> = 매크로 모드 시작 (흰색 LED)</li>
   <li>원하는 단축키 한 번 입력 후 단축키가 수행할 기능 입력
     <blockquote>
-      <p>예를 들어, <code class="language-plaintext highlighter-rouge">Fn</code> + <code class="language-plaintext highlighter-rouge">d</code> 입력 후 “안녕하세요” 를 순서대로 입력</p>
+      <p>예를 들어, <code class="language-plaintext highlighter-rouge">Fn</code> + <code class="language-plaintext highlighter-rouge">h</code> 입력 후 “Hello, world!” 를 순서대로 입력</p>
     </blockquote>
   </li>
   <li><code class="language-plaintext highlighter-rouge">Pn</code> = 매크로 저장</li>
