@@ -5,7 +5,7 @@ permalink: /portfolio/
 subtitle: "Projects I am working on" 
 feature-img: "assets/img/pexels/computer.jpeg"
 tags: [Page]
-hide: false
+hide: true
 ---
 
 {% include portfolio.html %}

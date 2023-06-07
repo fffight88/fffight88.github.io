@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-06-02T16:56:34+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Newbie’s DoorClosing</title><subtitle>Newbie&apos;s DoorClosing</subtitle><entry><title type="html">My Mistel Keyboard Settings</title><link href="http://localhost:4000/myjob/2023/06/02/keyboard-setting.html" rel="alternate" type="text/html" title="My Mistel Keyboard Settings" /><published>2023-06-02T00:00:00+09:00</published><updated>2023-06-02T00:00:00+09:00</updated><id>http://localhost:4000/myjob/2023/06/02/keyboard-setting</id><content type="html" xml:base="http://localhost:4000/myjob/2023/06/02/keyboard-setting.html"><![CDATA[<p>미스텔 MD770(블루투스 없는 버전) 자주 쓰는 기능 및 내 키보드 세팅 <!--more--></p>
-=======
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-06-04T19:34:27+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Newbie’s DoorClosing</title><subtitle>Newbie's DoorClosing</subtitle><entry><title type="html">네트워크 구축 기본</title><link href="http://localhost:4000/2023/06/04/network-building.html" rel="alternate" type="text/html" title="네트워크 구축 기본" /><published>2023-06-04T00:00:00+09:00</published><updated>2023-06-04T00:00:00+09:00</updated><id>http://localhost:4000/2023/06/04/network-building</id><content type="html" xml:base="http://localhost:4000/2023/06/04/network-building.html"><![CDATA[<p>AWS를 이용하여 네트워크를 구축할 때 꼭 알아야 할 기본이자 핵심 <!--more--></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-06-08T07:34:32+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Newbie’s DoorClosing</title><subtitle>Newbie&apos;s DoorClosing</subtitle><entry><title type="html">네트워크 구축 기본</title><link href="http://localhost:4000/2023/06/04/network-building.html" rel="alternate" type="text/html" title="네트워크 구축 기본" /><published>2023-06-04T00:00:00+09:00</published><updated>2023-06-04T00:00:00+09:00</updated><id>http://localhost:4000/2023/06/04/network-building</id><content type="html" xml:base="http://localhost:4000/2023/06/04/network-building.html"><![CDATA[<p>AWS를 이용하여 네트워크를 구축할 때 꼭 알아야 할 기본이자 핵심 <!--more--></p>
 
 <p><strong><em>참조문서</em></strong></p>
 <ul>
@@ -100,7 +97,6 @@
   <li>VPC 생성</li>
   <li>서브넷, 가용영역(Availability Zone)</li>
 </ol>]]></content><author><name>Victor Lo</name></author><category term="network" /><category term="네트워크" /><category term="aws" /><category term="클라우드서버" /><summary type="html"><![CDATA[AWS를 이용하여 네트워크를 구축할 때 꼭 알아야 할 기본이자 핵심]]></summary></entry><entry><title type="html">Mistel MD770</title><link href="http://localhost:4000/review/2023/06/02/mistel-md770.html" rel="alternate" type="text/html" title="Mistel MD770" /><published>2023-06-02T00:00:00+09:00</published><updated>2023-06-02T00:00:00+09:00</updated><id>http://localhost:4000/review/2023/06/02/mistel-md770</id><content type="html" xml:base="http://localhost:4000/review/2023/06/02/mistel-md770.html"><![CDATA[<p>편안한 타이핑자세로 거북목, 라운드숄더를 방지해주는 것으로 유명한, 반으로 갈라진 키보드 <strong><em>미스텔 MD770</em></strong> 을 두 달 사용하고 작성하는 후기<!--more--></p>
->>>>>>> 6f579110404440144a04da90a4d0b90e02ff5027
 
 <p><br /></p>
 
@@ -280,6 +276,7 @@
   <li><a href="#php">PHP</a>
     <ul>
       <li><a href="#연관배열에서-값을-가져올-때-주의할-점">연관배열에서 값을 가져올 때 주의할 점</a></li>
+      <li><a href="#문자열처리-함수사용시-한글-깨짐">문자열처리 함수사용시 한글 깨짐</a></li>
     </ul>
   </li>
   <li><a href="#mysql">MySQL</a>
@@ -371,6 +368,14 @@
 <hr />
 
 <p><br /></p>
+
+<h3 id="문자열처리-함수사용시-한글-깨짐">문자열처리 함수사용시 한글 깨짐</h3>
+
+<p>요즘 개발할 때 한글 인코딩을 거의 “UTF-8”로 하는데 이 때 한글은 2바이트가 아니라 3바이트가 된다. 한글이 깨지는 대부분의 원인이 여기에 있다. 한글을 문자열처리 함수에 사용해야 할 때는 mb_string 함수들을 사용하자. 물론 mb_string 라이브러리를 설치해야 한다.</p>
+
+<blockquote>
+  <p>예: substring(“안녕하세요”, 0, 2) 가 아니라 mb_substring(“안녕하세요”, 0, 2)</p>
+</blockquote>
 
 <h2 id="mysql">MySQL</h2>
 
