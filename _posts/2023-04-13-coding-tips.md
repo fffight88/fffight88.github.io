@@ -96,9 +96,6 @@ print_r($where_in_values);
 계속...
 
 <br>
-
-***
-
 <br>
 
 ### 문자열처리 함수사용시 한글 깨짐
@@ -107,7 +104,11 @@ print_r($where_in_values);
 
 > 예: substring("안녕하세요", 0, 2) 가 아니라 mb_substring("안녕하세요", 0, 2)
 
+<br>
 
+***
+
+<br>
 
 ## MySQL
 
