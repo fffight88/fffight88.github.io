@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-06-09T08:04:38+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Newbie’s DoorClosing</title><subtitle>Newbie&apos;s DoorClosing</subtitle><entry><title type="html">AWSome day</title><link href="http://localhost:4000/2023/06/08/aws-conference.html" rel="alternate" type="text/html" title="AWSome day" /><published>2023-06-08T00:00:00+09:00</published><updated>2023-06-08T00:00:00+09:00</updated><id>http://localhost:4000/2023/06/08/aws-conference</id><content type="html" xml:base="http://localhost:4000/2023/06/08/aws-conference.html"><![CDATA[<p>AWS 온라인 컨퍼런스인 AWSome day 액기스만 추출 <!--more--></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-06-09T11:54:49+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Newbie’s DoorClosing</title><subtitle>Newbie&apos;s DoorClosing</subtitle><entry><title type="html">AWSome day</title><link href="http://localhost:4000/2023/06/08/aws-conference.html" rel="alternate" type="text/html" title="AWSome day" /><published>2023-06-08T00:00:00+09:00</published><updated>2023-06-08T00:00:00+09:00</updated><id>http://localhost:4000/2023/06/08/aws-conference</id><content type="html" xml:base="http://localhost:4000/2023/06/08/aws-conference.html"><![CDATA[<p>AWS 온라인 컨퍼런스인 AWSome day 액기스만 추출 <!--more--></p>
 
 <h2 id="1강-aws-클라우드-소개">1강 AWS 클라우드 소개</h2>
 
@@ -345,6 +345,11 @@
       <li><a href="#텍스트박스-일부문자만-허용하기">텍스트박스 일부문자만 허용하기</a></li>
     </ul>
   </li>
+  <li><a href="#php">PHP</a>
+    <ul>
+      <li><a href="#separator로-구별한-숫자들로-구성된-문자열-처리">separator로 구별한 숫자들로 구성된 문자열 처리</a></li>
+    </ul>
+  </li>
 </ul>
 
 <p><br /></p>
@@ -369,7 +374,43 @@
         <span class="p">}</span>	
     <span class="p">});</span>
 <span class="p">})</span>
-</code></pre></div></div>]]></content><author><name>Victor Lo</name></author><category term="myjob" /><category term="code" /><category term="coding" /><category term="example" /><summary type="html"><![CDATA[유용한 예제코드들]]></summary></entry><entry><title type="html">How to get my SSH-key for Git</title><link href="http://localhost:4000/myjob/2023/05/12/ssh-key-generation.html" rel="alternate" type="text/html" title="How to get my SSH-key for Git" /><published>2023-05-12T00:00:00+09:00</published><updated>2023-05-12T00:00:00+09:00</updated><id>http://localhost:4000/myjob/2023/05/12/ssh-key-generation</id><content type="html" xml:base="http://localhost:4000/myjob/2023/05/12/ssh-key-generation.html"><![CDATA[<p>Github 또는 Gitlab에서 사용할 public SSH-key 만들고 등록하기 <!--more--></p>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<hr />
+
+<p><br /></p>
+
+<h2 id="php">PHP</h2>
+
+<h3 id="separator로-구별한-숫자들로-구성된-문자열-처리">separator로 구별한 숫자들로 구성된 문자열 처리</h3>
+
+<p>separator로 구별한 숫자들로 구성된 문자열(<code class="language-plaintext highlighter-rouge">ex : 1000||2000||3000</code>)을 가져와서 천단위 구별쉼표를 붙여서 다시 배열로 담기. 처음 세 개의 원소는 항상 숫자이며 그 다음부터는 문자라고 가정한다.</p>
+
+<ul>
+  <li>intval(param1) : 정수가 아닌 다른 자료형으로 인식하는 정수를 정수로 만들어 리턴
+    <ul>
+      <li>param1 : 다른 자료형으로 인식하고 있는 정수</li>
+    </ul>
+  </li>
+  <li>number_format(param1) : 정수에 천단위 쉼표를 붙여서 리턴
+    <ul>
+      <li>param1 : int, float</li>
+    </ul>
+  </li>
+</ul>
+
+<pre><code class="language-PHP">$example = "1000||2000||3000||테스트"
+$example_array = explode("||", $example); // 문자열을 쪼개서 배열로 담음
+foreach ($example_array as $key =&gt; $value)
+{
+    if (!($value &gt;= 0)) break; // 숫자가 아니면 루프문을 빠져나온다.
+    $example_array_separated[] = number_format(intval($value)); // 문자열인 $value를 정수형으로 바꾸고 천단위쉼표를 붙여서 $example_array_separated 배열에 담는다.
+}
+</code></pre>
+
+<p>이제 <code class="language-plaintext highlighter-rouge">$example_array_separated</code> 배열 안에는 천단위 쉼표가 적용된 숫자 세 개가 담겨있다.</p>]]></content><author><name>Victor Lo</name></author><category term="myjob" /><category term="code" /><category term="coding" /><category term="example" /><summary type="html"><![CDATA[유용한 예제코드들]]></summary></entry><entry><title type="html">How to get my SSH-key for Git</title><link href="http://localhost:4000/myjob/2023/05/12/ssh-key-generation.html" rel="alternate" type="text/html" title="How to get my SSH-key for Git" /><published>2023-05-12T00:00:00+09:00</published><updated>2023-05-12T00:00:00+09:00</updated><id>http://localhost:4000/myjob/2023/05/12/ssh-key-generation</id><content type="html" xml:base="http://localhost:4000/myjob/2023/05/12/ssh-key-generation.html"><![CDATA[<p>Github 또는 Gitlab에서 사용할 public SSH-key 만들고 등록하기 <!--more--></p>
 
 <p><br /></p>
 
