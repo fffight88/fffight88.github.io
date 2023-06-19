@@ -18,6 +18,8 @@ excerpt_separator: <!--more-->
   - [문자열처리 함수사용시 한글 깨짐](#문자열처리-함수사용시-한글-깨짐)
 - [MySQL](#mysql)
   - [UPDATE 문에서 주의사항](#update-문에서-주의사항)
+- [AWS EC2 서버 관리(아마존 리눅스)](#aws-ec2-서버-관리아마존-리눅스)
+  - [php.ini 등 설정파일 수정 시](#phpini-등-설정파일-수정-시)
 
 <br>
 
@@ -130,3 +132,21 @@ UPDATE `example_table` SET `example_col1` = '387' WHERE `example_col2` IN (
 		SELECT * FROM `example_table` WHERE `example_col1` = '386') AS a);
 ```
 
+<br>
+<br>
+
+<br>
+
+***
+
+<br>
+
+## AWS EC2 서버 관리(아마존 리눅스)
+
+### php.ini 등 설정파일 수정 시
+
+서버 내 설정파일을 수정하고 저장해도 바로 적용되지 않고 한 번 리부팅을 해줘야 적용이 된다. 리부팅이란 게 서버관리업체에 요청하여 실제 물리적인 리부팅이 될 수도 있지만, 그렇게 하면 추가로 해야 할 작업이 많아지므로 웹서버를 가동하는 애플리케이션만 재시작을 한다.
+
+1. 서버에 접속하여 터미널을 실행
+2. `systemctl restart httpd`
+3. 몇 초 정도 기다리면 다시 작동한다.
