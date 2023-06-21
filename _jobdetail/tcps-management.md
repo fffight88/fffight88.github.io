@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "TCPS 유지보수"
-img: "assets/img/jobdetail/tcps-management-0.png"
+img: "/assets/img/jobdetail/tcps_mainpage.png"
 color: orange
 tags: [tcps]
 published: true
