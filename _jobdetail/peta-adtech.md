@@ -2,7 +2,7 @@
 layout: post
 title: "페타애드텍 명함주문 솔루션 TCPS 연동 작업"
 tags: [페타, peta]
-img: "assets/img/jobdetail/tcps-management-0.png"
+img: "/assets/img/jobdetail/peta_adtech_logo.png"
 color: green
 published: true
 ---
