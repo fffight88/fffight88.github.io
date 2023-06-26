@@ -18,6 +18,8 @@ excerpt_separator: <!--more-->
   - [문자열처리 함수사용시 한글 깨짐](#문자열처리-함수사용시-한글-깨짐)
 - [MySQL](#mysql)
   - [UPDATE 문에서 주의사항](#update-문에서-주의사항)
+  - [AUTO\_INCREMENT 초기화 및 재부여](#auto_increment-초기화-및-재부여)
+  - [새 계정 table/view/procedure 등의 리스트가 안보일 때](#새-계정-tableviewprocedure-등의-리스트가-안보일-때)
 - [AWS EC2 서버 관리(아마존 리눅스)](#aws-ec2-서버-관리아마존-리눅스)
   - [php.ini 등 설정파일 수정 시](#phpini-등-설정파일-수정-시)
 
@@ -131,6 +133,39 @@ UPDATE `example_table` SET `example_col1` = '387' WHERE `example_col2` IN (
 	SELECT `a`.`example_col2` FROM (
 		SELECT * FROM `example_table` WHERE `example_col1` = '386') AS a);
 ```
+
+<br>
+<br>
+
+### AUTO_INCREMENT 초기화 및 재부여
+
+AUTO_INCREMENT를 초기화할 때는 반드시 새로 지정하는 시작값이 해당 컬럼에 이미 존재하는 값들 보다 커야 효과가 적용된다.
+
+```sql
+ALTER TABLE `테이블명` AUTO_INCREMENT = 초기시작값;
+```
+
+위와 같이 하면 원하는 값에서부터 AUTO_INCREMENT가 시작되고,
+
+```sql
+set @count = 0;
+update `테이블명` set `컬럼명` = @count:=@count+1;
+```
+
+위 `컬럼명`에 AUTO_INCREMENT를 적용하는 컬럼을 입력. 위와 같이 하면 초기시작값에서부터 차례대로 숫자를 부여받는다.
+
+<br>
+<br>
+
+### 새 계정 table/view/procedure 등의 리스트가 안보일 때
+
+특정한 DB에만 접근 가능한 계정을 만들었을 때 `mysql.user` 테이블에서는 모든 권한이 `N`으로 되어있고, `mysql.db` 테이블에서 그 특정한 db에 한해 해당 계정에 필요한 권한을 부여했을 것이다. 이렇게 했을 때 그 계정으로 접속했을 때 테이블 등 개체들이 리스트업이 되지 않을 수가 있다.
+
+`mysql.proc` 테이블은 개체들의 정보를 담으며 이 테이블에 대해 `select`권한이 없으면 개체들의 목록을 불러오지 못한다. 따라서, 
+
+1. `mysql.tables_priv`
+2. `host`, `user` 컬럼을 채우고 `Db` = 'mysql', `Table_name` = 'proc', `Grantor` = 'root계정명', `Table_priv`와 `Column_priv`에는 'Select'를 넣어서 한 줄을 삽입한다.
+3. `FLUSH PRIVILEGES;`를 실행한다.
 
 <br>
 <br>
