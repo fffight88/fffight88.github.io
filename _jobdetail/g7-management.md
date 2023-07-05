@@ -1,17 +1,20 @@
 ---
 layout: post
-title: "How To Manage G7"
-author: Victor Lo
+title: "G7 유지보수"
+img: "/assets/img/jobdetail/tcps_mainpage.png"
 tags: [g7]
-categories: myjob
-color: orange
-published: false
-excerpt_separator: <!--more-->
+color: lightgreen
+published: true
 ---
-타라그래픽스의 영업/결제모듈 G7 관리방법 <!--more-->
+타라그래픽스의 영업/결제모듈 G7 관리방법
 
 ***목차***
 - [접속정보](#접속정보)
+  - [웹서버(AWS EC2)](#웹서버aws-ec2)
+  - [DB서버(서비스)(AWS RDS)](#db서버서비스aws-rds)
+  - [DB서버(개발용)(AWS RDS)](#db서버개발용aws-rds)
+  - [GitLab](#gitlab)
+  - [Jenkins](#jenkins)
 - [주기적](#주기적)
   - [첫번째](#첫번째)
 - [요청있을 때](#요청있을-때)
@@ -34,10 +37,51 @@ excerpt_separator: <!--more-->
 
 ## 접속정보
 
-- 접속주소      : [http://www.ssakhedo.com](http://www.ssakhedo.com)
-- 서버아이피    : 54.178.242.82
+### 웹서버(AWS EC2)
+
+- 서버아이피    : 52.78.86.185
 - 서버계정      : ec2-user
-- 키           : <a href='/assets/auth_key/AWS003_Tokyo02_PMS_Production.pem' download>AWS003_Tokyo02_PMS_Product</a>
+- 암호          : (없음)
+- 인증키        : [Seoul_01_Webserver(Graphics)](/assets/auth_key/Seoul_01_Webserver(Graphics).pem)  
+<br>
+<br>
+
+### DB서버(서비스)(AWS RDS)
+
+- DB 호스트주소 : seoul-01-db-mysql.cnr8rmvlx27e.ap-northeast-2.rds.amazonaws.com
+- DB 계정 : grpbo
+- 암호 : grpbonpos
+- 데이터베이스 : grpbo
+<br>
+<br>
+
+### DB서버(개발용)(AWS RDS)
+
+- DB 호스트주소 : taxdb.cnr8rmvlx27e.ap-northeast-2.rds.amazonaws.com
+- DB 계정 : g7tax
+- 암호 : xkfkdkagh1!
+- 데이터베이스 : dz_db
+<br>
+<br>
+
+### GitLab
+
+- http://gitlab.openprintmarket.com:8090/
+- fffight88 / xkfkdkagh1!
+- C:\Windows\System32\drivers\etc\hosts 파일을 관리자권한 편집기로 열어서 다음을 삽입
+> 52.68.111.103 gitlab.openprintmarket.com
+<br>
+<br>
+
+### Jenkins
+
+- http://jenkins.openprintmarket.com:8091/
+- fffight88 / xkfkdkagh1!
+- C:\Windows\System32\drivers\etc\hosts 파일을 관리자권한 편집기로 열어서 다음을 삽입
+> 52.68.111.103 jenkins.openprintmarket.com
+<br>
+<br>
+
 
 <br>
 

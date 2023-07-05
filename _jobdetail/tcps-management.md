@@ -17,6 +17,7 @@ published: true
 	- [DB서버(AWS EC2, 웹서버와 같은 인스턴스)](#db서버aws-ec2-웹서버와-같은-인스턴스)
 	- [웹 접속주소](#웹-접속주소)
 	- [개발서버](#개발서버)
+	- [Jenkins](#jenkins)
 - [주기적](#주기적)
 	- [서버관리 - TRASH 폴더 내의 파일 정리](#서버관리---trash-폴더-내의-파일-정리)
 - [요청있을 때](#요청있을-때)
@@ -116,6 +117,17 @@ published: true
   - hostname : tk-mydb02.ctpvx3yvizc6.ap-northeast-1.rds.amazonaws.com
   - username : taragrp_tcps
   - password : rmfovlrtmtcps#@$ (그래픽스tcps#@$)
+<br>
+<br>
+
+### Jenkins
+
+- http://jenkins.openprintmarket.com:8091/
+- fffight88 / xkfkdkagh1!
+- C:\Windows\System32\drivers\etc\hosts 파일을 관리자권한 편집기로 열어서 다음을 삽입
+> 52.68.111.103 jenkins.openprintmarket.com
+<br>
+<br>
 
 <br>
 
