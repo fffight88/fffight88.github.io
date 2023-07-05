@@ -42,7 +42,7 @@ published: true
 - 서버아이피    : 52.78.86.185
 - 서버계정      : ec2-user
 - 암호          : (없음)
-- 인증키        : [Seoul_01_Webserver(Graphics)](/assets/auth_key/Seoul_01_Webserver(Graphics).pem)  
+- 인증키        : Seoul_01_Webserver(Graphics).pem
 <br>
 <br>
 

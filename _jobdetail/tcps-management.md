@@ -112,8 +112,8 @@ published: true
   - 아이피 : 52.68.111.103
   - 계정 : ec2-user
   - 비번없음
-  - 키파일 : [AWS002_Tokyo01_PMS_Test.pem](/assets/auth_key/AWS002_Tokyo01_PMS_Test.pem)
-- DB서버(RDS)
+  - 키파일 : AWS002_Tokyo01_PMS_Test.pem
+  - DB서버(RDS)
   - hostname : tk-mydb02.ctpvx3yvizc6.ap-northeast-1.rds.amazonaws.com
   - username : taragrp_tcps
   - password : rmfovlrtmtcps#@$ (그래픽스tcps#@$)
