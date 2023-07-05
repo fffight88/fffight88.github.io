@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "G7 유지보수"
-img: "/assets/img/jobdetail/tcps_mainpage.png"
+img: "/assets/img/jobdetail/g7_login.png"
 tags: [g7]
 color: lightgreen
 published: true
