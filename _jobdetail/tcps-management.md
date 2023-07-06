@@ -39,6 +39,7 @@ published: true
 	- [프라임에셋 우수인증설계사 적용 업무](#프라임에셋-우수인증설계사-적용-업무)
 	- [템플릿 가격 수정](#템플릿-가격-수정)
 	- [파트너사(ex: 오피스디포코리아; ODK) 주문 재전송](#파트너사ex-오피스디포코리아-odk-주문-재전송)
+	- [회원정보연동(로그인) API 사용법](#회원정보연동로그인-api-사용법)
 - [특정시점](#특정시점)
 	- [조직변경, 인사발령 후](#조직변경-인사발령-후)
 		- ['센터배송'에 속하는 지점 변경](#센터배송에-속하는-지점-변경)
@@ -231,7 +232,6 @@ array(
 
 ### 고객사페이지 디자인 수정
 
-
 <br>
 <br>
 
@@ -344,6 +344,28 @@ array(
 
 <br>
 <br>
+
+### 회원정보연동(로그인) API 사용법
+
+MRO 파트너사의 경우 고객이 당사의 사이트 어디를 클릭하면 로그인 되어있는 상태 그대로 TCPS에 자동으로 로그인되면서 해당 제품의 주문화면이 나오게 하길 원하는 경우가 있다.
+
+1. 담당매니저가 해당 고객사의 사이트를 개설하는데, MRO 사이트에 맞게 설정한다. (MRO = Y, 파트너사여부 등)
+2. 
+3. Ad ut sit commodo enim eiusmod ullamco non culpa culpa ut sint aliqua labore consequat.
+
+<br>
+<br>
+
+<!-- ### 내용 추가시 이거 복사해서 사용
+
+Excepteur qui pariatur exercitation cillum tempor ullamco labore.
+
+1. Nisi quis sit dolore nisi sit officia.
+2. Consequat consequat voluptate laboris amet dolore.
+3. Ad ut sit commodo enim eiusmod ullamco non culpa culpa ut sint aliqua labore consequat.
+
+<br>
+<br> -->
 
 <br>
 
