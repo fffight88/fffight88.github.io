@@ -348,7 +348,9 @@ array(
 
 ### 리테일앤인사이트 이용자계정 관리
 
-`[리테일앤인사이트_계정관리.sql](../../../docs/%EC%BF%BC%EB%A6%AC%20backup/tcps/%EB%A6%AC%ED%85%8C%EC%9D%BC%EC%95%A4%EC%9D%B8%EC%82%AC%EC%9D%B4%ED%8A%B8_%EA%B3%84%EC%A0%95%EA%B4%80%EB%A6%AC.sql)` 이용
+`리테일앤인사이트_계정관리.sql` 이용
+
+* 쿼리 파일 보관장소 : `c:/coding/docs/query/`
 
 <br>
 <br>
@@ -357,7 +359,7 @@ array(
 
 MRO 파트너사의 경우 고객이 당사의 사이트 어디를 클릭하면 로그인 되어있는 상태 그대로 TCPS에 자동으로 로그인되면서 해당 제품의 주문화면이 나오게 하길 원하는 경우가 있다.
 
-1. 담당매니저가 해당 고객사의 사이트를 개설하는데, MRO 사이트에 맞게 설정한다. (MRO = Y, 파트너사여부 등)
+1. 담당매니저가 해당 고객사의 사이트를 개설하는데, MRO 사이트에 맞게 설정한다. (MRO = Y, 파트너사여부 등) 담당매니저가 잘 모르거나 잘못 생성하면 알려준다.
 2. 
 3. Ad ut sit commodo enim eiusmod ullamco non culpa culpa ut sint aliqua labore consequat.
 

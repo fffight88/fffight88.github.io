@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-06-11T15:27:45+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Newbie’s DoorClosing</title><subtitle>Newbie&apos;s DoorClosing</subtitle><entry><title type="html">AWSome day</title><link href="http://localhost:4000/2023/06/08/aws-conference.html" rel="alternate" type="text/html" title="AWSome day" /><published>2023-06-08T00:00:00+09:00</published><updated>2023-06-08T00:00:00+09:00</updated><id>http://localhost:4000/2023/06/08/aws-conference</id><content type="html" xml:base="http://localhost:4000/2023/06/08/aws-conference.html"><![CDATA[<p>AWS 온라인 컨퍼런스인 AWSome day 액기스만 추출 <!--more--></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-07-07T10:23:58+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Newbie’s DoorClosing</title><subtitle>Newbie&apos;s DoorClosing</subtitle><entry><title type="html">AWSome day</title><link href="http://localhost:4000/2023/06/08/aws-conference.html" rel="alternate" type="text/html" title="AWSome day" /><published>2023-06-08T00:00:00+09:00</published><updated>2023-06-08T00:00:00+09:00</updated><id>http://localhost:4000/2023/06/08/aws-conference</id><content type="html" xml:base="http://localhost:4000/2023/06/08/aws-conference.html"><![CDATA[<p>AWS 온라인 컨퍼런스인 AWSome day 액기스만 추출 <!--more--></p>
 
 <h2 id="1강-aws-클라우드-소개">1강 AWS 클라우드 소개</h2>
 
@@ -350,6 +350,7 @@
       <li><a href="#separator로-구별한-숫자들로-구성된-문자열-처리">separator로 구별한 숫자들로 구성된 문자열 처리</a></li>
     </ul>
   </li>
+  <li><a href="#mysql">MySQL</a></li>
 </ul>
 
 <p><br /></p>
@@ -410,7 +411,15 @@ foreach ($example_array as $key =&gt; $value)
 }
 </code></pre>
 
-<p>이제 <code class="language-plaintext highlighter-rouge">$example_array_separated</code> 배열 안에는 천단위 쉼표가 적용된 숫자 세 개가 담겨있다.</p>]]></content><author><name>Victor Lo</name></author><category term="myjob" /><category term="code" /><category term="coding" /><category term="example" /><summary type="html"><![CDATA[유용한 예제코드들]]></summary></entry><entry><title type="html">How to get my SSH-key for Git</title><link href="http://localhost:4000/myjob/2023/05/12/ssh-key-generation.html" rel="alternate" type="text/html" title="How to get my SSH-key for Git" /><published>2023-05-12T00:00:00+09:00</published><updated>2023-05-12T00:00:00+09:00</updated><id>http://localhost:4000/myjob/2023/05/12/ssh-key-generation</id><content type="html" xml:base="http://localhost:4000/myjob/2023/05/12/ssh-key-generation.html"><![CDATA[<p>Github 또는 Gitlab에서 사용할 public SSH-key 만들고 등록하기 <!--more--></p>
+<p>이제 <code class="language-plaintext highlighter-rouge">$example_array_separated</code> 배열 안에는 천단위 쉼표가 적용된 숫자 세 개가 담겨있다.</p>
+
+<p><br /></p>
+
+<hr />
+
+<p><br /></p>
+
+<h2 id="mysql">MySQL</h2>]]></content><author><name>Victor Lo</name></author><category term="myjob" /><category term="code" /><category term="coding" /><category term="example" /><summary type="html"><![CDATA[유용한 예제코드들]]></summary></entry><entry><title type="html">How to get my SSH-key for Git</title><link href="http://localhost:4000/myjob/2023/05/12/ssh-key-generation.html" rel="alternate" type="text/html" title="How to get my SSH-key for Git" /><published>2023-05-12T00:00:00+09:00</published><updated>2023-05-12T00:00:00+09:00</updated><id>http://localhost:4000/myjob/2023/05/12/ssh-key-generation</id><content type="html" xml:base="http://localhost:4000/myjob/2023/05/12/ssh-key-generation.html"><![CDATA[<p>Github 또는 Gitlab에서 사용할 public SSH-key 만들고 등록하기 <!--more--></p>
 
 <p><br /></p>
 
@@ -512,6 +521,13 @@ foreach ($example_array as $key =&gt; $value)
   <li><a href="#mysql">MySQL</a>
     <ul>
       <li><a href="#update-문에서-주의사항">UPDATE 문에서 주의사항</a></li>
+      <li><a href="#auto_increment-초기화-및-재부여">AUTO_INCREMENT 초기화 및 재부여</a></li>
+      <li><a href="#새-계정-tableviewprocedure-등의-리스트가-안보일-때">새 계정 table/view/procedure 등의 리스트가 안보일 때</a></li>
+    </ul>
+  </li>
+  <li><a href="#aws-ec2-서버-관리아마존-리눅스">AWS EC2 서버 관리(아마존 리눅스)</a>
+    <ul>
+      <li><a href="#phpini-등-설정파일-수정-시">php.ini 등 설정파일 수정 시</a></li>
     </ul>
   </li>
 </ul>
@@ -626,7 +642,61 @@ foreach ($example_array as $key =&gt; $value)
 <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">UPDATE</span> <span class="nv">`example_table`</span> <span class="k">SET</span> <span class="nv">`example_col1`</span> <span class="o">=</span> <span class="s1">'387'</span> <span class="k">WHERE</span> <span class="nv">`example_col2`</span> <span class="k">IN</span> <span class="p">(</span>
 	<span class="k">SELECT</span> <span class="nv">`a`</span><span class="p">.</span><span class="nv">`example_col2`</span> <span class="k">FROM</span> <span class="p">(</span>
 		<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="nv">`example_table`</span> <span class="k">WHERE</span> <span class="nv">`example_col1`</span> <span class="o">=</span> <span class="s1">'386'</span><span class="p">)</span> <span class="k">AS</span> <span class="n">a</span><span class="p">);</span>
-</code></pre></div></div>]]></content><author><name>Victor Lo</name></author><category term="code" /><category term="javascript" /><category term="php" /><category term="mysql" /><summary type="html"><![CDATA[초보/신입 개발자가 코딩할 때 사소하지만 간과하기 쉬운 내용 정리]]></summary></entry><entry><title type="html">HTTP 터널링</title><link href="http://localhost:4000/database/2023/04/07/HTTP-tunneling.html" rel="alternate" type="text/html" title="HTTP 터널링" /><published>2023-04-07T00:00:00+09:00</published><updated>2023-04-07T00:00:00+09:00</updated><id>http://localhost:4000/database/2023/04/07/HTTP-tunneling</id><content type="html" xml:base="http://localhost:4000/database/2023/04/07/HTTP-tunneling.html"><![CDATA[<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SET</span> <span class="o">@</span><span class="n">var</span> <span class="o">=</span> <span class="mi">281</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p><br />
+<br /></p>
+
+<h3 id="auto_increment-초기화-및-재부여">AUTO_INCREMENT 초기화 및 재부여</h3>
+
+<p>AUTO_INCREMENT를 초기화할 때는 반드시 새로 지정하는 시작값이 해당 컬럼에 이미 존재하는 값들 보다 커야 효과가 적용된다.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="nv">`테이블명`</span> <span class="n">AUTO_INCREMENT</span> <span class="o">=</span> <span class="err">초기시작값</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>위와 같이 하면 원하는 값에서부터 AUTO_INCREMENT가 시작되고,</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">set</span> <span class="o">@</span><span class="k">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="k">update</span> <span class="nv">`테이블명`</span> <span class="k">set</span> <span class="nv">`컬럼명`</span> <span class="o">=</span> <span class="o">@</span><span class="k">count</span><span class="p">:</span><span class="o">=@</span><span class="k">count</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>위 <code class="language-plaintext highlighter-rouge">컬럼명</code>에 AUTO_INCREMENT를 적용하는 컬럼을 입력. 위와 같이 하면 초기시작값에서부터 차례대로 숫자를 부여받는다.</p>
+
+<p><br />
+<br /></p>
+
+<h3 id="새-계정-tableviewprocedure-등의-리스트가-안보일-때">새 계정 table/view/procedure 등의 리스트가 안보일 때</h3>
+
+<p>특정한 DB에만 접근 가능한 계정을 만들었을 때 <code class="language-plaintext highlighter-rouge">mysql.user</code> 테이블에서는 모든 권한이 <code class="language-plaintext highlighter-rouge">N</code>으로 되어있고, <code class="language-plaintext highlighter-rouge">mysql.db</code> 테이블에서 그 특정한 db에 한해 해당 계정에 필요한 권한을 부여했을 것이다. 이렇게 했을 때 그 계정으로 접속했을 때 테이블 등 개체들이 리스트업이 되지 않을 수가 있다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">mysql.proc</code> 테이블은 개체들의 정보를 담으며 이 테이블에 대해 <code class="language-plaintext highlighter-rouge">select</code>권한이 없으면 개체들의 목록을 불러오지 못한다. 따라서,</p>
+
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">mysql.tables_priv</code></li>
+  <li><code class="language-plaintext highlighter-rouge">host</code>, <code class="language-plaintext highlighter-rouge">user</code> 컬럼을 채우고 <code class="language-plaintext highlighter-rouge">Db</code> = ‘mysql’, <code class="language-plaintext highlighter-rouge">Table_name</code> = ‘proc’, <code class="language-plaintext highlighter-rouge">Grantor</code> = ‘root계정명’, <code class="language-plaintext highlighter-rouge">Table_priv</code>와 <code class="language-plaintext highlighter-rouge">Column_priv</code>에는 ‘Select’를 넣어서 한 줄을 삽입한다.</li>
+  <li><code class="language-plaintext highlighter-rouge">FLUSH PRIVILEGES;</code>를 실행한다.</li>
+</ol>
+
+<p><br />
+<br /></p>
+
+<p><br /></p>
+
+<hr />
+
+<p><br /></p>
+
+<h2 id="aws-ec2-서버-관리아마존-리눅스">AWS EC2 서버 관리(아마존 리눅스)</h2>
+
+<h3 id="phpini-등-설정파일-수정-시">php.ini 등 설정파일 수정 시</h3>
+
+<p>서버 내 설정파일을 수정하고 저장해도 바로 적용되지 않고 한 번 리부팅을 해줘야 적용이 된다. 리부팅이란 게 서버관리업체에 요청하여 실제 물리적인 리부팅이 될 수도 있지만, 그렇게 하면 추가로 해야 할 작업이 많아지므로 웹서버를 가동하는 애플리케이션만 재시작을 한다.</p>
+
+<ol>
+  <li>서버에 접속하여 터미널을 실행</li>
+  <li><code class="language-plaintext highlighter-rouge">systemctl restart httpd</code></li>
+  <li>몇 초 정도 기다리면 다시 작동한다.</li>
+</ol>]]></content><author><name>Victor Lo</name></author><category term="code" /><category term="javascript" /><category term="php" /><category term="mysql" /><summary type="html"><![CDATA[초보/신입 개발자가 코딩할 때 사소하지만 간과하기 쉬운 내용 정리]]></summary></entry><entry><title type="html">HTTP 터널링</title><link href="http://localhost:4000/database/2023/04/07/HTTP-tunneling.html" rel="alternate" type="text/html" title="HTTP 터널링" /><published>2023-04-07T00:00:00+09:00</published><updated>2023-04-07T00:00:00+09:00</updated><id>http://localhost:4000/database/2023/04/07/HTTP-tunneling</id><content type="html" xml:base="http://localhost:4000/database/2023/04/07/HTTP-tunneling.html"><![CDATA[<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SET</span> <span class="o">@</span><span class="n">var</span> <span class="o">=</span> <span class="mi">281</span><span class="p">;</span>
 
 <span class="k">SELECT</span> <span class="o">@</span><span class="n">var</span><span class="p">;</span>
 </code></pre></div></div>
