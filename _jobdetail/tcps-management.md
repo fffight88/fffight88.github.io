@@ -233,7 +233,7 @@ array(
 * [https://btb.tarapod.co.kr:8443/credia](https://btb.tarapod.co.kr:8443/credia)
 * c_serial = 281
 * 관련테이블 : `goods` , `stock_log`
-* sql파일 : `[/assets/sql/크레디아_재고관리.sql](/assets/sql/크레디아_재고관리.sql)`
+* sql파일 : [/assets/sql/크레디아_재고관리.sql](/assets/sql/크레디아_재고관리.sql)
 
 크레디아 사이트는 2023년 7월 현재 NEI:B(네이비)란 업체가 관리를 맡고 있고 크레디아 측으로부터 요청을 접수하여 우리쪽에 알려준다. 자세한 내용은 sql파일 참조
 
