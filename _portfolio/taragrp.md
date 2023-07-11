@@ -1,8 +1,8 @@
 ---
 layout: post
-title: 타라그래픽스
+title: 타라그룹 ERP "G7" 유지보수업무 & 관련프로젝트
 feature-img: "assets/img/portfolio/taragrp_featured_img.png"
-img: "assets/img/portfolio/taragrp.png"
+img: "assets/img/portfolio/g7_login.png"
 date: May, 29 2023
 tags: [포트폴리오, 타라]
 color: lightblue
@@ -42,14 +42,15 @@ published: true
 
 * 운영체제      : Windows 11
 * 플랫폼        : Web
-* 웹서버        : EC2(CentOS)
-* DB서버        : RDS
+* 웹서버        : AWS EC2(CentOS)
+* DB서버        : AWS RDS
 * 로컬서버      : Apache 2.4(XAMPP)
 * 개발언어      : PHP 5.6, JavaScript(jQuery, Ajax)
 * 프레임워크    : CodeIgnitor 3.0
-* IDE           : Sublime Text
-* DBMS          : MySQL
-* 버전관리      : Jenkins, GitHub
+* IDE           : Sublime Text, VS Code
+* RDBS          : MySQL
+* DBMS          : SQLyog
+* 버전관리      : Jenkins, GitLab
 
 <br>
 
