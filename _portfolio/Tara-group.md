@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Tara Group ERP "G7"
+title: Tara Group ERP 'G7'
 feature-img: "assets/img/portfolio/taragrp_featured_img.png"
 img: "assets/img/portfolio/g7_login.png"
 date: May, 29 2023
