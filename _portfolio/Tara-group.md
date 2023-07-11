@@ -1,6 +1,6 @@
 ---
 layout: post
-# title: 타라그룹 ERP "G7" 유지보수업무 & 관련프로젝트
+title: 타라그룹 ERP "G7" 유지보수업무 & 관련프로젝트
 feature-img: "assets/img/portfolio/taragrp_featured_img.png"
 img: "assets/img/portfolio/g7_login.png"
 date: May, 29 2023
