@@ -6,7 +6,7 @@ tags: [aws, awsomeday]
 color: gold
 # feature-img: "/assets/img/feature-img/2023-06-02-mistel-md770-0.png"
 # thumbnail: "/assets/img/feature-img/2023-06-02-mistel-md770-1.png"
-published: true
+published: false
 excerpt_separator: <!--more-->
 ---
 
