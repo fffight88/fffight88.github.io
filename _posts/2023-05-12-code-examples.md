@@ -60,7 +60,7 @@ separator로 구별한 숫자들로 구성된 문자열(`ex : 1000||2000||3000`)
 - number_format(param1) : 정수에 천단위 쉼표를 붙여서 리턴
   - param1 : int, float
 
-```PHP
+```php
 $example = "1000||2000||3000||테스트"
 $example_array = explode("||", $example); // 문자열을 쪼개서 배열로 담음
 foreach ($example_array as $key => $value)
