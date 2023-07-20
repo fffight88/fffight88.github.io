@@ -259,9 +259,9 @@ array(
 *여기서는 야놀자 명함 템플릿 변경을 예로 든다*
 
 1. 적용하려는 제품군을 특정한다. (`serial` 또는 `p_code` 등...)
-2. `application\controllers\Tpa001.php` 의 `edit_apply()`
+2. `application\controllers\Tpa001.php` 의 `edit_apply()`와 `save_cart_excel()`
 3. 고객사페이지에서 입력하는 정보들은 `$input_data` 배열에 담겨진 상태로 xml파일 생성을 위해 파라메터로 전달된다. 따라서 분기문을 통해 원하는 상황에 원하는 텍스트로 보이게하거나 제거하는 등 처리가 가능하다.
-4. `CTRL + F` -> ***야놀자 명함 템플릿 소제목 코드 변경*** 으로 검색해서 내용 참조
+4. `CTRL + F` -> ***야놀자(308) 명함 템플릿 소제목 코드 변경*** 으로 검색해서 내용 참조
 
 <br>
 <br>

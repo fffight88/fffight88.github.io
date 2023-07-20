@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Coding Tips & Knowhow"
+title: "Coding Tips & Know-how"
 author: Victor Lo
 tags: [javascript, php, mysql]
 categories: code
@@ -78,7 +78,7 @@ $where_in = array(
 );
 ```
 
-iteration을 할 때 `for` 또는 `foreach`를 사용하는데, `for`는 약간 귀찮지만 좀 더 직관적이어서 이해하기 쉽지만 `foreach`는 살짝 **헷갈릴** 때가 있다.
+iteration을 할 때 `for` 또는 `foreach`를 사용하는데, `for`는 약간 귀찮지만 좀 더 직관적이어서 이해하기 쉽지만 `foreach`는 살짝 헷갈릴 때가 있다.
 
 예를 들어, 위 연관 배열에서 값에 해당하는 내용들만 뽑아 새로운 일차원 배열을 만든다고 하면, `for`문을 이용하면 어렵지 않다.
 
