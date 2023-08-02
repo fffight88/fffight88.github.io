@@ -16,6 +16,9 @@ excerpt_separator: <!--more-->
 - [PHP](#php)
   - [separator로 구별한 숫자들로 구성된 문자열 처리](#separator로-구별한-숫자들로-구성된-문자열-처리)
   - [SHA-256 해쉬암호화](#sha-256-해쉬암호화)
+  - [요청쿼리에서 한글이 url인코딩 안되게 하기](#요청쿼리에서-한글이-url인코딩-안되게-하기)
+    - [버전 6이상](#버전-6이상)
+    - [버전 5이하](#버전-5이하)
 - [MySQL](#mysql)
 
 
@@ -123,6 +126,57 @@ https://www.php.net/manual/function.bin2hex.php
 
 @return Returns the hexadecimal representation of the given string.
 ```
+
+<br>
+<br>
+
+### 요청쿼리에서 한글이 url인코딩 안되게 하기
+
+요즘 보통 `json_encode()` 함수를 이용하여 json 형식으로 많이 송수신하는데, 파라메터 중에 한글로 된 데이터가 있다면 한글을 멀티바이트 문자로 인식하므로 `json_encode()`를 거치면서 (보통) `\uXXXX` 형식으로 인코딩된다. 그럼 요청을 수신하는 측에서는 디코딩을 해야하는 불편이 있어 인코딩이 안되게 해달라고 요청하기도 한다.
+
+#### 버전 6이상
+
+PHP의 버전이 6이상이라면 아주 간단하게 해결이 가능하다. `json_encode()` 함수의 파라메터가 추가되면서 이를 해결할 수 있는 옵션을 부여할 수 있게 되었다.
+
+```php
+$post_data = json_encode($post_data, JSON_UNESCAPED_UNICODE);
+```
+
+위와 같이 두 번째 파라메터로 옵션을 추가해주면 한글을 인코딩하지 않은 상태 그대로 전송이 가능하다. 아래는 두 번째 파라메터에 들어가는 옵션에 대한 설명.
+
+```php
+json_encode(mixed $value, int|null $flags = 0, int|null $depth = 512): bool|string
+$flags: Bitmask consisting of JSON_FORCE_OBJECT , JSON_HEX_QUOT , JSON_HEX_TAG , JSON_HEX_AMP , JSON_HEX_APOS , JSON_INVALID_UTF8_IGNORE , JSON_INVALID_UTF8_SUBSTITUTE , JSON_NUMERIC_CHECK , JSON_PARTIAL_OUTPUT_ON_ERROR , JSON_PRESERVE_ZERO_FRACTION , JSON_PRETTY_PRINT , JSON_UNESCAPED_LINE_TERMINATORS , JSON_UNESCAPED_SLASHES , JSON_UNESCAPED_UNICODE , JSON_THROW_ON_ERROR . The behaviour of these constants is described on the JSON constants page.
+
+
+Returns the JSON representation of a value
+Returns a string containing the JSON representation of the supplied `value`. If the parameter is an `array` or `object`, it will be serialized recursively.
+```
+
+#### 버전 5이하
+
+버전이 5이하이면 `json_encode()` 함수에 두 번째 파라메터로 옵션을 지정할 수 없고 옵션을 줘서 해 보면 오류가 발생한다. 이 때에는 아래의 함수를 추가하여 `json_encode()` 함수를 이 함수의 파라메터로 준다.
+
+***아래 정규표현식에서 `/e`수정자를 볼 수 있는데 이는 7미만의 버전에서만 사용가능하며 7버전부터는 `preg_replace_callback()` 함수를 이용하여 `/e` 수정자없이도 콜백함수를 호출할 수 있다.***
+
+```php
+function han($s)
+{
+  return reset(json_decode('{"s":"' . $s . '"}'));
+}
+
+function to_han($str)
+{
+  return preg_replace('/(\\\u[a-f0-9]+)+/e', 'han("$0")', $str);
+}
+
+$post_data = to_han(json_encode($post_data));
+```
+
+1. `$post_data` 가 `json_encode()` 를 거쳐서 하나의 json문자열로 인코딩되는데 이 때 물론 한글은 유니코드 방식으로 자동으로 인코딩된다.
+2. 1번에서 반환된 json문자열이 `to_han()` 함수를 거치는데 이 함수는 주어진 문자열에서 유니코드 이스케이프 시퀀스(보통 \uXXXX 형식)를 추출한 결과를 `han()` 의 인자로 주면서 호출한다. 즉 유니코드 이스케이프 시퀀스를 만날 때마다 `han()` 함수를 호출한 후 반환값으로 치환한다.
+3. `han()` 함수에서는 유니코드 이스케이프 시퀀스를 디코딩하여 주어진 방식의 문자열로 만들어준다.
+4. 따라서 `to_han()` 함수를 거치고 나면 유니코드 이스케이프 시퀀스가 모두 한글로 바뀐 json문자열이 반환된다.
 
 <br>
 <br>

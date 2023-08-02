@@ -41,8 +41,14 @@ published: true
 	- [파트너사(ex: 오피스디포코리아; ODK) 주문 재전송](#파트너사ex-오피스디포코리아-odk-주문-재전송)
 	- [리테일앤인사이트 이용자계정 관리](#리테일앤인사이트-이용자계정-관리)
 	- [제품주문 가변 항목에 부서, 직책 드롭박스 추가하기](#제품주문-가변-항목에-부서-직책-드롭박스-추가하기)
-	- [회원정보연동(로그인) API 사용법](#회원정보연동로그인-api-사용법)
+		- [와디즈(301)](#와디즈301)
+		- [대명(244)](#대명244)
 - [특정시점](#특정시점)
+	- [MRO 업체 회원/주문정보연동 작업(POST나 GET방식으로 주고받기)](#mro-업체-회원주문정보연동-작업post나-get방식으로-주고받기)
+		- [회원정보연동(자동로그인 API)](#회원정보연동자동로그인-api)
+		- [주문정보연동(매출정보전송 API)](#주문정보연동매출정보전송-api)
+		- [선결제(카드, 계좌이체 등) PG 가맹점 아이디 MRO사 것으로 변경](#선결제카드-계좌이체-등-pg-가맹점-아이디-mro사-것으로-변경)
+		- [MRO 회원사 CI 띄우기](#mro-회원사-ci-띄우기)
 	- [조직변경, 인사발령 후](#조직변경-인사발령-후)
 		- ['센터배송'에 속하는 지점 변경](#센터배송에-속하는-지점-변경)
 	- [AWS나 Billing 업체 등 서버가 재시작되었을 때](#aws나-billing-업체-등-서버가-재시작되었을-때)
@@ -366,30 +372,27 @@ array(
 
 ### 제품주문 가변 항목에 부서, 직책 드롭박스 추가하기
 
-와디즈(301), 대명(244)
+와디즈(301) - 부서에 따라 달라지는 직책 세트, 대명(244) - 계열사와 사업장 및 템플릿에 따라 다르게 부서 지정
 
 > 고객사정보 : mem_c
 > 부서정보 : mem_depth_name
 > 직책정보 : mem_l_info
 > tcps이용자계정 정보 : mem_table
 
-1. 담당매니저가 요청할 때 지정할 부서그룹, 직책그룹 및 그 부서와 직책을 적용할 템플릿을 미리 만들고 요청해온다.
+1. 담당매니저가 요청할 때 지정할 부서그룹, 직책그룹 및 그 부서와 직책을 적용할 템플릿을 미리 만들고 요청해온다. 혹시 만들지 않았으면 해당 고객사페이지에 관리자계정으로 들어가서 `관리자페이지 - 기초자료관리` 화면에서 만든다.
 2. `mem_depth_name` 테이블에서 해당 고객사의 `c_serial`로 검색해보면 동일한 `parent_id`값을 가진 여러 줄의 레코드들을 볼 수 있는데 이들이 하나의 부서그룹이 되며, 이 `parent_id`는 해당 부서그룹의 부모 항목이라고 할 수 있다.
 3. `mem_l_info` 테이블에서는 `mem_depth_serial`을 이용해서 검색하는데 여기에는 `mem_depth_name` 테이블의 항목 중 `parent_id`에 해당하는 레코드의 serial값을 이용한다. 즉, `parent_id`와 `mem_depth_serial`을 같은 값으로 검색하면 `mem_depth_name`에서는 부서그룹을, `mem_l_info`에서는 직책그룹을 찾을 수 있다.
 
-<br>
-<br>
+#### 와디즈(301)
 
-### 회원정보연동(로그인) API 사용법
 
-MRO 파트너사의 경우 고객이 당사의 사이트 어디를 클릭하면 로그인 되어있는 상태 그대로 TCPS에 자동으로 로그인되면서 해당 제품의 주문화면이 나오게 하길 원하는 경우가 있다.
 
-1. 담당매니저가 해당 고객사의 사이트를 개설하는데, MRO 사이트에 맞게 설정한다. (MRO = Y, 파트너사여부 등) 담당매니저가 잘 모르거나 잘못 생성하면 알려준다.
-2. 
-3. Ad ut sit commodo enim eiusmod ullamco non culpa culpa ut sint aliqua labore consequat.
+#### 대명(244)
 
 <br>
 <br>
+
+
 
 <!-- ### 내용 추가시 이거 복사해서 사용
 
@@ -409,6 +412,52 @@ Excepteur qui pariatur exercitation cillum tempor ullamco labore.
 <br>
 
 ## 특정시점
+
+### MRO 업체 회원/주문정보연동 작업(POST나 GET방식으로 주고받기)
+
+#### 회원정보연동(자동로그인 API)
+
+MRO 파트너사의 경우 고객이 당사의 사이트 어디를 클릭하면 로그인 되어있는 상태 그대로 TCPS에 자동으로 로그인되면서 해당 제품의 주문화면이 나오게 하길 원하는 경우가 있다.
+
+1. 해당고객사 담당영업매니저가 구축사양서를 작성, 전산담당 매니저에게 전달하면 그 고객사의 TCPS 고객사페이지가 개설된다. 이제 기업회원정보수정 화면에 들어가면 URL을 알 수 있다.
+2. 
+3. Ad ut sit commodo enim eiusmod ullamco non culpa culpa ut sint aliqua labore consequat.
+
+<br>
+<br>
+
+#### 주문정보연동(매출정보전송 API)
+
+Excepteur qui pariatur exercitation cillum tempor ullamco labore.
+
+1. Nisi quis sit dolore nisi sit officia.
+2. Consequat consequat voluptate laboris amet dolore.
+3. Ad ut sit commodo enim eiusmod ullamco non culpa culpa ut sint aliqua labore consequat.
+
+<br>
+<br>
+
+#### 선결제(카드, 계좌이체 등) PG 가맹점 아이디 MRO사 것으로 변경
+
+파트너사(MRO)에서 자신의 고객이 우리 사이트에서 주문을 하고 결제를 했을 때 타라티피에스 계정이 아니라 자사의 PG계정으로 결제내역이 발생하길 원하는 경우,
+
+1. Nisi quis sit dolore nisi sit officia.
+2. Consequat consequat voluptate laboris amet dolore.
+3. Ad ut sit commodo enim eiusmod ullamco non culpa culpa ut sint aliqua labore consequat.
+
+<br>
+<br>
+
+#### MRO 회원사 CI 띄우기
+
+원래 MRO 고객사의 사이트에서 TCPS로 넘어온 MRO 회원사의 화면에는 MRO 고객사의 로고와 회사명이 보이는데 그걸 자사의 로고와 사명이 나오게끔 해달라고 요청할 때
+
+1. Nisi quis sit dolore nisi sit officia.
+2. Consequat consequat voluptate laboris amet dolore.
+3. Ad ut sit commodo enim eiusmod ullamco non culpa culpa ut sint aliqua labore consequat.
+
+<br>
+<br>
 
 ### 조직변경, 인사발령 후
 
