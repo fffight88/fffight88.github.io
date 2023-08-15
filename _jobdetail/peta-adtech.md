@@ -30,6 +30,9 @@ published: true
 3. 매일 17시29분 cron으로 `b2b_icm`의 테이블에서 다음의 정보를 가져와 중간테이블에 업데이트한다.
    - `progress` 값이 다르면 최신 값으로 업데이트
    - `progress` 값을 `발송완료` 로 업데이트할 때 `deliv_date`와 `tracking_num`을 함께 업데이트한다.
+
+<br>
+<br>
    
 
 ## 2023/7/6 생산팀미팅
@@ -63,6 +66,9 @@ $c_serial = 377;  // 페타애드텍의 tcps상 고객사시리얼
 $t_serial = $c_serial.time();
 ```
 
+<br>
+<br>
+
 ### 주문번호(`order_num`) 생성 로직
 
 ```php
@@ -70,3 +76,5 @@ $order_num_peta = $o_data['order_num_peta']; // 페타측의 order_num을 테이
 $order_num = "PA".$order_num_peta;
 ```
 
+<br>
+<br>
