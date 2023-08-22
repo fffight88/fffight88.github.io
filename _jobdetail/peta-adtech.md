@@ -27,7 +27,7 @@ published: true
    - `progress` "주문접수"로 업데이트
    - `tcps_sent` "Y"로 업데이트
    - 각 주문의 썸네일링크주소와 pdf파일링크주소에서 파일을 다운받아 
-3. 매일 17시29분 cron으로 `b2b_icm`의 테이블에서 다음의 정보를 가져와 중간테이블에 업데이트한다.
+3. 매일 17시25분 cron으로 `b2b_icm`의 테이블에서 다음의 정보를 가져와 중간테이블에 업데이트한다.
    - `progress` 값이 다르면 최신 값으로 업데이트
    - `progress` 값을 `발송완료` 로 업데이트할 때 `deliv_date`와 `tracking_num`을 함께 업데이트한다.
 
@@ -37,7 +37,7 @@ published: true
 
 ## 2023/7/6 생산팀미팅
 
-페타측에서 이미자파일과 pdf파일의 링크만 받아서 생산팀에서 클릭하면 페타측 서버에서 다운받아 오는 방식은 우리회사 서버의 용량을 별도로 차지하지 않으므로 효율적이나, 주문의 이미지를 한꺼번에 다운받는 `전체압축기능` 사용이 제한되므로 기존대로 파일을 우리회사 서버에 업로드하는 방식으로 바꿈. 즉, ___생산팀에서 주문을 클릭했을 때 가져오는 방식이 아니라 cron으로 중간테이블에서 주문정보를 가져오는 동시에 해당 링크에 접속하여 파일을 다운받아 우리 서버에 저장해두는 방식.
+페타측에서 이미자파일과 pdf파일의 링크만 받아서 생산팀에서 클릭하면 페타측 서버에서 다운받아 오는 방식은 우리회사 서버의 용량을 별도로 차지하지 않으므로 효율적이나, 주문의 이미지를 한꺼번에 다운받는 `전체압축기능` 사용이 제한되므로 기존대로 파일을 우리회사 서버에 업로드하는 방식으로 바꿈. 즉, ***생산팀에서 주문을 클릭했을 때 가져오는 방식이 아니라 cron으로 중간테이블에서 주문정보를 가져오는 동시에 해당 링크에 접속하여 파일을 다운받아 우리 서버에 저장해두는 방식.***
 
 <br>
 <br>
@@ -74,6 +74,25 @@ $t_serial = $c_serial.time();
 ```php
 $order_num_peta = $o_data['order_num_peta']; // 페타측의 order_num을 테이블에서 가져와서 대입
 $order_num = "PA".$order_num_peta;
+```
+
+<br>
+<br>
+
+### 주문파일 저장폴더 지정 로직
+
+```php
+$savedir = $_SERVER['DOCUMENT_ROOT']."/templ_storage/tpa001/".date("ymd");
+$gif_load_dir = "/templ_storage/tpa001/".date("ymd")."/".$data['tcps_mem_id']."_".$t_serial;
+if(@dir($savedir) == false)
+{
+   mkdir($savedir, 0777);
+}
+
+$fold_name =$savedir."/".$data['tcps_mem_id']."_".$t_serial;
+if(@dir($fold_name) == false){
+   mkdir($fold_name, 0777);
+}
 ```
 
 <br>
