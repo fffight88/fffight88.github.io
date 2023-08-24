@@ -82,17 +82,12 @@ $order_num = "PA".$order_num_peta;
 ### 주문파일 저장폴더 지정 로직
 
 ```php
-$savedir = $_SERVER['DOCUMENT_ROOT']."/templ_storage/tpa001/".date("ymd");
-$gif_load_dir = "/templ_storage/tpa001/".date("ymd")."/".$data['tcps_mem_id']."_".$t_serial;
-if(@dir($savedir) == false)
-{
-   mkdir($savedir, 0777);
-}
+$namecard_files_folder_path_1 = $_SERVER['DOCUMENT_ROOT'] . "templ_storage/tpa001/" . date("ymd");
+$namecard_files_folder_path_2 = $namecard_files_folder_path_1 . "/" . $mem_id . "_" . $t_serial;
 
-$fold_name =$savedir."/".$data['tcps_mem_id']."_".$t_serial;
-if(@dir($fold_name) == false){
-   mkdir($fold_name, 0777);
-}
+if (file_exists($namecard_files_folder_path_1) == false) mkdir($namecard_files_folder_path_1, 0777, true);
+$namecard_files_folder_path_2 = $namecard_files_folder_path_1 . "/" . $mem_id . "_" . $t_serial;
+if (file_exists($namecard_files_folder_path_2) == false) mkdir($namecard_files_folder_path_2, 0777, true);
 ```
 
 <br>
