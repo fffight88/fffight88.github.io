@@ -107,10 +107,10 @@ if (file_exists($namecard_files_folder_path) == false) mkdir($namecard_files_fol
 
 ```php
 // DB접속로직
-$host = $example_host;
-$database = $example_database;
-$user_name = $example_username;
-$user_password = $example_password;
+$host = 'example_host';
+$database = 'example_database';
+$user_name = 'example_username';
+$user_password = 'example_password';
 $pdo = new PDO("mysql:host=$host; dbname=$database", $user_name, $user_password);
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // 에러 모드 설정
 
