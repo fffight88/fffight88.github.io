@@ -152,16 +152,18 @@ published: true
 1. XAMPP 다운로드: php버전 5.6.38에 맞춰서
 2. apache 서버만 선택해서 인스톨
 3. 메모장 등 텍스트편집기를 _관리자모드_ 로 열고 C:\Windows\System32\drivers\etc\hosts 파일 오픈
-4. "127.0.0.1 도메인명" 한 줄을 추가 ex: 127.0.0.1 tcps3.localhost 후 저장
-5. "C:\설치폴더경로\xampp\apache\conf\extra\httpd-vhosts.conf" 파일을 열고 다음 추가. xampp 기본으로 잡혀있는  작업폴더경로는 "설치폴더경로\htdocs" 
-><VirtualHost *:80>
->
->  DocumentRoot "C:/작업폴더경로"
->
->  ServerName 위에4번에서 써놓은 도메인명
->
-></VirtualHost>
+4. "127.0.0.1 도메인명" 한 줄을 추가 ex: 127.0.0.1 tcps3.localhost 추가 후 저장
+5. "C:\설치폴더경로\apache\conf\extra\httpd-vhosts.conf" 파일을 열고 다음 추가. xampp 기본으로 잡혀있는  작업폴더경로는 "설치폴더경로\htdocs" 
+```php
+<VirtualHost *:80>
+	DocumentRoot "C:/작업폴더경로"
+	ServerName 위에4번에서 써놓은 도메인명
+</VirtualHost>
+```
 6. database.php 에서 환경에 맞게 db 매칭
+
+<br>
+<br>
 
 <br>
 
