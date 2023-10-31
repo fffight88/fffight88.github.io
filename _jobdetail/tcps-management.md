@@ -18,6 +18,7 @@ published: true
 	- [웹 접속주소](#웹-접속주소)
 	- [개발서버](#개발서버)
 	- [Jenkins](#jenkins)
+	- [로컬개발환경 구성하기](#로컬개발환경-구성하기)
 - [주기적](#주기적)
 	- [서버관리 - TRASH 폴더 내의 파일 정리](#서버관리---trash-폴더-내의-파일-정리)
 - [요청있을 때](#요청있을-때)
@@ -47,6 +48,8 @@ published: true
 		- [대명(244)](#대명244)
 		- [드롭박스가 없는 고객사의 제품주문화면에 드롭박스 생성하기](#드롭박스가-없는-고객사의-제품주문화면에-드롭박스-생성하기)
 		- [부서/직급 텍스트박스를 드롭박스로 대체하기](#부서직급-텍스트박스를-드롭박스로-대체하기)
+	- [명함주문 pdf파일을 생산용, 외주용으로 나누어 만들기](#명함주문-pdf파일을-생산용-외주용으로-나누어-만들기)
+		- [추가로 고려해야 할 부분](#추가로-고려해야-할-부분)
 - [특정시점](#특정시점)
 	- [MRO 업체 회원/주문정보연동 작업(POST나 GET방식으로 주고받기)](#mro-업체-회원주문정보연동-작업post나-get방식으로-주고받기)
 		- [회원정보연동(자동로그인 API)](#회원정보연동자동로그인-api)
@@ -143,6 +146,22 @@ published: true
 > 52.68.111.103 jenkins.openprintmarket.com
 <br>
 <br>
+
+### 로컬개발환경 구성하기
+
+1. XAMPP 다운로드: php버전 5.6.38에 맞춰서
+2. apache 서버만 선택해서 인스톨
+3. 메모장 등 텍스트편집기를 _관리자모드_ 로 열고 C:\Windows\System32\drivers\etc\hosts 파일 오픈
+4. "127.0.0.1 도메인명" 한 줄을 추가 ex: 127.0.0.1 tcps3.localhost 후 저장
+5. "C:\설치폴더경로\xampp\apache\conf\extra\httpd-vhosts.conf" 파일을 열고 다음 추가
+><VirtualHost *:80>
+>
+>  DocumentRoot "C:/작업폴더경로"
+>
+>  ServerName 위에4번에서 써놓은 도메인명
+>
+></VirtualHost>
+6. database.php 에서 환경에 맞게 db 매칭
 
 <br>
 
@@ -408,7 +427,7 @@ https://btb.tarapod.co.kr:8443/v2/INTERLOCK/newprint_c.php 문서에서 작업
 
 #### 드롭박스가 없는 고객사의 제품주문화면에 드롭박스 생성하기
 
-소스코드에서 드롭박스를 추가하는 부분은 `/application/tpa001/set_input_data` 에서 `get_input_from_etc`를 호출하면서 세팅이 되므로 `get_input_from_etc` 함수 내부에 소스코드를 추가하여야 한다. 어렵지 않으니 이미 되어있는 타 고객사 코드 참조해서 새로 추가.
+소스코드에서 드롭박스를 추가하는 부분은 `/application/tpa001/set_input_data` 에서 `get_input_form_etc`를 호출하면서 세팅이 되므로 `get_input_form_etc` 함수 내부에 소스코드를 추가하여야 한다. 이미 되어있는 타 고객사 코드 참조해서 새로 추가.
 
 
 #### 부서/직급 텍스트박스를 드롭박스로 대체하기
@@ -419,8 +438,23 @@ https://btb.tarapod.co.kr:8443/v2/INTERLOCK/newprint_c.php 문서에서 작업
 <br>
 
 
+### 명함주문 pdf파일을 생산용, 외주용으로 나누어 만들기
 
-<!-- ### 내용 추가시 이거 복사해서 사용
+명함주문 중에서 글자에 엠보효과 등 생산팀에서 처리하기 어려운 특수부분이 섞여있으면 먼저 생산팀에서 할 수 있는 부분을 한 후에 나머지는 외주를 줘서 하게 해서 완성한다. 따라서 생산팀이 봐야하는 주문pdf와 외주에서 봐야하는 주문pdf가 다른 경우가 되는데 이 때 두 가지 파일을 별도로 작성하는 로직
+
+> 생산페이지에서 신동아건설 6286 템플릿 주문 참조
+
+#### 추가로 고려해야 할 부분
+- 파일명 생성 로직(단면/양면, 1페이지/2페이지): `application\models\intra\Order_model.php\get_download_filename`
+
+1. 일단 생산페이지의 주문목록화면에서 해당 주문의 다운로드버튼 옆에 `PDF생산` 이라는 버튼이 추가로 생성되어야 하고, 주문상세보기로 들어가면 PDF버튼 옆에 `PDF생산`과 `PDF외주` 두 개의 버튼이 추가로 생성되어야 한다.
+2. Ad ut sit commodo enim eiusmod ullamco non culpa culpa ut sint aliqua labore consequat.
+
+<br>
+<br>
+
+<!--
+### 내용 추가시 이거 복사해서 사용
 
 Excepteur qui pariatur exercitation cillum tempor ullamco labore.
 
@@ -429,7 +463,8 @@ Excepteur qui pariatur exercitation cillum tempor ullamco labore.
 3. Ad ut sit commodo enim eiusmod ullamco non culpa culpa ut sint aliqua labore consequat.
 
 <br>
-<br> -->
+<br> 
+-->
 
 <br>
 
