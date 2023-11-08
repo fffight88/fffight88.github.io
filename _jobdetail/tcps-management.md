@@ -150,11 +150,11 @@ published: true
 
 ### 로컬개발환경 구성하기
 
-1. XAMPP 다운로드: php버전 5.6.38에 맞춰서
+1. XAMPP 다운로드: php버전 __5.6.38__ 에 맞춰서
 2. apache 서버만 선택해서 인스톨
-3. 메모장 등 텍스트편집기를 _관리자모드_ 로 열고 C:\Windows\System32\drivers\etc\hosts 파일 오픈
-4. "127.0.0.1 도메인명" 한 줄을 추가 ex: 127.0.0.1 tcps3.localhost 추가 후 저장
-5. "C:\설치폴더경로\apache\conf\extra\httpd-vhosts.conf" 파일을 열고 다음 추가. xampp 기본으로 잡혀있는  작업폴더경로는 "설치폴더경로\htdocs"
+3. 메모장 등 텍스트편집기를 __관리자모드__ 로 열고 `C:\Windows\System32\drivers\etc\hosts` 파일 오픈
+4. `127.0.0.1 도메인명` 한 줄을 추가 ex: `127.0.0.1 tcps3.localhost` 추가 후 저장
+5. `C:\설치폴더경로\apache\conf\extra\httpd-vhosts.conf` 파일을 열고 다음 태그 추가. xampp 기본으로 잡혀있는  작업폴더경로는 `설치폴더경로\htdocs`
     
 ```
 <VirtualHost *:80>
@@ -164,7 +164,20 @@ published: true
 
 ```
 
-6. database.php 에서 환경에 맞게 db 매칭
+6. database.php 에서 환경에 맞게 코드 수정 및 db 매칭
+7. `index.php`의 `application environment` 부분에 다음의 `else if` 블록을 추가
+
+```php
+else if(strpos($_SERVER['HTTP_HOST'], "위 4번에서 정한 도메인명") !== FALSE)
+{
+	define('ENVIRONMENT', 'development');
+	define('ACCESS_ALLOW', true);
+	define('FILE_UPLOAD_PATH', 'V3');
+}
+
+```
+
+8. 서버에서 `tpa001_templ`(장바구니 이전 주문화면에서 사용하는 이미지 및 xml파일), `templ_storage`(주문이 장바구니를 떠나 접수 또는 접수대기 단계에서 사용하는 이미지들), `templ`(/cart: 장바구니화면에서 사용하는 이미지) 폴더에서 필요한 부분을 골라서 작업폴더루트에 복사한다. 이 때 __서버의 폴더 경로 및 폴더명과 동일하게__ 맞춰줘야 한다.
 
 <br>
 <br>
