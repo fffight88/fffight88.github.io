@@ -13,6 +13,7 @@ excerpt_separator: <!--more-->
 
 - [Javascript, jQuery](#javascript-jquery)
   - [텍스트박스 일부문자만 허용하기](#텍스트박스-일부문자만-허용하기)
+  - [title속성 이용한 툴팁 아닌 커스터마이징 툴팁 만들기](#title속성-이용한-툴팁-아닌-커스터마이징-툴팁-만들기)
   - [정수 난수 발생기](#정수-난수-발생기)
   - [날짜 계산하기](#날짜-계산하기)
   - [변수(또는 인자)의 형이 배열인지 객체인지 validation 로직](#변수또는-인자의-형이-배열인지-객체인지-validation-로직)
@@ -48,6 +49,36 @@ $(function() {
         }	
     });
 })
+```
+
+<br>
+<br>
+
+### title속성 이용한 툴팁 아닌 커스터마이징 툴팁 만들기
+
+* 툴팁을 띄울 태그들에 클래스로 `toolTip`을 주고, 툴팁박스로 이용할 <div>요소를 <body>의 자식요소로 아무곳에나 만들고 id를 `tipBox`로 준다.
+* css에서 `#tipBox`의 속성에 `position: absolute; display: none;` 을 포함해 준다.
+
+```javascript
+$(window).on('load', function () {
+    $('.toolTip').each(function () {
+        $(this).on('mouseover, mousemove', function (event) {
+            event.preventDefault();
+            $('body').css('cursor', 'help');
+            $('#tipBox').html($(event.target).attr('desc'));
+            var mousePosX = event.clientX + 20;
+            mousePosX = mousePosX + 'px';
+            var mousePosY = event.clientY + 10;
+            mousePosY = mousePosY + 'px';
+            $('#tipBox').css('display', 'block').css('left', mousePosX).css('top', mousePosY);
+        });
+        $(this).on('mouseout', function (event) {
+            event.preventDefault();
+            $('body').css('cursor', 'default');
+            $('#tipBox').css('display', 'none');
+        });
+    });
+});
 ```
 
 <br>
