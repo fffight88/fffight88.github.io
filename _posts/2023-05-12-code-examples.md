@@ -14,6 +14,9 @@ excerpt_separator: <!--more-->
 - [Javascript, jQuery](#javascript-jquery)
   - [텍스트박스 일부문자만 허용하기](#텍스트박스-일부문자만-허용하기)
   - [title속성 이용한 툴팁 아닌 커스터마이징 툴팁 만들기](#title속성-이용한-툴팁-아닌-커스터마이징-툴팁-만들기)
+  - [정수 난수 발생기](#정수-난수-발생기)
+  - [날짜 계산하기](#날짜-계산하기)
+  - [변수(또는 인자)의 형이 배열인지 객체인지 validation 로직](#변수또는-인자의-형이-배열인지-객체인지-validation-로직)
 - [PHP](#php)
   - [separator로 구별한 숫자들로 구성된 문자열 처리](#separator로-구별한-숫자들로-구성된-문자열-처리)
   - [SHA-256 해쉬암호화](#sha-256-해쉬암호화)
@@ -76,6 +79,115 @@ $(window).on('load', function () {
         });
     });
 });
+```
+
+<br>
+<br>
+
+### 정수 난수 발생기
+
+최소값 최대값을 주고 그 사이에서 원하는 개수만큼 난수 만들어내기.
+min, max, times(input type="number")에 최소값, 최대값, 횟수를 입력한 후 추첨하기(#start)버튼을 누르면 times회만큼 정수 난수를 발생
+
+```javascript
+  $('#start').click(function () {
+      var min = $('#min').val(), max = $('#max').val(), times = $('#times').val();
+      var console_text = '';
+      for (var i = 0; i < times; i++)
+      {
+          var rand_num = parseInt(Math.floor(Math.random() * (max - min + 1))) + parseInt(min);
+          console_text = console_text + "  " + rand_num;
+      }
+      $('#console').text(console_text);
+  })
+```
+
+<br>
+<br>
+
+### 날짜 계산하기
+
+```javascript
+$(function () {
+    
+    var today = new Date(); // 오늘 날짜 구하기
+    var baby_birth_year = $('input[name="baby_birth_year"]').val(); // 기준 연도 입력받기
+    var baby_birth_month = $('select').val(); // 기준 월 입력받기
+    var baby_birth_date = $('input[name="baby_birth_date"]').val(); // 기준 일 입력받기
+    var baby_birthday = new Date(baby_birth_year, baby_birth_month, baby_birth_date); // 기준 연월일 만들기
+
+    $('span').text(today.getFullYear() + "년 " + today.getMonth() + "월 " + today.getDay() + "일"); // 오늘 날짜 한국식 표현
+
+    // 기준연월일부터 오늘까지 며칠 지났나 구하기
+    $('button[name="cal_days_from_birth_to_now"]').click(function () 
+    {
+        var timeDiff = Math.abs(baby_birthday.getTime() - today.getTime()); // 마이크로초로 환산하여 차이 계산
+        var daysDiff = Math.ceil(timeDiff / (1000 * 3600 * 24)); // 마이크로초값을 일단위로 환산
+
+        $('input[name="days_from_birth_to_now"]').val(daysDiff);
+    });
+    
+    // 기준연월일부터 입력받은 날 만큼 지났을 때 연월일요일 구하기
+    $('button[name="cal_days_from_birth"]').click(function () 
+    {
+        var days_diff = $('#input_days_from_birth').val(); // 며칠 후의 날짜를 구할 것인지 입력받기
+        $('#output_days_from_birth').val(days_diff);
+        var target_date = new Date(baby_birthday.getTime() + (days_diff * 24 * 3600 * 1000)); // 입력받은 일단위를 마이크로초로 환산 후 기준연월일의 마이크로초값과 더함
+        // 요일 구하기
+        var target_day = target_date.getDate();
+        switch (target_day)
+        {
+            case 0:
+                target_day = "일요일";
+                break;
+            case 1:
+                target_day = "월요일";
+                break;
+            case 2:
+                target_day = "화요일";
+                break;
+            case 3:
+                target_day = "수요일";
+                break;
+            case 4:
+                target_day = "목요일";
+                break;
+            case 5:
+                target_day = "금요일";
+                break;
+            case 6:
+                target_day = "토요일";
+                break;
+        }
+        $('input[name="result_date"]').val(target_date.getFullYear() + "년 " + target_date.getMonth() + "월 " + target_date.getDay() + "일 " + target_day);
+    });
+});
+```
+
+<br>
+<br>
+
+### 변수(또는 인자)의 형이 배열인지 객체인지 validation 로직
+
+배열도 객체이므로 typeof 연산자를 쓰면 object로 뜨지만 객체와는 달리 length 프로퍼티를 갖는다.
+따라서 type이 object이면서 length 프로퍼티를 가지고 있으면 배열, 그렇지 않으면 객체이다.
+
+```javascript
+function objType(test)
+{
+    if ((test instanceOf Array) || (typeof test == "object" && "length" in test))
+    {
+      return "배열";
+    }
+    else if (typeof test == "object")
+    {
+      return "객체";
+    }
+    else
+    {
+      return "배열이나 객체가 아님";
+    }
+}
 ```
 
 <br>
