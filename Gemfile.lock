@@ -70,6 +70,7 @@ GEM
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
     wdm (0.1.1)
+    webrick (1.8.1)
 
 PLATFORMS
   x64-mingw-ucrt
@@ -87,6 +88,7 @@ DEPENDENCIES
   rouge (= 3.26.0)
   type-on-strap!
   wdm (>= 0.1.0)
+  webrick (= 1.8.1)
 
 BUNDLED WITH
    2.4.10
