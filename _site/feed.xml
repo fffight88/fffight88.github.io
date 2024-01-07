@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-01-07T13:58:50+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Newbie’s DoorClosing</title><subtitle>Newbie&apos;s DoorClosing</subtitle><entry><title type="html">페이지 이동하면 세션이 없어져요</title><link href="http://localhost:4000/coding/2023/12/21/keep-cookies-during-connecting-to-other-cite.html" rel="alternate" type="text/html" title="페이지 이동하면 세션이 없어져요" /><published>2023-12-21T00:00:00+09:00</published><updated>2023-12-21T00:00:00+09:00</updated><id>http://localhost:4000/coding/2023/12/21/keep-cookies-during-connecting-to-other-cite</id><content type="html" xml:base="http://localhost:4000/coding/2023/12/21/keep-cookies-during-connecting-to-other-cite.html"><![CDATA[<p>크로스사이트 간 페이지이동(POST, AJAX)시 세션(쿠키) 온전히 유지하는 방법(PHP, CodeIgnitor)<!--more-->
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-01-07T15:19:35+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Newbie’s DoorClosing</title><subtitle>Newbie&apos;s DoorClosing</subtitle><entry><title type="html">페이지 이동하면 세션이 없어져요</title><link href="http://localhost:4000/coding/2023/12/21/keep-cookies-during-connecting-to-other-cite.html" rel="alternate" type="text/html" title="페이지 이동하면 세션이 없어져요" /><published>2023-12-21T00:00:00+09:00</published><updated>2023-12-21T00:00:00+09:00</updated><id>http://localhost:4000/coding/2023/12/21/keep-cookies-during-connecting-to-other-cite</id><content type="html" xml:base="http://localhost:4000/coding/2023/12/21/keep-cookies-during-connecting-to-other-cite.html"><![CDATA[<p>크로스사이트 간 페이지이동(POST, AJAX)시 세션(쿠키) 온전히 유지하는 방법(PHP, CodeIgnitor)<!--more-->
 <br /></p>
 
 <hr />
@@ -248,7 +248,7 @@
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">$</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
     <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">[name=example], #example, .example</span><span class="dl">'</span><span class="p">).</span><span class="nf">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">input</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
         <span class="kd">var</span> <span class="nx">value</span> <span class="o">=</span> <span class="nf">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nf">val</span><span class="p">();</span>
-        <span class="nf">if </span><span class="p">(</span><span class="sr">/^</span><span class="se">[</span><span class="sr">0-9</span><span class="se">\-]</span><span class="sr">+$/</span><span class="p">.</span><span class="nf">test</span><span class="p">(</span><span class="nx">value</span><span class="p">)){</span>
+        <span class="k">if </span><span class="p">(</span><span class="sr">/^</span><span class="se">[</span><span class="sr">0-9</span><span class="se">\-]</span><span class="sr">+$/</span><span class="p">.</span><span class="nf">test</span><span class="p">(</span><span class="nx">value</span><span class="p">)){</span>
 
         <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
             <span class="nf">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nf">val</span><span class="p">(</span><span class="nx">value</span><span class="p">.</span><span class="nf">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">));</span>
@@ -299,7 +299,7 @@ min, max, times(input type=”number”)에 최소값, 최대값, 횟수를 입�
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#start</span><span class="dl">'</span><span class="p">).</span><span class="nf">click</span><span class="p">(</span><span class="nf">function </span><span class="p">()</span> <span class="p">{</span>
       <span class="kd">var</span> <span class="nx">min</span> <span class="o">=</span> <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#min</span><span class="dl">'</span><span class="p">).</span><span class="nf">val</span><span class="p">(),</span> <span class="nx">max</span> <span class="o">=</span> <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#max</span><span class="dl">'</span><span class="p">).</span><span class="nf">val</span><span class="p">(),</span> <span class="nx">times</span> <span class="o">=</span> <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#times</span><span class="dl">'</span><span class="p">).</span><span class="nf">val</span><span class="p">();</span>
       <span class="kd">var</span> <span class="nx">console_text</span> <span class="o">=</span> <span class="dl">''</span><span class="p">;</span>
-      <span class="nf">for </span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">times</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span>
+      <span class="k">for </span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">times</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span>
       <span class="p">{</span>
           <span class="kd">var</span> <span class="nx">rand_num</span> <span class="o">=</span> <span class="nf">parseInt</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nf">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nf">random</span><span class="p">()</span> <span class="o">*</span> <span class="p">(</span><span class="nx">max</span> <span class="o">-</span> <span class="nx">min</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)))</span> <span class="o">+</span> <span class="nf">parseInt</span><span class="p">(</span><span class="nx">min</span><span class="p">);</span>
           <span class="nx">console_text</span> <span class="o">=</span> <span class="nx">console_text</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">  </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">rand_num</span><span class="p">;</span>
@@ -340,7 +340,7 @@ min, max, times(input type=”number”)에 최소값, 최대값, 횟수를 입�
         <span class="kd">var</span> <span class="nx">target_date</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Date</span><span class="p">(</span><span class="nx">baby_birthday</span><span class="p">.</span><span class="nf">getTime</span><span class="p">()</span> <span class="o">+</span> <span class="p">(</span><span class="nx">days_diff</span> <span class="o">*</span> <span class="mi">24</span> <span class="o">*</span> <span class="mi">3600</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">));</span> <span class="c1">// 입력받은 일단위를 마이크로초로 환산 후 기준연월일의 마이크로초값과 더함</span>
         <span class="c1">// 요일 구하기</span>
         <span class="kd">var</span> <span class="nx">target_day</span> <span class="o">=</span> <span class="nx">target_date</span><span class="p">.</span><span class="nf">getDate</span><span class="p">();</span>
-        <span class="nf">switch </span><span class="p">(</span><span class="nx">target_day</span><span class="p">)</span>
+        <span class="k">switch </span><span class="p">(</span><span class="nx">target_day</span><span class="p">)</span>
         <span class="p">{</span>
             <span class="k">case</span> <span class="mi">0</span><span class="p">:</span>
                 <span class="nx">target_day</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">일요일</span><span class="dl">"</span><span class="p">;</span>
@@ -379,11 +379,11 @@ min, max, times(input type=”number”)에 최소값, 최대값, 횟수를 입�
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">objType</span><span class="p">(</span><span class="nx">test</span><span class="p">)</span>
 <span class="p">{</span>
-    <span class="nf">if </span><span class="p">((</span><span class="nx">test</span> <span class="nx">instanceOf</span> <span class="nb">Array</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">test</span> <span class="o">==</span> <span class="dl">"</span><span class="s2">object</span><span class="dl">"</span> <span class="o">&amp;&amp;</span> <span class="dl">"</span><span class="s2">length</span><span class="dl">"</span> <span class="k">in</span> <span class="nx">test</span><span class="p">))</span>
+    <span class="k">if </span><span class="p">((</span><span class="nx">test</span> <span class="nx">instanceOf</span> <span class="nb">Array</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">test</span> <span class="o">==</span> <span class="dl">"</span><span class="s2">object</span><span class="dl">"</span> <span class="o">&amp;&amp;</span> <span class="dl">"</span><span class="s2">length</span><span class="dl">"</span> <span class="k">in</span> <span class="nx">test</span><span class="p">))</span>
     <span class="p">{</span>
       <span class="k">return</span> <span class="dl">"</span><span class="s2">배열</span><span class="dl">"</span><span class="p">;</span>
     <span class="p">}</span>
-    <span class="k">else</span> <span class="nf">if </span><span class="p">(</span><span class="k">typeof</span> <span class="nx">test</span> <span class="o">==</span> <span class="dl">"</span><span class="s2">object</span><span class="dl">"</span><span class="p">)</span>
+    <span class="k">else</span> <span class="k">if </span><span class="p">(</span><span class="k">typeof</span> <span class="nx">test</span> <span class="o">==</span> <span class="dl">"</span><span class="s2">object</span><span class="dl">"</span><span class="p">)</span>
     <span class="p">{</span>
       <span class="k">return</span> <span class="dl">"</span><span class="s2">객체</span><span class="dl">"</span><span class="p">;</span>
     <span class="p">}</span>
@@ -1196,7 +1196,7 @@ function will still be working!</p>
     <span class="p">};</span>
 
     <span class="c1">// Do something</span>
-    <span class="nf">if </span><span class="p">(</span><span class="mf">2.0</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="nx">something</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if </span><span class="p">(</span><span class="mf">2.0</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="nx">something</span><span class="p">)</span> <span class="p">{</span>
         <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Hello, world!</span><span class="dl">'</span><span class="p">);</span>
     <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
         <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
@@ -1231,15 +1231,15 @@ function will still be working!</p>
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">os</span>
 
 
-<span class="k">def</span> <span class="nf">some_function</span><span class="p">(</span><span class="n">param_one</span><span class="o">=</span><span class="s">""</span><span class="p">,</span> <span class="n">param_two</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
-    <span class="sa">r</span><span class="s">'''A docstring'''</span>
+<span class="k">def</span> <span class="nf">some_function</span><span class="p">(</span><span class="n">param_one</span><span class="o">=</span><span class="sh">""</span><span class="p">,</span> <span class="n">param_two</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sh">'''</span><span class="s">A docstring</span><span class="sh">'''</span>
     <span class="k">if</span> <span class="n">param_one</span> <span class="o">&gt;</span> <span class="n">param_two</span><span class="p">:</span>  <span class="c1"># interesting
-</span>        <span class="nf">print</span><span class="p">(</span><span class="s">"Greater"</span><span class="p">)</span>
+</span>        <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Greater</span><span class="sh">"</span><span class="p">)</span>
     <span class="nf">return </span><span class="p">(</span><span class="n">param_two</span> <span class="o">-</span> <span class="n">param_one</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">+</span> <span class="mb">0b10</span><span class="p">)</span> <span class="ow">or</span> <span class="bp">None</span>
 
 
 <span class="k">class</span> <span class="nc">SomeClass</span><span class="p">:</span>
-    <span class="s">""" dunno what I am doing """</span>
+    <span class="sh">"""</span><span class="s"> dunno what I am doing </span><span class="sh">"""</span>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
         <span class="k">pass</span>
