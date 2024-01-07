@@ -4,6 +4,7 @@ title: "네트워크 구축 기본"
 author: Victor Lo
 tags: [network, 네트워크, aws, 클라우드서버]
 color: purple
+categories: network
 # feature-img: "/assets/img/feature-img/2023-06-02-mistel-md770-0.png"
 # thumbnail: "/assets/img/feature-img/2023-06-02-mistel-md770-1.png"
 published: true

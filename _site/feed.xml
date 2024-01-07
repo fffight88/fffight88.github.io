@@ -1,193 +1,62 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-07-07T12:23:40+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Newbie’s DoorClosing</title><subtitle>Newbie&apos;s DoorClosing</subtitle><entry><title type="html">AWSome day</title><link href="http://localhost:4000/2023/06/08/aws-conference.html" rel="alternate" type="text/html" title="AWSome day" /><published>2023-06-08T00:00:00+09:00</published><updated>2023-06-08T00:00:00+09:00</updated><id>http://localhost:4000/2023/06/08/aws-conference</id><content type="html" xml:base="http://localhost:4000/2023/06/08/aws-conference.html"><![CDATA[<p>AWS 온라인 컨퍼런스인 AWSome day 액기스만 추출 <!--more--></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-01-07T13:58:50+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Newbie’s DoorClosing</title><subtitle>Newbie&apos;s DoorClosing</subtitle><entry><title type="html">페이지 이동하면 세션이 없어져요</title><link href="http://localhost:4000/coding/2023/12/21/keep-cookies-during-connecting-to-other-cite.html" rel="alternate" type="text/html" title="페이지 이동하면 세션이 없어져요" /><published>2023-12-21T00:00:00+09:00</published><updated>2023-12-21T00:00:00+09:00</updated><id>http://localhost:4000/coding/2023/12/21/keep-cookies-during-connecting-to-other-cite</id><content type="html" xml:base="http://localhost:4000/coding/2023/12/21/keep-cookies-during-connecting-to-other-cite.html"><![CDATA[<p>크로스사이트 간 페이지이동(POST, AJAX)시 세션(쿠키) 온전히 유지하는 방법(PHP, CodeIgnitor)<!--more-->
+<br /></p>
 
-<h2 id="1강-aws-클라우드-소개">1강 AWS 클라우드 소개</h2>
+<hr />
 
-<h3 id="리전-선택-고려사항">리전 선택 고려사항</h3>
+<p><br /></p>
+
+<p>최근 회사b2b쇼핑몰의 모바일웹앱 개발 프로젝트를 수행하면서 나를 정말 멘붕으로 몰아넣었던 부분이 세가지가 있었다.</p>
+
+<blockquote>
+  <ol>
+    <li>레거시 프로젝트의 테스트서버 구축</li>
+    <li>인코딩(EUC-KR) 문제</li>
+    <li>303 see other 스테이터스와 함께 로그아웃, 로그인페이지로 리다이렉트</li>
+  </ol>
+</blockquote>
+
+<p>이 중 3번에 대해 기록해보려고 한다. (결론만 보실 분은 <a href="#결론">결론</a>으로 이동)</p>
+
 <ul>
-  <li>준수해야 할 규정이 있는 경우 : 지역 기준 등</li>
-  <li>지연 시간 : 주요고객층과 가까운 리전. 지연 시간</li>
-  <li>서비스 제공 유무 : 모든 서비스가 모든 리전에 제공되지는 않음</li>
-  <li>서비스 비용 : 리전마다 다름</li>
+  <li>개발환경: 웹, PHP5.6, CodeIgnitor3, MySQL, AWS(Apache2.4)
+<br /></li>
 </ul>
 
-<h3 id="aws-edge-infra">AWS Edge Infra</h3>
+<h2 id="삽질내용">삽질내용</h2>
 <ul>
-  <li>AWS Outposts : 온프레미스에 대응</li>
-  <li>AWS Local</li>
-  <li>AWS WaveLength : 5G 서비스</li>
-</ul>
-
-<h2 id="2강--ec2">2강 : EC2</h2>
-
-<h3 id="비용">비용</h3>
-<ul>
-  <li>온디맨드</li>
-  <li>예약형</li>
-  <li>Savings plan : 온디맨드대비 66퍼센트까지 절약</li>
-  <li>스팟 : 온디맨드대비 90퍼센트까지 절약</li>
-</ul>
-
-<h3 id="관리형-vs-비관리형">관리형 vs 비관리형</h3>
-<p>서비스가 내장되어있느냐 안되어있느냐</p>
-
-<h3 id="과금유형">과금유형</h3>
-<ul>
-  <li>규모나 요청횟수가 적으면 서버리스 애플리케이션이 효율적</li>
-  <li>
-    <h3 id="lambda">Lambda</h3>
+  <li>현상: pg사에 결제승인API 호출 후 데이터 리턴받을 때 파라미터로 보낸 리턴URI로 접속하는데, <em>__ 대여섯번에 한 번 __</em> 은 로그아웃된 상태로 로그인 페이지로 리다이렉트됨(DevTool에 보면 <code class="language-plaintext highlighter-rouge">303 see other</code> 스테이터스가 뜸).</li>
+  <li>생각의 흐름
+    <ol>
+      <li>세션문제인가? 근데 세션문제이면 할 때마다 로그인 페이지로 연결되어야지 왜 대여섯번에 한번만 그래? 세션이 원인이 아닌 것 같아. (DevTool에서 쿠키 내용을 보지는 않고 넘어감)</li>
+      <li>파라미터 문제인가? (파라미터들을 pg사 개발매뉴얼과 대조해 봄) 아니야 파라미터 문제이면 여기 단계까지 오기 전에 이미 에러가 발생했을 거야.</li>
+      <li>이게 우리회사만 그런가, 다른 회사도 이런 경우가 있었나? (pg사 기술지원팀에 메일을 보내 이러한 히스토리가 있었는지 문의했더니 이런 경우에 대한 히스토리는 없고 우리회사의 코드쪽에 문제가 있는 것 같다는 답변만 들음)</li>
+      <li>CI의 Router 클래스 어딘가에서 문제가 발생하나? 아님 그 근처 로직 어딘가에 이상이 발생할 만한 여지가 있는가? (코드를 검토해 보았으나 이상은 못 찾음)
+        <ul>
+          <li>Router 클래스를 통해 어느 클래스의 어느 메소드로 연결해 줄 것인지가 정해짐.</li>
+        </ul>
+      </li>
+      <li>아무래도 세션이 문제인 것 같은데? (DevTool에서 <code class="language-plaintext highlighter-rouge">303 see other</code> 스테이터스가 뜰 때 요청시의 세션값과 응답시의 세션값이 달라지고(즉, 세션값이 다른 새로운 세션이 생성), 두 세션의 데이터를 비교해보니 데이터가 다른 것을 발견) 세션 문제가 맞는 것 같아! 어떻게 세션을 유지시키지?
+<br /></li>
+    </ol>
   </li>
-  <li>완전관리형, Stateless, 여러 언어 지원.</li>
-  <li>사진업로드 - S3 - 람다 - 이미지 인식 - s3</li>
 </ul>
 
-<h3 id="블럭파일객체--ebsefsfsxs3s3-glacier">블럭/파일/객체 : EBS/EFS,FSx/S3,S3 Glacier</h3>
+<p><img src="C:\coding\workspace\fffight88.github.io\assets\img\feature-img\2023-12-21-keep-cookies-during-connecting-to-other-cite_1.png" alt="DevTool의 쿠키 탭" />
+<br /></p>
 
-<h3 id="s3">S3</h3>
-<ul>
-  <li>객체수준 스토리지</li>
-  <li>파일, 폴더 X. 모두 수평적인 레벨</li>
-  <li>최소 3개의 가용영역에 자동 저장</li>
-  <li>기본적으로 퍼블릭액세스 불가 - 옵션 조정 가능</li>
-</ul>
+<p>위 그림에서, 현재는 설정을 바꿔주었기에 <code class="language-plaintext highlighter-rouge">Secure</code>에 표시가 되어있고 <code class="language-plaintext highlighter-rouge">SameSite</code>에 <code class="language-plaintext highlighter-rouge">None</code> 이라는 값이 보이지만, 바꿔주기 전에는 표시도 되어있지 않았고 None이라는 값도 뜨지 않았다. 타 사이트간의 페이지이동시 쿠키데이터를 유지하려면 <code class="language-plaintext highlighter-rouge">SameSite</code>에 <code class="language-plaintext highlighter-rouge">None</code>값을 줘서 타 사이트간 이동시에도 쿠키데이터를 유지해야한다고 설정값을 줘야 하고, <code class="language-plaintext highlighter-rouge">SameSite=None</code> 옵션을 사용하려면 <code class="language-plaintext highlighter-rouge">Secure=True</code> 로 설정해줘야 한다고 한다.
+<br />
+<br /></p>
 
-<h3 id="efs">EFS</h3>
-<ul>
-  <li>Linux 기반 파일 시스템</li>
-  <li>서버리스 - 용량관리필요 x</li>
-  <li>관리형 서비스</li>
-  <li>요청 수가 많아도 동일한 서비스</li>
-</ul>
+<h2 id="결론">결론</h2>
+<p><code class="language-plaintext highlighter-rouge">application/config/config.php</code> 에서 cookie 설정주는 부분을 찾아 다음과 같이 수정하거나 추가한다.</p>
 
-<h3 id="fsx-for-windows">FSx for Windows</h3>
-<ul>
-  <li>윈도우즈 파일시스템</li>
-  <li>완전관리형</li>
-  <li>SMB 프로톹콜</li>
-</ul>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$config</span><span class="p">[</span><span class="s1">'cookie_secure'</span><span class="p">]</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">;</span>
+<span class="nv">$config</span><span class="p">[</span><span class="s1">'cookie_path'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'/; SameSite=None'</span><span class="p">;</span>
+</code></pre></div></div>
+<p><br /></p>
 
-<h3 id="fsx-for-lustre">FSx for Lustre</h3>
-<ul>
-  <li>Luster 파일시스템</li>
-</ul>
-
-<h3 id="ebs">EBS</h3>
-<ul>
-  <li>EC2용</li>
-  <li>SSD. HDD 지원</li>
-  <li>스냅샷 기능</li>
-</ul>
-
-<h2 id="3강--db">3강 : DB</h2>
-
-<h3 id="관계형">관계형</h3>
-
-<h4 id="rds">RDS</h4>
-
-<h4 id="amazon-aurora">Amazon Aurora</h4>
-<ul>
-  <li>MySQL, PostgreSQL</li>
-  <li>상용DB 대비 90퍼센트까지 절약</li>
-  <li>표준 MySql보다 5배빠름</li>
-  <li>64TB까지 자동확장</li>
-</ul>
-
-<h4 id="amazon-redshift-">Amazon Redshift :</h4>
-
-<h3 id="비관계형nosql">비관계형(NoSQL)</h3>
-
-<h4 id="dynamodb">DynamoDB</h4>
-<ul>
-  <li>완전관리형 NoSQL - 별도로 관리/운영 x</li>
-  <li>낮은 지연 시간 : 10밀리초 미만. 요청규모에 맞게 테이블 자동 조정</li>
-  <li>액세스권한제어 : IAM</li>
-  <li>유연성</li>
-</ul>
-
-<h4 id="ec2-s3-dynamodb-연동-예시">EC2, S3, DynamoDB 연동 예시</h4>
-<p>웹사이트 &gt; EC2 instance 웹서버 &gt; S3버켓 &gt; DynamoDB</p>
-
-<ol>
-  <li>미디어 컨텐츠 저장할 S3 버켓 생성</li>
-  <li>DB생성 - DynamoDB</li>
-  <li>웹서버 생성 - EC2
-    <ul>
-      <li>Termination protection : 실수로 종료되지 않게 보호</li>
-      <li>범용적으로 많이 사용되는 것 : t2.micro</li>
-    </ul>
-  </li>
-  <li>EC2인스턴스 IP로 접속</li>
-</ol>
-
-<h2 id="4강--vpc-서브넷-보안">4강 : VPC, 서브넷, 보안</h2>
-
-<h3 id="vpc--aws-cloud의-개인-네트워크-공간">VPC : AWS cloud의 개인 네트워크 공간</h3>
-
-<h3 id="가용영역">가용영역</h3>
-
-<h3 id="서브넷">서브넷</h3>
-<ul>
-  <li>퍼블릭</li>
-  <li>프라이빗</li>
-</ul>
-
-<h3 id="elb">ELB</h3>
-<ul>
-  <li>로드밸런서로 부하를 분산시킴</li>
-</ul>
-
-<h3 id="인프라-보안">인프라 보안</h3>
-<ul>
-  <li>VPC 라우팅 테이블</li>
-  <li>네트워크 액세스 제어 목록(서브넷 앞에)</li>
-  <li>보안 그룹 (인스턴스 수준)</li>
-</ul>
-
-<h3 id="aws-cloud-vpn">AWS Cloud VPN</h3>
-<ul>
-  <li>온프레미스 데이터센터와 연결</li>
-</ul>
-
-<h3 id="aws-direct-connect">AWS DIrect COnnect</h3>
-<ul>
-  <li>인터넷이 아닌 사설 경로를 통한 접속</li>
-  <li>안정적</li>
-</ul>
-
-<h3 id="iam">IAM</h3>
-<ul>
-  <li>사용자, 그룹, 역할에 세분화된 권한 할당</li>
-  <li>임시 계정 공유</li>
-</ul>
-
-<h3 id="aws-cloudtrail">AWS CloudTrail</h3>
-<ul>
-  <li>AWS계정의 사용자활동 및 API 사용 추적</li>
-  <li>규정준수감사, 보안분석, 문제해결에 유용</li>
-  <li>로그파일은 Amazon S3버킷으로 전송됨</li>
-</ul>
-
-<h3 id="aws-trsted-advisor">AWS Trsted Advisor</h3>
-<ul>
-  <li>비용최적화, 보안, 성능, 내결함성, 서비스한도 등의 권장사항을 안내하는 서비스</li>
-</ul>
-
-<h2 id="5강--혁신">5강 : 혁신</h2>
-
-<h3 id="aws-iot-core-greengrass">AWS IoT Core: Greengrass</h3>
-
-<h3 id="기계학습machin-learning--sagemaker">기계학습(Machin Learning) : SageMaker</h3>
-
-<h3 id="블록체인--amazon-managed-blockchain-hyerledger-etherium">블록체인 : Amazon Managed Blockchain (Hyerledger, Etherium)</h3>
-
-<h3 id="위성통신서비스--aws-ground-station">위성통신서비스 : AWS Ground Station</h3>
-
-<h3 id="5g-서비스--aws-wavelength">5G 서비스 : AWS Wavelength</h3>
-
-<h2 id="용어">용어</h2>
-<ul>
-  <li>자동 크기 조정</li>
-  <li>탄력성</li>
-</ul>]]></content><author><name>Victor Lo</name></author><category term="aws" /><category term="awsomeday" /><summary type="html"><![CDATA[AWS 온라인 컨퍼런스인 AWSome day 액기스만 추출]]></summary></entry><entry><title type="html">네트워크 구축 기본</title><link href="http://localhost:4000/2023/06/04/network-building.html" rel="alternate" type="text/html" title="네트워크 구축 기본" /><published>2023-06-04T00:00:00+09:00</published><updated>2023-06-04T00:00:00+09:00</updated><id>http://localhost:4000/2023/06/04/network-building</id><content type="html" xml:base="http://localhost:4000/2023/06/04/network-building.html"><![CDATA[<p>AWS를 이용하여 네트워크를 구축할 때 꼭 알아야 할 기본이자 핵심 <!--more--></p>
+<p>설정을 이렇게 바꾼 이후로는 더 이상 <code class="language-plaintext highlighter-rouge">303 see other</code>가 발생하지 않고 있다.</p>]]></content><author><name>Victor Lo</name></author><category term="coding" /><category term="cookie" /><category term="session" /><category term="쿠키" /><category term="세션" /><category term="303 see other" /><category term="코드이그나이터" /><category term="php" /><summary type="html"><![CDATA[크로스사이트 간 페이지이동(POST, AJAX)시 세션(쿠키) 온전히 유지하는 방법(PHP, CodeIgnitor)]]></summary></entry><entry><title type="html">네트워크 구축 기본</title><link href="http://localhost:4000/network/2023/06/04/network-building.html" rel="alternate" type="text/html" title="네트워크 구축 기본" /><published>2023-06-04T00:00:00+09:00</published><updated>2023-06-04T00:00:00+09:00</updated><id>http://localhost:4000/network/2023/06/04/network-building</id><content type="html" xml:base="http://localhost:4000/network/2023/06/04/network-building.html"><![CDATA[<p>AWS를 이용하여 네트워크를 구축할 때 꼭 알아야 할 기본이자 핵심 <!--more--></p>
 
 <p><strong><em>참조문서</em></strong></p>
 <ul>
@@ -285,7 +154,7 @@
   <li>개발에 사용할 IAM 생성</li>
   <li>VPC 생성</li>
   <li>서브넷, 가용영역(Availability Zone)</li>
-</ol>]]></content><author><name>Victor Lo</name></author><category term="network" /><category term="네트워크" /><category term="aws" /><category term="클라우드서버" /><summary type="html"><![CDATA[AWS를 이용하여 네트워크를 구축할 때 꼭 알아야 할 기본이자 핵심]]></summary></entry><entry><title type="html">Mistel MD770</title><link href="http://localhost:4000/review/2023/06/02/mistel-md770.html" rel="alternate" type="text/html" title="Mistel MD770" /><published>2023-06-02T00:00:00+09:00</published><updated>2023-06-02T00:00:00+09:00</updated><id>http://localhost:4000/review/2023/06/02/mistel-md770</id><content type="html" xml:base="http://localhost:4000/review/2023/06/02/mistel-md770.html"><![CDATA[<p>편안한 타이핑자세로 거북목, 라운드숄더를 방지해주는 것으로 유명한, 반으로 갈라진 키보드 <strong><em>미스텔 MD770</em></strong> 을 두 달 사용하고 작성하는 후기<!--more--></p>
+</ol>]]></content><author><name>Victor Lo</name></author><category term="network" /><category term="network" /><category term="네트워크" /><category term="aws" /><category term="클라우드서버" /><summary type="html"><![CDATA[AWS를 이용하여 네트워크를 구축할 때 꼭 알아야 할 기본이자 핵심]]></summary></entry><entry><title type="html">Mistel MD770</title><link href="http://localhost:4000/review/2023/06/02/mistel-md770.html" rel="alternate" type="text/html" title="Mistel MD770" /><published>2023-06-02T00:00:00+09:00</published><updated>2023-06-02T00:00:00+09:00</updated><id>http://localhost:4000/review/2023/06/02/mistel-md770</id><content type="html" xml:base="http://localhost:4000/review/2023/06/02/mistel-md770.html"><![CDATA[<p>편안한 타이핑자세로 거북목, 라운드숄더를 방지해주는 것으로 유명한, 반으로 갈라진 키보드 <strong><em>미스텔 MD770</em></strong> 을 두 달 사용하고 작성하는 후기<!--more--></p>
 
 <p><br /></p>
 
@@ -337,17 +206,28 @@
   <li><code class="language-plaintext highlighter-rouge">Fn</code> + <code class="language-plaintext highlighter-rouge">i</code><code class="language-plaintext highlighter-rouge">k</code><code class="language-plaintext highlighter-rouge">j</code><code class="language-plaintext highlighter-rouge">l</code> = 방향키</li>
   <li><code class="language-plaintext highlighter-rouge">Fn</code> + <code class="language-plaintext highlighter-rouge">y</code> = 계산기</li>
   <li><code class="language-plaintext highlighter-rouge">Fn</code> + <code class="language-plaintext highlighter-rouge">z</code> = 메뉴(마우스 오른쪽버튼)</li>
-</ul>]]></content><author><name>Victor Lo</name></author><category term="review" /><category term="mistel" /><category term="미스텔" /><category term="md770" /><category term="키보드" /><category term="거북목" /><category term="라운드숄더" /><category term="쪼개진키보드" /><summary type="html"><![CDATA[편안한 타이핑자세로 거북목, 라운드숄더를 방지해주는 것으로 유명한, 반으로 갈라진 키보드 미스텔 MD770 을 두 달 사용하고 작성하는 후기]]></summary></entry><entry><title type="html">Code Examples</title><link href="http://localhost:4000/myjob/2023/05/12/code-examples.html" rel="alternate" type="text/html" title="Code Examples" /><published>2023-05-12T00:00:00+09:00</published><updated>2023-05-12T00:00:00+09:00</updated><id>http://localhost:4000/myjob/2023/05/12/code-examples</id><content type="html" xml:base="http://localhost:4000/myjob/2023/05/12/code-examples.html"><![CDATA[<p>유용한 예제코드들 <!--more--></p>
+</ul>]]></content><author><name>Victor Lo</name></author><category term="review" /><category term="mistel" /><category term="미스텔" /><category term="md770" /><category term="키보드" /><category term="거북목" /><category term="라운드숄더" /><category term="쪼개진키보드" /><summary type="html"><![CDATA[편안한 타이핑자세로 거북목, 라운드숄더를 방지해주는 것으로 유명한, 반으로 갈라진 키보드 미스텔 MD770 을 두 달 사용하고 작성하는 후기]]></summary></entry><entry><title type="html">Code Examples</title><link href="http://localhost:4000/coding/2023/05/12/code-examples.html" rel="alternate" type="text/html" title="Code Examples" /><published>2023-05-12T00:00:00+09:00</published><updated>2023-05-12T00:00:00+09:00</updated><id>http://localhost:4000/coding/2023/05/12/code-examples</id><content type="html" xml:base="http://localhost:4000/coding/2023/05/12/code-examples.html"><![CDATA[<p>유용한 예제코드들 <!--more--></p>
 
 <ul>
   <li><a href="#javascript-jquery">Javascript, jQuery</a>
     <ul>
       <li><a href="#텍스트박스-일부문자만-허용하기">텍스트박스 일부문자만 허용하기</a></li>
+      <li><a href="#title속성-이용한-툴팁-아닌-커스터마이징-툴팁-만들기">title속성 이용한 툴팁 아닌 커스터마이징 툴팁 만들기</a></li>
+      <li><a href="#정수-난수-발생기">정수 난수 발생기</a></li>
+      <li><a href="#날짜-계산하기">날짜 계산하기</a></li>
+      <li><a href="#변수또는-인자의-형이-배열인지-객체인지-validation-로직">변수(또는 인자)의 형이 배열인지 객체인지 validation 로직</a></li>
     </ul>
   </li>
   <li><a href="#php">PHP</a>
     <ul>
       <li><a href="#separator로-구별한-숫자들로-구성된-문자열-처리">separator로 구별한 숫자들로 구성된 문자열 처리</a></li>
+      <li><a href="#sha-256-해쉬암호화">SHA-256 해쉬암호화</a></li>
+      <li><a href="#요청쿼리에서-한글이-url인코딩-안되게-하기">요청쿼리에서 한글이 url인코딩 안되게 하기</a>
+        <ul>
+          <li><a href="#버전-6이상">버전 6이상</a></li>
+          <li><a href="#버전-5이하">버전 5이하</a></li>
+        </ul>
+      </li>
     </ul>
   </li>
   <li><a href="#mysql">MySQL</a></li>
@@ -377,6 +257,143 @@
 <span class="p">})</span>
 </code></pre></div></div>
 
+<p><br />
+<br /></p>
+
+<h3 id="title속성-이용한-툴팁-아닌-커스터마이징-툴팁-만들기">title속성 이용한 툴팁 아닌 커스터마이징 툴팁 만들기</h3>
+
+<ul>
+  <li>툴팁을 띄울 태그들에 클래스로 <code class="language-plaintext highlighter-rouge">toolTip</code>을 주고, 툴팁박스로 이용할 &lt;div&gt;요소를 &lt;body&gt;의 자식요소로 아무곳에나 만들고 id를 <code class="language-plaintext highlighter-rouge">tipBox</code>로 준다.</li>
+  <li>css에서 <code class="language-plaintext highlighter-rouge">#tipBox</code>의 속성에 <code class="language-plaintext highlighter-rouge">position: absolute; display: none;</code> 을 포함해 준다.</li>
+</ul>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">$</span><span class="p">(</span><span class="nb">window</span><span class="p">).</span><span class="nf">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">load</span><span class="dl">'</span><span class="p">,</span> <span class="nf">function </span><span class="p">()</span> <span class="p">{</span>
+    <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">.toolTip</span><span class="dl">'</span><span class="p">).</span><span class="nf">each</span><span class="p">(</span><span class="nf">function </span><span class="p">()</span> <span class="p">{</span>
+        <span class="nf">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nf">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">mouseover, mousemove</span><span class="dl">'</span><span class="p">,</span> <span class="nf">function </span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">event</span><span class="p">.</span><span class="nf">preventDefault</span><span class="p">();</span>
+            <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">body</span><span class="dl">'</span><span class="p">).</span><span class="nf">css</span><span class="p">(</span><span class="dl">'</span><span class="s1">cursor</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">help</span><span class="dl">'</span><span class="p">);</span>
+            <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#tipBox</span><span class="dl">'</span><span class="p">).</span><span class="nf">html</span><span class="p">(</span><span class="nf">$</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">).</span><span class="nf">attr</span><span class="p">(</span><span class="dl">'</span><span class="s1">desc</span><span class="dl">'</span><span class="p">));</span>
+            <span class="kd">var</span> <span class="nx">mousePosX</span> <span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">clientX</span> <span class="o">+</span> <span class="mi">20</span><span class="p">;</span>
+            <span class="nx">mousePosX</span> <span class="o">=</span> <span class="nx">mousePosX</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">px</span><span class="dl">'</span><span class="p">;</span>
+            <span class="kd">var</span> <span class="nx">mousePosY</span> <span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">clientY</span> <span class="o">+</span> <span class="mi">10</span><span class="p">;</span>
+            <span class="nx">mousePosY</span> <span class="o">=</span> <span class="nx">mousePosY</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">px</span><span class="dl">'</span><span class="p">;</span>
+            <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#tipBox</span><span class="dl">'</span><span class="p">).</span><span class="nf">css</span><span class="p">(</span><span class="dl">'</span><span class="s1">display</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">block</span><span class="dl">'</span><span class="p">).</span><span class="nf">css</span><span class="p">(</span><span class="dl">'</span><span class="s1">left</span><span class="dl">'</span><span class="p">,</span> <span class="nx">mousePosX</span><span class="p">).</span><span class="nf">css</span><span class="p">(</span><span class="dl">'</span><span class="s1">top</span><span class="dl">'</span><span class="p">,</span> <span class="nx">mousePosY</span><span class="p">);</span>
+        <span class="p">});</span>
+        <span class="nf">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nf">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">mouseout</span><span class="dl">'</span><span class="p">,</span> <span class="nf">function </span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">event</span><span class="p">.</span><span class="nf">preventDefault</span><span class="p">();</span>
+            <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">body</span><span class="dl">'</span><span class="p">).</span><span class="nf">css</span><span class="p">(</span><span class="dl">'</span><span class="s1">cursor</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">default</span><span class="dl">'</span><span class="p">);</span>
+            <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#tipBox</span><span class="dl">'</span><span class="p">).</span><span class="nf">css</span><span class="p">(</span><span class="dl">'</span><span class="s1">display</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">none</span><span class="dl">'</span><span class="p">);</span>
+        <span class="p">});</span>
+    <span class="p">});</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<p><br />
+<br /></p>
+
+<h3 id="정수-난수-발생기">정수 난수 발생기</h3>
+
+<p>최소값 최대값을 주고 그 사이에서 원하는 개수만큼 난수 만들어내기.
+min, max, times(input type=”number”)에 최소값, 최대값, 횟수를 입력한 후 추첨하기(#start)버튼을 누르면 times회만큼 정수 난수를 발생</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#start</span><span class="dl">'</span><span class="p">).</span><span class="nf">click</span><span class="p">(</span><span class="nf">function </span><span class="p">()</span> <span class="p">{</span>
+      <span class="kd">var</span> <span class="nx">min</span> <span class="o">=</span> <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#min</span><span class="dl">'</span><span class="p">).</span><span class="nf">val</span><span class="p">(),</span> <span class="nx">max</span> <span class="o">=</span> <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#max</span><span class="dl">'</span><span class="p">).</span><span class="nf">val</span><span class="p">(),</span> <span class="nx">times</span> <span class="o">=</span> <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#times</span><span class="dl">'</span><span class="p">).</span><span class="nf">val</span><span class="p">();</span>
+      <span class="kd">var</span> <span class="nx">console_text</span> <span class="o">=</span> <span class="dl">''</span><span class="p">;</span>
+      <span class="nf">for </span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">times</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span>
+      <span class="p">{</span>
+          <span class="kd">var</span> <span class="nx">rand_num</span> <span class="o">=</span> <span class="nf">parseInt</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nf">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nf">random</span><span class="p">()</span> <span class="o">*</span> <span class="p">(</span><span class="nx">max</span> <span class="o">-</span> <span class="nx">min</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)))</span> <span class="o">+</span> <span class="nf">parseInt</span><span class="p">(</span><span class="nx">min</span><span class="p">);</span>
+          <span class="nx">console_text</span> <span class="o">=</span> <span class="nx">console_text</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">  </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">rand_num</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#console</span><span class="dl">'</span><span class="p">).</span><span class="nf">text</span><span class="p">(</span><span class="nx">console_text</span><span class="p">);</span>
+  <span class="p">})</span>
+</code></pre></div></div>
+
+<p><br />
+<br /></p>
+
+<h3 id="날짜-계산하기">날짜 계산하기</h3>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">$</span><span class="p">(</span><span class="nf">function </span><span class="p">()</span> <span class="p">{</span>
+    
+    <span class="kd">var</span> <span class="nx">today</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Date</span><span class="p">();</span> <span class="c1">// 오늘 날짜 구하기</span>
+    <span class="kd">var</span> <span class="nx">baby_birth_year</span> <span class="o">=</span> <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">input[name="baby_birth_year"]</span><span class="dl">'</span><span class="p">).</span><span class="nf">val</span><span class="p">();</span> <span class="c1">// 기준 연도 입력받기</span>
+    <span class="kd">var</span> <span class="nx">baby_birth_month</span> <span class="o">=</span> <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">select</span><span class="dl">'</span><span class="p">).</span><span class="nf">val</span><span class="p">();</span> <span class="c1">// 기준 월 입력받기</span>
+    <span class="kd">var</span> <span class="nx">baby_birth_date</span> <span class="o">=</span> <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">input[name="baby_birth_date"]</span><span class="dl">'</span><span class="p">).</span><span class="nf">val</span><span class="p">();</span> <span class="c1">// 기준 일 입력받기</span>
+    <span class="kd">var</span> <span class="nx">baby_birthday</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Date</span><span class="p">(</span><span class="nx">baby_birth_year</span><span class="p">,</span> <span class="nx">baby_birth_month</span><span class="p">,</span> <span class="nx">baby_birth_date</span><span class="p">);</span> <span class="c1">// 기준 연월일 만들기</span>
+
+    <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">span</span><span class="dl">'</span><span class="p">).</span><span class="nf">text</span><span class="p">(</span><span class="nx">today</span><span class="p">.</span><span class="nf">getFullYear</span><span class="p">()</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">년 </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">today</span><span class="p">.</span><span class="nf">getMonth</span><span class="p">()</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">월 </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">today</span><span class="p">.</span><span class="nf">getDay</span><span class="p">()</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">일</span><span class="dl">"</span><span class="p">);</span> <span class="c1">// 오늘 날짜 한국식 표현</span>
+
+    <span class="c1">// 기준연월일부터 오늘까지 며칠 지났나 구하기</span>
+    <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">button[name="cal_days_from_birth_to_now"]</span><span class="dl">'</span><span class="p">).</span><span class="nf">click</span><span class="p">(</span><span class="nf">function </span><span class="p">()</span> 
+    <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">timeDiff</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nf">abs</span><span class="p">(</span><span class="nx">baby_birthday</span><span class="p">.</span><span class="nf">getTime</span><span class="p">()</span> <span class="o">-</span> <span class="nx">today</span><span class="p">.</span><span class="nf">getTime</span><span class="p">());</span> <span class="c1">// 마이크로초로 환산하여 차이 계산</span>
+        <span class="kd">var</span> <span class="nx">daysDiff</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nf">ceil</span><span class="p">(</span><span class="nx">timeDiff</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1000</span> <span class="o">*</span> <span class="mi">3600</span> <span class="o">*</span> <span class="mi">24</span><span class="p">));</span> <span class="c1">// 마이크로초값을 일단위로 환산</span>
+
+        <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">input[name="days_from_birth_to_now"]</span><span class="dl">'</span><span class="p">).</span><span class="nf">val</span><span class="p">(</span><span class="nx">daysDiff</span><span class="p">);</span>
+    <span class="p">});</span>
+    
+    <span class="c1">// 기준연월일부터 입력받은 날 만큼 지났을 때 연월일요일 구하기</span>
+    <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">button[name="cal_days_from_birth"]</span><span class="dl">'</span><span class="p">).</span><span class="nf">click</span><span class="p">(</span><span class="nf">function </span><span class="p">()</span> 
+    <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">days_diff</span> <span class="o">=</span> <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#input_days_from_birth</span><span class="dl">'</span><span class="p">).</span><span class="nf">val</span><span class="p">();</span> <span class="c1">// 며칠 후의 날짜를 구할 것인지 입력받기</span>
+        <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#output_days_from_birth</span><span class="dl">'</span><span class="p">).</span><span class="nf">val</span><span class="p">(</span><span class="nx">days_diff</span><span class="p">);</span>
+        <span class="kd">var</span> <span class="nx">target_date</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Date</span><span class="p">(</span><span class="nx">baby_birthday</span><span class="p">.</span><span class="nf">getTime</span><span class="p">()</span> <span class="o">+</span> <span class="p">(</span><span class="nx">days_diff</span> <span class="o">*</span> <span class="mi">24</span> <span class="o">*</span> <span class="mi">3600</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">));</span> <span class="c1">// 입력받은 일단위를 마이크로초로 환산 후 기준연월일의 마이크로초값과 더함</span>
+        <span class="c1">// 요일 구하기</span>
+        <span class="kd">var</span> <span class="nx">target_day</span> <span class="o">=</span> <span class="nx">target_date</span><span class="p">.</span><span class="nf">getDate</span><span class="p">();</span>
+        <span class="nf">switch </span><span class="p">(</span><span class="nx">target_day</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">case</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="nx">target_day</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">일요일</span><span class="dl">"</span><span class="p">;</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="nx">target_day</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">월요일</span><span class="dl">"</span><span class="p">;</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="mi">2</span><span class="p">:</span>
+                <span class="nx">target_day</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">화요일</span><span class="dl">"</span><span class="p">;</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="mi">3</span><span class="p">:</span>
+                <span class="nx">target_day</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">수요일</span><span class="dl">"</span><span class="p">;</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="mi">4</span><span class="p">:</span>
+                <span class="nx">target_day</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">목요일</span><span class="dl">"</span><span class="p">;</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="mi">5</span><span class="p">:</span>
+                <span class="nx">target_day</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">금요일</span><span class="dl">"</span><span class="p">;</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="k">case</span> <span class="mi">6</span><span class="p">:</span>
+                <span class="nx">target_day</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">토요일</span><span class="dl">"</span><span class="p">;</span>
+                <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">input[name="result_date"]</span><span class="dl">'</span><span class="p">).</span><span class="nf">val</span><span class="p">(</span><span class="nx">target_date</span><span class="p">.</span><span class="nf">getFullYear</span><span class="p">()</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">년 </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">target_date</span><span class="p">.</span><span class="nf">getMonth</span><span class="p">()</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">월 </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">target_date</span><span class="p">.</span><span class="nf">getDay</span><span class="p">()</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">일 </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">target_day</span><span class="p">);</span>
+    <span class="p">});</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<p><br />
+<br /></p>
+
+<h3 id="변수또는-인자의-형이-배열인지-객체인지-validation-로직">변수(또는 인자)의 형이 배열인지 객체인지 validation 로직</h3>
+
+<p>배열도 객체이므로 typeof 연산자를 쓰면 object로 뜨지만 객체와는 달리 length 프로퍼티를 갖는다.
+따라서 type이 object이면서 length 프로퍼티를 가지고 있으면 배열, 그렇지 않으면 객체이다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">objType</span><span class="p">(</span><span class="nx">test</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">if </span><span class="p">((</span><span class="nx">test</span> <span class="nx">instanceOf</span> <span class="nb">Array</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">test</span> <span class="o">==</span> <span class="dl">"</span><span class="s2">object</span><span class="dl">"</span> <span class="o">&amp;&amp;</span> <span class="dl">"</span><span class="s2">length</span><span class="dl">"</span> <span class="k">in</span> <span class="nx">test</span><span class="p">))</span>
+    <span class="p">{</span>
+      <span class="k">return</span> <span class="dl">"</span><span class="s2">배열</span><span class="dl">"</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="nf">if </span><span class="p">(</span><span class="k">typeof</span> <span class="nx">test</span> <span class="o">==</span> <span class="dl">"</span><span class="s2">object</span><span class="dl">"</span><span class="p">)</span>
+    <span class="p">{</span>
+      <span class="k">return</span> <span class="dl">"</span><span class="s2">객체</span><span class="dl">"</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">else</span>
+    <span class="p">{</span>
+      <span class="k">return</span> <span class="dl">"</span><span class="s2">배열이나 객체가 아님</span><span class="dl">"</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
 <p><br /></p>
 
 <hr />
@@ -402,16 +419,117 @@
   </li>
 </ul>
 
-<pre><code class="language-PHP">$example = "1000||2000||3000||테스트"
-$example_array = explode("||", $example); // 문자열을 쪼개서 배열로 담음
-foreach ($example_array as $key =&gt; $value)
-{
-    if (!($value &gt;= 0)) break; // 숫자가 아니면 루프문을 빠져나온다.
-    $example_array_separated[] = number_format(intval($value)); // 문자열인 $value를 정수형으로 바꾸고 천단위쉼표를 붙여서 $example_array_separated 배열에 담는다.
-}
-</code></pre>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$example</span> <span class="o">=</span> <span class="s2">"1000||2000||3000||테스트"</span>
+<span class="nv">$example_array</span> <span class="o">=</span> <span class="nb">explode</span><span class="p">(</span><span class="s2">"||"</span><span class="p">,</span> <span class="nv">$example</span><span class="p">);</span> <span class="c1">// 문자열을 쪼개서 배열로 담음</span>
+<span class="k">foreach</span> <span class="p">(</span><span class="nv">$example_array</span> <span class="k">as</span> <span class="nv">$key</span> <span class="o">=&gt;</span> <span class="nv">$value</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="nv">$value</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">))</span> <span class="k">break</span><span class="p">;</span> <span class="c1">// 숫자가 아니면 루프문을 빠져나온다.</span>
+    <span class="nv">$example_array_separated</span><span class="p">[]</span> <span class="o">=</span> <span class="nb">number_format</span><span class="p">(</span><span class="nb">intval</span><span class="p">(</span><span class="nv">$value</span><span class="p">));</span> <span class="c1">// 문자열인 $value를 정수형으로 바꾸고 천단위쉼표를 붙여서 $example_array_separated 배열에 담는다.</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>이제 <code class="language-plaintext highlighter-rouge">$example_array_separated</code> 배열 안에는 천단위 쉼표가 적용된 숫자 세 개가 담겨있다.</p>
+
+<p><br />
+<br /></p>
+
+<h3 id="sha-256-해쉬암호화">SHA-256 해쉬암호화</h3>
+
+<p>여기서는 카드결제시 요청을 보내는 Form 데이터로 예를 든다. 밑의 <code class="language-plaintext highlighter-rouge">hash()</code>와 <code class="language-plaintext highlighter-rouge">bin2hex()</code>는 IDE에서 출력되는 함수에 대한 설명을 붙여넣은 것.</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ediDate</span> <span class="o">=</span> <span class="nb">date</span><span class="p">(</span><span class="s1">'YmdHis'</span><span class="p">);</span>
+<span class="nv">$merchantID</span> <span class="o">=</span> <span class="s2">"nicepay00m"</span><span class="p">;</span>
+<span class="nv">$price</span> <span class="o">=</span> <span class="mi">1004</span><span class="p">;</span>
+<span class="nv">$merchanKey</span> <span class="o">=</span> <span class="s2">"EYzu8jGGMfqaDEp76gSckuvnaHHu+bC4opsSN6lHv3b2lurNYkVXrZ7Z1AoqQnXI3eLuaUFyoRNC6FkrzVjceg=="</span><span class="p">;</span>
+
+<span class="nv">$hashString</span> <span class="o">=</span> <span class="nb">bin2hex</span><span class="p">(</span><span class="nb">hash</span><span class="p">(</span><span class="s1">'sha256'</span><span class="p">,</span> <span class="nv">$ediDate</span><span class="mf">.</span><span class="nv">$merchantID</span><span class="mf">.</span><span class="nv">$price</span><span class="mf">.</span><span class="nv">$merchantKey</span><span class="p">,</span> <span class="kc">true</span><span class="p">));</span>
+</code></pre></div></div>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">function</span> <span class="n">hash</span><span class="p">(</span>
+    <span class="kt">string</span> <span class="nv">$algo</span><span class="p">,</span>
+    <span class="kt">string</span> <span class="nv">$data</span><span class="p">,</span>
+    <span class="kt">bool</span><span class="o">|</span><span class="kc">null</span> <span class="nv">$binary</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="kt">array</span><span class="o">|</span><span class="kc">null</span> <span class="nv">$options</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="p">):</span> <span class="kt">string</span>
+<span class="nc">Generate</span> <span class="n">a</span> <span class="n">hash</span> <span class="nf">value</span> <span class="p">(</span><span class="n">message</span> <span class="n">digest</span><span class="p">)</span>
+
+<span class="n">https</span><span class="o">://</span><span class="n">www</span><span class="mf">.</span><span class="n">php</span><span class="mf">.</span><span class="n">net</span><span class="o">/</span><span class="n">manual</span><span class="o">/</span><span class="k">function</span><span class="mf">.</span><span class="n">hash</span><span class="mf">.</span><span class="n">php</span>
+
+<span class="o">@</span><span class="n">param</span> <span class="nv">$algo</span><span class="o">:</span> <span class="nc">Name</span> <span class="n">of</span> <span class="n">selected</span> <span class="n">hashing</span> <span class="nf">algorithm</span> <span class="p">(</span><span class="n">i</span><span class="mf">.</span><span class="n">e</span><span class="mf">.</span> <span class="s2">"md5"</span><span class="p">,</span> <span class="s2">"sha256"</span><span class="p">,</span> <span class="s2">"haval160,4"</span><span class="p">,</span> <span class="n">etc</span><span class="mf">..</span><span class="p">)</span><span class="mf">.</span> <span class="k">For</span> <span class="n">a</span> <span class="k">list</span> <span class="n">of</span> <span class="n">supported</span> <span class="n">algorithms</span> <span class="n">see</span> <span class="nb">hash_algos</span><span class="p">()</span><span class="mf">.</span>
+
+<span class="o">@</span><span class="n">param</span> <span class="nv">$data</span><span class="o">:</span> <span class="nc">Message</span> <span class="n">to</span> <span class="n">be</span> <span class="n">hashed</span><span class="mf">.</span>
+
+<span class="o">@</span><span class="n">param</span> <span class="nv">$binary</span><span class="o">:</span> <span class="nc">When</span> <span class="n">set</span> <span class="n">to</span> <span class="kc">true</span> <span class="p">,</span> <span class="kt">outputs</span> <span class="n">raw</span> <span class="n">binary</span> <span class="n">data</span><span class="mf">.</span> <span class="kc">false</span> <span class="n">outputs</span> <span class="n">lowercase</span> <span class="n">hexits</span><span class="mf">.</span>
+
+<span class="o">@</span><span class="n">param</span> <span class="nv">$options</span><span class="o">:</span> <span class="nc">An</span> <span class="k">array</span> <span class="n">of</span> <span class="n">options</span> <span class="k">for</span> <span class="n">the</span> <span class="n">various</span> <span class="n">hashing</span> <span class="n">algorithms</span><span class="mf">.</span> <span class="nc">Currently</span><span class="p">,</span> <span class="kt">only</span> <span class="n">the</span> <span class="s2">"seed"</span> <span class="n">parameter</span> <span class="n">is</span> <span class="n">supported</span> <span class="n">by</span> <span class="n">the</span> <span class="nc">MurmurHash</span> <span class="n">variants</span><span class="mf">.</span>
+
+<span class="o">@</span><span class="k">return</span> <span class="nc">Returns</span> <span class="n">a</span> <span class="n">string</span> <span class="n">containing</span> <span class="n">the</span> <span class="n">calculated</span> <span class="n">message</span> <span class="n">digest</span> <span class="k">as</span> <span class="n">lowercase</span> <span class="n">hexits</span> <span class="n">unless</span> <span class="n">binary</span> <span class="n">is</span> <span class="n">set</span> <span class="n">to</span> <span class="kc">true</span> <span class="n">in</span> <span class="n">which</span> <span class="k">case</span> <span class="n">the</span> <span class="n">raw</span> <span class="n">binary</span> <span class="n">representation</span> <span class="n">of</span> <span class="n">the</span> <span class="n">message</span> <span class="n">digest</span> <span class="n">is</span> <span class="n">returned</span><span class="mf">.</span>
+</code></pre></div></div>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">function</span> <span class="n">bin2hex</span><span class="p">(</span><span class="kt">string</span> <span class="nv">$string</span><span class="p">):</span> <span class="kt">string</span>
+<span class="nc">Convert</span> <span class="n">binary</span> <span class="n">data</span> <span class="n">into</span> <span class="n">hexadecimal</span> <span class="n">representation</span>
+
+<span class="nc">Returns</span> <span class="n">an</span> <span class="no">ASCII</span> <span class="n">string</span> <span class="n">containing</span> <span class="n">the</span> <span class="n">hexadecimal</span> <span class="n">representation</span> <span class="n">of</span> <span class="n">string</span><span class="mf">.</span> <span class="nc">The</span> <span class="n">conversion</span> <span class="n">is</span> <span class="n">done</span> <span class="n">byte</span><span class="o">-</span><span class="n">wise</span> <span class="n">with</span> <span class="n">the</span> <span class="n">high</span><span class="o">-</span><span class="n">nibble</span> <span class="n">first</span><span class="mf">.</span>
+
+<span class="n">https</span><span class="o">://</span><span class="n">www</span><span class="mf">.</span><span class="n">php</span><span class="mf">.</span><span class="n">net</span><span class="o">/</span><span class="n">manual</span><span class="o">/</span><span class="k">function</span><span class="mf">.</span><span class="n">bin2hex</span><span class="mf">.</span><span class="n">php</span>
+
+<span class="o">@</span><span class="n">param</span> <span class="nv">$string</span><span class="o">:</span> <span class="nc">A</span> <span class="n">string</span><span class="mf">.</span>
+
+<span class="o">@</span><span class="k">return</span> <span class="nc">Returns</span> <span class="n">the</span> <span class="n">hexadecimal</span> <span class="n">representation</span> <span class="n">of</span> <span class="n">the</span> <span class="n">given</span> <span class="n">string</span><span class="mf">.</span>
+</code></pre></div></div>
+
+<p><br />
+<br /></p>
+
+<h3 id="요청쿼리에서-한글이-url인코딩-안되게-하기">요청쿼리에서 한글이 url인코딩 안되게 하기</h3>
+
+<p>요즘 보통 <code class="language-plaintext highlighter-rouge">json_encode()</code> 함수를 이용하여 json 형식으로 많이 송수신하는데, 파라메터 중에 한글로 된 데이터가 있다면 한글을 멀티바이트 문자로 인식하므로 <code class="language-plaintext highlighter-rouge">json_encode()</code>를 거치면서 (보통) <code class="language-plaintext highlighter-rouge">\uXXXX</code> 형식으로 인코딩된다. 그럼 요청을 수신하는 측에서는 디코딩을 해야하는 불편이 있어 인코딩이 안되게 해달라고 요청하기도 한다.</p>
+
+<h4 id="버전-6이상">버전 6이상</h4>
+
+<p>PHP의 버전이 6이상이라면 아주 간단하게 해결이 가능하다. <code class="language-plaintext highlighter-rouge">json_encode()</code> 함수의 파라메터가 추가되면서 이를 해결할 수 있는 옵션을 부여할 수 있게 되었다.</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$post_data</span> <span class="o">=</span> <span class="nb">json_encode</span><span class="p">(</span><span class="nv">$post_data</span><span class="p">,</span> <span class="no">JSON_UNESCAPED_UNICODE</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>위와 같이 두 번째 파라메터로 옵션을 추가해주면 한글을 인코딩하지 않은 상태 그대로 전송이 가능하다. 아래는 두 번째 파라메터에 들어가는 옵션에 대한 설명.</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">json_encode</span><span class="p">(</span><span class="n">mixed</span> <span class="nv">$value</span><span class="p">,</span> <span class="n">int</span><span class="o">|</span><span class="kc">null</span> <span class="nv">$flags</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">int</span><span class="o">|</span><span class="kc">null</span> <span class="nv">$depth</span> <span class="o">=</span> <span class="mi">512</span><span class="p">)</span><span class="o">:</span> <span class="n">bool</span><span class="o">|</span><span class="n">string</span>
+<span class="nv">$flags</span><span class="o">:</span> <span class="nc">Bitmask</span> <span class="n">consisting</span> <span class="n">of</span> <span class="no">JSON_FORCE_OBJECT</span> <span class="p">,</span> <span class="no">JSON_HEX_QUOT</span> <span class="p">,</span> <span class="no">JSON_HEX_TAG</span> <span class="p">,</span> <span class="no">JSON_HEX_AMP</span> <span class="p">,</span> <span class="no">JSON_HEX_APOS</span> <span class="p">,</span> <span class="no">JSON_INVALID_UTF8_IGNORE</span> <span class="p">,</span> <span class="no">JSON_INVALID_UTF8_SUBSTITUTE</span> <span class="p">,</span> <span class="no">JSON_NUMERIC_CHECK</span> <span class="p">,</span> <span class="no">JSON_PARTIAL_OUTPUT_ON_ERROR</span> <span class="p">,</span> <span class="no">JSON_PRESERVE_ZERO_FRACTION</span> <span class="p">,</span> <span class="no">JSON_PRETTY_PRINT</span> <span class="p">,</span> <span class="no">JSON_UNESCAPED_LINE_TERMINATORS</span> <span class="p">,</span> <span class="no">JSON_UNESCAPED_SLASHES</span> <span class="p">,</span> <span class="no">JSON_UNESCAPED_UNICODE</span> <span class="p">,</span> <span class="no">JSON_THROW_ON_ERROR</span> <span class="mf">.</span> <span class="nc">The</span> <span class="n">behaviour</span> <span class="n">of</span> <span class="n">these</span> <span class="n">constants</span> <span class="n">is</span> <span class="n">described</span> <span class="n">on</span> <span class="n">the</span> <span class="no">JSON</span> <span class="n">constants</span> <span class="n">page</span><span class="mf">.</span>
+
+
+<span class="nc">Returns</span> <span class="n">the</span> <span class="no">JSON</span> <span class="n">representation</span> <span class="n">of</span> <span class="n">a</span> <span class="n">value</span>
+<span class="nc">Returns</span> <span class="n">a</span> <span class="n">string</span> <span class="n">containing</span> <span class="n">the</span> <span class="no">JSON</span> <span class="n">representation</span> <span class="n">of</span> <span class="n">the</span> <span class="n">supplied</span> <span class="sb">`value`</span><span class="mf">.</span> <span class="k">If</span> <span class="n">the</span> <span class="n">parameter</span> <span class="n">is</span> <span class="n">an</span> <span class="sb">`array`</span> <span class="k">or</span> <span class="sb">`object`</span><span class="p">,</span> <span class="n">it</span> <span class="n">will</span> <span class="n">be</span> <span class="n">serialized</span> <span class="n">recursively</span><span class="mf">.</span>
+</code></pre></div></div>
+
+<h4 id="버전-5이하">버전 5이하</h4>
+
+<p>버전이 5이하이면 <code class="language-plaintext highlighter-rouge">json_encode()</code> 함수에 두 번째 파라메터로 옵션을 지정할 수 없고 옵션을 줘서 해 보면 오류가 발생한다. 이 때에는 아래의 함수를 추가하여 <code class="language-plaintext highlighter-rouge">json_encode()</code> 함수를 이 함수의 파라메터로 준다.</p>
+
+<p><strong><em>아래 정규표현식에서 <code class="language-plaintext highlighter-rouge">/e</code>수정자를 볼 수 있는데 이는 7미만의 버전에서만 사용가능하며 7버전부터는 <code class="language-plaintext highlighter-rouge">preg_replace_callback()</code> 함수를 이용하여 <code class="language-plaintext highlighter-rouge">/e</code> 수정자없이도 콜백함수를 호출할 수 있다.</em></strong></p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">function</span> <span class="n">han</span><span class="p">(</span><span class="nv">$s</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">return</span> <span class="nb">reset</span><span class="p">(</span><span class="nb">json_decode</span><span class="p">(</span><span class="s1">'{"s":"'</span> <span class="mf">.</span> <span class="nv">$s</span> <span class="mf">.</span> <span class="s1">'"}'</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="k">function</span> <span class="n">to_han</span><span class="p">(</span><span class="nv">$str</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">return</span> <span class="nb">preg_replace</span><span class="p">(</span><span class="s1">'/(\\\u[a-f0-9]+)+/e'</span><span class="p">,</span> <span class="s1">'han("$0")'</span><span class="p">,</span> <span class="nv">$str</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nv">$post_data</span> <span class="o">=</span> <span class="nf">to_han</span><span class="p">(</span><span class="nb">json_encode</span><span class="p">(</span><span class="nv">$post_data</span><span class="p">));</span>
+</code></pre></div></div>
+
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">$post_data</code> 가 <code class="language-plaintext highlighter-rouge">json_encode()</code> 를 거쳐서 하나의 json문자열로 인코딩되는데 이 때 물론 한글은 유니코드 방식으로 자동으로 인코딩된다.</li>
+  <li>1번에서 반환된 json문자열이 <code class="language-plaintext highlighter-rouge">to_han()</code> 함수를 거치는데 이 함수는 주어진 문자열에서 유니코드 이스케이프 시퀀스(보통 \uXXXX 형식)를 추출한 결과를 <code class="language-plaintext highlighter-rouge">han()</code> 의 인자로 주면서 호출한다. 즉 유니코드 이스케이프 시퀀스를 만날 때마다 <code class="language-plaintext highlighter-rouge">han()</code> 함수를 호출한 후 반환값으로 치환한다.</li>
+  <li><code class="language-plaintext highlighter-rouge">han()</code> 함수에서는 유니코드 이스케이프 시퀀스를 디코딩하여 주어진 방식의 문자열로 만들어준다.</li>
+  <li>따라서 <code class="language-plaintext highlighter-rouge">to_han()</code> 함수를 거치고 나면 유니코드 이스케이프 시퀀스가 모두 한글로 바뀐 json문자열이 반환된다.</li>
+</ol>
+
+<p><br />
+<br /></p>
 
 <p><br /></p>
 
@@ -419,7 +537,7 @@ foreach ($example_array as $key =&gt; $value)
 
 <p><br /></p>
 
-<h2 id="mysql">MySQL</h2>]]></content><author><name>Victor Lo</name></author><category term="myjob" /><category term="code" /><category term="coding" /><category term="example" /><summary type="html"><![CDATA[유용한 예제코드들]]></summary></entry><entry><title type="html">How to get my SSH-key for Git</title><link href="http://localhost:4000/myjob/2023/05/12/ssh-key-generation.html" rel="alternate" type="text/html" title="How to get my SSH-key for Git" /><published>2023-05-12T00:00:00+09:00</published><updated>2023-05-12T00:00:00+09:00</updated><id>http://localhost:4000/myjob/2023/05/12/ssh-key-generation</id><content type="html" xml:base="http://localhost:4000/myjob/2023/05/12/ssh-key-generation.html"><![CDATA[<p>Github 또는 Gitlab에서 사용할 public SSH-key 만들고 등록하기 <!--more--></p>
+<h2 id="mysql">MySQL</h2>]]></content><author><name>Victor Lo</name></author><category term="coding" /><category term="code" /><category term="coding" /><category term="example" /><summary type="html"><![CDATA[유용한 예제코드들]]></summary></entry><entry><title type="html">How to get my SSH-key for Git</title><link href="http://localhost:4000/git/2023/05/12/ssh-key-generation.html" rel="alternate" type="text/html" title="How to get my SSH-key for Git" /><published>2023-05-12T00:00:00+09:00</published><updated>2023-05-12T00:00:00+09:00</updated><id>http://localhost:4000/git/2023/05/12/ssh-key-generation</id><content type="html" xml:base="http://localhost:4000/git/2023/05/12/ssh-key-generation.html"><![CDATA[<p>Github 또는 Gitlab에서 사용할 public SSH-key 만들고 등록하기 <!--more--></p>
 
 <p><br /></p>
 
@@ -469,7 +587,7 @@ foreach ($example_array as $key =&gt; $value)
 
 <p><img src="/assets/img/feature-img/2023-05-12-ssh-key-generation-5.png" alt="" /></p>
 
-<p>성공했다면 위와 같은 화면이 보이고, 더 이상 다운로드하려면 SSH-key를 등록하라는 메세지가 뜨지 않을 것이다.</p>]]></content><author><name>Victor Lo</name></author><category term="myjob" /><category term="git" /><category term="sshkey" /><category term="ssh-key" /><category term="keygen" /><summary type="html"><![CDATA[Github 또는 Gitlab에서 사용할 public SSH-key 만들고 등록하기]]></summary></entry><entry><title type="html">XAMPP - How to get desired domain on my server</title><link href="http://localhost:4000/myjob/2023/05/04/local-domain-setting.html" rel="alternate" type="text/html" title="XAMPP - How to get desired domain on my server" /><published>2023-05-04T00:00:00+09:00</published><updated>2023-05-04T00:00:00+09:00</updated><id>http://localhost:4000/myjob/2023/05/04/local-domain-setting</id><content type="html" xml:base="http://localhost:4000/myjob/2023/05/04/local-domain-setting.html"><![CDATA[<p>XAMPP 사용시 자신의 웹서버 또는 로컬 서버에서 특정 IP에 원하는 도메인 부여하기 <!--more--></p>
+<p>성공했다면 위와 같은 화면이 보이고, 더 이상 다운로드하려면 SSH-key를 등록하라는 메세지가 뜨지 않을 것이다.</p>]]></content><author><name>Victor Lo</name></author><category term="git" /><category term="git" /><category term="sshkey" /><category term="ssh-key" /><category term="keygen" /><summary type="html"><![CDATA[Github 또는 Gitlab에서 사용할 public SSH-key 만들고 등록하기]]></summary></entry><entry><title type="html">XAMPP - How to get desired domain on my server</title><link href="http://localhost:4000/server/management/2023/05/04/local-domain-setting.html" rel="alternate" type="text/html" title="XAMPP - How to get desired domain on my server" /><published>2023-05-04T00:00:00+09:00</published><updated>2023-05-04T00:00:00+09:00</updated><id>http://localhost:4000/server/management/2023/05/04/local-domain-setting</id><content type="html" xml:base="http://localhost:4000/server/management/2023/05/04/local-domain-setting.html"><![CDATA[<p>XAMPP 사용시 자신의 웹서버 또는 로컬 서버에서 특정 IP에 원하는 도메인 부여하기 <!--more--></p>
 
 <p><br /></p>
 
@@ -502,7 +620,7 @@ foreach ($example_array as $key =&gt; $value)
 
 <ul>
   <li>서버를 재시작한다.</li>
-</ul>]]></content><author><name>Victor Lo</name></author><category term="myjob" /><category term="xampp" /><category term="vhost" /><category term="hosts" /><summary type="html"><![CDATA[XAMPP 사용시 자신의 웹서버 또는 로컬 서버에서 특정 IP에 원하는 도메인 부여하기]]></summary></entry><entry><title type="html">Coding Tips &amp;amp; Knowhow</title><link href="http://localhost:4000/code/2023/04/13/coding-tips.html" rel="alternate" type="text/html" title="Coding Tips &amp;amp; Knowhow" /><published>2023-04-13T00:00:00+09:00</published><updated>2023-04-13T00:00:00+09:00</updated><id>http://localhost:4000/code/2023/04/13/coding-tips</id><content type="html" xml:base="http://localhost:4000/code/2023/04/13/coding-tips.html"><![CDATA[<p>초보/신입 개발자가 코딩할 때 사소하지만 간과하기 쉬운 내용 정리 <!--more--></p>
+</ul>]]></content><author><name>Victor Lo</name></author><category term="server" /><category term="management" /><category term="xampp" /><category term="vhost" /><category term="hosts" /><summary type="html"><![CDATA[XAMPP 사용시 자신의 웹서버 또는 로컬 서버에서 특정 IP에 원하는 도메인 부여하기]]></summary></entry><entry><title type="html">Coding Tips &amp;amp; Know-how</title><link href="http://localhost:4000/coding/2023/04/13/coding-tips.html" rel="alternate" type="text/html" title="Coding Tips &amp;amp; Know-how" /><published>2023-04-13T00:00:00+09:00</published><updated>2023-04-13T00:00:00+09:00</updated><id>http://localhost:4000/coding/2023/04/13/coding-tips</id><content type="html" xml:base="http://localhost:4000/coding/2023/04/13/coding-tips.html"><![CDATA[<p>초보/신입 개발자가 코딩할 때 사소하지만 간과하기 쉬운 내용 정리 <!--more--></p>
 
 <p><strong><em>목차</em></strong></p>
 
@@ -588,7 +706,7 @@ foreach ($example_array as $key =&gt; $value)
 <span class="p">);</span>
 </code></pre></div></div>
 
-<p>iteration을 할 때 <code class="language-plaintext highlighter-rouge">for</code> 또는 <code class="language-plaintext highlighter-rouge">foreach</code>를 사용하는데, <code class="language-plaintext highlighter-rouge">for</code>는 약간 귀찮지만 좀 더 직관적이어서 이해하기 쉽지만 <code class="language-plaintext highlighter-rouge">foreach</code>는 살짝 <strong>헷갈릴</strong> 때가 있다.</p>
+<p>iteration을 할 때 <code class="language-plaintext highlighter-rouge">for</code> 또는 <code class="language-plaintext highlighter-rouge">foreach</code>를 사용하는데, <code class="language-plaintext highlighter-rouge">for</code>는 약간 귀찮지만 좀 더 직관적이어서 이해하기 쉽지만 <code class="language-plaintext highlighter-rouge">foreach</code>는 살짝 헷갈릴 때가 있다.</p>
 
 <p>예를 들어, 위 연관 배열에서 값에 해당하는 내용들만 뽑아 새로운 일차원 배열을 만든다고 하면, <code class="language-plaintext highlighter-rouge">for</code>문을 이용하면 어렵지 않다.</p>
 
@@ -617,7 +735,7 @@ foreach ($example_array as $key =&gt; $value)
 <p>요즘 개발할 때 한글 인코딩을 거의 “UTF-8”로 하는데 이 때 한글은 2바이트가 아니라 3바이트가 된다. 한글이 깨지는 대부분의 원인이 여기에 있다. 한글을 문자열처리 함수에 사용해야 할 때는 mb_string 함수들을 사용하자. 물론 mb_string 라이브러리를 설치해야 한다.</p>
 
 <blockquote>
-  <p>예: substring(“안녕하세요”, 0, 2) 가 아니라 mb_substring(“안녕하세요”, 0, 2)</p>
+  <p>예: substr(“안녕하세요”, 0, 2) 가 아니라 mb_substr(“안녕하세요”, 0, 2)</p>
 </blockquote>
 
 <p><br /></p>
@@ -696,7 +814,7 @@ foreach ($example_array as $key =&gt; $value)
   <li>서버에 접속하여 터미널을 실행</li>
   <li><code class="language-plaintext highlighter-rouge">systemctl restart httpd</code></li>
   <li>몇 초 정도 기다리면 다시 작동한다.</li>
-</ol>]]></content><author><name>Victor Lo</name></author><category term="code" /><category term="javascript" /><category term="php" /><category term="mysql" /><summary type="html"><![CDATA[초보/신입 개발자가 코딩할 때 사소하지만 간과하기 쉬운 내용 정리]]></summary></entry><entry><title type="html">HTTP 터널링</title><link href="http://localhost:4000/database/2023/04/07/HTTP-tunneling.html" rel="alternate" type="text/html" title="HTTP 터널링" /><published>2023-04-07T00:00:00+09:00</published><updated>2023-04-07T00:00:00+09:00</updated><id>http://localhost:4000/database/2023/04/07/HTTP-tunneling</id><content type="html" xml:base="http://localhost:4000/database/2023/04/07/HTTP-tunneling.html"><![CDATA[<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SET</span> <span class="o">@</span><span class="n">var</span> <span class="o">=</span> <span class="mi">281</span><span class="p">;</span>
+</ol>]]></content><author><name>Victor Lo</name></author><category term="coding" /><category term="javascript" /><category term="php" /><category term="mysql" /><summary type="html"><![CDATA[초보/신입 개발자가 코딩할 때 사소하지만 간과하기 쉬운 내용 정리]]></summary></entry><entry><title type="html">HTTP 터널링</title><link href="http://localhost:4000/database/2023/04/07/HTTP-tunneling.html" rel="alternate" type="text/html" title="HTTP 터널링" /><published>2023-04-07T00:00:00+09:00</published><updated>2023-04-07T00:00:00+09:00</updated><id>http://localhost:4000/database/2023/04/07/HTTP-tunneling</id><content type="html" xml:base="http://localhost:4000/database/2023/04/07/HTTP-tunneling.html"><![CDATA[<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SET</span> <span class="o">@</span><span class="n">var</span> <span class="o">=</span> <span class="mi">281</span><span class="p">;</span>
 
 <span class="k">SELECT</span> <span class="o">@</span><span class="n">var</span><span class="p">;</span>
 </code></pre></div></div>

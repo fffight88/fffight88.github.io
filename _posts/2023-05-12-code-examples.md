@@ -3,7 +3,7 @@ layout: post
 title: "Code Examples"
 author: Victor Lo
 tags: [code, coding, example]
-categories: myjob
+categories: coding
 color: lightgray
 published: true
 excerpt_separator: <!--more-->

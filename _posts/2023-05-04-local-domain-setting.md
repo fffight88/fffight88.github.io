@@ -3,7 +3,7 @@ layout: post
 title: "XAMPP - How to get desired domain on my server"
 author: Victor Lo
 tags: [xampp, vhost, hosts]
-categories: myjob
+categories: server management
 color: red
 published: true
 excerpt_separator: <!--more-->

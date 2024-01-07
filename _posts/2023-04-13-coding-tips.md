@@ -3,7 +3,7 @@ layout: post
 title: "Coding Tips & Know-how"
 author: Victor Lo
 tags: [javascript, php, mysql]
-categories: code
+categories: coding
 color: lightblue
 excerpt_separator: <!--more-->
 ---

@@ -3,7 +3,7 @@ layout: post
 title: "How to get my SSH-key for Git"
 author: Victor Lo
 tags: [git, sshkey, ssh-key, keygen]
-categories: myjob
+categories: git
 color: red
 published: true
 excerpt_separator: <!--more-->
