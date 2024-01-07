@@ -40,7 +40,7 @@ excerpt_separator: <!--more-->
   5. 아무래도 세션이 문제인 것 같은데? (DevTool에서 `303 see other` 스테이터스가 뜰 때 요청시의 세션값과 응답시의 세션값이 달라지고(즉, 세션값이 다른 새로운 세션이 생성), 두 세션의 데이터를 비교해보니 데이터가 다른 것을 발견) 세션 문제가 맞는 것 같아! 어떻게 세션을 유지시키지?
 <br>
 
-![DevTool의 쿠키 탭](C:\coding\workspace\fffight88.github.io\assets\img\feature-img\2023-12-21-keep-cookies-during-connecting-to-other-cite_1.png)
+![DevTool의 쿠키 탭](/assets/img/feature-img/2023-12-21-keep-cookies-during-connecting-to-other-cite_1.png)
 <br>
 
 위 그림에서, 현재는 설정을 바꿔주었기에 `Secure`에 표시가 되어있고 `SameSite`에 `None` 이라는 값이 보이지만, 바꿔주기 전에는 표시도 되어있지 않았고 None이라는 값도 뜨지 않았다. 타 사이트간의 페이지이동시 쿠키데이터를 유지하려면 `SameSite`에 `None`값을 줘서 타 사이트간 이동시에도 쿠키데이터를 유지해야한다고 설정값을 줘야 하고, `SameSite=None` 옵션을 사용하려면 `Secure=True` 로 설정해줘야 한다고 한다.
