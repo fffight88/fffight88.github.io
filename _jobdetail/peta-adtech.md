@@ -21,7 +21,7 @@ published: true
    - 타라의 service용 DB와는 별개의 페타애드텍 전용 db를 생성하여, 현재 작업중인 명함 뿐 아니라 다른 주문들도 앞으로 이 DB를 이용할 예정
    - DB명: peta_adtech
    - 페타측의 crontab 작동 시간은 ~~17시 30분~~ 정오, 17시로 얘기됨.
-2. 매일 ~~17시40분~~ ~~12시10분~~ 11시50분, ~~17시10분~~ 16시 50분 crontab으로 중간테이블에서 정보를 가져와 `b2b_icm` 데이터베이스의 테이블에 insert하는데 이 때
+2. 매일 ~~17시40분~~ ~~12시10분~~ 11시50분, ~~17시10분~~ 16시50분 crontab으로 중간테이블에서 정보를 가져와 `b2b_icm` 데이터베이스의 테이블에 insert하는데 이 때
    - 각 주문의 order_num 생성, 업데이트
    - 묶음주문의 t_serial 생성, 업데이트
    - `progress` "주문접수"로 업데이트
@@ -57,7 +57,9 @@ published: true
 1. 기한: 2023년 9월 중순 ~ 말, 2024년 1월 중순(양사의 업무 사정으로 개발스케줄이 연기됨)
 2. 에러로 인해 데이터전송이 안되거나 DB기록에 실패할 경우 의사소통 및 사후처리를 원활하게 하기 위해 에러발생시 처리로직을 상세하게 개발할 생각이었으나
    이미 연기된 개발스케줄에서 더 시간을 소요하기 어려워 최소한의 기능만을 개발함.
-
+3. 2월초 실제 주문데이터로 테스트하면서 생산팀 피드백 적용 및 오류 수정작업.
+<br>
+<br>
 
 ## 페타애드텍용 DB 정보
 
@@ -132,9 +134,24 @@ try
 {
 
 }
-catch (PDOException $e)
+catch (PDOException $e) // PDO 실행 중 에러발생시 특정테이블에 에러내용 기록
 {
-   echo "Error: " . $e->getMessage() . "<br>";
-   die();
+   $host = 'example_host';
+   $database = 'example_database';
+   $user_name = 'example_username';
+   $user_password = 'example_password';
+   $pdo = new PDO("mysql:host=$host; dbname=$database", $user_name, $user_password);
+   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // 에러 모드 설정
+        
+        $insert_query = "INSERT INTO `example_table`
+                        SET
+                            example_column1 = '".$example_key1."',  
+                            example_column2 = '".$example_key2."',  
+                            example_column3 = '".mysql_real_escape_string(date("ymd His")." ".$e->getMessage())."',
+                            example_column4 = '".$e->getTraceAsString()."'
+        ";
+        $insert_stmt = $pdo->prepare($insert_query);
+        $insert_stmt->execute();
+        unset($insert_query, $insert_stmt);
 }
 ```
