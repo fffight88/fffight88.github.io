@@ -49,7 +49,7 @@ published: true
 
 ## 2023/8/30 전략영업팀 
 
-* 페타 주문정보 insert 시각 및 시행횟수 변경: 기존에는 매일 17시 30분 1회였으나, 매일 정오, 17시 2회로 변경
+* 페타 주문정보 insert 시각 및 시행횟수 변경: 기존에는 매일 17시 30분 1회였으나, 매일 ~~정오~~ 11시50분, ~~17시~~ 16시50분 2회로 변경
 <br>
 <br>
 
@@ -102,9 +102,11 @@ $order_num = "PA".$order_num_peta;
 ### 주문파일 저장폴더 지정 로직
 
 ```php
-$namecard_files_folder_path = $_SERVER['DOCUMENT_ROOT'] . "templ_storage/tpa001/" . date("ymd") . "/" . $mem_id . "_" . $t_serial;
+$namecard_files_folder_path = "/home/podtest/templ_storage/tpa001/" . date("ymd") . "/" . $mem_id . "_" . $t_serial;
 if (file_exists($namecard_files_folder_path) == false) mkdir($namecard_files_folder_path, 0777, true);
 ```
+처음에는 `$namecard_files_folder_path` 의 `/home/podtest` 이 부분을 `$_SERVER['document_root']` 로 줬는데 이렇게 하면 폴더를 생성하지 못한다. [https://stackoverflow.com/questions/9128488/cron-job-server-issue](https://stackoverflow.com/questions/9128488/cron-job-server-issue) 참조
+
 
 <br>
 <br>
