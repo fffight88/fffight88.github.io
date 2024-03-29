@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-02-15T09:19:16+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Newbie’s DoorClosing</title><subtitle>Newbie&apos;s DoorClosing</subtitle><entry><title type="html">cron에서 mkdir()이 실행되지 않을 때</title><link href="http://localhost:4000/coding/2024/02/14/using-mkdir-on-crond.html" rel="alternate" type="text/html" title="cron에서 mkdir()이 실행되지 않을 때" /><published>2024-02-14T00:00:00+09:00</published><updated>2024-02-14T00:00:00+09:00</updated><id>http://localhost:4000/coding/2024/02/14/using-mkdir-on-crond</id><content type="html" xml:base="http://localhost:4000/coding/2024/02/14/using-mkdir-on-crond.html">&lt;p&gt;cron에서 mkdir()이 실행되지 않을 때&lt;!--more--&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-02-16T14:38:13+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Newbie’s DoorClosing</title><subtitle>Newbie&apos;s DoorClosing</subtitle><entry><title type="html">cron에서 mkdir()이 실행되지 않을 때</title><link href="http://localhost:4000/coding/2024/02/14/using-mkdir-on-crond.html" rel="alternate" type="text/html" title="cron에서 mkdir()이 실행되지 않을 때" /><published>2024-02-14T00:00:00+09:00</published><updated>2024-02-14T00:00:00+09:00</updated><id>http://localhost:4000/coding/2024/02/14/using-mkdir-on-crond</id><content type="html" xml:base="http://localhost:4000/coding/2024/02/14/using-mkdir-on-crond.html">&lt;p&gt;cron에서 mkdir()이 실행되지 않을 때&lt;!--more--&gt;
 &lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -10,15 +10,30 @@
 &lt;p&gt;(결론만 보실 분은 &lt;a href=&quot;#결론&quot;&gt;결론&lt;/a&gt;으로 이동)&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;개발환경: 웹, PHP5.6, MySQL, AWS(Apache2.4)
+  &lt;li&gt;개발환경: 웹, PHP5.6, MySQL, AWS(Apache2.4), AmazonLinux
 &lt;br /&gt;
 &lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;삽질내용&quot;&gt;삽질내용&lt;/h2&gt;
+&lt;h2 id=&quot;배경&quot;&gt;배경&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;고객사 주문등록 &amp;amp; 매출정보전송 API 신규개발&lt;/li&gt;
+  &lt;li&gt;우리회사DB에 임시테이블을 생성, 고객사에서는 일1회 주문정보 입력 및 매출데이터 가져가기 용도로, 우리회사에서는 일1회 주문정보 가져오기 및 매출데이터 입력용으로 사용
+&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;문제상황-및-진행&quot;&gt;문제상황 및 진행&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;신규개발 완료 후 웹상에서 테스트하여 임시테이블에서 주문정보 및 주문이미지파일을 잘 가져오고 생산페이지에도 주문데이터 및 이미지가 잘 뜨는 걸 확인하였는데, crontab 이용하여 자동 실행하게 한 다음날부터 주문정보는 가져오는데 이미지가 안 들어오는 문제가 발생&lt;/li&gt;
+  &lt;li&gt;다음날 확인결과 파일 다운로드경로에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$_SERVER[&apos;document_root&apos;]&lt;/code&gt; 를 사용하였더니 cron이 인식을 못하고 엉뚱한 곳에 디렉토리를 생성하여 파일을 다운받아놓은 걸 확인&lt;/li&gt;
+  &lt;li&gt;다운로드경로를 하드코딩으로 입력해주고 다음날 다시 테스트, 이 때는 디렉토리를 생성하지도 못했고 따라서 파일이 다운받아지지 않은 것을 확인&lt;/li&gt;
+  &lt;li&gt;검색결과 폴더와 파일에 대한 권한 문제임을 알고 권한작업 후 문제해결
+&lt;br /&gt; 
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;의문점&quot;&gt;의문점&lt;/h2&gt;
 
 &lt;h2 id=&quot;결론&quot;&gt;결론&lt;/h2&gt;
 &lt;ul&gt;
