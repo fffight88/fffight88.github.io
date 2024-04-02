@@ -16,7 +16,6 @@ published: true
 	- [TCPS v3](#tcps-v3)
 	- [DB서버(AWS EC2, 웹서버와 같은 인스턴스)](#db서버aws-ec2-웹서버와-같은-인스턴스)
 	- [웹 접속주소](#웹-접속주소)
-	- [개발서버](#개발서버)
 	- [Jenkins](#jenkins)
 	- [로컬개발환경 구성하기](#로컬개발환경-구성하기)
 - [주기적](#주기적)
@@ -101,14 +100,11 @@ published: true
 
 ### DB서버(AWS EC2, 웹서버와 같은 인스턴스)
 
-- DB 호스트주소 : localhost
+- DB 호스트주소 : 52.79.207.19
 - DB 계정 : root
 - 암호 : xkfkdkagh1! (타라암호1!) -> ***root계정의 패스워드를 바꿨을 때에는 /home/podtest/cron/db_backup.php 내에서도 바꿔줘야 함***
 - 포트번호 : 3306
-- SSH 호스트 : 52.79.207.19
-- SSH 계정 : root
-- 암호 : xkfkdkagh1! (타라암호1!)
-- 포트번호 : 22
+
 <br>
 <br>
 
@@ -123,21 +119,6 @@ published: true
 -  관리자페이지
   - [https://btb3.tarapod.co.kr:9443/intra](https://btb3.tarapod.co.kr:9443/intra)
   - 자신의 관리자계정으로 로그인
-<br>
-<br>
-
-### 개발서버
-
-- 웹서버(EC2)
-  - 웹 접속주소 : [http://tcpsv3.openprintmarket.com/namsan](http://tcpsv3.openprintmarket.com/namsan)
-  - 아이피 : 52.68.111.103
-  - 계정 : ec2-user
-  - 비번없음
-  - 키파일 : AWS002_Tokyo01_PMS_Test.pem
-  - DB서버(RDS)
-  - hostname : tk-mydb02.ctpvx3yvizc6.ap-northeast-1.rds.amazonaws.com
-  - username : taragrp_tcps
-  - password : rmfovlrtmtcps#@$ (그래픽스tcps#@$)
 <br>
 <br>
 
