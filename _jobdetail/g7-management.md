@@ -12,7 +12,6 @@ published: true
 - [접속정보](#접속정보)
   - [웹서버(AWS EC2)](#웹서버aws-ec2)
   - [DB서버(서비스)(AWS RDS)](#db서버서비스aws-rds)
-  - [DB서버(개발용)(AWS RDS)](#db서버개발용aws-rds)
   - [GitLab](#gitlab)
   - [Jenkins](#jenkins)
 - [주기적](#주기적)
@@ -48,19 +47,10 @@ published: true
 
 ### DB서버(서비스)(AWS RDS)
 
-- DB 호스트주소 : seoul-01-db-mysql.cnr8rmvlx27e.ap-northeast-2.rds.amazonaws.com
-- DB 계정 : grpbo
-- 암호 : grpbonpos
-- 데이터베이스 : grpbo
-<br>
-<br>
-
-### DB서버(개발용)(AWS RDS)
-
-- DB 호스트주소 : taxdb.cnr8rmvlx27e.ap-northeast-2.rds.amazonaws.com
-- DB 계정 : g7tax
+- DB 호스트주소 : g7-service.cofuxhfeqzer.ap-northeast-2.rds.amazonaws.com
+- DB 계정 : root
 - 암호 : xkfkdkagh1!
-- 데이터베이스 : dz_db
+- 데이터베이스 : grpbo
 <br>
 <br>
 
