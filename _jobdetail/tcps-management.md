@@ -153,9 +153,10 @@ published: true
 </VirtualHost>
 
 ```
-
-6. database.php 에서 환경에 맞게 코드 수정 및 db 매칭
-7. `index.php`의 `application environment` 부분에 다음의 `else if` 블록을 추가
+6. FTP를 통해 서버에서 TCPS디렉토리를 통째로 복사해서 위 작업폴더경로에 놓고 폴더명을 위 도메인명으로 변경. git이나 로컬폴더에서 복사해 오면 안 된다. `.gitignore` 때문에 파일구성이 다르기 때문. 서버의 TCPS 디렉토리 경로는 `/home/tcps3`
+7. git 원격 레포지토리나 로컬 레포지토리의 루트폴더안에 보면 `.htaccess` 라는 파일이 있는데 이것을 복사해서 6번의 폴더 루트에 붙여넣는다.
+8. database.php 에서 환경에 맞게 코드 수정 및 db 매칭 => 이 부분은 현재 안해도 되게 짜여져있으나 필요시 수행
+9. `index.php`의 `application environment` 부분에 다음의 `else if` 블록을 추가
 
 ```php
 else if(strpos($_SERVER['HTTP_HOST'], "위 4번에서 정한 도메인명") !== FALSE)
@@ -167,7 +168,8 @@ else if(strpos($_SERVER['HTTP_HOST'], "위 4번에서 정한 도메인명") !== 
 
 ```
 
-8. 서버에서 `tpa001_templ`(장바구니 이전 주문화면에서 사용하는 이미지 및 xml파일), `templ_storage`(주문이 장바구니를 떠나 접수 또는 접수대기 단계에서 사용하는 이미지들), `templ`(/cart: 장바구니화면에서 사용하는 이미지) 폴더에서 필요한 부분을 골라서 작업폴더루트에 복사한다. 이 때 __서버의 폴더 경로 및 폴더명과 동일하게__ 맞춰줘야 한다.
+10. 서버에서 `tpa001_templ`(장바구니 이전 주문화면에서 사용하는 이미지 및 xml파일), `templ_storage`(주문이 장바구니를 떠나 접수 또는 접수대기 단계에서 사용하는 이미지들), `templ`(/cart: 장바구니화면에서 사용하는 이미지) 폴더에서 필요한 부분을 골라서 작업폴더루트에 복사한다. 이 때 __서버의 폴더 경로 및 폴더명과 동일하게__ 맞춰줘야 한다.
+
 
 <br>
 <br>

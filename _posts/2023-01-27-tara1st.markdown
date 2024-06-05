@@ -2,7 +2,6 @@
 layout: post
 title:  "TaraTPS - 1차 프로젝트"
 categories: portfolio
-date: 2023-01-27
 published: false
 ---
 
