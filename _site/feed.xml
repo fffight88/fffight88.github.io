@@ -1,4 +1,67 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-08-09T11:17:02+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Newbie’s DoorClosing</title><subtitle>Newbie&apos;s DoorClosing</subtitle><entry><title type="html">cron에서 mkdir()이 실행되지 않을 때</title><link href="http://localhost:4000/coding/2024/02/14/using-mkdir-on-crond.html" rel="alternate" type="text/html" title="cron에서 mkdir()이 실행되지 않을 때" /><published>2024-02-14T00:00:00+09:00</published><updated>2024-02-14T00:00:00+09:00</updated><id>http://localhost:4000/coding/2024/02/14/using-mkdir-on-crond</id><content type="html" xml:base="http://localhost:4000/coding/2024/02/14/using-mkdir-on-crond.html">&lt;p&gt;cron에서 mkdir()이 실행되지 않을 때&lt;!--more--&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-10-29T12:03:05+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Newbie’s DoorClosing</title><subtitle>Newbie&apos;s DoorClosing</subtitle><entry><title type="html">팝업버튼을 눌러도 팝업창이 뜨지 않아요</title><link href="http://localhost:4000/web/2024/10/29/no-response-from-popup-button.html" rel="alternate" type="text/html" title="팝업버튼을 눌러도 팝업창이 뜨지 않아요" /><published>2024-10-29T00:00:00+09:00</published><updated>2024-10-29T00:00:00+09:00</updated><id>http://localhost:4000/web/2024/10/29/no-response-from-popup-button</id><content type="html" xml:base="http://localhost:4000/web/2024/10/29/no-response-from-popup-button.html">&lt;p&gt;&lt;strong&gt;우편번호 찾기&lt;/strong&gt; 버튼을 눌러도 팝업이 뜨지 않아 불편을 겪고 계신가요? 오늘은 &lt;strong&gt;우편번호 찾기 팝업이 뜨지 않을 때&lt;/strong&gt; 문제를 해결하는 몇 가지 쉬운 방법을 알려드리겠습니다.(크롬 브라우저 기준) &lt;!--more--&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;1-팝업-차단-설정-확인하기&quot;&gt;1. 팝업 차단 설정 확인하기&lt;/h3&gt;
+
+&lt;p&gt;가장 많이 발생하는 문제는 &lt;strong&gt;팝업 차단 기능&lt;/strong&gt;입니다. 브라우저가 자동으로 팝업 창이 뜨는 것을 막아서 생기는 문제로, 우편번호 찾기 기능도 팝업창을 통해 작동하기 때문에, 팝업이 차단되면 우편번호 창이 뜨지 않습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;해결 방법:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;크롬 창에서, 주소창 오른쪽에 있는 &lt;strong&gt;자물쇠 모양 아이콘&lt;/strong&gt;을 클릭하거나, 안보이면 주소창이 있는 줄 가장 오른쪽의 &lt;strong&gt;점 세 개 아이콘(설정 메뉴) -&amp;gt; [설정] -&amp;gt; [개인 정보 보호 및 보안]&lt;/strong&gt;으로 들어갑니다.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;[사이트 설정] -&amp;gt; [팝업 및 리디렉션]&lt;/strong&gt;에 들어갑니다.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;“사이트에서 팝업을 전송하고 리디렉션을 사용할 수 있음”&lt;/strong&gt; 버튼을 클릭합니다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;2-브라우저-캐시-삭제하기&quot;&gt;2. 브라우저 캐시 삭제하기&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;캐시&lt;/strong&gt;란 브라우저가 인터넷 속도를 높이기 위해 저장해 둔 데이터입니다. 그런데 이 캐시가 오래 쌓이면 페이지 오류가 발생할 수 있어요. 우편번호 찾기 팝업이 안 뜰 때도 이 캐시가 원인일 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;해결 방법:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;크롬 창 오른쪽 위의 &lt;strong&gt;점 세 개 아이콘(설정 메뉴)&lt;/strong&gt;를 클릭하세요.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;[방문 기록] -&amp;gt; [방문 기록] -&amp;gt; [인터넷 사용 기록 삭제]&lt;/strong&gt;로 들어갑니다.&lt;/li&gt;
+  &lt;li&gt;“캐시된 이미지 및 파일”을 체크하고 &lt;strong&gt;데이터 삭제&lt;/strong&gt; 버튼을 누릅니다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;이렇게 하면 오래된 데이터가 삭제되어, 다시 시도할 때 오류가 해결될 수 있습니다.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;3-크롬-확장-프로그램-끄기&quot;&gt;3. 크롬 확장 프로그램 끄기&lt;/h3&gt;
+
+&lt;p&gt;크롬 브라우저는 다양한 &lt;strong&gt;확장 프로그램&lt;/strong&gt;(앱)을 설치할 수 있어요. 하지만 일부 확장 프로그램이 특정 기능을 방해할 때가 있습니다. 우편번호 찾기 팝업이 안 뜬다면, 확장 프로그램이 방해하고 있을 가능성도 있어요. &lt;strong&gt;시크릿 모드&lt;/strong&gt;로 브라우저를 열면 확장 프로그램이 기본적으로 꺼져 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;해결 방법:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;크롬을 실행한 후, 화면 하단 작업표시줄의 크롬 아이콘을 마우스 우클릭해서 &lt;strong&gt;새 시크릿 창&lt;/strong&gt;을 실행합니다.&lt;/li&gt;
+  &lt;li&gt;시크릿 모드에서 우편번호 찾기를 시도했을 때 팝업이 뜬다면, 확장 프로그램 중 하나가 문제를 일으키고 있을 수 있어요.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;크롬 설정 메뉴&lt;/strong&gt;에서 &lt;strong&gt;[확장 프로그램]&lt;/strong&gt;으로 들어가 하나씩 꺼보면서 어떤 프로그램이 방해하는지 확인합니다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;4-크롬-브라우저-업데이트하기&quot;&gt;4. 크롬 브라우저 업데이트하기&lt;/h3&gt;
+
+&lt;p&gt;크롬 브라우저는 주기적으로 &lt;strong&gt;업데이트&lt;/strong&gt;를 통해 기능을 개선하고 오류를 수정합니다. 만약 오래된 버전을 사용하고 있다면 최신 버전으로 업데이트하는 것이 좋아요.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;해결 방법:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;크롬 창 오른쪽 위의 점 세 개 아이콘을 클릭합니다.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;설정 -&amp;gt; Chrome 정보&lt;/strong&gt;로 들어가면 크롬 버전과 함께 업데이트가 필요하면 자동으로 진행됩니다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;이렇게 네 가지 방법을 시도해보시면 대부분의 경우 우편번호 찾기 팝업이 정상적으로 작동하겠지만 그래도 문제가 해결되지 않으면 다른 브라우저(예: 엣지, 파이어폭스)를 이용해보시고, 다른 브라우저에서도 안된다면 잘 아는 사람을 찾아 문의하시는게 좋겠습니다.&lt;/p&gt;
+
+&lt;p&gt;도움이 되셨길 바랍니다! 😊&lt;/p&gt;</content><author><name>Victor Lo</name></author><category term="web" /><category term="팝업" /><category term="popup" /><category term="주소찾기" /><category term="주소검색" /><category term="우편번호찾기" /><category term="우편번호검색" /><summary type="html">우편번호 찾기 버튼을 눌러도 팝업이 뜨지 않아 불편을 겪고 계신가요? 오늘은 우편번호 찾기 팝업이 뜨지 않을 때 문제를 해결하는 몇 가지 쉬운 방법을 알려드리겠습니다.(크롬 브라우저 기준)</summary></entry><entry><title type="html">cron에서 mkdir()이 실행되지 않을 때</title><link href="http://localhost:4000/coding/2024/02/14/using-mkdir-on-crond.html" rel="alternate" type="text/html" title="cron에서 mkdir()이 실행되지 않을 때" /><published>2024-02-14T00:00:00+09:00</published><updated>2024-02-14T00:00:00+09:00</updated><id>http://localhost:4000/coding/2024/02/14/using-mkdir-on-crond</id><content type="html" xml:base="http://localhost:4000/coding/2024/02/14/using-mkdir-on-crond.html">&lt;p&gt;cron에서 mkdir()이 실행되지 않을 때&lt;!--more--&gt;
 &lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -282,7 +345,57 @@ Group xxxx&lt;/p&gt;
   &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Fn&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;i&lt;/code&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;k&lt;/code&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;j&lt;/code&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;l&lt;/code&gt; = 방향키&lt;/li&gt;
   &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Fn&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;y&lt;/code&gt; = 계산기&lt;/li&gt;
   &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Fn&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;z&lt;/code&gt; = 메뉴(마우스 오른쪽버튼)&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Victor Lo</name></author><category term="review" /><category term="mistel" /><category term="미스텔" /><category term="md770" /><category term="키보드" /><category term="거북목" /><category term="라운드숄더" /><category term="쪼개진키보드" /><summary type="html">편안한 타이핑자세로 거북목, 라운드숄더를 방지해주는 것으로 유명한, 반으로 갈라진 키보드 미스텔 MD770 을 두 달 사용하고 작성하는 후기</summary></entry><entry><title type="html">Code Examples</title><link href="http://localhost:4000/coding/2023/05/12/code-examples.html" rel="alternate" type="text/html" title="Code Examples" /><published>2023-05-12T00:00:00+09:00</published><updated>2023-05-12T00:00:00+09:00</updated><id>http://localhost:4000/coding/2023/05/12/code-examples</id><content type="html" xml:base="http://localhost:4000/coding/2023/05/12/code-examples.html">&lt;p&gt;유용한 예제코드들 &lt;!--more--&gt;&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>Victor Lo</name></author><category term="review" /><category term="mistel" /><category term="미스텔" /><category term="md770" /><category term="키보드" /><category term="거북목" /><category term="라운드숄더" /><category term="쪼개진키보드" /><summary type="html">편안한 타이핑자세로 거북목, 라운드숄더를 방지해주는 것으로 유명한, 반으로 갈라진 키보드 미스텔 MD770 을 두 달 사용하고 작성하는 후기</summary></entry><entry><title type="html">How to get my SSH-key for Git</title><link href="http://localhost:4000/git/2023/05/12/ssh-key-generation.html" rel="alternate" type="text/html" title="How to get my SSH-key for Git" /><published>2023-05-12T00:00:00+09:00</published><updated>2023-05-12T00:00:00+09:00</updated><id>http://localhost:4000/git/2023/05/12/ssh-key-generation</id><content type="html" xml:base="http://localhost:4000/git/2023/05/12/ssh-key-generation.html">&lt;p&gt;Github 또는 Gitlab에서 사용할 public SSH-key 만들고 등록하기 &lt;!--more--&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Github이나 Gitlab에서 clone 기능을 문제없이 사용하려면 SSH-key가 꼭 필요하다. SSH-key를 새로 만들고 등록하는 방법을 알아보자. 여기서는 Gitlab을 이용하며 운영체제는 windows이다.&lt;/p&gt;
+
+&lt;p&gt;시작하기 전에 Gitlab 계정을 생성하고, Gitbash를 설치한다.&lt;/p&gt;
+
+&lt;h2 id=&quot;git-bash-설치하기&quot;&gt;&lt;a href=&quot;https://git-scm.com/downloads&quot;&gt;»Git Bash 설치하기«&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;설치과정 중 Git Bash를 선택할 수 있는 화면에서 선택하여 설치한다.&lt;/p&gt;
+
+&lt;p&gt;설치가 끝나면 Git Bash를 실행한 후 다음 셋 중 하나를 입력하는데, 1번부터 순서대로 시도해본다.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;ol&gt;
+    &lt;li&gt;ssh-keygen&lt;/li&gt;
+    &lt;li&gt;ssh-keygen -t rsa -b 4096 -C “examaple@example.com”&lt;/li&gt;
+    &lt;li&gt;ssh-keygen -t ed25519 -C “examaple@example.com”&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/feature-img/2023-05-12-ssh-key-generation-0.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;입력을 요구하는 부분에서는 전부 그냥 엔터로 넘긴다. 이제, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;c:\Users\user\.ssh&lt;/code&gt; 로 가보면 파일이 두 개가 있는데 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;id_rsa&lt;/code&gt;는 private, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;id_rsa.pub&lt;/code&gt;는 public 키이고 깃랩에 등록해야 하는 키는 public 키이다.&lt;/p&gt;
+
+&lt;p&gt;Git Bash에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cat /c/Users/user/.ssh/id_rsa.pub&lt;/code&gt; 를 입력하거나, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;id_rsa.pub&lt;/code&gt; 파일을 VS Code 등으로 열어보면&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/feature-img/2023-05-12-ssh-key-generation-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;이런 식의 키가 만들어져 있다. 이것을 그대로 카피한 후 깃랩으로 가서 로그인을 하면&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/feature-img/2023-05-12-ssh-key-generation-2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;좌측 메뉴에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SSH Keys&lt;/code&gt;를 선택하여 우측 상단의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Add SSH Key&lt;/code&gt; 버튼을 누른다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/feature-img/2023-05-12-ssh-key-generation-3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Title에는 원하는 명칭을, Key 부분에 아까 확인했던 키를 붙여넣는데 앞뒤로 개행문자나 공백 등이 붙이지 않고 텍스트 그대로 붙여넣어야 한다. 그 후 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Add Key&lt;/code&gt; 버튼을 누르면&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/feature-img/2023-05-12-ssh-key-generation-4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;잘 되는 경우도 있고 이렇게 빨갛게 에러메세지가 뜨는 경우가 있다. 이 때가 위의 세 가지 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ssh-keygen&lt;/code&gt; 중 두 번째를 시도해 볼 때이다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;c:\Users\user\.ssh&lt;/code&gt; 폴더의 파일 두 개를 삭제하고 두 번째 걸로 다시 시도하자. 두 번째 것도 안되면 세 번째 것으로 시도하자. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;example@example.com&lt;/code&gt; 에는 자신 계정의 이메일주소를 넣어줘야 한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/feature-img/2023-05-12-ssh-key-generation-5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;성공했다면 위와 같은 화면이 보이고, 더 이상 다운로드하려면 SSH-key를 등록하라는 메세지가 뜨지 않을 것이다.&lt;/p&gt;</content><author><name>Victor Lo</name></author><category term="git" /><category term="git" /><category term="sshkey" /><category term="ssh-key" /><category term="keygen" /><summary type="html">Github 또는 Gitlab에서 사용할 public SSH-key 만들고 등록하기</summary></entry><entry><title type="html">Code Examples</title><link href="http://localhost:4000/coding/2023/05/12/code-examples.html" rel="alternate" type="text/html" title="Code Examples" /><published>2023-05-12T00:00:00+09:00</published><updated>2023-05-12T00:00:00+09:00</updated><id>http://localhost:4000/coding/2023/05/12/code-examples</id><content type="html" xml:base="http://localhost:4000/coding/2023/05/12/code-examples.html">&lt;p&gt;유용한 예제코드들 &lt;!--more--&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;#javascript-jquery&quot;&gt;Javascript, jQuery&lt;/a&gt;
@@ -613,57 +726,7 @@ min, max, times(input type=”number”)에 최소값, 최대값, 횟수를 입�
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;mysql&quot;&gt;MySQL&lt;/h2&gt;</content><author><name>Victor Lo</name></author><category term="coding" /><category term="code" /><category term="coding" /><category term="example" /><summary type="html">유용한 예제코드들</summary></entry><entry><title type="html">How to get my SSH-key for Git</title><link href="http://localhost:4000/git/2023/05/12/ssh-key-generation.html" rel="alternate" type="text/html" title="How to get my SSH-key for Git" /><published>2023-05-12T00:00:00+09:00</published><updated>2023-05-12T00:00:00+09:00</updated><id>http://localhost:4000/git/2023/05/12/ssh-key-generation</id><content type="html" xml:base="http://localhost:4000/git/2023/05/12/ssh-key-generation.html">&lt;p&gt;Github 또는 Gitlab에서 사용할 public SSH-key 만들고 등록하기 &lt;!--more--&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;Github이나 Gitlab에서 clone 기능을 문제없이 사용하려면 SSH-key가 꼭 필요하다. SSH-key를 새로 만들고 등록하는 방법을 알아보자. 여기서는 Gitlab을 이용하며 운영체제는 windows이다.&lt;/p&gt;
-
-&lt;p&gt;시작하기 전에 Gitlab 계정을 생성하고, Gitbash를 설치한다.&lt;/p&gt;
-
-&lt;h2 id=&quot;git-bash-설치하기&quot;&gt;&lt;a href=&quot;https://git-scm.com/downloads&quot;&gt;»Git Bash 설치하기«&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;설치과정 중 Git Bash를 선택할 수 있는 화면에서 선택하여 설치한다.&lt;/p&gt;
-
-&lt;p&gt;설치가 끝나면 Git Bash를 실행한 후 다음 셋 중 하나를 입력하는데, 1번부터 순서대로 시도해본다.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;ol&gt;
-    &lt;li&gt;ssh-keygen&lt;/li&gt;
-    &lt;li&gt;ssh-keygen -t rsa -b 4096 -C “examaple@example.com”&lt;/li&gt;
-    &lt;li&gt;ssh-keygen -t ed25519 -C “examaple@example.com”&lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/feature-img/2023-05-12-ssh-key-generation-0.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;입력을 요구하는 부분에서는 전부 그냥 엔터로 넘긴다. 이제, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;c:\Users\user\.ssh&lt;/code&gt; 로 가보면 파일이 두 개가 있는데 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;id_rsa&lt;/code&gt;는 private, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;id_rsa.pub&lt;/code&gt;는 public 키이고 깃랩에 등록해야 하는 키는 public 키이다.&lt;/p&gt;
-
-&lt;p&gt;Git Bash에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cat /c/Users/user/.ssh/id_rsa.pub&lt;/code&gt; 를 입력하거나, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;id_rsa.pub&lt;/code&gt; 파일을 VS Code 등으로 열어보면&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/feature-img/2023-05-12-ssh-key-generation-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;이런 식의 키가 만들어져 있다. 이것을 그대로 카피한 후 깃랩으로 가서 로그인을 하면&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/feature-img/2023-05-12-ssh-key-generation-2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;좌측 메뉴에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SSH Keys&lt;/code&gt;를 선택하여 우측 상단의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Add SSH Key&lt;/code&gt; 버튼을 누른다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/feature-img/2023-05-12-ssh-key-generation-3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Title에는 원하는 명칭을, Key 부분에 아까 확인했던 키를 붙여넣는데 앞뒤로 개행문자나 공백 등이 붙이지 않고 텍스트 그대로 붙여넣어야 한다. 그 후 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Add Key&lt;/code&gt; 버튼을 누르면&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/feature-img/2023-05-12-ssh-key-generation-4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;잘 되는 경우도 있고 이렇게 빨갛게 에러메세지가 뜨는 경우가 있다. 이 때가 위의 세 가지 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ssh-keygen&lt;/code&gt; 중 두 번째를 시도해 볼 때이다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;c:\Users\user\.ssh&lt;/code&gt; 폴더의 파일 두 개를 삭제하고 두 번째 걸로 다시 시도하자. 두 번째 것도 안되면 세 번째 것으로 시도하자. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;example@example.com&lt;/code&gt; 에는 자신 계정의 이메일주소를 넣어줘야 한다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/feature-img/2023-05-12-ssh-key-generation-5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;성공했다면 위와 같은 화면이 보이고, 더 이상 다운로드하려면 SSH-key를 등록하라는 메세지가 뜨지 않을 것이다.&lt;/p&gt;</content><author><name>Victor Lo</name></author><category term="git" /><category term="git" /><category term="sshkey" /><category term="ssh-key" /><category term="keygen" /><summary type="html">Github 또는 Gitlab에서 사용할 public SSH-key 만들고 등록하기</summary></entry><entry><title type="html">XAMPP - How to get desired domain on my server</title><link href="http://localhost:4000/server/management/2023/05/04/local-domain-setting.html" rel="alternate" type="text/html" title="XAMPP - How to get desired domain on my server" /><published>2023-05-04T00:00:00+09:00</published><updated>2023-05-04T00:00:00+09:00</updated><id>http://localhost:4000/server/management/2023/05/04/local-domain-setting</id><content type="html" xml:base="http://localhost:4000/server/management/2023/05/04/local-domain-setting.html">&lt;p&gt;XAMPP 사용시 자신의 웹서버 또는 로컬 서버에서 특정 IP에 원하는 도메인 부여하기 &lt;!--more--&gt;&lt;/p&gt;
+&lt;h2 id=&quot;mysql&quot;&gt;MySQL&lt;/h2&gt;</content><author><name>Victor Lo</name></author><category term="coding" /><category term="code" /><category term="coding" /><category term="example" /><summary type="html">유용한 예제코드들</summary></entry><entry><title type="html">XAMPP - How to get desired domain on my server</title><link href="http://localhost:4000/server/management/2023/05/04/local-domain-setting.html" rel="alternate" type="text/html" title="XAMPP - How to get desired domain on my server" /><published>2023-05-04T00:00:00+09:00</published><updated>2023-05-04T00:00:00+09:00</updated><id>http://localhost:4000/server/management/2023/05/04/local-domain-setting</id><content type="html" xml:base="http://localhost:4000/server/management/2023/05/04/local-domain-setting.html">&lt;p&gt;XAMPP 사용시 자신의 웹서버 또는 로컬 서버에서 특정 IP에 원하는 도메인 부여하기 &lt;!--more--&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -999,206 +1062,4 @@ min, max, times(input type=”number”)에 최소값, 최대값, 횟수를 입�
 
 &lt;p&gt;&amp;lt;b id=”footnote1”&amp;gt;1&amp;lt;/b&amp;gt; 각주1번 내용입니다. [↩](#a1)
 &amp;lt;b id=”footnote2”&amp;gt;2&amp;lt;/b&amp;gt; 각주2번 내용입니다. [↩](#a2)
-&amp;lt;b id=”footnote3”&amp;gt;3&amp;lt;/b&amp;gt; 각주3번 내용입니다. [↩](#a3)&lt;/p&gt;</content><author><name>Victor Lo</name></author><category term="coding" /><category term="마크다운" /><category term="md" /><summary type="html">마크다운 문법</summary></entry><entry><title type="html">Tech Stuff example</title><link href="http://localhost:4000/2019/11/02/Tech-stuff-example.html" rel="alternate" type="text/html" title="Tech Stuff example" /><published>2019-11-02T00:00:00+09:00</published><updated>2019-11-02T00:00:00+09:00</updated><id>http://localhost:4000/2019/11/02/Tech-stuff-example</id><content type="html" xml:base="http://localhost:4000/2019/11/02/Tech-stuff-example.html">&lt;p&gt;Let’s demo some code snippet, with some mermaid diagrams.
-Because if you put some code in your blog, you would at least make it:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Searchable&lt;/li&gt;
-  &lt;li&gt;Good-looking&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;search-on-code&quot;&gt;Search on code&lt;/h2&gt;
-
-&lt;p&gt;Search should be working even for complicated escape symbols.&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;s/\&quot;hostname\&quot;\:.*$/\&quot;hostname\&quot;\: \&quot;&apos;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$IPADDR&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;\&quot;\,/g&apos;&lt;/span&gt; open-falcon/agent/config/cfg.json
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Or try searching for partial of a command, like this article should be returned when looking for “find grep”&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;find /etc &lt;span class=&quot;nt&quot;&gt;-type&lt;/span&gt; f &lt;span class=&quot;nt&quot;&gt;-exec&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;cat&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;{}&apos;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\;&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;tr&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;.[:digit:]&apos;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;\n&apos;&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;^[^.][^.]*\.[^.][^.]*\.[^.][^.]*\.[^.][^.]*$&apos;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;code-highlighting-examples&quot;&gt;Code highlighting examples&lt;/h2&gt;
-
-&lt;p&gt;Because you might put code in your blog post, and you want to make sure it will look good in here. Plus that the search
-function will still be working!&lt;/p&gt;
-
-&lt;h3 id=&quot;xml&quot;&gt;XML&lt;/h3&gt;
-
-&lt;p&gt;Example from &lt;a href=&quot;https://www.w3.org/standards/xml/core&quot;&gt;W3C&lt;/a&gt;&lt;/p&gt;
-&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;part&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;number=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;1976&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;name&amp;gt;&lt;/span&gt;Windscreen Wiper&lt;span class=&quot;nt&quot;&gt;&amp;lt;/name&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;description&amp;gt;&lt;/span&gt;The Windscreen wiper
-    automatically removes rain
-    from your windscreen, if it
-    should happen to splash there.
-    It has a rubber &lt;span class=&quot;nt&quot;&gt;&amp;lt;ref&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;part=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;1977&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;blade&lt;span class=&quot;nt&quot;&gt;&amp;lt;/ref&amp;gt;&lt;/span&gt;
-    which can be ordered separately
-    if you need to replace it.
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/description&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/part&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;java&quot;&gt;Java&lt;/h3&gt;
-
-&lt;p&gt;java example&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.*&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;nd&quot;&gt;@Example&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Demo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;CONSTANT&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;String&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Object&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;o&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;cm&quot;&gt;/**
-   * Creates a new demo.
-   * @param o The object to demonstrate.
-   */&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Demo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Object&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;o&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;o&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;o&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;o&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;CONSTANT&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Other example of text&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;123&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;33&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nc&quot;&gt;Demo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;demo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Demo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;demo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;o&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;javascript&quot;&gt;Javascript&lt;/h3&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cm&quot;&gt;/**
- * Does a thing
- */&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;helloWorld&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;param1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;param2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;example&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;`hello &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;param1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;something&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;// Do something&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;2.0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;something&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;Hello, world!&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;// TODO comment&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;json&quot;&gt;JSON&lt;/h3&gt;
-
-&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;animals&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;tiger&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-      &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;tiger&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-      &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;images&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;🐯&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;🐅&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;⻁&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;turtle&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-      &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;age&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;126&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-      &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;image&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;🐢&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;unicorn&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-      &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;doesExist&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-      &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;image&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;🦄&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;python&quot;&gt;Python&lt;/h3&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;os&lt;/span&gt;
-
-
-&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;some_function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;param_one&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;param_two&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;sa&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&apos;&apos;A docstring&apos;&apos;&apos;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;param_one&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;param_two&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# interesting
-&lt;/span&gt;        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Greater&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;param_two&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;param_one&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mb&quot;&gt;0b10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;
-
-
-&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;SomeClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot; dunno what I am doing &quot;&quot;&quot;&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;__init__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;pass&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;yaml&quot;&gt;YAML&lt;/h3&gt;
-
-&lt;p&gt;You can also render some yaml, like this &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;:&lt;/p&gt;
-
-&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&lt;span class=&quot;c1&quot;&gt;# Welcome to Jekyll!&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# This config file is meant for settings that affect your whole blog, values&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# which you are expected to set up once and rarely edit after that. If you find&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# yourself editing this file very often, consider using Jekyll&apos;s data files&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# feature for the data you need to update frequently.&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# This file, &quot;_config.yml&quot; is *NOT* reloaded automatically when you use&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# &apos;bundle exec jekyll serve&apos;. If you change this file, please restart the server process.&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# Site settings&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# These are used to personalize your new site. If you look in the HTML files,&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# you will see them accessed via Newbie&apos;s DoorClosing, , and so on.&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# You can create any custom variable you would like, and they will be accessible&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# in the templates via .&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# SITE CONFIGURATION&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;baseurl&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;/Type-on-Strap&quot;&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;https://sylhare.github.io&quot;&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# THEME-SPECIFIC CONFIGURATION&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Type on Strap&lt;/span&gt;                                    &lt;span class=&quot;c1&quot;&gt;# site&apos;s title&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;website&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;blog&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;posts&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;and&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;pages&quot;&lt;/span&gt;      &lt;span class=&quot;c1&quot;&gt;# used by search engines&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;avatar&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;assets/img/triangle.png&lt;/span&gt;                         &lt;span class=&quot;c1&quot;&gt;# Empty for no avatar in navbar&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;favicon&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;assets/favicon.ico&lt;/span&gt;                             &lt;span class=&quot;c1&quot;&gt;# Icon displayed in the tab&lt;/span&gt;
-
-&lt;span class=&quot;na&quot;&gt;remote_theme&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;sylhare/Type-on-Strap&lt;/span&gt;                     &lt;span class=&quot;c1&quot;&gt;# If using as a remote_theme in github&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;mermaid&quot;&gt;Mermaid&lt;/h3&gt;
-
-&lt;p&gt;Diagrams with mermaid, make sure it is enabled in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;.
-Here is a simple example:&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- To generate a diagram --&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;mermaid&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-sequenceDiagram
-    Alice-&amp;gt;&amp;gt;John: Hello John, how are you?
-    John--&amp;gt;&amp;gt;Alice: Great!
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;That will be rendered into this:&lt;/p&gt;
-
-&lt;div class=&quot;row&quot;&gt;
-    
-    &lt;div style=&quot;flex: 100.0%&quot;&gt;
-        &lt;img class=&quot;single&quot; src=&quot;/assets/img/mermaid-example.png&quot; alt=&quot;mermaid-example.png&quot; /&gt;
-    &lt;/div&gt;
-    
-&lt;/div&gt;
-
-&lt;p&gt;You can also go with more complex features and diagrams from the &lt;a href=&quot;https://mermaid-js.github.io/mermaid/&quot;&gt;documentation&lt;/a&gt;:&lt;/p&gt;
-
-&lt;details&gt;
-&lt;summary&gt;More complex diagram&lt;/summary&gt;
-&lt;div class=&quot;mermaid&quot;&gt;
-sequenceDiagram
-    participant Alice
-    participant Bob
-    Alice-&amp;gt;&amp;gt;John: Hello John, how are you?
-    loop Healthcheck
-        John-&amp;gt;&amp;gt;John: Fight against hypochondria
-    end
-    Note right of John: Rational thoughts prevail!
-    John--&amp;gt;&amp;gt;Alice: Great!
-    John-&amp;gt;&amp;gt;Bob: How about you?
-    Bob--&amp;gt;&amp;gt;John: Jolly good!
-&lt;/div&gt;
-&lt;/details&gt;</content><author><name></name></author><category term="Mermaid" /><category term="Highlight" /><category term="Markdown" /><summary type="html">Let’s demo some code snippet, with some mermaid diagrams. Because if you put some code in your blog, you would at least make it: Searchable Good-looking</summary></entry></feed>
+&amp;lt;b id=”footnote3”&amp;gt;3&amp;lt;/b&amp;gt; 각주3번 내용입니다. [↩](#a3)&lt;/p&gt;</content><author><name>Victor Lo</name></author><category term="coding" /><category term="마크다운" /><category term="md" /><summary type="html">마크다운 문법</summary></entry></feed>
