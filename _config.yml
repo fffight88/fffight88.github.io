@@ -1,8 +1,8 @@
 # site settings
 title: "Victor"
-subtitle: "'s Portfolio"
+subtitle: "'s Footage"
 email: fffight88@gmail.com
-description: Victor의 발자취가 담긴 페이지 몇 장이 전시되어 있는 공간
+description: Victor의 발자취가 전시되어 있는 공간
 baseurl: "" # the subpath of your site, e.g. /blog
 url: # the base hostname & protocol for your site
 author:

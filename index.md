@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Home
-landing-title: "Victor's Portfolio"
+landing-title: "Victor's Footage"
 description: null
 image: null
 author: null
