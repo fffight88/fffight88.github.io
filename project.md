@@ -15,6 +15,17 @@ nav-menu: true
 		<header class="major">
 			<h2>타라TPS</h2>
 		</header>
+		<p><i><b>타라에서의 주요 프로젝트 & 기술 스택</b></i></p>
+		<ul>
+			<li>PHP5, CodeIgnitor3, HTML/CSS/JavaScript</li>
+			<li>AWS-EC2(CentOS6), AWS-RDS, MySQL5</li>
+			<li>GitLab, Jenkins, VSCode, PostMan, WinSCP, Putty, SourceTree, GitHub, XAMPP</li>
+			<li>서버측/클라이언트측 웹서비스(RESTful API) 설계, 구현, 테스트, 서비스</li>
+			<li>B2B쇼핑몰(상업/디지털인쇄 솔루션) 기능개발/유지보수</li>
+			<li>ERP, MES시스템 기능개발/유지보수</li>
+			<li>신규ERP(더존 ERP10제품) MES단 초기세팅작업 및 구MES시스템과의 연동작업</li>
+		</ul>
+		
 		<p><a href='https://www.taratps.com/' target='blank'>어떤 회사인지 둘러보기</a></p>
 	</div>
 </section>
@@ -22,9 +33,6 @@ nav-menu: true
 <!-- Two -->
 <section id="two" class="spotlights">
 	<section>
-		<!-- <a href="generic.html" class="image">
-			<img src="{% link assets/images/pic08.jpg %}" alt="" data-position="center center" />
-		</a> -->
 		<div class="content">
 			<div class="inner">
 				<header class="major">
