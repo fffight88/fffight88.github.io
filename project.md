@@ -40,7 +40,7 @@ nav-menu: true
 				</header>
 				<p>ERP의 매출확정 프로세스에서 현실과 다른 부분을 현실에 맞게 수정하고 그와 함께 부가적인 기능을 추가한 작업</p>
 				<ul class="actions">
-					<li><a href="all_posts.html#g7-고도화" class="button">자세히 보기</a></li>
+					<li><a href="all_posts.html#erp-고도화" class="button">자세히 보기</a></li>
 				</ul>
 			</div>
 		</div>
@@ -56,7 +56,7 @@ nav-menu: true
 				</header>
 				<p>모바일 사용에 대한 고려 없이 설계된 쇼핑몰을 고객이 모바일에서 사용할 수 있도록 개선 및 기능 추가한 작업</p>
 				<ul class="actions">
-					<li><a href="all_posts.html#tcps-고도화" class="button">자세히 보기</a></li>
+					<li><a href="all_posts.html#mes-고도화" class="button">자세히 보기</a></li>
 				</ul>
 			</div>
 		</div>
