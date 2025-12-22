@@ -93,6 +93,18 @@ nav-menu: true
 				</p>
 			</div>
 			<hr>
+			<div>
+				<h4>비상교육 상주프리랜서 근무</h4>
+				<p>
+					<span class="image left"><img src="{% link assets/images/pic16.png %}" alt="" /></span>
+					<span>
+						<li>2025년 9월부터 근무</li>
+						<li>한국 공교육 교과서 점유율 상위권의 교육 전문 기업으로, 콘텐츠와 플랫폼 기반의 통합 교육 솔루션을 제공</li>
+						<li>주요업무: LMS 플랫폼인 Allvia Connect Learning의 관리자사이트 개발</li>
+					</span>
+				</p>
+			</div>
+			<hr>
 		</div>
 	</section>
 </div>
