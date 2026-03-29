@@ -4,7 +4,7 @@ subtitle: "'s Footage"
 email: fffight88@gmail.com
 description: Victor의 발자취가 전시되어 있는 공간
 baseurl: "" # the subpath of your site, e.g. /blog
-url: # the base hostname & protocol for your site
+url: "https://fffight88.github.io" # the base hostname & protocol for your site
 author:
 street_address: 1234 Somewhere Road
 city: Nashville
