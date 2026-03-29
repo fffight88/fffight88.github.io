@@ -1,7 +1,7 @@
 ---
 title: Engineering
 layout: landing
-description: 수행했던 프로젝트
+description: 기술 상세 포트폴리오
 image: assets/images/project.jpg
 nav-menu: true
 ---

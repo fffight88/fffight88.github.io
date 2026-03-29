@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Projects
-description: 수행했던 일상 업무
+title: Project
+description: 수행했던 프로젝트
 image: assets/images/pic11.jpg
 nav-menu: true
 ---
@@ -20,10 +20,10 @@ nav-menu: true
 	<section id="one">
 		<div class="inner">
 			<header class="major">
-				<h1>Projects</h1>
+				<h1>Jobs</h1>
 			</header>
             <div>
-                <h2>타라TPS</h2>
+                <h2>Enterprise 솔루션 통합 관리 및 레거시 현대화 (ERP/MES/B2B SaaS)</h2>
             </div>
 			<div>
 				<h4>ERP 유지보수/기능개발 업무</h4>
