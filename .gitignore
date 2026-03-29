@@ -6,3 +6,5 @@ Gemfile.lock
 .jekyll-cache
 vendor/
 .bundle/
+.idea/
+.ruby-version
