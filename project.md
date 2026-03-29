@@ -1,5 +1,5 @@
 ---
-title: Project
+title: Engineering
 layout: landing
 description: 수행했던 프로젝트
 image: assets/images/project.jpg

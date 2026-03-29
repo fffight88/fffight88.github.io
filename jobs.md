@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Jobs
+title: Projects
 description: 수행했던 일상 업무
 image: assets/images/pic11.jpg
 nav-menu: true
@@ -20,7 +20,7 @@ nav-menu: true
 	<section id="one">
 		<div class="inner">
 			<header class="major">
-				<h1>Jobs</h1>
+				<h1>Projects</h1>
 			</header>
             <div>
                 <h2>타라TPS</h2>
