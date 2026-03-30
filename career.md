@@ -4,6 +4,7 @@ title: Career
 description: 거쳐온 발자취
 image: assets/images/pic01.jpg
 nav-menu: true
+weight: 1
 ---
 
 <!-- Style-->
