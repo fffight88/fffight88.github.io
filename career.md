@@ -24,7 +24,7 @@ weight: 1
 				<h1>Career</h1>
 			</header>
 			<div>
-				<h4>레굴루스 테크놀로지(SI) 입사 후 비상교육 파견근무</h4>
+				<h4>레굴루스 테크놀로지 입사 후 비상교육 파견근무</h4>
 				<p>
 					<span class="image left"><img src="{% link assets/images/pic16.png %}" alt="" /></span>
 					<span>

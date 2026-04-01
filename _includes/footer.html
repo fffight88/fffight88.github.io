@@ -22,11 +22,16 @@
 			</form>
 		</section> -->
 		<section class="split">
-			<section>
+			<section class="contact-row">
 				<div class="contact-method">
 					<span class="icon alt fa-envelope"></span>
 					<h3>Email</h3>
 					<a href="mailto:{{ site.email }}">{{ site.email }}</a>
+				</div>
+				<div class="contact-method">
+					<span class="icon alt fa-github"></span>
+					<h3>GitHub</h3>
+					<a href="{{ site.socials.GitHub }}" target="_blank" rel="noopener noreferrer">{{ site.socials.GitHub | remove: "https://" }}</a>
 				</div>
 			</section>
 			<!-- <section>
@@ -48,7 +53,7 @@
 					    {{ site.city }},
 					{% endif %}
 					{% if site.state %}
-					    {{ site.state }} 
+					    {{ site.state }}
 					{% endif %}
 					{% if site.zip_code %}
 					    {{ site.zip_code }}<br />

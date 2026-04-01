@@ -1,6 +1,7 @@
 ---
 title: 타라TPS에서 수행한 프로젝트
 layout: post
+published: false
 # image: assets/images/project.jpg
 ---
 

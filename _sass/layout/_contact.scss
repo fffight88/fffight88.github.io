@@ -26,6 +26,19 @@
 				width: 40%;
 			}
 
+			> .split:only-child {
+				width: 100%;
+				border-right: 0;
+			}
+
+			> .split .contact-row {
+				display: flex;
+
+				> .contact-method {
+					flex: 1;
+				}
+			}
+
 			> .split {
 				padding: 0;
 

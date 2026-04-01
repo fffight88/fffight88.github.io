@@ -34,10 +34,12 @@ weight: 2
 						<li>한 문장 프롬프트로 유튜브 썸네일 생성 + 텍스트 지시 기반 정밀 편집 SaaS (API 6개, 코드 ~6,400줄)</li>                                       
 						<li>Gemini 3.1 Flash 2K 생성 → Kontext Pro + Recraft Crisp 업스케일 2단계 편집 파이프라인 설계 (Fallback·자동 롤백 포함)</li>            
 						<li>Supabase RPC 원자적 크레딧 차감, Google OAuth 인증, 한글→영어 자동 번역 파이프라인, 다국어(i18n) 지원</li>                                  
-						<li>Next.js 16, React 19, Tailwind CSS v4, TypeScript 5, Supabase (Auth/DB/Storage), Gemini API, fal.ai API, Vercel</li>
-						<li>https://github.com/fffight88/grimbang-public | https://nailart-eta.vercel.app/</li>                        
+						<li>Next.js 16, React 19, Tailwind CSS v4, TypeScript 5, Supabase (Auth/DB/Storage), Gemini API, fal.ai API, Vercel</li>                       
 					</span>                                                 
-				</p>                                                                      
+				</p>
+				<ul class="actions" style="text-align: center;">
+					<li><a href="engineering.html#grimbang" class="button">기술 포트폴리오 보러 가기</a></li>
+				</ul>
 			</div>
 			<hr>             
 			<div>
@@ -54,6 +56,9 @@ weight: 2
 						<li>Java 21, Spring Boot 3.3, JPA/QueryDSL, PostgreSQL, Thymeleaf, Alpine.js, KendoUI, Web Crypto API</li>
 					</span>
 				</p>
+				<ul class="actions" style="text-align: center; clear: both;">
+					<li><a href="engineering.html#allviA-admin" class="button">기술 포트폴리오 보러 가기</a></li>
+				</ul>
 			</div>
 			<hr>
             <div>
