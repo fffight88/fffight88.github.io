@@ -46,7 +46,7 @@ weight: 3
 		</ul>
 
 		<h4>개발기간</h4>
-		<p>2026년 2월 ~ 현재 (1인 개발)</p>
+		<p>2026년 2월초 ~ 3월말</p>
 
 		<p><a href="https://grimbang.art" target="_blank">서비스 바로가기</a> &nbsp;|&nbsp; <a href="https://github.com/fffight88/grimbang-public" target="_blank">GitHub</a></p>
 	</div>
@@ -104,7 +104,7 @@ weight: 3
 		</ul>
 
 		<h4>개발기간</h4>
-		<p>2025년 11월 ~ 현재 (백엔드 개발)</p>
+		<p>2025년 11월 ~ 2026년 3월</p>
 	</div>
  </section>
 </div>
