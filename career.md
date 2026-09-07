@@ -24,13 +24,27 @@ weight: 1
 				<h1>Career</h1>
 			</header>
 			<div>
+				<h4>TOSconsulting 외주 프로젝트</h4>
+				<p>
+					<span class="image left"><img src="{% link assets/images/pic17.png %}" alt="" /></span>
+					<span>
+						<li>2026년 9월부터 진행 중</li>
+						<li>자격검정 운영·교육 사업을 수행하는 컨설팅 업체</li>
+						<li>주요업무: 반려동물행동지도사 실기시험 전자채점 시스템 구축</li>
+						<li>Google Sheets를 DB로, AppSheet를 태블릿 앱으로 사용하는 로우코드 구성으로 평가위원 3인의 감점 입력부터 자동 합산·실격 판정·최종 결과 산출까지 처리</li>
+					</span>
+				</p>
+			</div>
+			<hr>
+			<div>
 				<h4>레굴루스 테크놀로지 입사 후 비상교육 파견근무</h4>
 				<p>
 					<span class="image left"><img src="{% link assets/images/pic16.png %}" alt="" /></span>
 					<span>
-						<li>2025년 9월부터 근무</li>
+						<li>근무기간 2025년 8월 ~ 2026년 8월</li>
 						<li>한국 공교육 교과서 점유율 상위권의 교육 전문 기업으로, 콘텐츠와 플랫폼 기반의 통합 교육 솔루션을 제공</li>
-						<li>주요업무: 바이브 코딩으로 LMS 플랫폼인 Allvia Connect Learning의 관리자앱 개발</li>
+						<li>프로젝트1: Claude CLI 이용한 바이브 코딩으로 LMS 플랫폼인 Allvia Connect Learning의 관리자웹페이지 개발</li>
+						<li>프로젝트2: 직접 개발한 범용 AI 하네스 이용하여 한국어능력시험대비 학습서비스 Mastertopik의 관리자웹페이지 개발</li>
 					</span>
 				</p>
 			</div>

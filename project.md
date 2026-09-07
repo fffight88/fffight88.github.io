@@ -23,6 +23,41 @@ weight: 2
 			<header class="major">
 				<h1>Project</h1>
 			</header>
+			<div>
+				<h2>한국어능력시험 학습 플랫폼 masterTOPIK 관리자페이지 풀스택 개발</h2>
+			</div>
+			<div>
+				<h4>직접 개발한 하네스(cc-baseline)를 이용해 개발·납품한 첫 프로젝트</h4>
+				<span class="image left"><img src="{% link assets/images/mastertopik.png %}" alt="" /></span>
+				<ul style="overflow: hidden;">
+					<li>Classic ASP 약 1,000개 파일 규모의 레거시 관리자 시스템을 Java(Spring Boot)로 전환하는 프로젝트에서 기능 정합(parity) 검증·QA·결함 수정 및 신규 화면 개발 담당</li>
+					<li>Claude Code 기반 멀티에이전트 파이프라인(퍼블리싱 → 코드리뷰 + 보안감사 → E2E 테스트)과 커스텀 스킬을 직접 설계·운영하여 페이지 단위 개발–QA 사이클 자동화</li>
+					<li>관리자 메뉴 47개 전수 QA 및 UI 디자인 베이스라인(시각 정합 기준) 수립, Playwright 기반 E2E 라이브 검증 체계 구축</li>
+					<li>권한·IP 접근통제 구현, 개인정보 파기 관리, 결제·정산·환불·회원지표 등 핵심 화면 QA 및 다수 버그의 근본 원인 해결</li>
+					<li>보안 망분리(VDI) 환경 제약 하에서 텍스트 패치 기반 코드 반영 워크플로 수립, 개발환경·전달자료에 맞춘 커스텀 스킬 다수 제작으로 업무 플로우 단순화</li>
+					<li>Java 8, Spring Boot 2, MSSQL, JPA/QueryDSL, Mustache, Spring Security, OpenAPI Generator, Playwright, Claude Code (MCP · Skills), GitLab, Docker</li>
+				</ul>
+			</div>
+			<hr>
+			<div>
+				<h2>AI 코딩 에이전트 하네스 설계 및 개발 (cc-baseline)</h2>
+			</div>
+			<div>
+				<h4>개발환경 표준화를 위한 Claude Code 하네스 번들 인스톨러</h4>
+				<p>
+					<span class="image left"><img src="{% link assets/images/cc_baseline.png %}" alt="" /></span>
+					<span>
+						<li>행동규칙·에이전트·스킬·훅을 단일 npx 명령으로 설치하는 Claude Code 하네스 번들 인스톨러 (JS ~2,700줄, 템플릿 33개 파일)</li>
+						<li>5개 에이전트 파이프라인(design-director → publisher → security-auditor + code-reviewer → e2e-tester) 설계 및 게이트별 책임 경계·중복제거 매트릭스 정의</li>
+						<li>기존 ~/.claude 설정을 덮어쓰지 않는 마커블록 병합 및 훅 ID 중복제거 전략, --dry-run / --doctor / --uninstall 지원</li>
+						<li>Node.js 18+ 기반, 외부 의존성 없이 내장 모듈만으로 구현 (설치 전 타임스탬프 백업 자동 생성)</li>
+					</span>
+				</p>
+				<ul class="actions" style="text-align: center; clear: both;">
+					<li><a href="engineering.html#cc-baseline" class="button">기술 포트폴리오 보러 가기</a></li>
+				</ul>
+			</div>
+			<hr>
 			<div>                                                                         
 				<h2>AI 유튜브 썸네일 생성 SaaS 풀스택 개발 (그림방)</h2>                  
 			</div>                                                                        

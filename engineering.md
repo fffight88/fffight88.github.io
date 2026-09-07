@@ -10,6 +10,62 @@ weight: 3
 <!-- Main -->
 <div id="main">
 
+<!-- cc-baseline -->
+<section id="cc-baseline">
+	<div class="inner">
+		<header class="major">
+			<h2>cc-baseline</h2>
+		</header>
+		<p><i><b>Claude Code 하네스 번들 인스톨러 — 개발환경 표준화 사이드 프로젝트</b></i></p>
+		<p>머신이 바뀌어도 동일한 AI 코딩 환경을 재현하기 위한 도구. 행동규칙·에이전트·스킬·훅·MCP 설정을 하나의 번들로 묶어, 기존 설정을 덮어쓰지 않고 병합 설치하는 npx 인스톨러</p>
+		<br>
+		<div id="cc-baseline-details" class="spotlights">
+			<header class="major">
+				<h4>5-에이전트 QA 파이프라인 설계</h4>
+			</header>
+			<p>design-director(방향 결정) → publisher(마크업·CSS 작성) → security-auditor + code-reviewer(병렬 리뷰) → e2e-tester(동작 검증)의 5단계 파이프라인을 정의. 각 게이트의 소유자를 <b>중복제거 매트릭스</b>로 명시하여 에이전트끼리 같은 검사를 반복하지 않도록 했고, 모든 이슈에 <code>decision_type</code>(auto / design / business)을 부여해 자동 수정 대상과 사용자 판단이 필요한 항목을 분리.</p>
+			<ul class="actions" style="text-align: center;">
+				<li><a href="all_posts.html#5-에이전트-qa-파이프라인-설계" class="button">자세히 보기</a></li>
+			</ul>
+			<header class="major">
+				<h4>런타임 결함 게이트 (§0 Pre-pass)</h4>
+			</header>
+			<p>정적 리뷰로는 구조적으로 잡히지 않는 결함군(화이트라벨 화면, 미바인딩 핸들러로 인한 <code>ReferenceError</code>, 동작하지 않는 버튼)을 잡기 위해 e2e-tester에 필수 사전검사를 내장. 모든 화면 전환·클릭 후 런타임 불변식(에러 페이지 없음 / 4xx·5xx 없음 / 콘솔 에러 0)을 단언하고, 클릭 가능한 요소를 전수 열거해 관측 가능한 반응이 없으면 FAIL 처리 — 삭제·로그아웃·결제 등 파괴적 컨트롤은 자동 제외.</p>
+			<ul class="actions" style="text-align: center;">
+				<li><a href="all_posts.html#런타임-결함-게이트-설계" class="button">자세히 보기</a></li>
+			</ul>
+			<header class="major">
+				<h4>비파괴 병합 & 자가 진단</h4>
+			</header>
+			<p>사용자의 기존 <code>~/.claude</code> 설정을 보존하는 것이 설계의 제1원칙. 문서는 마커블록 치환, 훅은 <code>_ccBaselineId</code> 기준 중복 수렴, MCP는 키 단위 병합으로 처리하며 설치 전 타임스탬프 백업을 남김. 실제로 세션종료 훅이 23회 중복 등록된 설치 사례를 발견해, 첫 항목만 교체하고 멈추던 병합 로직을 전량 수렴 방식으로 수정하고 <code>--doctor</code>가 중복 등록을 경고하도록 보강.</p>
+			<ul class="actions" style="text-align: center;">
+				<li><a href="all_posts.html#비파괴-병합--자가-진단" class="button">자세히 보기</a></li>
+			</ul>
+			<header class="major">
+				<h4>보안 스캔 & 감사 리포트 자동화</h4>
+			</header>
+			<p>semgrep(SAST) · gitleaks(시크릿) · trivy(SCA)를 실제로 실행해 JSON + Markdown 구조화 리포트를 생성. 스캐너가 설치되어 있지 않으면 조용히 건너뛰지 않고 <code>scanner-gap</code> 이슈로 명시 보고하며, 에이전트·커맨드 정의 파일 자체의 <b>프롬프트 인젝션 패턴</b>도 점검 대상에 포함. 결과 JSON은 심각도순 색상 코딩된 HTML 리포트로 변환되어 스캔 종료 시 자동으로 열림.</p>
+			<ul class="actions" style="text-align: center;">
+				<li><a href="all_posts.html#보안-스캔--감사-리포트-자동화" class="button">자세히 보기</a></li>
+			</ul>
+		</div>
+		<br>
+		<h4>Tech Stack</h4>
+		<ul>
+			<li><b>Runtime:</b> Node.js 18+ (외부 의존성 0 — 내장 모듈만 사용)</li>
+			<li><b>CLI:</b> bin/cli.js (인자 파싱), src/install.js (설치 오케스트레이션), src/conflict-checker.js (훅 충돌 감지)</li>
+			<li><b>Merge:</b> 마커블록 마크다운 병합, settings.json 훅 중복제거 병합, mcpServers 키 병합</li>
+			<li><b>Templates:</b> CLAUDE.md, memory 16개, agents 5개, commands 4개 (총 33개 파일)</li>
+			<li><b>Integration:</b> Claude Code Hooks, MCP (Playwright ×5 병렬), terminal-notifier</li>
+			<li><b>Scanners:</b> semgrep, gitleaks, trivy (자동 설치)</li>
+			<li><b>Install:</b> <code>npx</code> 단일 명령 설치, <code>--dry-run</code> / <code>--doctor</code> / <code>--uninstall</code> 지원</li>
+		</ul>
+
+		<h4>개발기간</h4>
+		<p>2026년 4월 ~ 진행 중</p>
+	</div>
+</section>
+
 <!-- Grimbang -->
 <section id="grimbang">
 	<div class="inner">
